@@ -1,0 +1,7 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# mem.dat: Speicherverwaltung der Karte
+#          wird von map.dat eingebunden
+
+# Speicherverwaltung
+Objects   = 33554432
+CacheSize = 20971520

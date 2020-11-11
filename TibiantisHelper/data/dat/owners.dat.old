@@ -1,0 +1,5509 @@
+ID = 10001
+Owner = 1002138
+LastTransition = 1081677991
+PaidUntil = 1099821991
+Guests = {"*@Chronicle","Cata Clism","Mythical","Fehudi","Fewufu","Jehudi","Cataphract","Druid of Chintu","Saitou Hajime Wolf Of Miburo","Kovopa","Sarojot","Tidovo","Verpon","Satumi","Mage of distruction","pyro princess","azn healer","Apovok","Gokou San","Sir Cerberus","Keguxa","Bohanovi","Vuntina","Meepok","Ginger-Ninja","Luster Titan","Skillfull Knight","tuzigiba","Broly Knight"}
+Subowners = {"Dark Jurry","Arch Druid","Dark Danz","Dark-Danz"}
+
+ID = 10002
+Owner = 5505482
+LastTransition = 1098353279
+PaidUntil = 1099998449
+Guests = {"Rheakith","Calax","Angelic Flare","Fuomo","Aranada","Bumbubba","Perchnosius","Undyne Soul","nathus edrahil","Jaemz","sades","trem","Xtrordinary","sir xean","dizingo","lady candilace","osyrus","wurusufi","cerenity","sargeant slaughter","ponin the elf","Jehara","Shalira","Swalinda","*@demoralize","kelmor Ürgul","suluk nu moh"}
+Subowners = {"Rheakith","Calax","Fuomo"}
+
+ID = 10003
+Owner = 416135
+LastTransition = 1096193752
+PaidUntil = 1100081226
+Guests = {"Miklos Selkirk","Tudrish","Talec","*@Guardians of Tanelorn","@*Guardians of Tanelorn","ihsen blackblade","last fayth","brunosurf druid","erogan","trollmaster","kapove","Lacet","cristhian blackblade","xowun","gauchao","Wo'dahs Sugam","Flea lieutenants","ihsen blackblade","magic watcher","mountain elf","dark salbakuta","try ruler","jeogog","obione","socher","obione","@*Council of power","*@Council of power","@*Holy sinners","*@Holy sinners","bayani"}
+Subowners = {"Talec"}
+
+ID = 10004
+Owner = 365549
+LastTransition = 1068722161
+PaidUntil = 1100600993
+Guests = {"*@deadly stars","guioki","noryx","calax","Miroku Of Amera","beholder of light","dennys kerber","latsemy","rheakith","cekath","tumeric","sloane","backan","acubens","warbird","davahneh","vejohaz","gotewoki","hetano","tewaha","wizter","calax","deadly scream","tias druid","dark skull master","satindyret","sararman","wanuma","Bellas Knight","boxir","dark stuart","fuomo","beholder of death","coutinhow","dark druida","laerec","barrow-downs","Hurdy","Cyrmana","texob","lady rose","maghazinee","shizza","tiggeress","lady rosy"}
+Subowners = {"wanuma","syzoky"}
+
+ID = 10005
+Owner = 2797662
+LastTransition = 1089454040
+PaidUntil = 1100430669
+Guests = {"*@ seekerz of the f","triant","baldoran","oneeye","mang","golden might","platinum might","karamiwa the second","karamiwa","byteme","sir rys","corpsy","pharo-hood","tujoga","peter thibault","gerontius-teimao","utob","zakos","ripper of amera"}
+Subowners = {}
+
+ID = 10101
+Owner = 982710
+LastTransition = 1095761252
+PaidUntil = 1101467428
+Guests = {"dark stuart","mithy","Dennys kerber","Ibrahim netto"}
+Subowners = {"Dennys kerber","Ibrahim Netto","Dark stuart"}
+
+ID = 10102
+Owner = 794100
+LastTransition = 1086084313
+PaidUntil = 1101035394
+Guests = {"Ibrahim netto","Kurt gossgren","deltra"}
+Subowners = {"dark stuart"}
+
+ID = 10103
+Owner = 4209786
+LastTransition = 1095934045
+PaidUntil = 1100171403
+Guests = {"bellas knight","chaos-demon","lady blood rage","Lillith raven","bazb"}
+Subowners = {"bellas knight"}
+
+ID = 10104
+Owner = 2839890
+LastTransition = 1096625283
+PaidUntil = 1101031955
+Guests = {"Sir Dante","Sir Drake","Dealdy warlock","Daigoron","empier dx","Jeice"}
+Subowners = {"Sir dante"}
+
+ID = 10112
+Owner = 1207116
+LastTransition = 1091441256
+PaidUntil = 1100945110
+Guests = {"Veio Broxa"}
+Subowners = {}
+
+ID = 10113
+Owner = 260170
+LastTransition = 0
+PaidUntil = 1099134687
+Guests = {"Befisu","Dozef"}
+Subowners = {"Mage of Chaos"}
+
+ID = 10114
+Owner = 763417
+LastTransition = 1093774121
+PaidUntil = 1100170004
+Guests = {"Aradius","Dark-legionaire","Milaco","Popol","Sherbet","Sherbets Druid"}
+Subowners = {"Aradius","Dark-legionaire","Milaco","Popol","Sherbet","Sherbets Druid"}
+
+ID = 10121
+Owner = 3663828
+LastTransition = 1096452483
+PaidUntil = 1101636483
+Guests = {"Psyhco Wind"}
+Subowners = {}
+
+ID = 10122
+Owner = 551042
+LastTransition = 1096625283
+PaidUntil = 1099562840
+Guests = {"Knightsterr"}
+Subowners = {"Jiblit"}
+
+ID = 10123
+Owner = 1074421
+LastTransition = 1095761252
+PaidUntil = 1100775938
+Guests = {"chaos-demon","blood-roar","dolphin lady","lillith raven"}
+Subowners = {}
+
+ID = 10124
+Owner = 1557228
+LastTransition = 1088590002
+PaidUntil = 1101463559
+Guests = {"Lord of Disaster"}
+Subowners = {}
+
+ID = 10201
+Owner = 3456767
+LastTransition = 1097316763
+PaidUntil = 1099821932
+Guests = {}
+Subowners = {"Hajan The Second","Hajan The Third"}
+
+ID = 10202
+Owner = 302510
+LastTransition = 1098353279
+PaidUntil = 1099563998
+Guests = {}
+Subowners = {}
+
+ID = 10203
+Owner = 279188
+LastTransition = 1094206072
+PaidUntil = 1099390072
+Guests = {"sinistra","Syrnn","destny","shylah ameth","fawido"}
+Subowners = {}
+
+ID = 10204
+Owner = 324441
+LastTransition = 1095847631
+PaidUntil = 1099307523
+Guests = {"corpse druid","criminal skin","bhasz","forsaken shadow"}
+Subowners = {"curvus","texob","penca","corpse druid"}
+
+ID = 10205
+Owner = 5625178
+LastTransition = 1099044485
+PaidUntil = 1099476372
+Guests = {}
+Subowners = {"Fugee Foo","Bayani"}
+
+ID = 10212
+Owner = 1970657
+LastTransition = 1098612628
+PaidUntil = 1099995115
+Guests = {"Negativity","Jiblit"}
+Subowners = {}
+
+ID = 10213
+Owner = 3020358
+LastTransition = 1094379127
+PaidUntil = 1099563127
+Guests = {"nixoni druid","aeyla angelsdaughter","nixoni knight"}
+Subowners = {}
+
+ID = 10214
+Owner = 4839553
+LastTransition = 1096712059
+PaidUntil = 1099739410
+Guests = {"Gooht Shorts"}
+Subowners = {}
+
+ID = 10215
+Owner = 4501052
+LastTransition = 1094465298
+PaidUntil = 1099649298
+Guests = {"Lord Rizzy","Dragon Lord Trainer"}
+Subowners = {"dark night asasend","dark night asasin","lowuka"}
+
+ID = 10216
+Owner = 617903
+LastTransition = 1094638120
+PaidUntil = 1100603442
+Guests = {"Mensjerensje","Desoret","Rutaro","Rising Miracle","Sir gallad","trimuria","Trustybat","Gixaz","Rakazi","Katsimaru","Bloodishia","Silent destructor","Lord stormrage","Lady ellamore","Himar","Robino-guy","Dukade","Kisehesi"}
+Subowners = {"Leong Fu","Silent Mysticus","Condroz","Rising Miracle","Silent Crusader","Leong Fu","Rutaro"}
+
+ID = 10301
+Owner = 3164194
+LastTransition = 1096366064
+PaidUntil = 1099736022
+Guests = {"rivid"}
+Subowners = {"Zukat","Zeraon"}
+
+ID = 10302
+Owner = 4108747
+LastTransition = 1098785255
+PaidUntil = 1101377255
+Guests = {"Sir Mastermind","Swordling","Spiderman Sorcerer","Paladian Of Death"}
+Subowners = {}
+
+ID = 10303
+Owner = 3805371
+LastTransition = 1093255716
+PaidUntil = 1100599668
+Guests = {"Lord dragon"}
+Subowners = {"Zineko"}
+
+ID = 10304
+Owner = 1620200
+LastTransition = 1097230094
+PaidUntil = 1100686118
+Guests = {}
+Subowners = {"Elit drottningen","Lord Zhapper","Zobex"}
+
+ID = 10305
+Owner = 315144
+LastTransition = 1095415650
+PaidUntil = 1099563255
+Guests = {"Mnemosyne","Chickta","Chip Lady","Scaredycat Girl","Kitty Angel","Hero of Rot","Commander death of Amera","Bonins","Dean Howard","Zero Punk","Starie","Empireboy","Lone Outlaw","Elf Priest","God Apocalypse","Kitty-Kitty Girl"}
+Subowners = {"Mnemosyne","Chickta","Chip Lady","Scaredycat Girl","Kitty Angel","Hero of Rot","Commander death of Amera"}
+
+ID = 10306
+Owner = 3400942
+LastTransition = 1096452483
+PaidUntil = 1099653091
+Guests = {"Zip-lock","Bedax","Topedane the second","Zorane","Fortisque"}
+Subowners = {}
+
+ID = 10307
+Owner = 255704
+LastTransition = 1098439706
+PaidUntil = 1100085678
+Guests = {"Warior of the Arctic","Bonez Crasher","Gumir","xiahous bowman","maddmartigan","Kristys healer","kristina the knight","Kristy mistys sister","nivex the druid","Muncher"}
+Subowners = {"Warior of the Arctic","Gumir"}
+
+ID = 10308
+Owner = 1592844
+LastTransition = 1096970854
+PaidUntil = 1101118139
+Guests = {"Fontes Birinight","zendenn","Flabinho","sir popoh","Tcholla"}
+Subowners = {"flabinho"}
+
+ID = 10311
+Owner = 992047
+LastTransition = 1098698843
+PaidUntil = 1099822120
+Guests = {"maddmartigan","nivex"}
+Subowners = {"warior of the dragons","gumir","bonez crasher"}
+
+ID = 10312
+Owner = 515553
+LastTransition = 1075915780
+PaidUntil = 1099217543
+Guests = {"sandee","spankette","muncher","snadster","Muncher II","rhayn","fituj","Saemix","wobogi","nastead"}
+Subowners = {"sandee","hoptooit"}
+
+ID = 10313
+Owner = 796033
+LastTransition = 1069844989
+PaidUntil = 1100948989
+Guests = {"Tibia Henry Hung","Band","Vekine","Nalud","Dark of Ice Angel","Dark of Fire Angel","Kabepimas","Maihtml"}
+Subowners = {}
+
+ID = 10314
+Owner = 4163386
+LastTransition = 1096366064
+PaidUntil = 1099220715
+Guests = {"Warior of the arctic","Maddmartigan","Nivex","muncher"}
+Subowners = {"gumir","bonez crasher","kristys healer","kristina the knight"}
+
+ID = 10315
+Owner = 633776
+LastTransition = 1092391687
+PaidUntil = 1100862707
+Guests = {"Starie"}
+Subowners = {"Elf Priest","Evil Priest","Commissar Kyogen","Zuran Soldier","Ceathur","Sloan Ots"}
+
+ID = 10316
+Owner = 411628
+LastTransition = 1093601346
+PaidUntil = 1099908731
+Guests = {"peremetheus","special edward"}
+Subowners = {"peremetheus","special edward"}
+
+ID = 10317
+Owner = 1127114
+LastTransition = 1096798294
+PaidUntil = 1100344197
+Guests = {"andinho","greedo the great"}
+Subowners = {}
+
+ID = 10318
+Owner = 587497
+LastTransition = 1098871665
+PaidUntil = 1101204446
+Guests = {"Bonez Crasher","Celeste","Kristy Mistys Sister","Kristys Healer","Lil Flipp","Nivex","Warior of the arctic","Warior of the dragons","Gumir","Unholy Necromancer","Kristina the Knight"}
+Subowners = {}
+
+ID = 10319
+Owner = 2499792
+LastTransition = 1095329209
+PaidUntil = 1100775938
+Guests = {"elven strike","zeginen","rookgaardian clesseh"}
+Subowners = {"Rivid"}
+
+ID = 10320
+Owner = 2418363
+LastTransition = 1096970854
+PaidUntil = 1100775938
+Guests = {"Hokarudo","Little heal","Lites heals","Champ eater","Vampire ninja"}
+Subowners = {"Hokarudo","Lites heals","Junz","Little heal"}
+
+ID = 10321
+Owner = 1537919
+LastTransition = 1097575750
+PaidUntil = 1100775938
+Guests = {"Pall of Detch","Pedi-Druid","Mils"}
+Subowners = {"Pall Of Detch","Lord Serafin"}
+
+ID = 10322
+Owner = 3712778
+LastTransition = 1087639495
+PaidUntil = 1101117916
+Guests = {"kersova","illy-yo","meadow"}
+Subowners = {"kersova","heerohito","reptar"}
+
+ID = 10323
+Owner = 1549740
+LastTransition = 1096107072
+PaidUntil = 1100775938
+Guests = {"Healing Cupid","tobu","Renia","darvicux","apocalyps angel","Sting of death","mg slayer","master jimbo","Zakos","utob","Gsus Angel","Xifaw","Healing Phoenix"}
+Subowners = {"Healing Cupid","Deadly cupid","zakos"}
+
+ID = 10324
+Owner = 366023
+LastTransition = 1095588854
+PaidUntil = 1100775938
+Guests = {"Wertyarcher","Malinko man","Bokotufo","Voct","Grimmz","Tiggeress","Quikstrike","Prof Chaos"}
+Subowners = {}
+
+ID = 10325
+Owner = 317907
+LastTransition = 1095588854
+PaidUntil = 1101031622
+Guests = {}
+Subowners = {}
+
+ID = 10326
+Owner = 1795251
+LastTransition = 1098698843
+PaidUntil = 1100254606
+Guests = {"erfan","erfan da knight","magical spy","servant of erfan"}
+Subowners = {"erfan","erfan da knight","magical spy"}
+
+ID = 10401
+Owner = 304160
+LastTransition = 1098698843
+PaidUntil = 1100862722
+Guests = {"Hellios","Ryoushin","Latsemy","King Josh","Deuce","Scarlet Tears","Mithy"}
+Subowners = {"Hellios","King Josh"}
+
+ID = 10402
+Owner = 241295
+LastTransition = 1098698843
+PaidUntil = 1101554052
+Guests = {}
+Subowners = {"Ryoushin","Latsemy"}
+
+ID = 10403
+Owner = 281767
+LastTransition = 1097921444
+PaidUntil = 1099132203
+Guests = {"rewler","kersava","dom warrior","meadow","leero","illy-yo","heerohito","master knite","tiggeress"}
+Subowners = {}
+
+ID = 10404
+Owner = 2789767
+LastTransition = 1088676464
+PaidUntil = 1100776128
+Guests = {}
+Subowners = {"Bayani","Fugee Foo","Zeno Swiftsword"}
+
+ID = 10405
+Owner = 536419
+LastTransition = 1087293831
+PaidUntil = 1099044693
+Guests = {"Udwin"}
+Subowners = {}
+
+ID = 10406
+Owner = 338093
+LastTransition = 1067598771
+PaidUntil = 1101208291
+Guests = {"****************@legion of gondor","darkson-sett","canstoplis","fiero man","xanda-vaz","dired","Inu-yasha back","sir blator","kenai san","eddie the magic swordsman","cutilim","Siyanide","Memdigo","Xanda Edrahil","Legendary nathan"}
+Subowners = {}
+
+ID = 10407
+Owner = 1010366
+LastTransition = 1097575750
+PaidUntil = 1099562840
+Guests = {"Captain carl"}
+Subowners = {}
+
+ID = 10408
+Owner = 278931
+LastTransition = 1089194863
+PaidUntil = 1100775938
+Guests = {"krishnan","jasper yam","azure wrath","defender of tibia","chester osbourne"}
+Subowners = {"Krishnan","defender of tibia"}
+
+ID = 10501
+Owner = 2353851
+LastTransition = 1089108473
+PaidUntil = 1101646161
+Guests = {"evil-bart","Ingalish lad","irthorn"}
+Subowners = {}
+
+ID = 10503
+Owner = 1333623
+LastTransition = 1073992164
+PaidUntil = 1099912164
+Guests = {"Hells Forecaster","Ravens Mirror"}
+Subowners = {"rays insane","Innocent Crusader","ray"}
+
+ID = 10504
+Owner = 2399717
+LastTransition = 1098526225
+PaidUntil = 1100001664
+Guests = {"Shadow sakura","Prince sorcerer","Lord smooky","Dark pyrosorc","Hell-boi","Misshandlet"}
+Subowners = {"Shadow sakura","Prince sorcerer","Lord smooky"}
+
+ID = 10505
+Owner = 647552
+LastTransition = 1097403116
+PaidUntil = 1100945461
+Guests = {}
+Subowners = {}
+
+ID = 10507
+Owner = 2418746
+LastTransition = 1096107072
+PaidUntil = 1101291072
+Guests = {"rimame","lady keladry of mindelan"}
+Subowners = {}
+
+ID = 10508
+Owner = 1998058
+LastTransition = 1093083035
+PaidUntil = 1100859035
+Guests = {"lord mater fox"}
+Subowners = {}
+
+ID = 10509
+Owner = 5334859
+LastTransition = 1098353279
+PaidUntil = 1101463559
+Guests = {"Crucified angel","crucified elf"}
+Subowners = {}
+
+ID = 10510
+Owner = 892540
+LastTransition = 1092132468
+PaidUntil = 1100775938
+Guests = {}
+Subowners = {}
+
+ID = 10601
+Owner = 4342355
+LastTransition = 1098180465
+PaidUntil = 1100685986
+Guests = {"fabieo","nidajaey","Levise","Exclusive lady","Exclusive mami","Druiddster","Skillfull Knight","twissted princess","gafgorion","midelin","zukat","zekino","Roykuss","Druid-dandjo","Zineko","Almighty Celtic Demon","Crimson Gryphon","Hitchhiker tom","aklinzo","warrior of the dawn","Smartie","Akjoey","Akajoey","Dragoon slayer","Druid of havoc","bngefhg5","Stric Slayer","Hovsjo","Vokub","Smiitty","strakker","Luzerus","nekkar","stoobs knight","Legendary nathan","Faith Visa","Lord Tidus","Sir Galahand","Terry Lamont","trubar","Terry Sword Fighter","Bibilicious","Picky the pala","Mevoride","burseker","Popol","Milaco","Sir Smietan-fix","Unknown warrior of the doom","boomstick","pink knight"}
+Subowners = {"Exclusive lady","Dragun Of Death"}
+
+ID = 10602
+Owner = 3158582
+LastTransition = 1097921444
+PaidUntil = 1100081113
+Guests = {"Knight-flames","timtwia","xilato","kipfried be","kipfried de"}
+Subowners = {"Mutt the knight"}
+
+ID = 10603
+Owner = 389230
+LastTransition = 1096798294
+PaidUntil = 1100513057
+Guests = {"Ratis","Syrin Dragon","Najax","Garod","Sincmaster","Garod Blackfeather","Will Hunting"}
+Subowners = {}
+
+ID = 10701
+Owner = 2232451
+LastTransition = 1098526225
+PaidUntil = 1100772428
+Guests = {"jazzmanka","barman'alfonso","tixisohi"}
+Subowners = {}
+
+ID = 10702
+Owner = 673305
+LastTransition = 1094810853
+PaidUntil = 1099389944
+Guests = {"stonghold","unforgoten","qoq","lord jetaw","sorc of the devils","royal xifiw","baba"}
+Subowners = {}
+
+ID = 10703
+Owner = 2622383
+LastTransition = 1091959681
+PaidUntil = 1100945225
+Guests = {"Monty moonwolf","Woodmaker","Roykuss","Mike the stranger","Markio","Matthew knight","Carmen halfmoon"}
+Subowners = {}
+
+ID = 10801
+Owner = 1569352
+LastTransition = 1097748522
+PaidUntil = 1100340584
+Guests = {"Socher","Erogan","Minimemg","Joanezz","Magical-Man","Lord Amos","Jeogog","Socher the second","Socher the Third","Socher Undead","muncher"}
+Subowners = {"Erogan","Jeogog"}
+
+ID = 10802
+Owner = 327458
+LastTransition = 1079003114
+PaidUntil = 1099390243
+Guests = {"Eternal Oblivion","Loramir","Lord Drakore"}
+Subowners = {"Lord Drakore","Loramir","Eternal Oblivion"}
+
+ID = 10803
+Owner = 956085
+LastTransition = 1094551686
+PaidUntil = 1099912413
+Guests = {"Bifoleh","rollinstoned","budz"}
+Subowners = {}
+
+ID = 10804
+Owner = 477967
+LastTransition = 1098439706
+PaidUntil = 1100516989
+Guests = {"Sowin","Ganesh","Rosalynne","doq","st hellwin","rygne"}
+Subowners = {}
+
+ID = 10901
+Owner = 893098
+LastTransition = 1098526225
+PaidUntil = 1099908762
+Guests = {"Princess Abooboo","Lyckety Splyt"}
+Subowners = {}
+
+ID = 10902
+Owner = 240719
+LastTransition = 1087466644
+PaidUntil = 1100775938
+Guests = {"Clubster Amera","Dragoncloud II","Omega Wolf","Eternal Legend","Miroku Of Amera","Underworld legend","Dark Skull Master","Indian Girl","Stoobs Knight","Lillies","Pubey","Zemir","Peebster"}
+Subowners = {"Miroku Of Amera"}
+
+ID = 10903
+Owner = 336931
+LastTransition = 1095256745
+PaidUntil = 1100775938
+Guests = {"kindler","laerec"}
+Subowners = {"Dwarf Commander","Fluffhead"}
+
+ID = 10904
+Owner = 1764632
+LastTransition = 1091786840
+PaidUntil = 1099562840
+Guests = {"Rosalynne","Joharapa","Ganesh"}
+Subowners = {}
+
+ID = 10905
+Owner = 831637
+LastTransition = 1097489316
+PaidUntil = 1099562842
+Guests = {}
+Subowners = {"Starry","Rama","Drogo Chubb","Leana","spellbinder","meadow","tessa crisanti","angeleyez"}
+
+ID = 11001
+Owner = 243750
+LastTransition = 1048245101
+PaidUntil = 1100085101
+Guests = {"boxir"}
+Subowners = {"boxir"}
+
+ID = 11002
+Owner = 1459304
+LastTransition = 1098266864
+PaidUntil = 1099563133
+Guests = {}
+Subowners = {}
+
+ID = 11003
+Owner = 4606994
+LastTransition = 1093601346
+PaidUntil = 1101290971
+Guests = {"night fighter of amera","gaint of stone","neeltje","sorcer of lightning","blobbers","witefighter","sir arnaut","godoro","Truus columbus","Truus de mier","knight of thingy","palla of thingy"}
+Subowners = {"Godoro","night fighter of amera","palla of thingy"}
+
+ID = 11004
+Owner = 2027655
+LastTransition = 1086950182
+PaidUntil = 1099910182
+Guests = {"Bladetor","Guard of detch","unia pany"}
+Subowners = {}
+
+ID = 11005
+Owner = 1316206
+LastTransition = 1096366064
+PaidUntil = 1101644418
+Guests = {}
+Subowners = {}
+
+ID = 11006
+Owner = 2450715
+LastTransition = 1089626839
+PaidUntil = 1099908402
+Guests = {"tricky nicky","amera time fire","duxawaf","tuxai","Zuper Bolt","tricky nicky"}
+Subowners = {}
+
+ID = 11007
+Owner = 1808431
+LastTransition = 1093774121
+PaidUntil = 1101377156
+Guests = {"Bojugow","Nupax","right fighter"}
+Subowners = {"Nupax"}
+
+ID = 11008
+Owner = 2549143
+LastTransition = 1098353279
+PaidUntil = 1099825784
+Guests = {"Bojugow","Nupax","Ice ryder","Hinabe","Rotol","Little lomeg","Left fighter"}
+Subowners = {}
+
+ID = 11009
+Owner = 332396
+LastTransition = 1094984194
+PaidUntil = 1099653013
+Guests = {}
+Subowners = {}
+
+ID = 11010
+Owner = 1816044
+LastTransition = 1081937234
+PaidUntil = 1099998384
+Guests = {"Rotol","Nupax","Lord-Fudge","Right Fighter"}
+Subowners = {}
+
+ID = 11011
+Owner = 252327
+LastTransition = 1091614059
+PaidUntil = 1099390059
+Guests = {"balron druid","balron knight","boomstick","latsemy","sorcererr of death","darkenfaith","Elemental chaos","morphyus"}
+Subowners = {"balron knight","balron druid"}
+
+ID = 11012
+Owner = 564211
+LastTransition = 1085306826
+PaidUntil = 1099822614
+Guests = {"Lord Pamos","Erogann","erogan"}
+Subowners = {}
+
+ID = 11013
+Owner = 2026363
+LastTransition = 1098439706
+PaidUntil = 1101463559
+Guests = {"mys-tique","biggie","lomeg","daugther of vampair","right fighter"}
+Subowners = {}
+
+ID = 11014
+Owner = 702335
+LastTransition = 1072264332
+PaidUntil = 1100776332
+Guests = {"josh groban"}
+Subowners = {"doria","riwiziro","josh groban","zotari","rosalynn","tokuhu"}
+
+ID = 11015
+Owner = 1726721
+LastTransition = 1076843566
+PaidUntil = 1099996314
+Guests = {"Bafegox","Lord Bafegox","Earendil the archer","Numinoba","lady slaatje","sovata","sovate","Sherane Eldra"}
+Subowners = {"Wizard Suman","Guard Suman","Archer Suman","Perahi"}
+
+ID = 11016
+Owner = 252177
+LastTransition = 1078657695
+PaidUntil = 1099563194
+Guests = {"Zizov","executorio","Arzakon","aethne","lombo","zavebi","ae'mii","vampire ninja","Champ eater","zotari","kridged"}
+Subowners = {"Adradil","Sironis"}
+
+ID = 11017
+Owner = 982965
+LastTransition = 1075806554
+PaidUntil = 1099476669
+Guests = {"doria","rosalynne","aziel","grobanite","zotari","Zizov","executorio","kridged","sir galhad","bransies","teddybare","glynda","tokuhu"}
+Subowners = {}
+
+ID = 11018
+Owner = 550668
+LastTransition = 1097403116
+PaidUntil = 1099307680
+Guests = {"Kurol","Alen York","Fung Shweh","Will Hunting"}
+Subowners = {"Kurol","Alen York"}
+
+ID = 11019
+Owner = 927531
+LastTransition = 1085997932
+PaidUntil = 1101549932
+Guests = {"daffytjuh","navarth"}
+Subowners = {"royo yoro"}
+
+ID = 11020
+Owner = 1499390
+LastTransition = 1089799624
+PaidUntil = 1101121861
+Guests = {"Celtic Lad","Bagpiper","Ant Ruler","Taxi-ling","Garmy-Nor"}
+Subowners = {"Ant Ruler","Bagpiper","Celtic Lad"}
+
+ID = 11021
+Owner = 270612
+LastTransition = 1056536624
+PaidUntil = 1101208167
+Guests = {"aethne","Ae'mii","ekin","achillas"}
+Subowners = {}
+
+ID = 11022
+Owner = 1815605
+LastTransition = 1092737300
+PaidUntil = 1101463559
+Guests = {"nakabo","wittletawantuwa","dargon master","ak-baba","snipery the seconde","Hitokori Kuya"}
+Subowners = {}
+
+ID = 11023
+Owner = 2217835
+LastTransition = 1097921444
+PaidUntil = 1100775938
+Guests = {"Sir Smietan-fix","Maua","Lady Limera","Tichiki"}
+Subowners = {}
+
+ID = 11401
+Owner = 301651
+LastTransition = 1085133987
+PaidUntil = 1101121531
+Guests = {"Homunkulus","rheakith","Meiner","Exitus Rechterhand","Midway"}
+Subowners = {"Homunkulus"}
+
+ID = 11404
+Owner = 986705
+LastTransition = 1098871665
+PaidUntil = 1100776189
+Guests = {"hailie lee","brotenks","tiggeress","eon killer","jaemz","valaraukar","hellios","nocturnal jester","farmer maggot","pepper the druid","battary","newb islander","dade","dayice"}
+Subowners = {"brotenks"}
+
+ID = 12001
+Owner = 648880
+LastTransition = 1098180465
+PaidUntil = 1101204552
+Guests = {"Benny-dude","Condroz","Lady Ellamore","Trazor","Royal@Rush","Silent Crusader","*@Rush","Dukade","De Koe","Rising Miracle","Pivolo","Rakazi","Robino-Guy","Sargu","Hohito","Himar","Gixaz","Condroz Slave","Bigilisi the shadow hunter","Giant midget","Kisehesi","magnit","Mensjerensje","Rotol","Meor","Silent Mysticus","Sir Gallad","Bloodishia","Xegius","Lord-Fudge","Rising Miracle","Pivolo","Huimin","Smull"}
+Subowners = {"Condroz","Lady Ellamore","Bartello","Trazor","Benny-dude"}
+
+ID = 12002
+Owner = 567766
+LastTransition = 1098871665
+PaidUntil = 1100513709
+Guests = {"Belodor","Maua","Niarn","Spririling druid","Zuwojanu","Akevekemaster","Senora Vaquera","Snookie","Valkard","Zokozi","Genian","Giver of life","Long yao","Necromanaiac","Xeduz","Corporal","Sir hammer","Gorack","Krisn","Lidemo","Reaverz","Spearsman","Zigs knight","Bonita Wolf","Lady starsaint","Reaverz","Krisn","rutaro","Smurruf the Angel"}
+Subowners = {"Zuwojanu"}
+
+ID = 12003
+Owner = 1702828
+LastTransition = 1092478177
+PaidUntil = 1100775938
+Guests = {"shurai"}
+Subowners = {}
+
+ID = 12004
+Owner = 1212725
+LastTransition = 1096366064
+PaidUntil = 1100776189
+Guests = {"dennys kerber","veio broxa","sir popoh"}
+Subowners = {}
+
+ID = 12005
+Owner = 2404902
+LastTransition = 1095588854
+PaidUntil = 1100168066
+Guests = {"Thinking warrior","Thinking Druid","Sivazoli","Botuga","darkelven mage","Mad housewife","Jareknes"}
+Subowners = {"Thinking warrior","Thinking druid"}
+
+ID = 12006
+Owner = 244453
+LastTransition = 1098785255
+PaidUntil = 1101294752
+Guests = {}
+Subowners = {}
+
+ID = 12007
+Owner = 240046
+LastTransition = 1097316763
+PaidUntil = 1099653373
+Guests = {}
+Subowners = {}
+
+ID = 12008
+Owner = 245625
+LastTransition = 1097230094
+PaidUntil = 1099822094
+Guests = {}
+Subowners = {"Magical-Druid"}
+
+ID = 12009
+Owner = 928046
+LastTransition = 1097143665
+PaidUntil = 1101640312
+Guests = {"viper vemon","prince sorcerer","guliver atom","prince of flames","prince magic","fancystar","immortal naxuron","shadow sakura","slifire","sopuz","cky alliance","lenue","stalker of hell","magical peliden","hunta da beast","headhunta","tomamera","Pingua of amera","fefos"}
+Subowners = {"immortal naxuron","prince of flames","prince sorcerer","fancystar","slifire"}
+
+ID = 12010
+Owner = 3413942
+LastTransition = 1093687902
+PaidUntil = 1100599494
+Guests = {"rongz","ai qian hui","bo-liao","cbkang","elemental catastrophe","xulode","hiroki sakaz","xethyr","zhu ge liang","hokarudo","little heal","lu feng xian","omnia vinca","bo-liao","commander yeo","dark aces","ah congx","ah-siao","aragon of ameras","kazon","lame kia","rabid wolverine","nelaj","karen chan","hui zhen","champ eater","chalay lord of dragons","sadaz","eliteknight","kaxexim","amera prince","Phyllis Choi","kefev"}
+Subowners = {}
+
+ID = 12100
+Owner = 241348
+LastTransition = 0
+PaidUntil = 1100416117
+Guests = {"*@Deadly Stars","Blazinghunter","Clubster Amera","Dark Skull Master","Deltra","Eternal Legend","Indian Girl","Mark On Amera","Miroku Of Amera","Mystical Princess","Silver Fang Master","Underworld Legend","Tiggeress","Reptar","Redz","Grim II"}
+Subowners = {}
+
+ID = 14001
+Owner = 1390209
+LastTransition = 1085393110
+PaidUntil = 1100945110
+Guests = {"*@council of power","*@council of power south side","Larkieman","vormav","soldier of amera","sluff","Dragana","Kristy Mistys Sister","resonance","Rivid","samuel langley","pierpont","quibly","Baron Bumbbleman","altragirl","Allaurae","*@hive","Town Cryor","Leumas Phantom"}
+Subowners = {}
+
+ID = 14002
+Owner = 336931
+LastTransition = 1097316763
+PaidUntil = 1100775938
+Guests = {"*@awakend","@awakend","laerec","Latsemy","Scarlet Tears","eyesore"}
+Subowners = {"eyesore","kindler"}
+
+ID = 14003
+Owner = 621885
+LastTransition = 1098785255
+PaidUntil = 1099735643
+Guests = {"capacity","demonic flame","dizingo","noxtious","shockgrubz"}
+Subowners = {"capacity","demonic flame"}
+
+ID = 14005
+Owner = 590982
+LastTransition = 1051265696
+PaidUntil = 1100513696
+Guests = {"wolfleader","Wolfet","sleepywolf","dark-dart","kuhahe","Tegajejz"}
+Subowners = {"sleepywolf","wolfet"}
+
+ID = 14006
+Owner = 2526972
+LastTransition = 1096712059
+PaidUntil = 1099995147
+Guests = {"wizi","zebadi"}
+Subowners = {}
+
+ID = 14007
+Owner = 4472536
+LastTransition = 1092564584
+PaidUntil = 1100599494
+Guests = {"dvolth","snow paladino"}
+Subowners = {}
+
+ID = 14008
+Owner = 419263
+LastTransition = 1098698843
+PaidUntil = 1101290843
+Guests = {"Sakura Moon","Tenzar","Tenzac","Drucillia Dye","Bransies"}
+Subowners = {}
+
+ID = 14009
+Owner = 963016
+LastTransition = 1092996572
+PaidUntil = 1101463559
+Guests = {"Fayline","Beltsasar","Mardgolian","Drake Skylar"}
+Subowners = {}
+
+ID = 14010
+Owner = 4612604
+LastTransition = 1095674845
+PaidUntil = 1100945101
+Guests = {"Darken Rahl","jess darkheart","Aan'Allein","Edwin Barcjus","bermia"}
+Subowners = {"jess darkheart"}
+
+ID = 14011
+Owner = 416135
+LastTransition = 1088503525
+PaidUntil = 1100257836
+Guests = {"Talec","Miklos Selkirk","Tudrish","Lacet","Cristhian blackblade","Attraiu"}
+Subowners = {"Talec"}
+
+ID = 14012
+Owner = 506093
+LastTransition = 1094033288
+PaidUntil = 1100599494
+Guests = {"*@Epoch","Dolphn","Benedictino V","Zopiros","Yalagen","Sandee","Pixiegurl","Qeskelvar","Lady Dragonmare","Kai-Kai Vilu","Babzz"}
+Subowners = {"Laerec","Leragincajun","Qeskelvar"}
+
+ID = 20001
+Owner = 241980
+LastTransition = 1097230094
+PaidUntil = 1099822094
+Guests = {"*@Demoralize","Khylik","Bionic Jive","Rebellion","Dantevius","Nofut","Runik","Raoul Haskmanjaar"}
+Subowners = {"Homunkulus"}
+
+ID = 20002
+Owner = 2326836
+LastTransition = 1097662206
+PaidUntil = 1100604538
+Guests = {"*@everafter","*@ever after","finfan","Gohigoge","Jigakex","Nanukimo the Second","Weteh","Himaran","Mt Griz","Dusti","spikess"}
+Subowners = {"Mystical Rainbow"}
+
+ID = 20003
+Owner = 2305840
+LastTransition = 1093342140
+PaidUntil = 1100772428
+Guests = {"*@Sweet Angels","crookedbone","shin edrahil","xandinho sinistro","hairona","wepevi","xabaka","tremere liv","chutador de macumba","xandinho loko","maiden zelda","maiden lara croft","angel-dani","ayane the summoner","vbill","maconheira legal","Gopahama","maiden sakura","dexeve","xcorbulus","stephie","valeria freitas","vurik"}
+Subowners = {"gopahama","demonhuu"}
+
+ID = 20004
+Owner = 3527728
+LastTransition = 1098871665
+PaidUntil = 1101463559
+Guests = {"elite shorcerer","elite shotter","nejji","sanotak","vingador of amera","drud noia","Guga Graciano","Pequena Princesa","Luiz carlos Virus","Holy Assassin"}
+Subowners = {}
+
+ID = 20005
+Owner = 240163
+LastTransition = 1080039938
+PaidUntil = 1100775938
+Guests = {}
+Subowners = {"zemorgal"}
+
+ID = 20006
+Owner = 424960
+LastTransition = 1096279699
+PaidUntil = 1100775938
+Guests = {"pellinor","Phin"}
+Subowners = {"pellinor"}
+
+ID = 20007
+Owner = 1727006
+LastTransition = 1095070080
+PaidUntil = 1100167624
+Guests = {}
+Subowners = {"Veertjuh","Knight Vera","Levoto","MikeB","Sir Levoto"}
+
+ID = 20102
+Owner = 1502670
+LastTransition = 1098266864
+PaidUntil = 1100858833
+Guests = {"necro leader","master piccilo","tuff knight"}
+Subowners = {}
+
+ID = 20103
+Owner = 255666
+LastTransition = 1087898646
+PaidUntil = 1100858646
+Guests = {"Konedima","Amidenok","Peckalilae","Comeng","Sassie"}
+Subowners = {"Rerojoli","Swanky Prankster","Veroxen"}
+
+ID = 20104
+Owner = 2380343
+LastTransition = 1097316763
+PaidUntil = 1101467422
+Guests = {"Sorcerer of Ravaldii","abuu","fabuu ya","monkey biter","demon bugs","destined agony","psyhco wind","revudego","gokudrew","supaswift"}
+Subowners = {"sorcerer of ravaldii","revudego"}
+
+ID = 20201
+Owner = 676654
+LastTransition = 1074942629
+PaidUntil = 1101463857
+Guests = {"Tebuko","Inferno soldier","Ti Graw","Diamond Wizardist","Sir Tan","Tiger Soldier","Lord Meaty","Chilly Fries"}
+Subowners = {"Tebuko"}
+
+ID = 20202
+Owner = 378318
+LastTransition = 1082542665
+PaidUntil = 1099307523
+Guests = {"Rond voltou","Druida of amera","Ahamuhum","Hakkyra"}
+Subowners = {}
+
+ID = 20204
+Owner = 314754
+LastTransition = 1095934045
+PaidUntil = 1100168889
+Guests = {"yoyomura ii","sephirothaeris"}
+Subowners = {}
+
+ID = 20205
+Owner = 2160363
+LastTransition = 1097662206
+PaidUntil = 1101035394
+Guests = {"monkey biter","supaswift","xiretez","eternal toilet","grimmz","legendary saiyan knight","demon bug","stealth wizard"}
+Subowners = {"gokudrew"}
+
+ID = 20206
+Owner = 700093
+LastTransition = 1098958068
+PaidUntil = 1099477252
+Guests = {"Magic Cypress","Losleck","Pieriss"}
+Subowners = {}
+
+ID = 20304
+Owner = 629946
+LastTransition = 1085652317
+PaidUntil = 1101550159
+Guests = {"Deus da morte","Moohab","kutmaff seth"}
+Subowners = {}
+
+ID = 20305
+Owner = 348184
+LastTransition = 1099130971
+PaidUntil = 1099821991
+Guests = {"bal'akor"}
+Subowners = {"Sir Jonaz","Sir Set"}
+
+ID = 20306
+Owner = 2595826
+LastTransition = 1096539226
+PaidUntil = 1099998610
+Guests = {}
+Subowners = {}
+
+ID = 20307
+Owner = 2600991
+LastTransition = 1097748522
+PaidUntil = 1099217118
+Guests = {}
+Subowners = {}
+
+ID = 20308
+Owner = 4673558
+LastTransition = 1099130971
+PaidUntil = 1100945709
+Guests = {"Vbill","Royal Elite"}
+Subowners = {}
+
+ID = 20309
+Owner = 1892369
+LastTransition = 1094292705
+PaidUntil = 1100254036
+Guests = {}
+Subowners = {}
+
+ID = 20310
+Owner = 442392
+LastTransition = 1095934045
+PaidUntil = 1099476669
+Guests = {"lord kikiolo","posha","sir corso"}
+Subowners = {"sir corso","lord kikiolo"}
+
+ID = 20311
+Owner = 2287207
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"wargraft","Eterno Goku"}
+Subowners = {}
+
+ID = 20312
+Owner = 2002093
+LastTransition = 1099044485
+PaidUntil = 1100772250
+Guests = {"tatilindinha"}
+Subowners = {}
+
+ID = 20313
+Owner = 549110
+LastTransition = 1082455668
+PaidUntil = 1100599668
+Guests = {"Litlle Star","Neophytes druid","Adonis Joep","Venomia","Stampuh","Mystirox","Lord Tivisola"}
+Subowners = {"mystirox"}
+
+ID = 20314
+Owner = 585317
+LastTransition = 1089367620
+PaidUntil = 1099477872
+Guests = {}
+Subowners = {}
+
+ID = 20315
+Owner = 714057
+LastTransition = 1088503525
+PaidUntil = 1100772904
+Guests = {"berenice druida","alker"}
+Subowners = {}
+
+ID = 20316
+Owner = 1931985
+LastTransition = 1095415649
+PaidUntil = 1100599649
+Guests = {"figgo"," "," "}
+Subowners = {}
+
+ID = 20317
+Owner = 722682
+LastTransition = 1083319515
+PaidUntil = 1099480204
+Guests = {"Zeiko","Favetupo","Zigaji","greedo the great"}
+Subowners = {"Zeiko","Zigaji"}
+
+ID = 20318
+Owner = 4854482
+LastTransition = 1099130971
+PaidUntil = 1100775938
+Guests = {}
+Subowners = {}
+
+ID = 20319
+Owner = 1172624
+LastTransition = 1094810852
+PaidUntil = 1099994852
+Guests = {"nathaly drooper"}
+Subowners = {"garoto mal"}
+
+ID = 20320
+Owner = 2326095
+LastTransition = 1098958068
+PaidUntil = 1101550068
+Guests = {}
+Subowners = {"sir jonaz","bal'akor"}
+
+ID = 20321
+Owner = 4007385
+LastTransition = 1097834911
+PaidUntil = 1100685986
+Guests = {"Dharon","Lord Sosso Zealot","Angel-Dani","Lord Crawz","Master Spectro","Tatilindinha","Maconheira Legal","Lord Winer","Yosuke Ura","Death Shade","Elder Spectro","Krustyx"}
+Subowners = {"Dharon"}
+
+ID = 20322
+Owner = 4507079
+LastTransition = 1096798294
+PaidUntil = 1099243779
+Guests = {"Xanda-Vaz"}
+Subowners = {}
+
+ID = 20323
+Owner = 4968130
+LastTransition = 1097662206
+PaidUntil = 1100776378
+Guests = {"negoso tambem","phyro the dark knight","anjinha de carlin","leptor","wetecenjo","dark wetec daniel"}
+Subowners = {}
+
+ID = 20324
+Owner = 2947229
+LastTransition = 1098612628
+PaidUntil = 1101031631
+Guests = {"lord sauniere","dilba xnd","duid cansada"}
+Subowners = {}
+
+ID = 20325
+Owner = 1812119
+LastTransition = 1096452483
+PaidUntil = 1101636457
+Guests = {"Tiggeress","Niarn","Ziget","Bopozepas kight","Zigs knight","LEy ayanami"}
+Subowners = {"Lata"}
+
+ID = 20326
+Owner = 1533456
+LastTransition = 1094897373
+PaidUntil = 1099476458
+Guests = {"vepepa","mata galinha","gepifal"}
+Subowners = {"impadinha"}
+
+ID = 20327
+Owner = 3566192
+LastTransition = 1096279699
+PaidUntil = 1101031955
+Guests = {}
+Subowners = {"Hubex","Splinker"}
+
+ID = 20401
+Owner = 272463
+LastTransition = 1062929592
+PaidUntil = 1099480247
+Guests = {"saintas"}
+Subowners = {}
+
+ID = 20402
+Owner = 2558730
+LastTransition = 1095256745
+PaidUntil = 1101550310
+Guests = {"Wirafuzi","Huxebewa","Muverik","Dargo","Kobul"}
+Subowners = {"Popata","Wirafuzi"}
+
+ID = 20403
+Owner = 241737
+LastTransition = 1063275255
+PaidUntil = 1099563255
+Guests = {"Seismic"}
+Subowners = {}
+
+ID = 20404
+Owner = 1033580
+LastTransition = 1098871665
+PaidUntil = 1099821991
+Guests = {"Biteb scroll","maiden sakura","lady angelique","xin xin salabin","lord of carnagel","held dunkel","tatilindinha"}
+Subowners = {}
+
+ID = 20405
+Owner = 2031720
+LastTransition = 1087725882
+PaidUntil = 1101121944
+Guests = {"Mendorato","Pemore Legendary","Baldaumrox","Kruis kredo"}
+Subowners = {}
+
+ID = 20406
+Owner = 3264069
+LastTransition = 1095156452
+PaidUntil = 1101636362
+Guests = {"Popat","Wirafuzi","Muverik","Kobul","Dargo"}
+Subowners = {}
+
+ID = 20501
+Owner = 2340779
+LastTransition = 1096712059
+PaidUntil = 1099563646
+Guests = {"zukuto","noddukeyn","rodolfo gordolfo","xanda-vaz","franci"}
+Subowners = {"zukuto"}
+
+ID = 20502
+Owner = 785824
+LastTransition = 1091009276
+PaidUntil = 1101377276
+Guests = {"Sowarra","Monho","Korki catalana","Warlocks Master","Malebolge","Ghurk","Zankfein Do'Urden"}
+Subowners = {"Warlocks Master"}
+
+ID = 20503
+Owner = 455822
+LastTransition = 1098266864
+PaidUntil = 1100084722
+Guests = {"Lady Lillyanne","Nocens caster","parnn","Huyckey"}
+Subowners = {}
+
+ID = 20504
+Owner = 4440642
+LastTransition = 1094465298
+PaidUntil = 1100257884
+Guests = {"nocens caster","Invisus rex","parnn","Talia Tinsley","Aerosence","Huyckey"}
+Subowners = {}
+
+ID = 20505
+Owner = 2400661
+LastTransition = 1098871665
+PaidUntil = 1099221258
+Guests = {"Willian Village"}
+Subowners = {"Willian Village"}
+
+ID = 20507
+Owner = 1817395
+LastTransition = 1091268458
+PaidUntil = 1099390103
+Guests = {"Panoramix Druida","Snake-Maluco","maldito-ruxador","Snake Maniaco da Scout"}
+Subowners = {}
+
+ID = 20508
+Owner = 2866329
+LastTransition = 1090663622
+PaidUntil = 1101294665
+Guests = {"Kinoplex"}
+Subowners = {}
+
+ID = 20509
+Owner = 1276000
+LastTransition = 1079262449
+PaidUntil = 1099998449
+Guests = {"Lady noa","Knight mix","Lady Mix","ghosts of war","princess canei"}
+Subowners = {}
+
+ID = 20510
+Owner = 5328990
+LastTransition = 1098353279
+PaidUntil = 1100945279
+Guests = {"Snookie","Eternal Warior"}
+Subowners = {"snookie"}
+
+ID = 20512
+Owner = 1947309
+LastTransition = 1095588854
+PaidUntil = 1100685880
+Guests = {"knychala","kallqueruma","golden phyro","endrah","ruivo rering","phyro the dark paladino","ninja doidao"}
+Subowners = {}
+
+ID = 20513
+Owner = 1079815
+LastTransition = 1099130971
+PaidUntil = 1100253831
+Guests = {"Demonhuu","Henk meff","angel-liv","lord of carnagel"}
+Subowners = {"demonhuu"}
+
+ID = 20514
+Owner = 1357595
+LastTransition = 1091009276
+PaidUntil = 1100776378
+Guests = {"supremo kakaroto","krause","nubob","ares of amera"}
+Subowners = {}
+
+ID = 20515
+Owner = 3698961
+LastTransition = 1098698843
+PaidUntil = 1101290843
+Guests = {"Lord Winer","Lady Yavimaya","Zacchi","Death Shade","Cardding","Reid Darknight","Yosuke Ura","Grabber Falcon Hunter","Dharon","Krustyx","Lord Sosso Zealot","Dilba Xnd","Lord Sauniere","Ana-Beatriz","Henk Meff","Elder Spectro","Yoshi Bira","Unholy Aurus","Demon Elder","Kuvegopo","Elliot Darthgheru","Lord Crawz","Sir of Draggy","Mamutx","Berenice Druida","Hizuvu","Grabber Do Parque"}
+Subowners = {"Elder Spectro"}
+
+ID = 20601
+Owner = 2428113
+LastTransition = 1096712059
+PaidUntil = 1100344218
+Guests = {"Faramhir","Deus da Vida"}
+Subowners = {}
+
+ID = 20603
+Owner = 470407
+LastTransition = 1093860550
+PaidUntil = 1100254674
+Guests = {}
+Subowners = {}
+
+ID = 20604
+Owner = 443067
+LastTransition = 1081937234
+PaidUntil = 1100082726
+Guests = {"dragonbart","sashora","dark spider","guga graciano"}
+Subowners = {}
+
+ID = 20605
+Owner = 447758
+LastTransition = 1082455668
+PaidUntil = 1099998610
+Guests = {"Breganait","Lord Galcian","Rhea Eclipse","Marlus","Nukeri"}
+Subowners = {}
+
+ID = 20606
+Owner = 255926
+LastTransition = 1095256745
+PaidUntil = 1100428090
+Guests = {"Tig","Twinket","Evil witch","Eon killer","Wimaza","Lady Tig","Illy-Yo","Bay","Rhayn","Elven Strike"}
+Subowners = {"Tig","Twinket","Wimaza","Eon Killer"}
+
+ID = 20607
+Owner = 903841
+LastTransition = 1094897373
+PaidUntil = 1101032658
+Guests = {}
+Subowners = {}
+
+ID = 20701
+Owner = 595346
+LastTransition = 1096279699
+PaidUntil = 1099912210
+Guests = {}
+Subowners = {}
+
+ID = 20703
+Owner = 1979849
+LastTransition = 1098353279
+PaidUntil = 1100945279
+Guests = {}
+Subowners = {}
+
+ID = 20704
+Owner = 899972
+LastTransition = 1090663622
+PaidUntil = 1100341288
+Guests = {}
+Subowners = {}
+
+ID = 20705
+Owner = 1318024
+LastTransition = 1077102666
+PaidUntil = 1100430666
+Guests = {"adrian dragonslayer"}
+Subowners = {}
+
+ID = 20706
+Owner = 3151567
+LastTransition = 1097834911
+PaidUntil = 1099134657
+Guests = {"Kapove","Sharingan Elder","Andrea Lopez","Bobby Wise","marilow the lord knight","Emily Ryan"}
+Subowners = {}
+
+ID = 20707
+Owner = 325501
+LastTransition = 1097057278
+PaidUntil = 1099998384
+Guests = {"Neo Blue Bear","Guigo the Iron","Aioros of Amera","haloha peteka"}
+Subowners = {}
+
+ID = 20708
+Owner = 1265949
+LastTransition = 1095761252
+PaidUntil = 1100776189
+Guests = {}
+Subowners = {"kuartzo"}
+
+ID = 20709
+Owner = 2251860
+LastTransition = 1099130971
+PaidUntil = 1101467118
+Guests = {"lokaum druid"}
+Subowners = {"lokaum druid"}
+
+ID = 20710
+Owner = 2941665
+LastTransition = 1088503524
+PaidUntil = 1101463524
+Guests = {}
+Subowners = {"zodiacu"}
+
+ID = 20711
+Owner = 4139727
+LastTransition = 1098871665
+PaidUntil = 1100085210
+Guests = {"Amanga","Muleke Jovem","Lawod"}
+Subowners = {}
+
+ID = 20712
+Owner = 3748068
+LastTransition = 1095588854
+PaidUntil = 1100513709
+Guests = {"Showzinho","Showdim"}
+Subowners = {}
+
+ID = 20714
+Owner = 2103075
+LastTransition = 1089799624
+PaidUntil = 1099649126
+Guests = {"Lugg","Eye Solo","Zenn Solo","Baxibovo"}
+Subowners = {"Lugg","Eye Solo","Zenn Solo"}
+
+ID = 20715
+Owner = 3513326
+LastTransition = 1095847631
+PaidUntil = 1101463652
+Guests = {"alker"}
+Subowners = {}
+
+ID = 20801
+Owner = 1107976
+LastTransition = 1094724464
+PaidUntil = 1099562781
+Guests = {"Mithrandhir the Wizard","sarava veio","Zronx","tcheco II"}
+Subowners = {"holy assassin"}
+
+ID = 20802
+Owner = 450630
+LastTransition = 1096279699
+PaidUntil = 1100776189
+Guests = {"barbinha"}
+Subowners = {}
+
+ID = 20803
+Owner = 239916
+LastTransition = 1096884467
+PaidUntil = 1100599649
+Guests = {}
+Subowners = {}
+
+ID = 20901
+Owner = 3619538
+LastTransition = 1097748522
+PaidUntil = 1100257836
+Guests = {"*@Ever After","*@Everafter","Dusti","Nanukimo the Second","Mt Griz","Weteh","Himaran","Jigakex","Gohigoge"}
+Subowners = {}
+
+ID = 20902
+Owner = 241764
+LastTransition = 1089799624
+PaidUntil = 1099739466
+Guests = {"Meadow","Starry","Arissa","spellbinder","domida","winged shadow's daughter","dakamur","dragonas","born soldier","rinwal","danimoth","larkieman","drogo chubb","shawe","deteriorated","angeleyez","saintas","wobogi","leana","alasse melwasul","midnight fire","sir gray wolf","ziget","rama the assamite","wufii","cyre","sewad","exieled wolf","silvah","evil witch","gamal","kristty","argus' spirit","loridos","crevin","ivory thorn","aleanah","awod wicket","popat","savith","issalia","niarn","dejaah","bonita wolf","Vincent Von Dimitri","Envain","kamol","pheonix unforgotten","wirafuzi","sir nemo","brice boys","jherek","mystical warrior","awod undersiege","gm syrn on amera","bart griffwin","xamintilo","flumm","menise","john johnny joe john","sir yoohoo","lady top dawg","Dezana","Guardin gaurdin princess","cherished sword","Rugusase","deity","nylan","Guji","zigs knight","knemesis the second","Xojomu","babay","Tessa Chrisanti","Suniki-jo","god of gods","Hadessious Darkreaver","red lyon",".frienkog#tester","cybeck","gm syrn on amera","dark-lotus","Ivory thorn","hard knocker","Heralgan Druid","Heralgan Knight","Heralgan Sorceress","Heralganite","Larkaden","stealth wizard"}
+Subowners = {"sir gray wolf","elrohir melwasul","drogo chubb","shawe","starry","arissa","leana"}
+
+ID = 22001
+Owner = 606795
+LastTransition = 1096712059
+PaidUntil = 1101551182
+Guests = {"covveiro"}
+Subowners = {}
+
+ID = 22002
+Owner = 2267232
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"Indio Cinta Larga","lady polly","master bim","brunus","Indio Surui","Vassilis"}
+Subowners = {}
+
+ID = 22003
+Owner = 381885
+LastTransition = 1093601346
+PaidUntil = 1101117902
+Guests = {"hullabawoop","doodo","master gugowid","gugowid","ponin the elf","ascendant evincar","druid nukey","half-moon striker","xabaka","master knite"}
+Subowners = {"master gugowid","doodo"}
+
+ID = 22004
+Owner = 1292041
+LastTransition = 1097834911
+PaidUntil = 1101636927
+Guests = {"druid of the masters","Destroyer-Knight"}
+Subowners = {"shoran akemi"}
+
+ID = 22005
+Owner = 3609187
+LastTransition = 1096798294
+PaidUntil = 1099390294
+Guests = {"shiftpoint","shiftaint","turee","turens","Erestorina","silat","Tanken The Knight","Maynard","Jacoblewe","Demon-Velocity","Mino Demon","lucifers son","Deus da Destruicao","Funny Little Gnome","Pallorian","mephisto odyssey","knightian","Nando Revoltado","Angel-Velocity","Sixaso","Rishome","wogihavo","Jammin Snake","Syllark","Lord of Honorx","dante vinero","fiter nate","elven arrow","Fusixaa","yugii motho","bugzey","mecro druid","zilozox","Trekkers","Empireboy","Kenaxus","Gopahama","Dark natethan","aja","sir aja","Svitar","Biteb Scroll","Elite Pikuzez","Silent Ace","Xezza","Gladiador Mavf","bijuz","Fyro the Hunter","Sivazoli","Danziro","thinking warrior","volpe","cleno","Azize Delam","Dark-Magican","Olav uit Houten","rebecky","Johny the knight","ollergam","Apocolips","Druid of the Masters","Elite Beholder Knight","Americus special force","Xowun","willian village","japibul","Garota esperta","mulgore","cobra stanger","weird little gnome","rixiwu","Sahabute","svenneett","Kenuxis","Merex","zopize","xejaf","Hell-Boi","starie","light bolt","Lady Demon Master","xabaka","jiblit","kufifim"}
+Subowners = {"xezza","Sky Archa","Aurora Soul","Sky Rusher"}
+
+ID = 22006
+Owner = 3609187
+LastTransition = 1098353279
+PaidUntil = 1100945279
+Guests = {}
+Subowners = {}
+
+ID = 22007
+Owner = 896835
+LastTransition = 1097921444
+PaidUntil = 1099998449
+Guests = {"farofa fa","druid of the masters","xowun","shoran akemi","kikio knight"}
+Subowners = {"druid of the masters"}
+
+ID = 22008
+Owner = 2081634
+LastTransition = 1098958068
+PaidUntil = 1100513709
+Guests = {"*@Protectors of Avalon","eskelvar","mecania","maynard","lyn the tormentor","girli","knight of liberty","jessjess nite","tiggeress","eon killer"}
+Subowners = {"sephirothaeris","cadmos","benedictino"}
+
+ID = 24001
+Owner = 1536793
+LastTransition = 1087121182
+PaidUntil = 1099739113
+Guests = {"tempted","bokotufo"}
+Subowners = {}
+
+ID = 24002
+Owner = 441310
+LastTransition = 1062756693
+PaidUntil = 1100340866
+Guests = {"temptress","emmarancie","stolen","kiya ann","angelace","fleppenstein","omi tsukiyono","john kokkiri","tenzar","Die lummoll","Jades the invincible","queen rooky","Knemesis the second"}
+Subowners = {"kiya ann","temptress","emmarancie","angelace","karina"}
+
+ID = 24003
+Owner = 830860
+LastTransition = 1066299147
+PaidUntil = 1099995147
+Guests = {"Unforgiven Eternity","huesca","stolen","illusia","chopper the great"}
+Subowners = {"juste convent"}
+
+ID = 24004
+Owner = 2503028
+LastTransition = 1093687902
+PaidUntil = 1099822062
+Guests = {"hikari kamiya","Gata de amera"}
+Subowners = {"Hikari kamiya"}
+
+ID = 24005
+Owner = 2839478
+LastTransition = 1098785255
+PaidUntil = 1100254036
+Guests = {"arra skyle","kenokev","sir aja","emu mage","flint lock","circus monkey","aja","razorsnipe"}
+Subowners = {}
+
+ID = 24006
+Owner = 509515
+LastTransition = 1097057278
+PaidUntil = 1101636464
+Guests = {"splinker"}
+Subowners = {}
+
+ID = 24007
+Owner = 3105717
+LastTransition = 1098266864
+PaidUntil = 1099134553
+Guests = {}
+Subowners = {}
+
+ID = 24008
+Owner = 4460944
+LastTransition = 1097489315
+PaidUntil = 1100081315
+Guests = {"Sades","Fayline","Beltsasar","Logan-San","Isa Padilha"}
+Subowners = {}
+
+ID = 24009
+Owner = 812994
+LastTransition = 1097575750
+PaidUntil = 1100776189
+Guests = {"Knight Ridder of Amera"}
+Subowners = {"Excelent Druid"}
+
+ID = 24010
+Owner = 3703032
+LastTransition = 1098612628
+PaidUntil = 1101464345
+Guests = {}
+Subowners = {}
+
+ID = 24011
+Owner = 4090636
+LastTransition = 1099130971
+PaidUntil = 1100253978
+Guests = {"Xabaka","Darkness Falcon","Tanken the knight"}
+Subowners = {"Xabaka","Darkness Falcon"}
+
+ID = 24012
+Owner = 911945
+LastTransition = 1096625283
+PaidUntil = 1099825784
+Guests = {}
+Subowners = {}
+
+ID = 24013
+Owner = 4209283
+LastTransition = 1093169461
+PaidUntil = 1100168719
+Guests = {"Naggano","bokotufo","revol","neath arrow","tempted","phurple","tiggeress"}
+Subowners = {"Naggano"}
+
+ID = 24014
+Owner = 596559
+LastTransition = 1097748522
+PaidUntil = 1099649277
+Guests = {"Sojij","Los Bong","Ogaiht nones","Treviss","Xowun","Zeiko","Dark esquilo","Destroyer-Knight","Serberros","Free-lancer","Evil Kenshin","snugle","henk meff","Kiari","Tcheco II","Pieris"}
+Subowners = {}
+
+ID = 30001
+Owner = 364211
+LastTransition = 1097316763
+PaidUntil = 1099393818
+Guests = {"*@dragon lord nation","Postal-rad","Maximum maxx","Gunthar Ghent","Guardian Beast","Spirit Strike","Alley Darkwind","Rookinbobsta","Gumofu","Pyro Mat","Imperiol","Jet Stream","Cloud Fighter","jack kane"}
+Subowners = {"Postal-rad"}
+
+ID = 30002
+Owner = 470244
+LastTransition = 1074078564
+PaidUntil = 1099998564
+Guests = {"Sound@Echoes","Resound@Echoes","Loud@Echoes","Thunder@Echoes","Noise@Echoes","Whisper@Echoes","Pulse@Echoes","Trial Echo@Echoes","Akenaton","Sinestro","Yoda Master","Mumm-ha","Fire Ring","Sir Francisco","Tiozinhoveio","Zenetos","Lord shadoww","Will Hunting","Vabirof","Lord shadoww","Pro-Sangue","Skankin","Tcheco II","Kopot","Tukur","Zenetoz","zene-elvendougmasterjonh","Douglas Netto","God of Distance","Valerizinha","melozim","Gopahama","Demonhuu","Ogaiht Nones"}
+Subowners = {"Rikekuda","Ibrahim Netto","Birodid","Darkness Soldier","Dennys Kerber"}
+
+ID = 30003
+Owner = 3151512
+LastTransition = 1098266864
+PaidUntil = 1099393818
+Guests = {"*@Caballeros de Honor","Yawgmoth the mage","Ojiazul","Blueshark","Sakura moon","Urban Meadow","Kranex","Draken Flamy","Nigcrailer","sir deluxe","soac","Kazador De Chanchos","Ewock the slayer","Darkfurby"}
+Subowners = {"Soac","Shaleko De Mono"}
+
+ID = 30101
+Owner = 333344
+LastTransition = 1096798294
+PaidUntil = 1099131149
+Guests = {"Line Arian","Mau Mesmo"}
+Subowners = {}
+
+ID = 30103
+Owner = 313447
+LastTransition = 1094638120
+PaidUntil = 1101031622
+Guests = {}
+Subowners = {}
+
+ID = 30104
+Owner = 1657398
+LastTransition = 1087898646
+PaidUntil = 1099996314
+Guests = {"Gods Present","Magickz"}
+Subowners = {"Gods present"}
+
+ID = 30105
+Owner = 1960070
+LastTransition = 1094897373
+PaidUntil = 1101377169
+Guests = {"Nepoje"}
+Subowners = {"Nepoje"}
+
+ID = 30106
+Owner = 781816
+LastTransition = 1096193751
+PaidUntil = 1101377751
+Guests = {"Kurt Gossgren","Samuel Langley","Aisilynn"}
+Subowners = {"Madjen Boo"}
+
+ID = 30201
+Owner = 367341
+LastTransition = 1080039940
+PaidUntil = 1099479964
+Guests = {"neath arrow","revol","Anika","Sitanie","kris ten"}
+Subowners = {"Neath arrow","Revol","Anika","Sitanie"}
+
+ID = 30202
+Owner = 324839
+LastTransition = 1097489316
+PaidUntil = 1101644418
+Guests = {}
+Subowners = {"Druida-Roxo"}
+
+ID = 30203
+Owner = 1055174
+LastTransition = 1096452483
+PaidUntil = 1099390827
+Guests = {"Joe Phillip","John Doee","Withering Soul","Undyne Soul","Quenn Knight"}
+Subowners = {}
+
+ID = 30204
+Owner = 4438171
+LastTransition = 1096020467
+PaidUntil = 1100948988
+Guests = {"kwaume khmer","kwaume leng","mianoe","neomisos","jaihaio"}
+Subowners = {}
+
+ID = 30205
+Owner = 758191
+LastTransition = 1094206073
+PaidUntil = 1099132203
+Guests = {"Super Rygeta"}
+Subowners = {}
+
+ID = 30206
+Owner = 1286568
+LastTransition = 1098698843
+PaidUntil = 1099390072
+Guests = {"Diogo Suspiro","Ill'Nino"}
+Subowners = {"Diogo Suspiro"}
+
+ID = 30207
+Owner = 5273770
+LastTransition = 1098612627
+PaidUntil = 1101204627
+Guests = {"Krakenyz"}
+Subowners = {}
+
+ID = 30208
+Owner = 4500114
+LastTransition = 1096539226
+PaidUntil = 1100603461
+Guests = {"seiya the pegaso"}
+Subowners = {}
+
+ID = 30209
+Owner = 2633169
+LastTransition = 1099130971
+PaidUntil = 1101031715
+Guests = {}
+Subowners = {}
+
+ID = 30301
+Owner = 355327
+LastTransition = 1074856141
+PaidUntil = 1100776141
+Guests = {"Huvon","Apache Shaman"}
+Subowners = {}
+
+ID = 30302
+Owner = 5308864
+LastTransition = 1098094093
+PaidUntil = 1098616241
+Guests = {"Lemondy Fresh","kajind"}
+Subowners = {}
+
+ID = 30303
+Owner = 4724247
+LastTransition = 1098698843
+PaidUntil = 1101290843
+Guests = {"Gopahama","Demonhuu","Skarerz","Huvon"}
+Subowners = {}
+
+ID = 30304
+Owner = 428845
+LastTransition = 1093255715
+PaidUntil = 1101031715
+Guests = {"himumaza","sir the darcknes"}
+Subowners = {"vevepu"}
+
+ID = 30305
+Owner = 1481975
+LastTransition = 1097748522
+PaidUntil = 1100685986
+Guests = {"xowun"}
+Subowners = {"xowun"}
+
+ID = 30306
+Owner = 2956598
+LastTransition = 1094984193
+PaidUntil = 1100168193
+Guests = {"Flowertje","Neidron","lord zarazu"}
+Subowners = {"Hammie"}
+
+ID = 30307
+Owner = 470244
+LastTransition = 1074942628
+PaidUntil = 1100862628
+Guests = {"Apache Shaman","Darkness Soldier","Rikekuda","Tathi","mumm-ha","Valeria Freitas"}
+Subowners = {}
+
+ID = 30308
+Owner = 3263254
+LastTransition = 1089886037
+PaidUntil = 1101640312
+Guests = {"Dark lite","darkenfaith"}
+Subowners = {}
+
+ID = 30310
+Owner = 4842883
+LastTransition = 1098785255
+PaidUntil = 1101377255
+Guests = {"Morphez","Daloria","Fikusen","Alanndir","Viperious"}
+Subowners = {}
+
+ID = 30311
+Owner = 621894
+LastTransition = 1094724463
+PaidUntil = 1099908463
+Guests = {}
+Subowners = {}
+
+ID = 30312
+Owner = 4292324
+LastTransition = 1098353279
+PaidUntil = 1100426910
+Guests = {"Elwish magician","elwish ancient"}
+Subowners = {}
+
+ID = 30313
+Owner = 565476
+LastTransition = 1097575750
+PaidUntil = 1099912025
+Guests = {}
+Subowners = {}
+
+ID = 30401
+Owner = 1176546
+LastTransition = 1097921444
+PaidUntil = 1100430666
+Guests = {"xibed"}
+Subowners = {"xibed","korky"}
+
+ID = 30402
+Owner = 2517619
+LastTransition = 1095156452
+PaidUntil = 1098529944
+Guests = {"gaffgarion","sephirothaeris","foluria"}
+Subowners = {"aegis the defiled","alkamar","wild demon"}
+
+ID = 30403
+Owner = 1360012
+LastTransition = 1097834911
+PaidUntil = 1099476669
+Guests = {"lordly caliber","steal might","platinum might","dalabalo","darkenfaith"}
+Subowners = {}
+
+ID = 30404
+Owner = 1360813
+LastTransition = 1099130971
+PaidUntil = 1101722971
+Guests = {"Mohf","Proesuhs","Predathor","Erazer"}
+Subowners = {"mohf","Proesuhs","Predathor","Erazer"}
+
+ID = 30501
+Owner = 540753
+LastTransition = 1098439706
+PaidUntil = 1101290862
+Guests = {}
+Subowners = {}
+
+ID = 30502
+Owner = 3016232
+LastTransition = 1098094093
+PaidUntil = 1100257758
+Guests = {"T-racy","Sir George","Angel Lite","Marmalade"}
+Subowners = {}
+
+ID = 30503
+Owner = 3739321
+LastTransition = 1098785255
+PaidUntil = 1100426910
+Guests = {"Morphez","Alanndir","Nicholas Devreux","Kottegron","Fikusen","Viperious"}
+Subowners = {}
+
+ID = 30504
+Owner = 567805
+LastTransition = 1084183527
+PaidUntil = 1101467522
+Guests = {"firewraith","tigerwraith","anji mito","nozarro"}
+Subowners = {"nozarro"}
+
+ID = 30505
+Owner = 3749337
+LastTransition = 1095847631
+PaidUntil = 1099649174
+Guests = {"lord muaza","hamster warrior"}
+Subowners = {}
+
+ID = 30506
+Owner = 4328367
+LastTransition = 1098785255
+PaidUntil = 1101381063
+Guests = {"Druidoso Velhinho","Lord Sires"}
+Subowners = {}
+
+ID = 30507
+Owner = 545702
+LastTransition = 1072609944
+PaidUntil = 1101121944
+Guests = {"Pozeidon"}
+Subowners = {}
+
+ID = 30508
+Owner = 2429869
+LastTransition = 1096884467
+PaidUntil = 1099134309
+Guests = {"obee the knight","tebolt","magmas angel","sir smokey the obee","obbs"}
+Subowners = {}
+
+ID = 30510
+Owner = 937578
+LastTransition = 1082455668
+PaidUntil = 1099220715
+Guests = {"Omegabit","Sacred Omni"}
+Subowners = {"omegabit"}
+
+ID = 30511
+Owner = 244814
+LastTransition = 1069326582
+PaidUntil = 1100430582
+Guests = {"kosaka"}
+Subowners = {}
+
+ID = 30512
+Owner = 4311266
+LastTransition = 1091786841
+PaidUntil = 1100257836
+Guests = {"titton","Lord of Sudden deaths"}
+Subowners = {"Gazula","Dark Lavis"}
+
+ID = 30513
+Owner = 5169869
+LastTransition = 1098180465
+PaidUntil = 1100772465
+Guests = {"Gojesopi","Cacador Ninja","Master Sky Angel","Elite Sky Angel"}
+Subowners = {}
+
+ID = 30514
+Owner = 3463776
+LastTransition = 1094379132
+PaidUntil = 1100171133
+Guests = {"eowenn","arttorius","iosakura"}
+Subowners = {}
+
+ID = 30515
+Owner = 1446847
+LastTransition = 1087071828
+PaidUntil = 1101381361
+Guests = {"Bigad","Princess Nightdust","Ottomani","Sanov"}
+Subowners = {}
+
+ID = 30516
+Owner = 1528395
+LastTransition = 1096193752
+PaidUntil = 1100945110
+Guests = {"Yory Agamy","bundinha cabeluda","vugubam","zeus imortal","taludabam","tijolinho de pedra"}
+Subowners = {"Tijolinho de Pedra"}
+
+ID = 30517
+Owner = 1324752
+LastTransition = 1090663622
+PaidUntil = 1100776141
+Guests = {"Diogo the archer"}
+Subowners = {}
+
+ID = 30518
+Owner = 3773085
+LastTransition = 1098612628
+PaidUntil = 1100689543
+Guests = {"magdaa","dzieniszek","yellow devil","mekuro"}
+Subowners = {}
+
+ID = 30519
+Owner = 1158486
+LastTransition = 1097489316
+PaidUntil = 1099390059
+Guests = {"Le Jin","Tebuko","Sir Tan"}
+Subowners = {"Le Jin","Tebuko"}
+
+ID = 30520
+Owner = 352818
+LastTransition = 1097489316
+PaidUntil = 1100430582
+Guests = {"vanityfaire","postal-rad","habozo","Lord Meitemark"}
+Subowners = {"bristlebane fizzlethorpe"}
+
+ID = 30521
+Owner = 1126747
+LastTransition = 1094119663
+PaidUntil = 1099303663
+Guests = {}
+Subowners = {"Valourin","Noir Assassins","Pegoj"}
+
+ID = 30522
+Owner = 567482
+LastTransition = 1086950184
+PaidUntil = 1100945110
+Guests = {"Lorelyn","Tharlo","Felipe Little Master"}
+Subowners = {"Lorelyn"}
+
+ID = 30523
+Owner = 739735
+LastTransition = 1096970854
+PaidUntil = 1100516989
+Guests = {"King of all nightmares","Neophytes druid","Sir xean","Athornos","Athornis","Mystirox"}
+Subowners = {}
+
+ID = 30524
+Owner = 2608536
+LastTransition = 1097403116
+PaidUntil = 1099131165
+Guests = {}
+Subowners = {}
+
+ID = 30601
+Owner = 285973
+LastTransition = 1075547423
+PaidUntil = 1100776189
+Guests = {"Uborg","Grobu","Azure Flash","Leshrak","Drucilla Dye"}
+Subowners = {}
+
+ID = 30602
+Owner = 1339179
+LastTransition = 1094638120
+PaidUntil = 1099822120
+Guests = {"Ordiway","Sleepy Sniper","Excelsious","Meguja","Fesodem","Wahivip","Wodidilo"}
+Subowners = {"Ordiway","Sleepy Sniper"}
+
+ID = 30603
+Owner = 1349763
+LastTransition = 1085825169
+PaidUntil = 1101377169
+Guests = {"demented clown","dark torment"}
+Subowners = {"stratigy medicianman"}
+
+ID = 30604
+Owner = 1150020
+LastTransition = 1092305328
+PaidUntil = 1099303580
+Guests = {}
+Subowners = {"Nate the bard","Negrociator","Nathaneal","Nathaniel"}
+
+ID = 30605
+Owner = 612892
+LastTransition = 1088244312
+PaidUntil = 1100859853
+Guests = {"Lorelyn","Don tuno","Lorelynn","Tunino"}
+Subowners = {"Lorelyn","Don Tuno","Lorelynn","Tunino"}
+
+ID = 30606
+Owner = 1407826
+LastTransition = 1098180465
+PaidUntil = 1099307616
+Guests = {"Arcanius"}
+Subowners = {"Mithirius"}
+
+ID = 30607
+Owner = 508988
+LastTransition = 1094119664
+PaidUntil = 1099649381
+Guests = {"Lord Chaoz","Darker Cell","Lord Magi","Uroburos","Xewajov","Motriello","Xezivihu","Xanero","zhadowz","cathii"}
+Subowners = {"Darker Cell","Lord Chaoz"}
+
+ID = 30608
+Owner = 1169811
+LastTransition = 1098266864
+PaidUntil = 1099303906
+Guests = {"skagen","darkwraith","nozarro","monkys paw"}
+Subowners = {"skagen"}
+
+ID = 30609
+Owner = 2174193
+LastTransition = 1098785255
+PaidUntil = 1100171403
+Guests = {"Dimitriouse-Miles","Alkamar"}
+Subowners = {"Alkamar","Dimitriouse-Miles"}
+
+ID = 30610
+Owner = 383914
+LastTransition = 1098871665
+PaidUntil = 1101031955
+Guests = {"Karl'Marx"}
+Subowners = {"Skint","Skint II","Skint IV","Sirdruid"}
+
+ID = 30611
+Owner = 677260
+LastTransition = 1092650939
+PaidUntil = 1099391441
+Guests = {"Motriello","Willmyster","Xewajov","Darker Cell","Chimera Scout","Uroburos"}
+Subowners = {"Willmyster"}
+
+ID = 30612
+Owner = 4659626
+LastTransition = 1098785255
+PaidUntil = 1101636927
+Guests = {}
+Subowners = {}
+
+ID = 30701
+Owner = 496458
+LastTransition = 1074424269
+PaidUntil = 1100257884
+Guests = {"*@High Guard of Tibia","Hewuzo","Lotharius","Sir Zolixu","Half-moon striker","Aerosence","Cleaso","doboler","Hiwof","Hevanlea","Andromeda assendent","Legizin","skint","Kopersatem"}
+Subowners = {"serra kaishen","darian starke"}
+
+ID = 30702
+Owner = 451283
+LastTransition = 1099044485
+PaidUntil = 1101636485
+Guests = {"*@Xtreme","Frank dee","Aryl","Brother of Muncher","Muncher","Muncher II","----------------------------","Hacko","Guareber","Gumir","_________________________"}
+Subowners = {"Frank dee","Aryl","brother of muncher","Muncher","Muncher II"}
+
+ID = 30703
+Owner = 3215083
+LastTransition = 1095070080
+PaidUntil = 1100254080
+Guests = {"El rey uru","Winged shadow's daughter","Kitewe","Xvolope","Cloud Fighter","Imperiol","Shoostek","Vampire Princess Mara","Lehas-Recreated","Mai-Valentine","Aurum Warrior","Ex Cloud","Ice Stallion","Zippay","Twilie","Kajind","Datezo","Magical summoner","Sir Dustin","Monjunk","Cilia Darkstripes","Robion","Tonkpills","Ultimate Swordsman","Dixuri","Fox Striker","Drizzit","Peetrie","Galia","Alkamar","Ex Sephiroth","Ithaca Sparta","Nekkit","Felipe little master","Extreme worker","Zword","Reev","Shaleko de mono","son of jedi"}
+Subowners = {"Hero Swordsman"}
+
+ID = 32001
+Owner = 1185729
+LastTransition = 1098958068
+PaidUntil = 1099822094
+Guests = {"Distorted","Zelzona"}
+Subowners = {"Zezzert"}
+
+ID = 32002
+Owner = 993614
+LastTransition = 1076325014
+PaidUntil = 1099307680
+Guests = {"coretex"}
+Subowners = {}
+
+ID = 32003
+Owner = 271862
+LastTransition = 1089886037
+PaidUntil = 1099307395
+Guests = {"Socket","Elsa Von Spielburg"}
+Subowners = {"Socket","Elsa Von Spielburg"}
+
+ID = 32004
+Owner = 2599459
+LastTransition = 1093687899
+PaidUntil = 1101463899
+Guests = {}
+Subowners = {"Joe the sumoner"}
+
+ID = 32005
+Owner = 526728
+LastTransition = 1091268457
+PaidUntil = 1101636457
+Guests = {"Littletoon","Xooket","Zooket","Patrask","Ghaul","Celtic Segato","Fehiwi","Zap"}
+Subowners = {}
+
+ID = 32006
+Owner = 2579103
+LastTransition = 1098180465
+PaidUntil = 1100772465
+Guests = {"Mastersorc","Sohogo","Reh","kopuxezo","Devil Mauuz","Zipazen"}
+Subowners = {}
+
+ID = 32007
+Owner = 735519
+LastTransition = 1096625283
+PaidUntil = 1100430582
+Guests = {"Asuna","Rosalynne"}
+Subowners = {"Caledric"}
+
+ID = 32008
+Owner = 338093
+LastTransition = 1098439706
+PaidUntil = 1101031706
+Guests = {}
+Subowners = {}
+
+ID = 32009
+Owner = 1518838
+LastTransition = 1096452483
+PaidUntil = 1101636483
+Guests = {"conkor"}
+Subowners = {}
+
+ID = 32010
+Owner = 2504368
+LastTransition = 1092910105
+PaidUntil = 1100686105
+Guests = {"pedestrion","half an half","death chip","mothug","kottonz","pasler"}
+Subowners = {}
+
+ID = 32011
+Owner = 293091
+LastTransition = 1088244312
+PaidUntil = 1101549969
+Guests = {"Dark-Danz","Kogomai","Chryos","Arch Druid","Fewufu","Jlman","Zewil","Caleb-Knight"}
+Subowners = {"Dark-Danz","Kogomai","Chryos","Arch Druid"}
+
+ID = 32012
+Owner = 567766
+LastTransition = 1099044485
+PaidUntil = 1101636485
+Guests = {"zuwojanu"}
+Subowners = {}
+
+ID = 32013
+Owner = 4762291
+LastTransition = 1097057278
+PaidUntil = 1100858845
+Guests = {"Riktigkille","Laheb","Fredrik Snortare","Morfin the champion","Krizze"}
+Subowners = {"Patrask"}
+
+ID = 32014
+Owner = 2136375
+LastTransition = 1096452483
+PaidUntil = 1100858825
+Guests = {"Lord Kendrik","Lord Zekel","Lady Rosy","Cramitclowny","Armored Elite","Xetut","skidmark steve","Master sorcerer sam"}
+Subowners = {}
+
+ID = 32015
+Owner = 458093
+LastTransition = 1077707445
+PaidUntil = 1101035445
+Guests = {"Anji Mito","Reinhart","Reuben","Qoq","Newb Islander","Dumak","Menise","Lord Jetaw","Mary alice","Daugther of Vampair","Sir giggles","Zumewdwi","Full Force","Butcher Man"}
+Subowners = {}
+
+ID = 35001
+Owner = 260648
+LastTransition = 0
+PaidUntil = 1099479964
+Guests = {"*@sacred order","'","\"Second Chars of Members","'","crystal gazing","beamer","winter chyl","\"","\"GUESTS","angels child","Protector from ","friekster","!krazy ky"}
+Subowners = {"ciran","quado","konomi","beamer","agatar","braloth","vice lord@sacred order","high counsellor@sacred orde","mikki","krazy ky"}
+
+ID = 35002
+Owner = 295433
+LastTransition = 1098007807
+PaidUntil = 1099217480
+Guests = {"Sir galhad","Bransies","Zizov","Ziriz","danithor the defiled"}
+Subowners = {"Executorio","Zotari","Josh Groban","Supreme Gamma","Kridged"}
+
+ID = 35003
+Owner = 837470
+LastTransition = 1080212799
+PaidUntil = 1100948799
+Guests = {"kraizysorc","nervine","vimuzumu","fusudo","haim","paletas","paletas the druid","fantom archer","ogaiht nones","serberros","Bruno portuga","Diogo the warrior","Master Diogo","Grande conquistador","Miguel","Daniela the druid","Joao Crespo","Zeons-tidal wave","grande maluko","marknight","knight of the nightmare","sir filipe","paletas the archer","sir paletas","klodo ll","fusudo the druid","arthlink","samuel the sorcerer","lilith furi","sir felipao","shahar numb","tragedie","catarina","sir manyc","kraizyknight","stealth shadow ninja","dead sniper","spouk","Xemekobu","kiari","pedro borges","Mauricius Bio","Mountains Archer","Blueneto","Ruby Slayer","Paletas the sorcerer","Lady Catarina Filipa","iorda the sorcerer","pt kadiru","Lady Chani Tuga","iorda druid","Lord Gariani","Sapphire Slayer","Demon Sharpshooter","Demon Commando","Rackel"}
+Subowners = {"Diogo the archer"}
+
+ID = 35004
+Owner = 647552
+LastTransition = 1098698843
+PaidUntil = 1099304058
+Guests = {"Sakura moon","Klovur moon","stealthy yuffie","dim silhouette","tenzar","alec gem","mousemasters","trio clubs","dragon half","trekkers","bugzey","knight of stealth","gyper","sage-mage","hotec","dark dangerus","dark moles","dark zorro","dark wacha","nahualon","stoobs knight","mobob","risibixie","efex","gato-cazador","druid deily","Frezoin","zerous","xoderous","Kaluzzix","bagpiper andy","Lord Sti","orthis","tinkon"}
+Subowners = {"alec gem","sakura moon"}
+
+ID = 35005
+Owner = 241515
+LastTransition = 1082455668
+PaidUntil = 1100431003
+Guests = {"*@Rising Dragons Amera","GM Syikan","GM Syrn on Amera","Dragonas","GM Maribella Marbelton","Garalar","Ayria","Vulgatia"}
+Subowners = {"Wizardis","Syikan","Kelu Kalu","Erason","Issalia"}
+
+ID = 35006
+Owner = 241932
+LastTransition = 1070449893
+PaidUntil = 1099477872
+Guests = {"Royal Mad","Erason","Kelu Kalu","Pencilon","Muvelud"}
+Subowners = {"Erason","Kelu Kalu"}
+
+ID = 35007
+Owner = 453458
+LastTransition = 1076325014
+PaidUntil = 1099998734
+Guests = {"Ben Kweller","thyleader","nefirouse","undyne soul","doctor feelgood","bromley","simon yip"}
+Subowners = {"archbishop osane","peetrie","lord of druids"}
+
+ID = 35008
+Owner = 3311411
+LastTransition = 1093255716
+PaidUntil = 1101554052
+Guests = {"Dark Furby","Elpelado","Lord Tampico","Lord Hielito","Hombrekk","Kano Shredder","Rigoberta Menchu","Lugux Royality","Lady Claudymar","nightpandora","Dark Zolo","Abtala","Paoli"}
+Subowners = {}
+
+ID = 35009
+Owner = 260648
+LastTransition = 0
+PaidUntil = 1100603811
+Guests = {"\"","\"never again use wild card","*@sacred order","ducky kim"}
+Subowners = {"Ciran","agatar","braloth","quado","vice lord@sacred order","konomi","friek","friekster"}
+
+ID = 35010
+Owner = 517416
+LastTransition = 1082714704
+PaidUntil = 1100859316
+Guests = {"Pilupe","Zynka","Drucilla Dye","Kelowna","autumn rane"}
+Subowners = {"Pilupe"}
+
+ID = 35011
+Owner = 926887
+LastTransition = 1099044485
+PaidUntil = 1100427277
+Guests = {"Bokotufo","Tempted","Knemesis the second"}
+Subowners = {"Bokotufo"}
+
+ID = 35012
+Owner = 1870876
+LastTransition = 1085565916
+PaidUntil = 1101381256
+Guests = {"Spirit Strike","scram jet","Spirit Holder","ghost eagle","ice dragon knight","imperiol","Postal-rad","Vanityfaire","vulcun","cloud fighter","Fox Striker","Winter Dragon","wing falcon","Ice Dragon knight","cloud attacker","bujeh"}
+Subowners = {}
+
+ID = 35013
+Owner = 245125
+LastTransition = 0
+PaidUntil = 1099653128
+Guests = {"Phlox","Clematis","Spirit Strike","Vanityfaire","Dream-Catcher","Spirit Holder","Spirit Strike","Soulbinder","nervine","imperiol","cloud fighter","jet stream"}
+Subowners = {"Spirit Strike","Vanityfaire","Spirit Holder"}
+
+ID = 35014
+Owner = 1269982
+LastTransition = 1098526225
+PaidUntil = 1099566699
+Guests = {"jet stream","postal-rad","vanityfaire","vulcun"}
+Subowners = {}
+
+ID = 35015
+Owner = 1559369
+LastTransition = 1099130971
+PaidUntil = 1100690219
+Guests = {}
+Subowners = {"Revol","Naggano","Neath Arrow"}
+
+ID = 35016
+Owner = 241065
+LastTransition = 1087466644
+PaidUntil = 1099653128
+Guests = {"Darigazz","Incisa","Drucilla Dye","narya","Telemachas","Nisaxe","Elite Talrasha","Dustin the Destroyer","Sir Zuripant"}
+Subowners = {"Yurigo","Danithor the Defiled","Sir Dustin"}
+
+ID = 35017
+Owner = 258063
+LastTransition = 1096279699
+PaidUntil = 1100085678
+Guests = {"Muvelud","Solemn","Boboms","Warlike","Zizov","Danithor the Defiled","luskar ethiane","eternal oblivion"}
+Subowners = {"muvelud"}
+
+ID = 35018
+Owner = 333673
+LastTransition = 1086689160
+PaidUntil = 1099649160
+Guests = {"Aegis Light","Anii","Anika","Fluvvy","Haliah","Sitanie","Terrae","Vurashima","Xao'tal"}
+Subowners = {"Aegis Light"}
+
+ID = 35019
+Owner = 821276
+LastTransition = 1089367620
+PaidUntil = 1100431003
+Guests = {"Ogaiht Nones","Diogo the Sorcerer","dead sniper","Fusudo the druid","dead sniper","hopeless knight","Bokotufo"}
+Subowners = {"Diogo the sorcerer","ogaiht nones","Nervine"}
+
+ID = 35020
+Owner = 364211
+LastTransition = 1093774121
+PaidUntil = 1099480204
+Guests = {"postal-rad","vanityfaire","midknightangel","spirit strike","pyro mat","Icey sliver","soulbinder","clematis","dream-catcher","spirit holder"}
+Subowners = {"postal-rad","midknightangel","vanityfaire"}
+
+ID = 35021
+Owner = 3574641
+LastTransition = 1097403116
+PaidUntil = 1101377388
+Guests = {}
+Subowners = {}
+
+ID = 35022
+Owner = 4116749
+LastTransition = 1097143665
+PaidUntil = 1100171384
+Guests = {"Opukuko"}
+Subowners = {"Elvryn","Lintle"}
+
+ID = 35023
+Owner = 2771783
+LastTransition = 1098007806
+PaidUntil = 1100599806
+Guests = {"row rybnik hools","kobieta paladyn","birob"}
+Subowners = {}
+
+ID = 35024
+Owner = 1631654
+LastTransition = 1096193752
+PaidUntil = 1099393885
+Guests = {"lendrosurfer"}
+Subowners = {}
+
+ID = 35025
+Owner = 1211202
+LastTransition = 1097489316
+PaidUntil = 1099393694
+Guests = {"Redsoul","Gufa","Druider stifler"}
+Subowners = {"Redsoul","Drduier Stifler","Gufa"}
+
+ID = 35026
+Owner = 776205
+LastTransition = 1094292705
+PaidUntil = 1100171403
+Guests = {"Lightning healer","blup","False Flame","altigabi","sophy"}
+Subowners = {"shoostek"}
+
+ID = 35027
+Owner = 4113857
+LastTransition = 1097662206
+PaidUntil = 1099653013
+Guests = {"el pollosonico","ditex borlax","lord tampico","darkfurby"}
+Subowners = {}
+
+ID = 35028
+Owner = 571689
+LastTransition = 1071832197
+PaidUntil = 1100430582
+Guests = {}
+Subowners = {"Morinu","Kelduhas","Keldulas","vurixiru"}
+
+ID = 35029
+Owner = 241272
+LastTransition = 1099044485
+PaidUntil = 1099998564
+Guests = {}
+Subowners = {"Captain billy"}
+
+ID = 35030
+Owner = 691740
+LastTransition = 1096970854
+PaidUntil = 1099998494
+Guests = {"ken kinif","blitzkrieg rufus","hotlildevil","desiraz","snowballz"}
+Subowners = {"blitzkreig rufus","ken kinif","hotlildevil"}
+
+ID = 35031
+Owner = 1336390
+LastTransition = 1093169461
+PaidUntil = 1101640454
+Guests = {"Klodo","Tremesy","Xeduz","Skilled magician","Zword","Skilled Druidis","Lesco","Kujodon","Lord of Health"}
+Subowners = {"Klodo","Skilled Magician","Zword"}
+
+ID = 35032
+Owner = 321455
+LastTransition = 1096712059
+PaidUntil = 1101636601
+Guests = {"Davande"}
+Subowners = {"Heelflipe","Davande"}
+
+ID = 35033
+Owner = 956693
+LastTransition = 1098871665
+PaidUntil = 1101550598
+Guests = {"yuribro","kaxihi","battle draggon","tusub","Riper Of Heades","Shadowhunters"}
+Subowners = {"yuribro","kaxihi"}
+
+ID = 35034
+Owner = 538561
+LastTransition = 1095588854
+PaidUntil = 1099220715
+Guests = {}
+Subowners = {}
+
+ID = 35035
+Owner = 1314080
+LastTransition = 1095256745
+PaidUntil = 1100081113
+Guests = {"Crink","Gugo","Chitman","Bawk","Barbariffic","geneshe"}
+Subowners = {"Crink"}
+
+ID = 35036
+Owner = 573766
+LastTransition = 1094033288
+PaidUntil = 1100772577
+Guests = {"Gaizka du Cirque"}
+Subowners = {"Ivin Lilian"}
+
+ID = 35037
+Owner = 4055713
+LastTransition = 1091009276
+PaidUntil = 1100689858
+Guests = {"Samuray Warrior","sumon busca","farano","stiil","blueneto","sylomon","sorcerer igor"}
+Subowners = {"Samuray Warrior","sylomon","stiil","greaver"}
+
+ID = 35038
+Owner = 693637
+LastTransition = 1097057278
+PaidUntil = 1101035410
+Guests = {"Babzz","Boboms","Saiyanprince"}
+Subowners = {}
+
+ID = 35039
+Owner = 999215
+LastTransition = 1092132468
+PaidUntil = 1099307264
+Guests = {"Vampire Princess Mara","Rainna","Rerozo","Shoostek The Sorcerer","Penninio","vampire prince mara","mishmish"}
+Subowners = {"Vampire Princess Mara","Shahar Numb"}
+
+ID = 35040
+Owner = 602712
+LastTransition = 1060425048
+PaidUntil = 1099305048
+Guests = {"Mex-Outlaw","Devine Angel"}
+Subowners = {"Mex-Outlaw","Devine Angel"}
+
+ID = 35041
+Owner = 2617685
+LastTransition = 1095329209
+PaidUntil = 1100085678
+Guests = {"Guests of Paupers Palace, Flat 27","Naphtali","Mirages"}
+Subowners = {"Mirages","Naphtali"}
+
+ID = 35042
+Owner = 1911680
+LastTransition = 1096107072
+PaidUntil = 1099562863
+Guests = {"mirages","powax-druid","Rosalynne"}
+Subowners = {}
+
+ID = 35043
+Owner = 1011488
+LastTransition = 1092910105
+PaidUntil = 1100686105
+Guests = {"baazer","harry chicken","lord of summoner","chicken summoner"}
+Subowners = {}
+
+ID = 35044
+Owner = 5538844
+LastTransition = 1098353279
+PaidUntil = 1100945279
+Guests = {"Gleen Pacific","Murkdor","Douse","Corporate Knight Lord","Zixor"}
+Subowners = {}
+
+ID = 35045
+Owner = 1148700
+LastTransition = 1098439706
+PaidUntil = 1099221258
+Guests = {"Vampire princess mara","Shoostek"}
+Subowners = {"Vampire Princess Mara"}
+
+ID = 35046
+Owner = 255325
+LastTransition = 0
+PaidUntil = 1099221060
+Guests = {"lord tiger ace","krimson kat","golliath","kuzipor","spao","richys","lightning healer","half-moon striker","evil kitty of doom","knights tail","megami elf","xvolope","datezo","zippay","zippy junior","lord daedric","renity","mudwitch","dismissed","nekkit","lord giant nightwolf","kaotic koz","evil hand of doom","shahar numb","hercules hero of the skys","timekufu","siyuzio","koz","cymry arrow","defaults","snowy jade","tofareni"}
+Subowners = {"Princess uni","Avitek","Avilone","Krimson kat","Evil kitty of doom"}
+
+ID = 35047
+Owner = 310725
+LastTransition = 1076584211
+PaidUntil = 1099563133
+Guests = {"*@hive","*@shadow souls","Thyleader","naggano","anika","red ryder","sitanie","kojax","neath arrow","Spike-Spiegel","isamu"}
+Subowners = {"naggano"}
+
+ID = 35048
+Owner = 241814
+LastTransition = 1089367620
+PaidUntil = 1100603442
+Guests = {}
+Subowners = {}
+
+ID = 35049
+Owner = 272850
+LastTransition = 1091009276
+PaidUntil = 1099307523
+Guests = {"tayrissa","geria","gm syrn on amera","naggano","gm dalith amera"}
+Subowners = {}
+
+ID = 35050
+Owner = 341353
+LastTransition = 1060943489
+PaidUntil = 1099131133
+Guests = {"wizardis","dorim","jiaa","boomstick","eyesblack","loramir","fuomo","latsemy","kelu kalu","lady lorien","will hunting","asiago"}
+Subowners = {"anika","sitanie","eternal oblivion","dr gonzo"}
+
+ID = 35051
+Owner = 719670
+LastTransition = 1059042668
+PaidUntil = 1100514668
+Guests = {"Kelowna","Mr. Zlu","pilule","dedwar","Fynin","zynka"}
+Subowners = {"Dedwar","Pilupe","boboms","Hara","Danithor the defiled","Narcosis"}
+
+ID = 35052
+Owner = 770158
+LastTransition = 1099044485
+PaidUntil = 1099912164
+Guests = {"attilla"}
+Subowners = {}
+
+ID = 35053
+Owner = 275327
+LastTransition = 1096625283
+PaidUntil = 1100517145
+Guests = {"Mike huntwall","Nozob","Fielder Force","Broot Force","Angelic star","Vampyric Yorkie"}
+Subowners = {"Angelic Sorcoress","Mitsukai Kumoyuki"}
+
+ID = 35054
+Owner = 4314010
+LastTransition = 1095847631
+PaidUntil = 1101121774
+Guests = {"Lord Giant Nightwolf","alfredao","dark druida"}
+Subowners = {}
+
+ID = 35055
+Owner = 3850469
+LastTransition = 1092391687
+PaidUntil = 1101380986
+Guests = {"darkai","nervine","hopeless knight","Krimson kat","crysta unikorn","Evil Kitty Of Doom","Cilia Darkstripes","Cilia the darkmagican","avitek","Sharaha","Ameras wain","Gamge freeman"}
+Subowners = {}
+
+ID = 35056
+Owner = 886088
+LastTransition = 1098266864
+PaidUntil = 1099739216
+Guests = {"Eyesore","Latsemy","chabackie"}
+Subowners = {"Boomstick","Gil Grissom","Latsemy"}
+
+ID = 35057
+Owner = 336018
+LastTransition = 1090663622
+PaidUntil = 1100431003
+Guests = {"Avital Stormbringer","aethne"}
+Subowners = {"avital stormbringer","aethne"}
+
+ID = 35058
+Owner = 631533
+LastTransition = 1065002976
+PaidUntil = 1100431003
+Guests = {"gitoy","Sion Barsault","Vamadah","Kyo-na","Xeodin","saricus","Dwarven master","Peter Almighty","aapie gaapie","queen of the darkside","underground antiflag","Nizavu"}
+Subowners = {"Hobbit master","Ronaldus Albrilus","Vamadah"}
+
+ID = 35059
+Owner = 371784
+LastTransition = 1083665119
+PaidUntil = 1099476669
+Guests = {"deuce","asiag","awod wicke","eyesore"}
+Subowners = {"awod undersiege","awod wicket"}
+
+ID = 35060
+Owner = 1011070
+LastTransition = 1075806553
+PaidUntil = 1099134553
+Guests = {"Josh Groban","Zotari","Sowin","Isamu","Caledric","Nunga-Nunga","Mirages","Joharapa","El Rey uru"}
+Subowners = {"Ganesh"}
+
+ID = 35061
+Owner = 1813309
+LastTransition = 1091095652
+PaidUntil = 1099134855
+Guests = {}
+Subowners = {"japistar","woman of japibul","manttus"}
+
+ID = 35062
+Owner = 642238
+LastTransition = 1092132468
+PaidUntil = 1099912292
+Guests = {"sahel-lehas","lehas-recreated","auctioneerist","slackn II","slackn","druid king"}
+Subowners = {"little mac iv","enron","seikuro","creedxies","kreedexies","wasuho"}
+
+ID = 35063
+Owner = 262999
+LastTransition = 1095847631
+PaidUntil = 1100431003
+Guests = {"boboms"}
+Subowners = {"Boboms"}
+
+ID = 35064
+Owner = 905051
+LastTransition = 1077016219
+PaidUntil = 1100344142
+Guests = {}
+Subowners = {}
+
+ID = 40001
+Owner = 999221
+LastTransition = 1090058833
+PaidUntil = 1100257836
+Guests = {"Ryu ga inai","*@Matsuri Network","Ballad Assassin","Ebiqueen","Ron Tok","Staft","Dempa","Otokojyuku Sanmenken Gekkou","Queen of Kabukicho","Yokoyama Yasushi","Kirisaki Jack","Sueno Latino","Kuze","Ouba-rajio","Puttie","Rovo","Tentekomai","Gemagema","Luvle","Shiro Bon","Henry the hobo","overradio ha okama","nyannmage","bes cha","magic kitten","susi bomber","magemage","Chez Birgur","mingol"}
+Subowners = {"Taicho@Matsuri Network"}
+
+ID = 40002
+Owner = 2171475
+LastTransition = 1097662206
+PaidUntil = 1101377105
+Guests = {"paoli"}
+Subowners = {}
+
+ID = 40101
+Owner = 4044497
+LastTransition = 1098698843
+PaidUntil = 1100085142
+Guests = {}
+Subowners = {"Vezops Brother"}
+
+ID = 40102
+Owner = 1747308
+LastTransition = 1096452483
+PaidUntil = 1100084857
+Guests = {"Negati"}
+Subowners = {}
+
+ID = 40103
+Owner = 307816
+LastTransition = 1089799624
+PaidUntil = 1099480347
+Guests = {"Nihon Break Industrial","Erein","Cookle","Shiro Bon"}
+Subowners = {"Shiro Bon","Cookle"}
+
+ID = 40104
+Owner = 1579737
+LastTransition = 1068722159
+PaidUntil = 1099826159
+Guests = {"*@Matsuri Network","Netokama","Ouba-rajio","Kuze","Kirisaki jack","petit-cat","Qtaro","Rovo","Mokeebi","Yatsuse","Sueno Latino","Don Cobana","Simon Posford"}
+Subowners = {"Junkun","Taicho@Matsuri Network"}
+
+ID = 40105
+Owner = 1663037
+LastTransition = 1097316763
+PaidUntil = 1100945110
+Guests = {"jareknes","sir sorek","santhon","royal adio"}
+Subowners = {"Sir Aryam"}
+
+ID = 40106
+Owner = 2806214
+LastTransition = 1098958068
+PaidUntil = 1100864206
+Guests = {"ritur"}
+Subowners = {"Evil Jetta","Vezop Almighty"}
+
+ID = 40107
+Owner = 3797855
+LastTransition = 1092564584
+PaidUntil = 1100171550
+Guests = {"Nofexmike","Starting Line","requiement bob","claetus","gugo"}
+Subowners = {"Nofexmike"}
+
+ID = 40108
+Owner = 312209
+LastTransition = 0
+PaidUntil = 1101122165
+Guests = {"Hua Chiu","Saiyanprince","Eternal Merlin","Silent Max","Sensubean","Mors Repentinus"}
+Subowners = {"Firefreaker","Hua Chiu","Princess Alecia"}
+
+ID = 40109
+Owner = 3401362
+LastTransition = 1095934045
+PaidUntil = 1101118045
+Guests = {"bohofo"}
+Subowners = {}
+
+ID = 40110
+Owner = 554482
+LastTransition = 1096020467
+PaidUntil = 1099823223
+Guests = {"Iora","Kirisaki Jack","Kurogane","Sueno Latino","Purple Hermit"}
+Subowners = {"Iora","Kurogane"}
+
+ID = 40111
+Owner = 467798
+LastTransition = 1097834911
+PaidUntil = 1101294665
+Guests = {"sonic maxim","ricky cool ll","fire-hero","tibia henry hung","fire of orc","truant hero","vikapi","mozezuse","lucky dog","pojixih","band"}
+Subowners = {}
+
+ID = 40112
+Owner = 295715
+LastTransition = 1089886037
+PaidUntil = 1099736026
+Guests = {"Rosalynne","Zotari","*@Council of Power","*@Council of Power South Side","Samuel Langley","Asheara Blackblade","Elfun","Ewock the slayer","pacho pasquel","Isamu","Ranger Aragorn","Camaris","Injen"}
+Subowners = {}
+
+ID = 40211
+Owner = 4565727
+LastTransition = 1095588854
+PaidUntil = 1101553822
+Guests = {"shizune san","uchiha tenten","gods knight"}
+Subowners = {}
+
+ID = 40212
+Owner = 666997
+LastTransition = 1097575750
+PaidUntil = 1100859035
+Guests = {"Dragon Forces","Mevu","Royal Sync","zakiza","Tor Druid"}
+Subowners = {}
+
+ID = 40213
+Owner = 2383716
+LastTransition = 1092046062
+PaidUntil = 1100344268
+Guests = {"elastoid"}
+Subowners = {}
+
+ID = 40221
+Owner = 2429249
+LastTransition = 1095761252
+PaidUntil = 1100171137
+Guests = {"Wollverine","Meninas Veneno","Bezrutchka The Sorcerer "}
+Subowners = {}
+
+ID = 40222
+Owner = 3774376
+LastTransition = 1088676464
+PaidUntil = 1101377388
+Guests = {"Fijer","Erghun","Dist'dance","Ammunition","such'leet"}
+Subowners = {"Fijer","Erghun","Dist'dance"}
+
+ID = 40223
+Owner = 1334090
+LastTransition = 1093428552
+PaidUntil = 1100340954
+Guests = {"Xilume","Princess Helicia","Chonbura","Lord Velmort","saiyanprince","vijetu","sargeant webster","peece keeper","dom warrior"}
+Subowners = {"Xilume","Princess Helicia"}
+
+ID = 40224
+Owner = 1054664
+LastTransition = 1093169461
+PaidUntil = 1101204446
+Guests = {"Femef sorc","femef rk","felipe palada","youkai hiei","jujucreid","lord eddy","exuddery"}
+Subowners = {}
+
+ID = 40231
+Owner = 1318976
+LastTransition = 1095070080
+PaidUntil = 1100254080
+Guests = {"magic chunky","charly swordmaster"}
+Subowners = {"leon the arcanist"}
+
+ID = 40232
+Owner = 2472676
+LastTransition = 1097403116
+PaidUntil = 1101121830
+Guests = {"Mati Hanzel","Stern Mc'Lion","Jareknes","Fixami","cursed maua"}
+Subowners = {}
+
+ID = 40233
+Owner = 2176305
+LastTransition = 1097575750
+PaidUntil = 1100167750
+Guests = {"dark dangerus","dark moles ","bagpiper andy","dark zorro","punx jojo","lento violento","apocalipticus","dark wacha","Fapahaz"}
+Subowners = {"dark moles","bagpiper andy","dark zorro","Ant Ruler"}
+
+ID = 40234
+Owner = 2985332
+LastTransition = 1098094093
+PaidUntil = 1101037389
+Guests = {"Vipervennom"}
+Subowners = {"Lamehuevos"}
+
+ID = 40241
+Owner = 285017
+LastTransition = 1073214657
+PaidUntil = 1100689726
+Guests = {"Silouette","sandman phoenix","jolted"}
+Subowners = {}
+
+ID = 40242
+Owner = 2441074
+LastTransition = 1094551686
+PaidUntil = 1100600184
+Guests = {"yawgmoth the mage","leiny"}
+Subowners = {}
+
+ID = 40243
+Owner = 2885801
+LastTransition = 1092218863
+PaidUntil = 1098873000
+Guests = {"Shinta of Orion","Wiscon Crove of Foreignheart","Sir Alt","Hsiung"}
+Subowners = {}
+
+ID = 40244
+Owner = 394990
+LastTransition = 1052475014
+PaidUntil = 1099131014
+Guests = {"Jyersf","lord of the elves"}
+Subowners = {}
+
+ID = 40301
+Owner = 1084401
+LastTransition = 1096712059
+PaidUntil = 1100776141
+Guests = {"Bruxinha malvada","Jesemol","Line arian"}
+Subowners = {"Line arian"}
+
+ID = 40302
+Owner = 2359599
+LastTransition = 1097921443
+PaidUntil = 1100513443
+Guests = {"Endiabler","Styrik"}
+Subowners = {"Dondek"}
+
+ID = 40303
+Owner = 3606552
+LastTransition = 1093083035
+PaidUntil = 1100859035
+Guests = {"Honor Star","Raczo Kowacza","ljuben von gabrowo"}
+Subowners = {"ljuben von gabrowo"}
+
+ID = 40304
+Owner = 619415
+LastTransition = 1096193751
+PaidUntil = 1101377751
+Guests = {"Wizlux","Fijer","Dist'Dance"}
+Subowners = {}
+
+ID = 40401
+Owner = 4770007
+LastTransition = 1098698843
+PaidUntil = 1100513443
+Guests = {"Ritur","Rizp","Flammy","Noxik"}
+Subowners = {"Ritur","Rizp"}
+
+ID = 40402
+Owner = 783859
+LastTransition = 1078484716
+PaidUntil = 1100686639
+Guests = {"Guwange","Chez birgur","Magic kitten","Noob warllock","Henry the hobo","Cuwange","Fist of fire","gugo","master gugowid","tawara","skwater"}
+Subowners = {"Chez Birgur","Noob warllock","magic kitten","kthxbye","henry the hobo","Guwange","Cuawnge"}
+
+ID = 40403
+Owner = 1544850
+LastTransition = 1098094093
+PaidUntil = 1099134828
+Guests = {"Dark wacha","Sir Dangerus","Dark Moles","Punx Jojo","bagpiper andy","silent plantom","apocalipticus","lento violento","pulgoso"}
+Subowners = {"Dark Moles"}
+
+ID = 40404
+Owner = 1911337
+LastTransition = 1094897373
+PaidUntil = 1100518732
+Guests = {"aragorn dunedain","ari cafetao","elminster the magemaster","hanna the amazon princess","eddy the might warrior","fleetwood mac","ari cafetao","accio","jujucreid","ari junior","wertyarcher","femef sorc","marilow the lord knight","kafona"}
+Subowners = {"Lord Eddy"}
+
+ID = 40405
+Owner = 999221
+LastTransition = 1088503525
+PaidUntil = 1101722709
+Guests = {"chopper the great","cuwange"}
+Subowners = {}
+
+ID = 40406
+Owner = 1909985
+LastTransition = 1098785255
+PaidUntil = 1099994852
+Guests = {"Saydram","kalaxu"}
+Subowners = {}
+
+ID = 40407
+Owner = 669408
+LastTransition = 1095256745
+PaidUntil = 1100254934
+Guests = {"indico","zuzu druid"}
+Subowners = {}
+
+ID = 40409
+Owner = 1253808
+LastTransition = 1097748522
+PaidUntil = 1099998384
+Guests = {"Bugzey","Thann","Empireboy","Tyger Greenleaf"}
+Subowners = {"Bugzey","Tyger Greenleaf","Thann","Empireboy"}
+
+ID = 40410
+Owner = 381452
+LastTransition = 1096020467
+PaidUntil = 1100686118
+Guests = {"Quenn Knight","kexaxes"}
+Subowners = {}
+
+ID = 40411
+Owner = 503057
+LastTransition = 1076670610
+PaidUntil = 1099998610
+Guests = {"Xenzaren","Aldiana Vit","Mr messmor","Bexovam","johekiwana","Xenzern","Duzasoana","Smo"}
+Subowners = {}
+
+ID = 40412
+Owner = 242268
+LastTransition = 0
+PaidUntil = 1099480347
+Guests = {"Queen of Kabukicho","Otokojyuku Sanmenken Gekkou"}
+Subowners = {"Nikukopun"}
+
+ID = 40413
+Owner = 295715
+LastTransition = 1096020467
+PaidUntil = 1100171403
+Guests = {"Mythicus","Pinion","Descendent Soul","Netherias"}
+Subowners = {}
+
+ID = 40501
+Owner = 942036
+LastTransition = 1074769718
+PaidUntil = 1099393885
+Guests = {"viper striker","valor hawk","beast master wolf","Mariza","flaming spearrow","dark-swordsmen","deaths-blade","coklo kiki","king dung","le'tude","shearr","primade","coklo coklo","martin byerley","phantom elf","elite men","riptide","thann","sheerr"}
+Subowners = {}
+
+ID = 40502
+Owner = 333867
+LastTransition = 1091441256
+PaidUntil = 1099217256
+Guests = {}
+Subowners = {}
+
+ID = 40503
+Owner = 1056038
+LastTransition = 1094551686
+PaidUntil = 1101031955
+Guests = {"sir wizard time","mecania"}
+Subowners = {"sir wizard time"}
+
+ID = 40504
+Owner = 4146782
+LastTransition = 1098094093
+PaidUntil = 1100081328
+Guests = {"Green Joint","Royal Master Karol","Bobby Heman","gamge freeman"}
+Subowners = {}
+
+ID = 40505
+Owner = 1390209
+LastTransition = 1091700458
+PaidUntil = 1101118490
+Guests = {"samuel langley","resonance","babble ","quibly","octace chanute","firestorm","sluff","luemas phantom","pierpont","altragirl"}
+Subowners = {}
+
+ID = 40506
+Owner = 778571
+LastTransition = 1089972451
+PaidUntil = 1101204524
+Guests = {"refedebo","zigg zaggy","Rimame","rogil","Siania","snipey","Snowy Angel","tootsie druid","stefi","millsey on amera"}
+Subowners = {"refedebo","black sabbath rocks","zigg zaggy"}
+
+ID = 40507
+Owner = 4257220
+LastTransition = 1094810853
+PaidUntil = 1101553891
+Guests = {"refedebo","zaggy ziggy","millsey on amera"}
+Subowners = {}
+
+ID = 40508
+Owner = 3702441
+LastTransition = 1098958068
+PaidUntil = 1099826159
+Guests = {"Siania","Snowy Angel","Refedebo","Zaggy Ziggy","Rimame","Sir Rimame","Flammy","Flammy Flames","Darkleech","Kiies"}
+Subowners = {"Siania"}
+
+ID = 40509
+Owner = 1213453
+LastTransition = 1086950184
+PaidUntil = 1101550771
+Guests = {"jebeb","Mckeijan","lord tampico"}
+Subowners = {}
+
+ID = 40510
+Owner = 520113
+LastTransition = 1088157903
+PaidUntil = 1100603676
+Guests = {"jazfire","kylord","kylorb","kimzee","airesz"}
+Subowners = {}
+
+ID = 40611
+Owner = 4049925
+LastTransition = 1095329209
+PaidUntil = 1101467428
+Guests = {"REDDEVIL KNIGHT"}
+Subowners = {}
+
+ID = 40612
+Owner = 5070985
+LastTransition = 1097662206
+PaidUntil = 1100254206
+Guests = {}
+Subowners = {"Master kamilek"}
+
+ID = 40613
+Owner = 2154699
+LastTransition = 1085306826
+PaidUntil = 1101463795
+Guests = {"wholy","house-house","overradio ha okama"}
+Subowners = {"Googi","Fudoo","Nimoa","Ron Tok","Wimn","Uwoo","Jarooin","Est-bn","Googy sa","Goldery"}
+
+ID = 40614
+Owner = 2363415
+LastTransition = 1089626839
+PaidUntil = 1099649160
+Guests = {"Genky","Aragorn ricardo","Blade Sword Vampire","Druid of North","duplo ninja ninja","gixigen","Figgo","Dark Shaman of amera"}
+Subowners = {"Genky","Aragorn Ricardo"}
+
+ID = 40621
+Owner = 2186523
+LastTransition = 1099044485
+PaidUntil = 1101208291
+Guests = {"Erev","Colen","Mayotis","Sibirian","Zewie"}
+Subowners = {"Sosuteir"}
+
+ID = 40622
+Owner = 1872329
+LastTransition = 1098007807
+PaidUntil = 1101294582
+Guests = {"Erev","Sosuteir","Mayotis","Sibirian","Sergeant Xikko","Zewie"}
+Subowners = {"Fuzeke"}
+
+ID = 40623
+Owner = 2587941
+LastTransition = 1090318034
+PaidUntil = 1100686034
+Guests = {"Beutines Vampire","wertyarcher"}
+Subowners = {"Meniveg"}
+
+ID = 40624
+Owner = 3607660
+LastTransition = 1096020467
+PaidUntil = 1099134657
+Guests = {}
+Subowners = {}
+
+ID = 40625
+Owner = 1238465
+LastTransition = 1093169461
+PaidUntil = 1101640157
+Guests = {"lillies","sakura moon","ikrit","Princess Tara","Har the knight","aerithsephiroth","Jessjess nites","kaoscaim","lyn the tormentor","temble","Maynard","jessjess nite","alkamar","yoyomura II","lof","evil witch","tatilla","Lady Keladry of Mindelan","girli","guardin princess"}
+Subowners = {"Princess Tara","sakura moon","jessjess nite"}
+
+ID = 40626
+Owner = 2320381
+LastTransition = 1097143665
+PaidUntil = 1099735665
+Guests = {"muito forgado","Hell Hades","Lirity","magic rainox","Shadyside Knight","Debovun","Ze Polvinho Paladino"}
+Subowners = {"muito forgado","magic rainox"}
+
+ID = 40627
+Owner = 3016903
+LastTransition = 1087898646
+PaidUntil = 1100685986
+Guests = {"socha","l","galia"}
+Subowners = {}
+
+ID = 40628
+Owner = 688609
+LastTransition = 1098266864
+PaidUntil = 1099994852
+Guests = {"Druid Nukey","Babay","Gugo","Fergo The Messenjah"}
+Subowners = {}
+
+ID = 40631
+Owner = 3352366
+LastTransition = 1098007807
+PaidUntil = 1100430594
+Guests = {"anastomosis","ando cachondo","peludonio","sephirothaeris","sopitas","dark moles","pulgoso","el maximo druida","pacho pasquel","xoloescuincle","sopasitas","karmentxu","mexino macho","don platano"}
+Subowners = {}
+
+ID = 40632
+Owner = 5283368
+LastTransition = 1097230094
+PaidUntil = 1099994773
+Guests = {"little samuri","flaming spearrow","primade","deaths-blade","dark-swordsmen","mariza","le'tude"}
+Subowners = {}
+
+ID = 40633
+Owner = 3272846
+LastTransition = 1090145298
+PaidUntil = 1100430594
+Guests = {"menininha de amera","dark menininha de amera"}
+Subowners = {}
+
+ID = 40634
+Owner = 317103
+LastTransition = 1062929591
+PaidUntil = 1099217591
+Guests = {"Leero","Sensubean","Shu Gnilles","Laerec","lillies"}
+Subowners = {"Vijetu","Mofusas","Kuziwige"}
+
+ID = 40635
+Owner = 3548278
+LastTransition = 1094119664
+PaidUntil = 1101550121
+Guests = {"bagpiper andy","apocalipticus","pulgoso","dark wacha","dark zorro","punx jojo","dark dangerus","maynard","Silent Plantom","guilock"}
+Subowners = {"dark zorro","dark dangerus","lento violento"}
+
+ID = 40636
+Owner = 558083
+LastTransition = 1077707445
+PaidUntil = 1101035445
+Guests = {"astro boy","nahualon","sir yo","lord velmort"}
+Subowners = {}
+
+ID = 40637
+Owner = 328815
+LastTransition = 1094206072
+PaidUntil = 1099390072
+Guests = {"Dark moles","Don Platano","Sarnosa","Dark zorro","El maximo druida","Dark dangerus","lento violento","Mexino macho","Karmentxu","Lord Xinot","Lord Velmort","peludonio","Maynard"}
+Subowners = {"Don platano","Sarnosa"}
+
+ID = 40638
+Owner = 807582
+LastTransition = 1087725882
+PaidUntil = 1099389944
+Guests = {"nahualon","guilock"}
+Subowners = {}
+
+ID = 50101
+Owner = 980821
+LastTransition = 1094984193
+PaidUntil = 1100168193
+Guests = {"berenice"}
+Subowners = {"runn"}
+
+ID = 50102
+Owner = 408949
+LastTransition = 1071486736
+PaidUntil = 1099304419
+Guests = {"garalar","vulgatia"}
+Subowners = {"garalar"}
+
+ID = 50103
+Owner = 1244670
+LastTransition = 1097403116
+PaidUntil = 1100430669
+Guests = {"Mistress of Valor","Mystikal-cow"}
+Subowners = {"Mistress of Valor","Mystikal-cow"}
+
+ID = 50104
+Owner = 2457699
+LastTransition = 1079521564
+PaidUntil = 1099739509
+Guests = {"garoto mal","man-knight"}
+Subowners = {"mamut revoltado","bug do inferno"}
+
+ID = 50105
+Owner = 3748112
+LastTransition = 1098785255
+PaidUntil = 1100344268
+Guests = {"Little Pried","Knemesis the second","Sinyuin"}
+Subowners = {}
+
+ID = 50106
+Owner = 3237952
+LastTransition = 1088244312
+PaidUntil = 1100084817
+Guests = {"Troll Eliminator","Munchalot","Sir Vedappy","Kojey","Fejey","Palliden","Durado","Master Rune Maker","Wrath of Rage","Rage of Rage","Frenzy of Rage","Fury of Rage","Izit","Popgold"}
+Subowners = {}
+
+ID = 50107
+Owner = 243079
+LastTransition = 1080039940
+PaidUntil = 1100344197
+Guests = {"Sacred omni"}
+Subowners = {}
+
+ID = 50108
+Owner = 288920
+LastTransition = 1085306826
+PaidUntil = 1100341288
+Guests = {"will hunting","Thunder magic","socha"}
+Subowners = {}
+
+ID = 50109
+Owner = 1949537
+LastTransition = 1087639494
+PaidUntil = 1100599494
+Guests = {"Tharlo","Lorelyn","Tunino"}
+Subowners = {"Lorelyn","Tharlo","Tunino"}
+
+ID = 50110
+Owner = 557639
+LastTransition = 1098180465
+PaidUntil = 1100084973
+Guests = {}
+Subowners = {}
+
+ID = 50111
+Owner = 242243
+LastTransition = 1073473818
+PaidUntil = 1099393818
+Guests = {"Heart of the Sunrise","Ballad Assassin"}
+Subowners = {"Heart of the Sunrise"}
+
+ID = 50112
+Owner = 1600752
+LastTransition = 1094551686
+PaidUntil = 1099735686
+Guests = {}
+Subowners = {}
+
+ID = 50113
+Owner = 980932
+LastTransition = 1097748522
+PaidUntil = 1100513709
+Guests = {"sephiroths palidan"}
+Subowners = {"Great Milenko"}
+
+ID = 50114
+Owner = 320689
+LastTransition = 1095588854
+PaidUntil = 1099243779
+Guests = {"samuelray","Lord Ratt","Dark Choinnich","Master Ratt","Sorceror penguin","Dragon Frighter"}
+Subowners = {}
+
+ID = 50115
+Owner = 4387443
+LastTransition = 1096625282
+PaidUntil = 1099217282
+Guests = {}
+Subowners = {}
+
+ID = 50116
+Owner = 395547
+LastTransition = 1070881886
+PaidUntil = 1099394168
+Guests = {"fuomo"}
+Subowners = {}
+
+ID = 50117
+Owner = 2202796
+LastTransition = 1091959681
+PaidUntil = 1099307375
+Guests = {"Majewiz","Jeloziw","Gorablade","Safar-Wazier","Herosim","Princess caitlin"}
+Subowners = {}
+
+ID = 50118
+Owner = 483663
+LastTransition = 1092046062
+PaidUntil = 1099908731
+Guests = {}
+Subowners = {}
+
+ID = 50119
+Owner = 823466
+LastTransition = 1098266864
+PaidUntil = 1099390103
+Guests = {}
+Subowners = {}
+
+ID = 50120
+Owner = 1190460
+LastTransition = 1098698843
+PaidUntil = 1099737126
+Guests = {}
+Subowners = {"Olympiako"}
+
+ID = 50121
+Owner = 2100652
+LastTransition = 1090663622
+PaidUntil = 1099480204
+Guests = {"blit"}
+Subowners = {}
+
+ID = 50122
+Owner = 734488
+LastTransition = 1093601346
+PaidUntil = 1101031955
+Guests = {}
+Subowners = {}
+
+ID = 50123
+Owner = 4075401
+LastTransition = 1098612628
+PaidUntil = 1099390059
+Guests = {}
+Subowners = {}
+
+ID = 50124
+Owner = 841223
+LastTransition = 1081245971
+PaidUntil = 1099221068
+Guests = {"Sirius Greenleaf","Severus Snape","Doug the druid","Gilgamesh the Mage","Thann","Trekkers","Bugzey"}
+Subowners = {}
+
+ID = 50125
+Owner = 545976
+LastTransition = 1096884467
+PaidUntil = 1099476467
+Guests = {}
+Subowners = {"Witito el Magico"}
+
+ID = 50126
+Owner = 487151
+LastTransition = 1096020467
+PaidUntil = 1099653013
+Guests = {"Xidiv","Zoombini","Sha'Dar Shadrach","Nohgri"}
+Subowners = {}
+
+ID = 50127
+Owner = 3238534
+LastTransition = 1092391687
+PaidUntil = 1100862609
+Guests = {"Kunos","kinoplex"}
+Subowners = {"Kunos","kinoplex"}
+
+ID = 50128
+Owner = 2151991
+LastTransition = 1098353279
+PaidUntil = 1101640312
+Guests = {"hoppuss"}
+Subowners = {}
+
+ID = 50201
+Owner = 264236
+LastTransition = 1070449891
+PaidUntil = 1101553891
+Guests = {"Lilly Pendragon","Lady Lafiel","Sir Articus","Mex-Assassin","Gaius Marius"}
+Subowners = {}
+
+ID = 50202
+Owner = 773398
+LastTransition = 1089454040
+PaidUntil = 1099823488
+Guests = {"Kris ten"}
+Subowners = {}
+
+ID = 50203
+Owner = 2126268
+LastTransition = 1099044485
+PaidUntil = 1100167750
+Guests = {"cituan er amo"}
+Subowners = {"lord duffman","vugoxe","druida el birras"}
+
+ID = 50204
+Owner = 325263
+LastTransition = 1088417133
+PaidUntil = 1099998494
+Guests = {"daie","eiad"}
+Subowners = {"Lirasi"}
+
+ID = 50205
+Owner = 243107
+LastTransition = 1074942629
+PaidUntil = 1100862574
+Guests = {"Wobogi","Lirasi"}
+Subowners = {"Aderil"}
+
+ID = 50301
+Owner = 465579
+LastTransition = 1099044485
+PaidUntil = 1100946252
+Guests = {"Ponin the elf","Gugo"}
+Subowners = {}
+
+ID = 50302
+Owner = 1293115
+LastTransition = 1092132468
+PaidUntil = 1099998734
+Guests = {"Gilgamesh the Mage","Doug the Druid","Forty Seventh Ronin","Tyger Greenleaf","Empireboy","Bugzey","Little Samuri","severus snape","Trekkers"}
+Subowners = {}
+
+ID = 50303
+Owner = 2206815
+LastTransition = 1089108473
+PaidUntil = 1100772308
+Guests = {"Dark batlin","wogaramis"}
+Subowners = {"logoz","Lord logoz","Master Logoz"}
+
+ID = 50304
+Owner = 438916
+LastTransition = 1090922863
+PaidUntil = 1099217341
+Guests = {"Rheakith","calax","undyne soul","fuomo","trem"}
+Subowners = {"Rheakith"}
+
+ID = 50305
+Owner = 3495228
+LastTransition = 1094206073
+PaidUntil = 1101377169
+Guests = {"dyrk","tray","krazy ky","goblin muncher"}
+Subowners = {"dyrk"}
+
+ID = 50306
+Owner = 956552
+LastTransition = 1097921444
+PaidUntil = 1099479912
+Guests = {}
+Subowners = {"Dark Chaky","Xumuvade","Jabeva Aisengard"}
+
+ID = 50307
+Owner = 688962
+LastTransition = 1097143665
+PaidUntil = 1101381074
+Guests = {"Ciberius","Neo Rexx","Bringer of indignation","Ximubeke","Juvuki","Dlawe","Demon ciberius","devils charm","Crippling Devotion","Wolves Curse","Slashqueen","Holder of flames","elite pikuzez","Dasaff","Arrchy","Heppico","Ashes of Tommorow"}
+Subowners = {"Kalumo","Bringer of indignation","Dlawe"}
+
+ID = 50308
+Owner = 3447513
+LastTransition = 1098958068
+PaidUntil = 1101550068
+Guests = {"Samuray warrior"}
+Subowners = {}
+
+ID = 50309
+Owner = 4098843
+LastTransition = 1096020467
+PaidUntil = 1101204467
+Guests = {"archy bunker","judoic"}
+Subowners = {"Archy Bunker"}
+
+ID = 50311
+Owner = 5505500
+LastTransition = 1098439706
+PaidUntil = 1100689718
+Guests = {"Fuomo","rheakith"}
+Subowners = {}
+
+ID = 50312
+Owner = 965458
+LastTransition = 1087293831
+PaidUntil = 1101381074
+Guests = {}
+Subowners = {"Dark Chaky","Jabeva","Dark Batlin"}
+
+ID = 50313
+Owner = 274166
+LastTransition = 1051784121
+PaidUntil = 1101032121
+Guests = {"Squidy de Druid","Squidy de striker"}
+Subowners = {"Squidy de Druid","Squidy de Striker"}
+
+ID = 50314
+Owner = 1349465
+LastTransition = 1096970854
+PaidUntil = 1099562854
+Guests = {}
+Subowners = {"Unlimited"}
+
+ID = 50315
+Owner = 2569979
+LastTransition = 1086862023
+PaidUntil = 1101118208
+Guests = {"ciran ","tray","kaida inari","Krazyk","derkezz","izit"}
+Subowners = {}
+
+ID = 50316
+Owner = 3282208
+LastTransition = 1098007807
+PaidUntil = 1099217256
+Guests = {"kaida inari","krazy ky","archee","tray"}
+Subowners = {}
+
+ID = 50317
+Owner = 485947
+LastTransition = 0
+PaidUntil = 1101121774
+Guests = {"hance howard","friek","krazy ky"}
+Subowners = {"ciran","tray","Braloth","cynric","azurhayden","vice lord@sacred order","quado","azurden"}
+
+ID = 50318
+Owner = 1397457
+LastTransition = 1098698843
+PaidUntil = 1098529861
+Guests = {"chonbura","rebel raid","elvryn","shaiden"}
+Subowners = {}
+
+ID = 50319
+Owner = 619467
+LastTransition = 1086862023
+PaidUntil = 1100171403
+Guests = {"dark batlin"}
+Subowners = {}
+
+ID = 50320
+Owner = 293262
+LastTransition = 1052993592
+PaidUntil = 1099649592
+Guests = {"Konomi","Tray","Ciran","Agatar"}
+Subowners = {}
+
+ID = 50321
+Owner = 3921664
+LastTransition = 1096884467
+PaidUntil = 1101204446
+Guests = {"dionysis","usako"}
+Subowners = {}
+
+ID = 50322
+Owner = 477613
+LastTransition = 1059993000
+PaidUntil = 1101465000
+Guests = {"Eschbach","Nofx Nation"}
+Subowners = {"Eschbach"}
+
+ID = 50323
+Owner = 1969313
+LastTransition = 1098180465
+PaidUntil = 1099908968
+Guests = {"Kyra warrior","Lord koko eneko","Cituan er Amo","Hay poten"}
+Subowners = {}
+
+ID = 50324
+Owner = 5550587
+LastTransition = 1099130971
+PaidUntil = 1099131149
+Guests = {"malek","unnatural knight"}
+Subowners = {}
+
+ID = 50325
+Owner = 2085577
+LastTransition = 1098007807
+PaidUntil = 1099825513
+Guests = {"Suzie Cue","lombo","peebster","foluria","ashrayel","trekkers","Dierdre Skye","Rienne","blazinghunter","lillies","tiggeress","angel of mischeif"}
+Subowners = {"lillies"}
+
+ID = 50326
+Owner = 5053959
+LastTransition = 1097921444
+PaidUntil = 1100340954
+Guests = {"Beamer","Mendusa","Beamerjunior","vol","Stormy thunder","cybeck","rupmu","krazy ky"}
+Subowners = {}
+
+ID = 50401
+Owner = 286999
+LastTransition = 1097921444
+PaidUntil = 1100945677
+Guests = {"todeshi kwan","stormy thunder","shadowing knight","pred"}
+Subowners = {}
+
+ID = 50402
+Owner = 243007
+LastTransition = 1096970854
+PaidUntil = 1101122165
+Guests = {"memoire","fuomo","Meiner","midway"}
+Subowners = {}
+
+ID = 50403
+Owner = 2146387
+LastTransition = 1097748522
+PaidUntil = 1099393870
+Guests = {"talia thunder","bolaro","yantil","dark dragon lord of dragons","todeshi kwan"}
+Subowners = {"Shadowing knight","cybeck","pred","shadowing sabra","talia thunder"}
+
+ID = 50404
+Owner = 240748
+LastTransition = 1095847631
+PaidUntil = 1099912025
+Guests = {"Midway","Fuomo","Rebellion","Dantevius","Tasp","Aitou","Midelo","Blacktears","Raoul Haskmanjaar","Scarlet tears","homunkulus","Kelmor Ürgul"}
+Subowners = {"Midway"}
+
+ID = 50405
+Owner = 1455338
+LastTransition = 1093774121
+PaidUntil = 1099307417
+Guests = {"Cordelia the warrior princess"}
+Subowners = {"Jimmy Stronghold"}
+
+ID = 50406
+Owner = 1048503
+LastTransition = 1070622670
+PaidUntil = 1099563194
+Guests = {"joxini"}
+Subowners = {}
+
+ID = 50407
+Owner = 704303
+LastTransition = 1079089514
+PaidUntil = 1099652710
+Guests = {"Lord Drakore","Loramir","Will Hunting","dorim","asiago","jiaa","fuomo","lord dracus","big jer","latsemy","ryoushin","narya"}
+Subowners = {"Lord Drakore","Will Hunting"}
+
+ID = 50408
+Owner = 263785
+LastTransition = 1094551686
+PaidUntil = 1099739564
+Guests = {"Muncher II","Brother Of Muncher","frank dee"}
+Subowners = {}
+
+ID = 50409
+Owner = 3668125
+LastTransition = 1097662206
+PaidUntil = 1100254206
+Guests = {"Xexol","Nakivaha","Quadrinero","Zezzert","keeper of evil"}
+Subowners = {"Xexol","Nakivaha"}
+
+ID = 50410
+Owner = 2878548
+LastTransition = 1090231665
+PaidUntil = 1101467522
+Guests = {"lady marmalade","monjunk","jee jee","lady aula","inferni"}
+Subowners = {}
+
+ID = 50501
+Owner = 1104384
+LastTransition = 1094206072
+PaidUntil = 1099390072
+Guests = {"Sir Saramon","Nuxuxani","Vumileh","Lord-Fudge","Phanaikeluths"}
+Subowners = {}
+
+ID = 50502
+Owner = 570540
+LastTransition = 1096712059
+PaidUntil = 1100776128
+Guests = {"Will Hunting","Don Azzaro","Jeressious Darkreaver","Shopgirl"}
+Subowners = {}
+
+ID = 50503
+Owner = 2771785
+LastTransition = 1097316762
+PaidUntil = 1099908762
+Guests = {}
+Subowners = {"wenus"}
+
+ID = 50504
+Owner = 4697028
+LastTransition = 1096366064
+PaidUntil = 1100862652
+Guests = {"Nocturnal jester","Craz the beast"}
+Subowners = {}
+
+ID = 50505
+Owner = 365549
+LastTransition = 1070622670
+PaidUntil = 1101636693
+Guests = {"syzoky","benef","wanuma","timmie","glowing hands"}
+Subowners = {}
+
+ID = 50506
+Owner = 2424185
+LastTransition = 1090490833
+PaidUntil = 1100603461
+Guests = {"Rheakith","Calax","Ponin the elf","Fuomo"}
+Subowners = {}
+
+ID = 50507
+Owner = 266328
+LastTransition = 1091614059
+PaidUntil = 1099390059
+Guests = {"band","durids","wusis","tibia henry hung","tibia ricky ku"}
+Subowners = {}
+
+ID = 50508
+Owner = 846672
+LastTransition = 1096452483
+PaidUntil = 1099303736
+Guests = {"rolheim","tikiwasabi","syrik","redz","skooma","joshy washy","shazz","sha'dar shadrach","brotenks","thyleader","master knite","Kemosavi","Sybryn","tibage iv"}
+Subowners = {"tikiwasabi","syrik"}
+
+ID = 50509
+Owner = 257809
+LastTransition = 1087466644
+PaidUntil = 1100430649
+Guests = {"Tanakayoru","cuales cambures","pandora of silence","panfilo eliot","nastead","wobogi","muncher","Hadessious darkreaver"}
+Subowners = {"Eowyn of Rohan","Guareber","Lady Death of the Endless"}
+
+ID = 50510
+Owner = 401083
+LastTransition = 1096970854
+PaidUntil = 1101204524
+Guests = {"Farooqua","Born Archer"}
+Subowners = {}
+
+ID = 50511
+Owner = 388616
+LastTransition = 1072005095
+PaidUntil = 1100344197
+Guests = {"snappy","royla cop"}
+Subowners = {}
+
+ID = 50512
+Owner = 358010
+LastTransition = 1098612628
+PaidUntil = 1101117902
+Guests = {"vol","Katlajle",",,l,, Haha fucking niggers"}
+Subowners = {"Katlajle ","Sneaky sneaky"}
+
+ID = 50513
+Owner = 1497053
+LastTransition = 1088417133
+PaidUntil = 1101377133
+Guests = {}
+Subowners = {}
+
+ID = 50514
+Owner = 1670053
+LastTransition = 1087553059
+PaidUntil = 1101121830
+Guests = {"Sanov"}
+Subowners = {"Pegoj","Reev","Noir Assassins"}
+
+ID = 50515
+Owner = 1186917
+LastTransition = 1091786841
+PaidUntil = 1101292174
+Guests = {"Avenged Druid of Death","Druid dom"}
+Subowners = {}
+
+ID = 50516
+Owner = 285751
+LastTransition = 1079435134
+PaidUntil = 1100513788
+Guests = {"gugo","master knite","anghellic","qazwert","danoive"}
+Subowners = {"queen of the dragons"}
+
+ID = 50517
+Owner = 391069
+LastTransition = 1079867361
+PaidUntil = 1099217480
+Guests = {"Mandurang","Prismat","Kinter","Belldar","Zizov"}
+Subowners = {"Kinter","Belldar"}
+
+ID = 50601
+Owner = 762906
+LastTransition = 1069067137
+PaidUntil = 1100171137
+Guests = {"Band","Maxinum","Vekine","Kabepimas","Dark of Fire Angel","Dark of Ice Angel","Camp girl","Mozezuse","Sherluk Jones","Mubovir","Kabop","Nalud","Tibia ricky ku","Sonic maxim","Ar","Ricky cool ll"}
+Subowners = {}
+
+ID = 50602
+Owner = 243631
+LastTransition = 1049105679
+PaidUntil = 1099393824
+Guests = {"*@Elite Avengers","Nicep","Zamog"}
+Subowners = {"Council Avenger@Elite Avengers"}
+
+ID = 50603
+Owner = 334254
+LastTransition = 1073992164
+PaidUntil = 1099912164
+Guests = {"Sir parseeker","sir ratt","Mackducky","Sir lobo","Lady Jodie","Rackel","Sermonoff","lord ratt","El gran kampeon","Unnatural knight","cordelia the warrior princess","samuelray","Lady Ctop","Sir tweeter","Rooster Wolfen","Empireboy","dragon frighter","Kompanix","Sermonoff Angel","Avec","Trucker the second","Joefish","Band","strapping young lad","Menise","Dark Choinnich","evil-bart","Ceasar Claw","Inuyasha the tensiga holder","Sorceror Penguin","Aram","Ninja of Healing","Ninja of Chaos","Dwain druid lord","Master Tweeter","Unnatural Sorc","Elmera Stronghart","Gen Viper","Dragon Frighter","Master Ratt","Overcharge","Beamer","Lord Airhead"}
+Subowners = {"Lady Ctop"}
+
+ID = 50604
+Owner = 241515
+LastTransition = 1074510595
+PaidUntil = 1101035449
+Guests = {"Masasil","Syrnn","Hetokera Batosi","GM Syrn on Amera","Issalia","Kidorah"}
+Subowners = {"Broken Angel","Angels Child"}
+
+ID = 50701
+Owner = 611993
+LastTransition = 1095070080
+PaidUntil = 1100945101
+Guests = {"psiamp","pixiegurl","lord blitz","aleanah","awod undersiege"}
+Subowners = {}
+
+ID = 50702
+Owner = 2206408
+LastTransition = 1098094093
+PaidUntil = 1099908402
+Guests = {"Cordelia the Warrior Princess"}
+Subowners = {}
+
+ID = 50703
+Owner = 2588485
+LastTransition = 1097921444
+PaidUntil = 1100081328
+Guests = {"Enabyks Sunavlys","Tyranus Skybane","Terridas Skybane","Silverion Skybane"}
+Subowners = {}
+
+ID = 50704
+Owner = 597558
+LastTransition = 1052043274
+PaidUntil = 1101291274
+Guests = {"kaida inari"}
+Subowners = {"ciran","braloth","tray","quado","konomi","agatar","krazy ky","azurhayden","derkezz","dyrk"}
+
+ID = 50705
+Owner = 1213494
+LastTransition = 1098526225
+PaidUntil = 1101290917
+Guests = {"Maniac-man","Lord-Magic","Arch-bishop","Domog","Tapad"}
+Subowners = {}
+
+ID = 50706
+Owner = 610910
+LastTransition = 1097921444
+PaidUntil = 1101294665
+Guests = {"Magical zimih","Phaaz","Mokilita"}
+Subowners = {}
+
+ID = 50707
+Owner = 242412
+LastTransition = 1098698843
+PaidUntil = 1100254036
+Guests = {}
+Subowners = {}
+
+ID = 52001
+Owner = 714606
+LastTransition = 1098958068
+PaidUntil = 1100430715
+Guests = {}
+Subowners = {}
+
+ID = 52002
+Owner = 1994637
+LastTransition = 1082628308
+PaidUntil = 1099739484
+Guests = {"Rheakith","osyrus","isteldor","aranada","Undyne Soul"}
+Subowners = {"rheakith"}
+
+ID = 52003
+Owner = 605642
+LastTransition = 1098698843
+PaidUntil = 1099826159
+Guests = {}
+Subowners = {}
+
+ID = 52004
+Owner = 473652
+LastTransition = 1093428552
+PaidUntil = 1099480610
+Guests = {"Liket","Xexol","zelzona"}
+Subowners = {"Floglot","Liket"}
+
+ID = 52005
+Owner = 3214127
+LastTransition = 1097834911
+PaidUntil = 1100340521
+Guests = {}
+Subowners = {"Andinho"}
+
+ID = 52006
+Owner = 1227864
+LastTransition = 1076152206
+PaidUntil = 1100514668
+Guests = {"Vegeta San","sixele","Genmu","violent forrest","violent ken"}
+Subowners = {"Violent Forrest","Violent Ken","Sixele","Genmu"}
+
+ID = 52007
+Owner = 461278
+LastTransition = 1082024052
+PaidUntil = 1101380986
+Guests = {"Zaggy Ziggy","Zigg Zaggy","Stefi","Tootsie Druid"}
+Subowners = {}
+
+ID = 52008
+Owner = 341598
+LastTransition = 1093169461
+PaidUntil = 1101553890
+Guests = {}
+Subowners = {}
+
+ID = 52009
+Owner = 1018142
+LastTransition = 1098439706
+PaidUntil = 1100858918
+Guests = {"Cavaleiro de fenix","Heimdall shielder"}
+Subowners = {}
+
+ID = 52010
+Owner = 4464867
+LastTransition = 1095588854
+PaidUntil = 1099130709
+Guests = {}
+Subowners = {}
+
+ID = 52011
+Owner = 700110
+LastTransition = 1052129700
+PaidUntil = 1101291274
+Guests = {}
+Subowners = {"Ogfetan Riglan","Kamol","Yulo Braffon","Riverblade"}
+
+ID = 52012
+Owner = 2672039
+LastTransition = 1096625282
+PaidUntil = 1099217282
+Guests = {"arathys the dark","drizaur","de-andrew","elevate","de-loaded"}
+Subowners = {"ninja of chaos"}
+
+ID = 52013
+Owner = 4279261
+LastTransition = 1092391687
+PaidUntil = 1101037389
+Guests = {"dredicts","ninja of healing","zoib","gamal","ninja of chaos","jessikaa"}
+Subowners = {}
+
+ID = 52014
+Owner = 584906
+LastTransition = 1092564584
+PaidUntil = 1100254177
+Guests = {"Terridas Skybane","Silverion Skybane"}
+Subowners = {"Enabyks Sunavlys"}
+
+ID = 52015
+Owner = 5153792
+LastTransition = 1097748522
+PaidUntil = 1099908368
+Guests = {"abigale","marisa","meadow","born soldier"}
+Subowners = {"Abigale","Marisa"}
+
+ID = 52016
+Owner = 1897608
+LastTransition = 1094206073
+PaidUntil = 1100171565
+Guests = {}
+Subowners = {"Kejo Atirador","Tiao Camarao","Lord Fabio Eiji","Waliheto"}
+
+ID = 52017
+Owner = 1625365
+LastTransition = 1095588854
+PaidUntil = 1099134553
+Guests = {"Unnatural Knight","Unnatural Sorc","Unnatural Shooter","Winter Wolf Dog","Rodney Mullet","Orikia","deadbug the wizard","ninja of healing","ninja of chaos."}
+Subowners = {"Unnatural Knight","Unnatural sorc","Winter WOlf dog"}
+
+ID = 52018
+Owner = 4766505
+LastTransition = 1095588854
+PaidUntil = 1099134657
+Guests = {"Mastir obieone","Timathron"}
+Subowners = {"totiebudso"}
+
+ID = 52019
+Owner = 4754832
+LastTransition = 1097748521
+PaidUntil = 1100340521
+Guests = {"drizaur"}
+Subowners = {}
+
+ID = 52021
+Owner = 4924563
+LastTransition = 1098526225
+PaidUntil = 1099476367
+Guests = {"Rogil","flammy","siania","flammy flames","rimame","kiies"}
+Subowners = {}
+
+ID = 52022
+Owner = 270612
+LastTransition = 1096970854
+PaidUntil = 1099307680
+Guests = {"will hunting","loramir"}
+Subowners = {"Big jer"}
+
+ID = 54001
+Owner = 311425
+LastTransition = 1087121181
+PaidUntil = 1100081181
+Guests = {"yeyetrapo","lord jujue","yeyerapo","lof"}
+Subowners = {"lord jujue","pachuco bailarin","yeyetrapo","spsato","coyot cojo","lof"}
+
+ID = 54002
+Owner = 4545994
+LastTransition = 1098353279
+PaidUntil = 1101035410
+Guests = {"Zeriel","Gabad"}
+Subowners = {}
+
+ID = 54003
+Owner = 1163680
+LastTransition = 1098785255
+PaidUntil = 1101204552
+Guests = {"seycom","don walo","Ganondor","abtala","paoli"}
+Subowners = {}
+
+ID = 54004
+Owner = 631134
+LastTransition = 1090404440
+PaidUntil = 1101290701
+Guests = {"ganondor","lady dayancita","granfaloon","sonya","abtala","don vampirium"}
+Subowners = {}
+
+ID = 54005
+Owner = 1794820
+LastTransition = 1092218863
+PaidUntil = 1100858825
+Guests = {"nocturnal jester","Hitmanll","everbound","Gugo"}
+Subowners = {}
+
+ID = 54006
+Owner = 656553
+LastTransition = 1085911544
+PaidUntil = 1101463544
+Guests = {"celtic crusador"}
+Subowners = {"lord palopa"}
+
+ID = 54007
+Owner = 1357140
+LastTransition = 1087812251
+PaidUntil = 1100685880
+Guests = {}
+Subowners = {}
+
+ID = 54008
+Owner = 3997861
+LastTransition = 1096539226
+PaidUntil = 1100772854
+Guests = {"CITUAN ER AMO"}
+Subowners = {}
+
+ID = 54009
+Owner = 634791
+LastTransition = 1094984194
+PaidUntil = 1101636550
+Guests = {"pachuco bailarin"}
+Subowners = {"charly swordmaster","yeyetrapo","spsato","lord jujue","magic chunky"}
+
+ID = 54010
+Owner = 3673363
+LastTransition = 1093946984
+PaidUntil = 1099130984
+Guests = {"vikapi","refene","raside","hellbrazer"}
+Subowners = {"vikapi","refene","raside","hellbrazer"}
+
+ID = 54011
+Owner = 1368515
+LastTransition = 1088503525
+PaidUntil = 1099563255
+Guests = {"kagapozo","zazagag"}
+Subowners = {}
+
+ID = 54012
+Owner = 2743406
+LastTransition = 1096798294
+PaidUntil = 1099649290
+Guests = {}
+Subowners = {}
+
+ID = 54013
+Owner = 594685
+LastTransition = 1097057278
+PaidUntil = 1099908468
+Guests = {"nirtus"}
+Subowners = {}
+
+ID = 54014
+Owner = 800632
+LastTransition = 1098007806
+PaidUntil = 1100599806
+Guests = {"Zeriel","Xeriel","Worhees","Xordien","Amakuni"}
+Subowners = {"Zeriel","Gullefjuun","xeriel"}
+
+ID = 54015
+Owner = 2410504
+LastTransition = 1098785255
+PaidUntil = 1100859316
+Guests = {"Lord Smooky","Evensson","Fire Juna","Juna Summoner","sibyllamannen"}
+Subowners = {}
+
+ID = 54016
+Owner = 819656
+LastTransition = 1068030855
+PaidUntil = 1099134855
+Guests = {"digezi","pallio"}
+Subowners = {}
+
+ID = 54017
+Owner = 577539
+LastTransition = 1095847631
+PaidUntil = 1099393908
+Guests = {"forces of evil","dealio"}
+Subowners = {"Lex Force","dealio"}
+
+ID = 54018
+Owner = 1316020
+LastTransition = 1095847631
+PaidUntil = 1101636464
+Guests = {"Lord-Demonic"}
+Subowners = {}
+
+ID = 54019
+Owner = 2219968
+LastTransition = 1098612628
+PaidUntil = 1100167686
+Guests = {"Little Izzo"}
+Subowners = {}
+
+ID = 54020
+Owner = 285993
+LastTransition = 1092996572
+PaidUntil = 1100082510
+Guests = {"Tibage Iv","Tibage Druid","Awod Kikaider","Big Jer","Ulitmate pally","Jetup","Ulitmate knight","Justin the supper druid","Justin the super sorccer","Hunnie-Bun"}
+Subowners = {"Tibage Iv","Tibage Druid","Awod Kikaider"}
+
+ID = 54021
+Owner = 2502337
+LastTransition = 1097316763
+PaidUntil = 1101117902
+Guests = {"Tivisola","Arnootje","Tivisola Druid","Lord Roebersen"}
+Subowners = {"Tivisola","Tivisola Druid"}
+
+ID = 54022
+Owner = 754956
+LastTransition = 1094984194
+PaidUntil = 1099998685
+Guests = {"Summergoddess","Summershine","Lexicor"}
+Subowners = {}
+
+ID = 54023
+Owner = 2686020
+LastTransition = 1097057278
+PaidUntil = 1099994838
+Guests = {"salacious fury","ken casey","lady orithyia","galadrialle","selena casey","huksada"}
+Subowners = {"ken casey","salacious fury","selena casey"}
+
+ID = 54024
+Owner = 535639
+LastTransition = 1089367620
+PaidUntil = 1100171551
+Guests = {"digezi","mofames","utedo karu","saber king","druida elven","xuul","mantrolltion"}
+Subowners = {"digezi","ladyravenness"}
+
+ID = 54025
+Owner = 240419
+LastTransition = 1097057278
+PaidUntil = 1101032121
+Guests = {"Born Soldier","Farooqua","Starry","Rama","Arissa","Angeleyez","Hadessious Darkreaver","Digezi","Faiden","seismic","dragonas","red lyon","rewler","illy-yo","xureduw","tasp","aleanah"}
+Subowners = {}
+
+ID = 54026
+Owner = 4860373
+LastTransition = 1096970854
+PaidUntil = 1099562854
+Guests = {"Thadow","Dire Avengerz"}
+Subowners = {}
+
+ID = 54027
+Owner = 257809
+LastTransition = 1095934045
+PaidUntil = 1101290971
+Guests = {"*@Darkreaver Nation","fuomo","muncher","digezi","sandee","Stormy Thunder","Meadow","Blacktears","Amailliana","Ponin the Elf","Big Jer"}
+Subowners = {"Hadessious Darkreaver"}
+
+ID = 58000
+Owner = 1373348
+LastTransition = 1093687899
+PaidUntil = 1101463899
+Guests = {}
+Subowners = {"Thawman","Thaw the Korean"}
+
+ID = 58001
+Owner = 1689175
+LastTransition = 1097230094
+PaidUntil = 1101463899
+Guests = {"Calax","Osyrus","cerenity","rheakith","Isteldor","joxini"}
+Subowners = {"Calax","Isteldor"}
+
+ID = 58002
+Owner = 2442046
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"Gunthar Ghent","Maxium Maxx"}
+Subowners = {}
+
+ID = 58003
+Owner = 606637
+LastTransition = 1092910105
+PaidUntil = 1100686105
+Guests = {"lord of summoner","harry chicken","lord-pyro","misticks"}
+Subowners = {"demon fire arrow","oasisx","bee ron"}
+
+ID = 58004
+Owner = 1909884
+LastTransition = 1092910105
+PaidUntil = 1100686105
+Guests = {"oblitzerator the druid","guardian beast the sorcerer","shadow elite sorcerer"}
+Subowners = {}
+
+ID = 58005
+Owner = 4801084
+LastTransition = 1098871665
+PaidUntil = 1100772567
+Guests = {"Naja Prince","Naja Naja"}
+Subowners = {}
+
+ID = 58006
+Owner = 4204769
+LastTransition = 1097316763
+PaidUntil = 1101377345
+Guests = {}
+Subowners = {"Silver metronome"}
+
+ID = 58007
+Owner = 2516365
+LastTransition = 1096020467
+PaidUntil = 1100772567
+Guests = {"Jason Nightbreeze","Akira Darkwind","Raghnall","Renjiro Braveheart","Cho Kumiko"}
+Subowners = {}
+
+ID = 58008
+Owner = 275216
+LastTransition = 1099130971
+PaidUntil = 1101722971
+Guests = {"doboler","doboler the druid","kero darkwind","bob darkwind"}
+Subowners = {"doboler"}
+
+ID = 58009
+Owner = 1502036
+LastTransition = 1098007807
+PaidUntil = 1101463899
+Guests = {"Ximubeke","Ashes of Tommorow"}
+Subowners = {"Ximubeke","Akkoron","Ashes of Tommorow"}
+
+ID = 58010
+Owner = 4555646
+LastTransition = 1096279698
+PaidUntil = 1098871698
+Guests = {"jrhino"}
+Subowners = {}
+
+ID = 58011
+Owner = 248599
+LastTransition = 1098180465
+PaidUntil = 1101377345
+Guests = {"Deteriorated","Bart Griffwin","larkie the sorcerer","rooky the equp","larkieman returns","ponin the elf"}
+Subowners = {}
+
+ID = 58012
+Owner = 489624
+LastTransition = 1093255716
+PaidUntil = 1100772567
+Guests = {"athornis","nervine","jira"}
+Subowners = {"athornos"}
+
+ID = 58013
+Owner = 3105915
+LastTransition = 1098094093
+PaidUntil = 1100772567
+Guests = {"Little stratigy"}
+Subowners = {}
+
+ID = 58014
+Owner = 2553044
+LastTransition = 1092910105
+PaidUntil = 1100686105
+Guests = {"lordly caliber","mecro druid","hagarth bloodbane","druidiza","wind life","evil witch"}
+Subowners = {"lordly caliber"}
+
+ID = 58016
+Owner = 5481877
+LastTransition = 1098439706
+PaidUntil = 1100772567
+Guests = {}
+Subowners = {}
+
+ID = 58017
+Owner = 573616
+LastTransition = 1098439706
+PaidUntil = 1101463899
+Guests = {"Lady Spade","Romantic Kitty"}
+Subowners = {"Romantic Kitty"}
+
+ID = 58018
+Owner = 2535305
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"mendorato","deboh","zukuto","jifatoj","Zamatoh","loton yondogorg"}
+Subowners = {}
+
+ID = 58019
+Owner = 702458
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"Haku"}
+Subowners = {"Xechri","Hobbit master","Gitoy","Kyo-na","Vamadah","Sion barsault","Saricus","Aapie gaapie","Nizavu"}
+
+ID = 58020
+Owner = 4905957
+LastTransition = 1097489316
+PaidUntil = 1100686105
+Guests = {"Olav uit Houten","Volpe","Quhizite","crockidoo","caliiro"}
+Subowners = {"Olav uit Houten"}
+
+ID = 58021
+Owner = 1771226
+LastTransition = 1098094093
+PaidUntil = 1101377345
+Guests = {"banshera","amy angelsdaughter","abby angelsdaughter","amber angelsdaughter"}
+Subowners = {}
+
+ID = 58022
+Owner = 381293
+LastTransition = 1093687899
+PaidUntil = 1101463899
+Guests = {"crint"}
+Subowners = {"Skint II","Skint IV","Sirdruid"}
+
+ID = 58023
+Owner = 1333932
+LastTransition = 1093601345
+PaidUntil = 1101377345
+Guests = {"tejumuro","scary ghost from hell","brewtus the barbarian","sargane"}
+Subowners = {}
+
+ID = 58024
+Owner = 3846739
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"bruno portuga"}
+Subowners = {"Diogo the archer","Diogo the sorcerer"}
+
+ID = 58025
+Owner = 3065525
+LastTransition = 1096884467
+PaidUntil = 1099476467
+Guests = {"Jonesio","Luxop-Druid","Rita-loka"}
+Subowners = {}
+
+ID = 58026
+Owner = 602463
+LastTransition = 1098871665
+PaidUntil = 1100772567
+Guests = {"Madamwizard","Bonins","Kittycat girl","Starie","Jonney Bones"}
+Subowners = {}
+
+ID = 58027
+Owner = 4226096
+LastTransition = 1099130971
+PaidUntil = 1101463899
+Guests = {"angel racield"}
+Subowners = {}
+
+ID = 58028
+Owner = 3528053
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"Blackeagle Knight","lord bigstratigy","lord daleman","agman","lord eagle healer","princess stratigy"}
+Subowners = {"Blackeagle Knight"}
+
+ID = 58030
+Owner = 1260807
+LastTransition = 1097834911
+PaidUntil = 1101463899
+Guests = {"Scotu","Jebeb","Buzzfreak","Mysst","Necromanca","Necromorka","Taj Arandor","Ryhnn","nekkit","doboler","Ihsen Blackblade","Dark Salbakuta","Paulo-Paulada","Lovere","Ryhnn","Doboler The Druid","Mirages","Necromunda"}
+Subowners = {"Kurt Gossgren","Ranger Aragorn"}
+
+ID = 58031
+Owner = 1569010
+LastTransition = 1097403116
+PaidUntil = 1101463899
+Guests = {"Sachieal","Emma lee","Dark angel archer of amera","Tinae","Attrai","lady lite","Golden'eagle"}
+Subowners = {"Sachieal"}
+
+ID = 58032
+Owner = 1553188
+LastTransition = 1095329209
+PaidUntil = 1100686105
+Guests = {"Rackel","Mysst","Ryhnn","Taj Arandor","Griffen","Yellow legend"}
+Subowners = {"Ryhnn"}
+
+ID = 58033
+Owner = 577830
+LastTransition = 1095070080
+PaidUntil = 1100254080
+Guests = {"Necromorka","Necromalta","Necromanca","John Johnny Joe John","Trinky","Switch rider","Necromagi","Necromanka","Necromalga","Necromaji","Eternals Druid","Eternal Warior","Ghaz","Attraiu"}
+Subowners = {"Necromanca","Necromorka","Necromalta"}
+
+ID = 58034
+Owner = 2551581
+LastTransition = 1098526225
+PaidUntil = 1100772567
+Guests = {"sasubia","dazori","eternals druid"}
+Subowners = {}
+
+ID = 58035
+Owner = 677838
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"wigit"}
+Subowners = {}
+
+ID = 58036
+Owner = 1517264
+LastTransition = 1098612628
+PaidUntil = 1100686105
+Guests = {"Momixahe","Telash","Tinkon","Soul-Jar","Lucifers Son","Jammin Snake","Nekkit"}
+Subowners = {"Momixahe","Soul-Jar","Dark Natethan","Puvuz","Lucifers Son","Telash"}
+
+ID = 58037
+Owner = 516637
+LastTransition = 1095934045
+PaidUntil = 1100858845
+Guests = {"lof"}
+Subowners = {"spsato","charly swordmaster","yeyerapo","yeyetrapo","magic chunky","pachuco bailarin","rezebelu"}
+
+ID = 58038
+Owner = 512350
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"Sir Gretz","Master Diggs","Diggs Jay","Shawn Gretz II","meadow","zigog","karamiwa","triant the mage","karamiwa the second","Born Soldier"}
+Subowners = {}
+
+ID = 58039
+Owner = 367711
+LastTransition = 1096798294
+PaidUntil = 1100686105
+Guests = {}
+Subowners = {"moruck","izuul"}
+
+ID = 58040
+Owner = 991251
+LastTransition = 1096884467
+PaidUntil = 1099476467
+Guests = {"Eldred Jonas","Edward the Miracle","Portnal","Afterburn","Big Jer","Little Jer","Jeressious Darkreaver"}
+Subowners = {}
+
+ID = 58042
+Owner = 514435
+LastTransition = 1098094093
+PaidUntil = 1100772567
+Guests = {"vobo"}
+Subowners = {"Xvolope","olrichk"}
+
+ID = 58043
+Owner = 1380116
+LastTransition = 1098180465
+PaidUntil = 1100772567
+Guests = {"apollo the first","dagolith","armage","knights mare"}
+Subowners = {"apollo the first"}
+
+ID = 58044
+Owner = 462875
+LastTransition = 1098180465
+PaidUntil = 1100772567
+Guests = {"doboler the druid","kero darkwind","bob darkwind","gingetoketecks"}
+Subowners = {}
+
+ID = 58045
+Owner = 1008865
+LastTransition = 1097143665
+PaidUntil = 1099735665
+Guests = {"saint loki"}
+Subowners = {}
+
+ID = 58046
+Owner = 1464176
+LastTransition = 1098612628
+PaidUntil = 1100772567
+Guests = {}
+Subowners = {"tokon","javik"}
+
+ID = 58047
+Owner = 3284261
+LastTransition = 1095156452
+PaidUntil = 1100772567
+Guests = {"Knight of Amera","divefaxi on rook","Angel vampier","Dark vampier Archer","Jipox","jolay"}
+Subowners = {"Jacoblewe","lady demon master","Joakimlewe","Rebecka le","Zutaju","vampier druid","angel vampier","masacreiw"}
+
+ID = 59000
+Owner = 976895
+LastTransition = 1097230094
+PaidUntil = 1099476704
+Guests = {"Xokafu","Gunex","Fuwex"}
+Subowners = {}
+
+ID = 59001
+Owner = 1541033
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"Eidoss"}
+Subowners = {}
+
+ID = 59002
+Owner = 1592751
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"Leragincajun","Ember Raine"}
+Subowners = {}
+
+ID = 59003
+Owner = 787044
+LastTransition = 1093687902
+PaidUntil = 1100772567
+Guests = {"calax","fuomo","isteldor","aranada"}
+Subowners = {}
+
+ID = 59004
+Owner = 708984
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"Aapie gaapie","Nizavu","Gitoy"}
+Subowners = {"Kyo-na","Sion barsault","Ronaldus albrilus","Xechri"}
+
+ID = 59005
+Owner = 4079245
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"Charless the Second","Galia","El Rey Uru","Dioscuros","Queen of amera","Quenn Brittney","tormento link","Howuve","sir zuripant","Diablin archer"}
+Subowners = {"Charless the Second","Galia"}
+
+ID = 59006
+Owner = 769769
+LastTransition = 1092910105
+PaidUntil = 1100686105
+Guests = {"Rolling Mad Deep","Falcono","Mygot Samster","Shadow Sakura","Prince Sorcerer","Sacred Omni","xixoru","Fancystar","hottie of fright","master destroyer","fug packer"}
+Subowners = {"Hat Man","hat elf","hat man man","druid to supply","young gunner","master destroyer"}
+
+ID = 59007
+Owner = 278478
+LastTransition = 1093687899
+PaidUntil = 1101463899
+Guests = {"Misnervine","Misalley","alley darkwind","nathan rahl","misnerevaine","cuthbert","sylpheed"}
+Subowners = {"wizard rahl","lord rahl"}
+
+ID = 59008
+Owner = 4379211
+LastTransition = 1098094093
+PaidUntil = 1101463899
+Guests = {"Jotleon","champion sorcerer","raven the forbidden","fozati","gafiniwe"}
+Subowners = {"Jotleon","raven the forbidden","guco"}
+
+ID = 59009
+Owner = 2885880
+LastTransition = 1098871665
+PaidUntil = 1100081315
+Guests = {"Sikge","Poxu","Veba"}
+Subowners = {"Poxu"}
+
+ID = 59010
+Owner = 4745448
+LastTransition = 1096020467
+PaidUntil = 1100772567
+Guests = {}
+Subowners = {"silver ank","silver thourus"}
+
+ID = 59011
+Owner = 3763018
+LastTransition = 1095934045
+PaidUntil = 1101463899
+Guests = {"Seventh Wizard","Dharon","Sosso Mau"}
+Subowners = {}
+
+ID = 59012
+Owner = 525011
+LastTransition = 1096020467
+PaidUntil = 1101204467
+Guests = {"Dexeve","Andinho","Gopahama","Valeria Freitas","Henkzinhu"}
+Subowners = {}
+
+ID = 59013
+Owner = 274808
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"tewaha"}
+Subowners = {"Tewaha"}
+
+ID = 59015
+Owner = 2494721
+LastTransition = 1098180465
+PaidUntil = 1100772567
+Guests = {"abby angelsdaughter","betarune","pumekamo","xebax","yedezed","fredrik silverbolt","dream catchers"}
+Subowners = {}
+
+ID = 59016
+Owner = 1805528
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"Elderon DarkSoul","Raghnall","Lady Unea northern sorceress","Rey Aiyanomi","Ratrisha Angelblade"}
+Subowners = {}
+
+ID = 59017
+Owner = 1900723
+LastTransition = 1096452483
+PaidUntil = 1101636483
+Guests = {"leroy benner","pergo","marley","dijo"}
+Subowners = {}
+
+ID = 59018
+Owner = 1762553
+LastTransition = 1098698843
+PaidUntil = 1100772567
+Guests = {"Patrask","segato","Fehiwi"}
+Subowners = {}
+
+ID = 59020
+Owner = 1408918
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"*@nooblet army","Akira Darkwind","jason nightbreeze","Kisha Starbreeze","Shinsetsu","Raghnall","Tupex"}
+Subowners = {"Akira Darkwind","Yuna Silverblade"}
+
+ID = 59021
+Owner = 5426164
+LastTransition = 1099130971
+PaidUntil = 1101463899
+Guests = {"Alanas"}
+Subowners = {"Alanas"}
+
+ID = 59023
+Owner = 4596996
+LastTransition = 1098958068
+PaidUntil = 1101550068
+Guests = {"Xuxijiwa"}
+Subowners = {"Xuxijiwa"}
+
+ID = 59024
+Owner = 438066
+LastTransition = 1095934045
+PaidUntil = 1101463899
+Guests = {"Afterburn","Portnal","Don Azzaro"}
+Subowners = {}
+
+ID = 59025
+Owner = 2289457
+LastTransition = 1094638120
+PaidUntil = 1100686105
+Guests = {"rheakith","calax","wurusufi","aranada","Isteldor"}
+Subowners = {}
+
+ID = 59026
+Owner = 4420462
+LastTransition = 1096884467
+PaidUntil = 1099476467
+Guests = {}
+Subowners = {"frekkel","hoofdletterr","reapers curse","dark count","yusumitsu"}
+
+ID = 59027
+Owner = 1394833
+LastTransition = 1096539226
+PaidUntil = 1101463899
+Guests = {"bivijom","redarc","macimus","desiraz","kugure","mac the archer","limp ripper"}
+Subowners = {"Limp Ripper","Redarc","Noble Ice Archer"}
+
+ID = 59028
+Owner = 1408918
+LastTransition = 1097230094
+PaidUntil = 1100772567
+Guests = {"Shinsetsu","Wachter der Nacht","Deteriorated","Raghnall"}
+Subowners = {"Ratrisha Angelblade","Akira Darkwind","Kisha Starbreeze"}
+
+ID = 59029
+Owner = 2240242
+LastTransition = 1098612628
+PaidUntil = 1101463899
+Guests = {}
+Subowners = {}
+
+ID = 59030
+Owner = 1357428
+LastTransition = 1093687899
+PaidUntil = 1101463899
+Guests = {"Lady Candilace","Brunt Bambi","tantianna"}
+Subowners = {"Druid Birdman"}
+
+ID = 59031
+Owner = 3688114
+LastTransition = 1096970854
+PaidUntil = 1100772567
+Guests = {"chaoscalvin","Nefrititaus","nadamek","druid of nadamek"}
+Subowners = {}
+
+ID = 59032
+Owner = 496458
+LastTransition = 1096970854
+PaidUntil = 1100772567
+Guests = {"Sir Materus","Sir Kedrien","skint","crint","sirdruid","Serra Kaishen","Anisuya","Zero Flamez","Andromeda Assendent","Darian Starke","doboler"}
+Subowners = {"Sir Materus","Sir Kedrien","Serra Kaishen","Anisuya","Zero Flamez","Andromeda Assendent","Darian Starke"}
+
+ID = 59033
+Owner = 2374649
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"chaoscommander","ayiee"}
+Subowners = {"druid of nadamek","toiyk","lifetonad"}
+
+ID = 59035
+Owner = 458093
+LastTransition = 1092910105
+PaidUntil = 1100686105
+Guests = {"Butcher Man"}
+Subowners = {}
+
+ID = 59036
+Owner = 1183656
+LastTransition = 1095415650
+PaidUntil = 1100772567
+Guests = {"Dredicts","Bart Griffwin","Drizaur"}
+Subowners = {}
+
+ID = 59037
+Owner = 3802363
+LastTransition = 1097921444
+PaidUntil = 1100772567
+Guests = {"Robion","Camphor Alum"}
+Subowners = {}
+
+ID = 59038
+Owner = 819710
+LastTransition = 1095761252
+PaidUntil = 1101463899
+Guests = {"keliza","criptonarquista","sir odin","lord velmort","innuart","rheakith","isteldor"}
+Subowners = {"keliza"}
+
+ID = 59039
+Owner = 384956
+LastTransition = 1098094093
+PaidUntil = 1101463899
+Guests = {"Sir Bonzai"}
+Subowners = {"Sir Bonzai"}
+
+ID = 59040
+Owner = 4232781
+LastTransition = 1098785255
+PaidUntil = 1100772567
+Guests = {}
+Subowners = {}
+
+ID = 59041
+Owner = 247022
+LastTransition = 1094206073
+PaidUntil = 1100686105
+Guests = {"joxini"}
+Subowners = {}
+
+ID = 59042
+Owner = 1093037
+LastTransition = 1097662206
+PaidUntil = 1100686105
+Guests = {}
+Subowners = {"Little Iverson"}
+
+ID = 59043
+Owner = 1048614
+LastTransition = 1098698843
+PaidUntil = 1100772567
+Guests = {}
+Subowners = {}
+
+ID = 59044
+Owner = 926337
+LastTransition = 1098612628
+PaidUntil = 1100772567
+Guests = {"joakimlewe","lady demon master","Masacreiw","Dark vampier archer","Vampier druid","zutaju"}
+Subowners = {"eric le","Masacreiw"}
+
+ID = 59045
+Owner = 1894418
+LastTransition = 1096366064
+PaidUntil = 1098871899
+Guests = {}
+Subowners = {}
+
+ID = 59046
+Owner = 354482
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"danthor"}
+Subowners = {"lord jujue","charly swordmaster","pachuco bailarin","yeyerapo","yeyetrapo","magic chunky","lof"}
+
+ID = 59047
+Owner = 2652024
+LastTransition = 1097489316
+PaidUntil = 1100772567
+Guests = {"Inferno swordsman","Anagarsu","Zihadael"}
+Subowners = {}
+
+ID = 59048
+Owner = 2303779
+LastTransition = 1097057278
+PaidUntil = 1100772567
+Guests = {"Fanks"}
+Subowners = {}
+
+ID = 59049
+Owner = 2224020
+LastTransition = 1099044485
+PaidUntil = 1101463899
+Guests = {"Skilled Druidis","Gimlio","Zword","Lord of Health"}
+Subowners = {"Skilled Druidis","Gimlio","Zword","Lord of Health"}
+
+ID = 59050
+Owner = 844342
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"dark boxer","ringside","grizzly wintergreen"}
+Subowners = {"fortwunty","exup","bart the archer"}
+
+ID = 59051
+Owner = 4567313
+LastTransition = 1097057278
+PaidUntil = 1101636550
+Guests = {"Naja Naja","Latnamar"}
+Subowners = {}
+
+ID = 59052
+Owner = 4707841
+LastTransition = 1097316763
+PaidUntil = 1100772567
+Guests = {}
+Subowners = {}
+
+ID = 59053
+Owner = 4357610
+LastTransition = 1098526225
+PaidUntil = 1100772567
+Guests = {"Splash Woman"}
+Subowners = {"Splash Woman"}
+
+ID = 59055
+Owner = 2805870
+LastTransition = 1098526225
+PaidUntil = 1100772567
+Guests = {"Rakaha","Perab","Dark natethan"}
+Subowners = {}
+
+ID = 59056
+Owner = 3767006
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"freestyle fighter","Azz the sorcerer","velinus","zesez","maxiba","feye","woodlow","dark oblitorator","Jevo"}
+Subowners = {"dark infest"}
+
+ID = 59057
+Owner = 3980831
+LastTransition = 1096970854
+PaidUntil = 1100772567
+Guests = {"Mago-of-Amera"}
+Subowners = {"Mago-of-amera"}
+
+ID = 59058
+Owner = 2256501
+LastTransition = 1096020467
+PaidUntil = 1100772567
+Guests = {"Nisindro","xenobion"}
+Subowners = {}
+
+ID = 59059
+Owner = 5523484
+LastTransition = 1098612628
+PaidUntil = 1100772567
+Guests = {}
+Subowners = {}
+
+ID = 59060
+Owner = 5505258
+LastTransition = 1098958068
+PaidUntil = 1101550068
+Guests = {"neidron","nedero"}
+Subowners = {"nedros"}
+
+ID = 59061
+Owner = 2326836
+LastTransition = 1095156452
+PaidUntil = 1100772567
+Guests = {"Waygate","Master gatway","Master Olleg","Dusti","finfan"}
+Subowners = {"Fais","Master Olleg"}
+
+ID = 59062
+Owner = 3913175
+LastTransition = 1098871664
+PaidUntil = 1101463664
+Guests = {}
+Subowners = {}
+
+ID = 59063
+Owner = 2322409
+LastTransition = 1098958068
+PaidUntil = 1100513443
+Guests = {"Mugaraj","Dobobo"}
+Subowners = {}
+
+ID = 59064
+Owner = 1633671
+LastTransition = 1096539226
+PaidUntil = 1101463899
+Guests = {"Alyssia","Ximoti de knight","Anyel","Valupo"}
+Subowners = {"Anyel","Ximoti de knight"}
+
+ID = 59065
+Owner = 692870
+LastTransition = 1096625283
+PaidUntil = 1101377345
+Guests = {"Duridey","Suss","!Lilusher"}
+Subowners = {"Elite pikuzez"}
+
+ID = 59066
+Owner = 762629
+LastTransition = 1094379127
+PaidUntil = 1099563127
+Guests = {"Maxium Maxx"}
+Subowners = {}
+
+ID = 59067
+Owner = 5370079
+LastTransition = 1098958068
+PaidUntil = 1101550068
+Guests = {}
+Subowners = {}
+
+ID = 59068
+Owner = 3148185
+LastTransition = 1095674845
+PaidUntil = 1100858845
+Guests = {"tio vagabundo","exuddiney"}
+Subowners = {}
+
+ID = 59069
+Owner = 370173
+LastTransition = 1092996567
+PaidUntil = 1100772567
+Guests = {"Loridos","Moruck"}
+Subowners = {}
+
+ID = 59070
+Owner = 1238205
+LastTransition = 1093342140
+PaidUntil = 1100686105
+Guests = {}
+Subowners = {"Skint","Skint II","Skint IV","Crint"}
+
+ID = 59071
+Owner = 1218680
+LastTransition = 1093601345
+PaidUntil = 1101377345
+Guests = {"Xenzer","Mr Messmor","Bexovam","Xenzaren","Duzasoana","Sir sibon","Sir Bonzai","johekiwana"}
+Subowners = {"Xenzer"}
+
+ID = 59073
+Owner = 275300
+LastTransition = 1097575750
+PaidUntil = 1100167750
+Guests = {"Arathnicus","mia rose"}
+Subowners = {"Arathnicus"}
+
+ID = 59074
+Owner = 505525
+LastTransition = 1098958068
+PaidUntil = 1100340521
+Guests = {}
+Subowners = {}
+
+ID = 59075
+Owner = 1351433
+LastTransition = 1096970854
+PaidUntil = 1100686105
+Guests = {"tony bomba"}
+Subowners = {}
+
+ID = 59076
+Owner = 311425
+LastTransition = 1093428552
+PaidUntil = 1100772567
+Guests = {"*@la comunidad del dragon","skape","cobra stanger","dooms-day-druid","rezebelu"}
+Subowners = {"yeyerapo","lord jujue","spsato","yeyetrapo","magic chunky","dark zorro","dark moles"}
+
+ID = 61000
+Owner = 610860
+LastTransition = 1057919171
+PaidUntil = 1100945859
+Guests = {"king bobsy","lord bobsy","evil mystic sorc","Shea Sully","mixlalilxy","myst magi"}
+Subowners = {"Shea Sully"}
+
+ID = 61001
+Owner = 3937840
+LastTransition = 1097057278
+PaidUntil = 1099908368
+Guests = {}
+Subowners = {}
+
+ID = 61002
+Owner = 731742
+LastTransition = 1073560180
+PaidUntil = 1100945709
+Guests = {"Grim","Marino","kiral","mabius"}
+Subowners = {}
+
+ID = 61003
+Owner = 3710255
+LastTransition = 1095070080
+PaidUntil = 1099567820
+Guests = {"Zajokile","Crimson-Bloodshed"}
+Subowners = {"zajokile"}
+
+ID = 61004
+Owner = 562309
+LastTransition = 1094206073
+PaidUntil = 1099393885
+Guests = {"sephiroth nailo","sckhar shantallas","burned druid","wurkjen","darta","noldor galadriel","Mixlalilxy","tadachi","purple nailo"}
+Subowners = {}
+
+ID = 61005
+Owner = 1019294
+LastTransition = 1097316763
+PaidUntil = 1101553890
+Guests = {"Fred, the Paladin"}
+Subowners = {"fafnir"}
+
+ID = 61006
+Owner = 2018558
+LastTransition = 1091009276
+PaidUntil = 1100254674
+Guests = {"lord apophis","forgotten lord","malum sane","pixiegurl","lord blitz","psiamp"}
+Subowners = {"lord apophis","pixiegurl"}
+
+ID = 61007
+Owner = 2668854
+LastTransition = 1092737300
+PaidUntil = 1099303736
+Guests = {"mixlalilxy","jazdeleily","ryuho","sephiroth nailo","sombradeluz","meldalele","jayjos","forbius tharos","bobsy","jin tsunami","shea sully","myst magi"}
+Subowners = {}
+
+ID = 61008
+Owner = 2502845
+LastTransition = 1082542665
+PaidUntil = 1100686665
+Guests = {"mixlalilxy","jazdeleily","jayjos","Morituras","Mysticmoto","sombradeluz","meldalele","arzakon","bobsy","lady saebel zwei","forbius tharos","si fu","despen","despen","justin the super sorccer","lord physalis"}
+Subowners = {}
+
+ID = 61009
+Owner = 2597429
+LastTransition = 1098698843
+PaidUntil = 1099476839
+Guests = {"street hero","xebax","druid of beltazo","fredrik silverbolt","topeden","yedezed","udwin","amber angelsdaughte","aerwyn angelsdaughter","bokuf"}
+Subowners = {"street hero"}
+
+ID = 61010
+Owner = 1977737
+LastTransition = 1098612628
+PaidUntil = 1101208291
+Guests = {"Matias Dragons","Estrellita de fuego","Amppy","Zozaw","Martinna"}
+Subowners = {}
+
+ID = 61011
+Owner = 562870
+LastTransition = 1099044485
+PaidUntil = 1101031706
+Guests = {"arcane legend","watatah"}
+Subowners = {}
+
+ID = 61012
+Owner = 572016
+LastTransition = 1094379127
+PaidUntil = 1099563127
+Guests = {"Bobdowns gf","Evil magican","Nebuhe","Princess tara","Quenn of amera","Kewusu","Sparkaligo","Novaeh","Tonkpills","quenn brittney"}
+Subowners = {}
+
+ID = 61014
+Owner = 312488
+LastTransition = 1099044485
+PaidUntil = 1101208332
+Guests = {}
+Subowners = {}
+
+ID = 61015
+Owner = 585512
+LastTransition = 1066126349
+PaidUntil = 1099822349
+Guests = {"Euphonium","Fagotto"}
+Subowners = {"Euphonium","Fagotto"}
+
+ID = 61016
+Owner = 1843747
+LastTransition = 1095502564
+PaidUntil = 1099221013
+Guests = {"Lord Tampico","Lord Ixion"}
+Subowners = {}
+
+ID = 61017
+Owner = 4969869
+LastTransition = 1097316763
+PaidUntil = 1099220715
+Guests = {"Yenhari","Yanhari","Arcane Legend","Skilled Paladin"}
+Subowners = {}
+
+ID = 61018
+Owner = 1094811
+LastTransition = 1096798294
+PaidUntil = 1101038502
+Guests = {"susanita","jebeb","yawg"}
+Subowners = {}
+
+ID = 61019
+Owner = 3238907
+LastTransition = 1089194863
+PaidUntil = 1099562863
+Guests = {"tchutchucona","nhalin","xanda-vaz"}
+Subowners = {"mente aberta"}
+
+ID = 61020
+Owner = 581896
+LastTransition = 1050833655
+PaidUntil = 1100081655
+Guests = {"Kikki","Calli","Darby","Siera","Magero","Jamzi"}
+Subowners = {"Kikki"}
+
+ID = 61021
+Owner = 598076
+LastTransition = 1060684249
+PaidUntil = 1099564249
+Guests = {"spelldruid"}
+Subowners = {}
+
+ID = 61022
+Owner = 284625
+LastTransition = 1095934045
+PaidUntil = 1100518732
+Guests = {"lady helen","fable soul"}
+Subowners = {"Cymry Arrow"}
+
+ID = 61023
+Owner = 5319973
+LastTransition = 1098958068
+PaidUntil = 1101290843
+Guests = {"Bokufo the druid"}
+Subowners = {}
+
+ID = 61024
+Owner = 389272
+LastTransition = 1097575750
+PaidUntil = 1100344101
+Guests = {"cadrock","mabius","Grim II"}
+Subowners = {}
+
+ID = 61025
+Owner = 804111
+LastTransition = 1093601346
+PaidUntil = 1099218363
+Guests = {"chicken summoner","demon fire arrow"}
+Subowners = {"Chicken summoner","demon fire arrow","bee ron"}
+
+ID = 61026
+Owner = 2167250
+LastTransition = 1095329209
+PaidUntil = 1099393783
+Guests = {"Kezamut","Ezell","Sandee"}
+Subowners = {"Volfen","Slimymale"}
+
+ID = 61027
+Owner = 245401
+LastTransition = 1064916524
+PaidUntil = 1101204524
+Guests = {"stolen","temptress","angelace","QUEEN ROOKIE","emmarancie","jester of the flam","Die lummoll","sosem","Super Saiyan Knight","Gizzmo-Gurl"}
+Subowners = {"stolen","angelace","temptress","queen rooky","emmarancie"}
+
+ID = 61028
+Owner = 1047009
+LastTransition = 1094292705
+PaidUntil = 1101205994
+Guests = {"Bart griffwin"}
+Subowners = {}
+
+ID = 61029
+Owner = 267748
+LastTransition = 1086689160
+PaidUntil = 1100430666
+Guests = {"nervine","lordly caliber","deuce","aleanah","big jer","durids"}
+Subowners = {"dawei"}
+
+ID = 61030
+Owner = 379803
+LastTransition = 1062065280
+PaidUntil = 1101463927
+Guests = {"Heyleigh","Anglican","Sabrell","Callie","Big Jer","Jeressious Darkreaver"}
+Subowners = {"Anglican","Heyleigh","Cuddles","Callie","Sabrell"}
+
+ID = 61031
+Owner = 375704
+LastTransition = 1070536314
+PaidUntil = 1099477252
+Guests = {"Kiral","Peyton Rhylie","lord physalis"}
+Subowners = {"Royken","Lord Of Agony","Sagittaire"}
+
+ID = 61032
+Owner = 2386286
+LastTransition = 1093687902
+PaidUntil = 1101290862
+Guests = {}
+Subowners = {"golden amber","Lord Mikira","simon yip","jimgoli"}
+
+ID = 61033
+Owner = 4709239
+LastTransition = 1097748522
+PaidUntil = 1101290971
+Guests = {"Amppallu","Pachuco broz"}
+Subowners = {}
+
+ID = 61034
+Owner = 3831439
+LastTransition = 1093774121
+PaidUntil = 1101380986
+Guests = {"angelic flare","kyalie","Pergo"}
+Subowners = {"angelic flare","kyalie"}
+
+ID = 61035
+Owner = 4848300
+LastTransition = 1095674845
+PaidUntil = 1100858704
+Guests = {"Charisma","Shandelle","Lady of Princess","Ilane","Matwes","Alec gem","Mousemasters","Sakura moon","Don walo","gato-cazador"}
+Subowners = {"Shandelle","Laincita"}
+
+ID = 61036
+Owner = 1768204
+LastTransition = 1087725882
+PaidUntil = 1100257959
+Guests = {"shandelle","amppy","vovazap","jebeb","Yawgmoth the mage","martinna","gato-cazador","nacho","amppallu","kyko warrior","Moondance","foxix"}
+Subowners = {}
+
+ID = 61037
+Owner = 240762
+LastTransition = 0
+PaidUntil = 1100171543
+Guests = {}
+Subowners = {"Ogfetan Riglan","Kamol","Numitor","Wedotahe","Riverblade","Lord Lomak"}
+
+ID = 61038
+Owner = 4360107
+LastTransition = 1098612628
+PaidUntil = 1098785345
+Guests = {"Heimdall shielder","Herosim","Princess caitlin","Lord Agron","Gorablade"}
+Subowners = {"Majewiz","jeloziw"}
+
+ID = 61039
+Owner = 1845413
+LastTransition = 1091009276
+PaidUntil = 1100686665
+Guests = {"Jert sniper","Wolvensorc","Majewiz","Cavaleiro de fenix"}
+Subowners = {"Rose of Thorns","Jert Sniper"}
+
+ID = 61040
+Owner = 3869503
+LastTransition = 1094465298
+PaidUntil = 1099908306
+Guests = {"Grim II","Redz"}
+Subowners = {}
+
+ID = 61041
+Owner = 670479
+LastTransition = 1085738724
+PaidUntil = 1101290724
+Guests = {"Castle Guard","Paulo-Paulada","Sir Xean","Heimdall Shielder"}
+Subowners = {"Nervine","Diddl druid","Heart fire","Kitten knight"}
+
+ID = 61042
+Owner = 2877459
+LastTransition = 1089886037
+PaidUntil = 1100085678
+Guests = {"Butcher Man","Zhao Yunx","Wind Tunnel","Guan Yux","Digezi","Tojaza"}
+Subowners = {}
+
+ID = 61043
+Owner = 2985553
+LastTransition = 1091700458
+PaidUntil = 1101381074
+Guests = {"Kiowa","Rexigiv","ashton bolt","elder titan","butcher man","laicie","Digezi","Whirly bird"}
+Subowners = {"Dark-champien"}
+
+ID = 61044
+Owner = 2052361
+LastTransition = 1073041891
+PaidUntil = 1099303824
+Guests = {"Fiachra","Wachter Der Nacht","Elderon Darksoul","Akira Darkwind","Kisha Starbreeze","Darkened Sin","Angel Darkwind","yuna silverblade","Ratrisha Angelblade","Ho'demi","killah demon","tupex","Cho Kumiko","Quarion Nighbreeze","carnival","lady unea northern sorceress","rey aiyanomi","Eriskegal"}
+Subowners = {"wachter der nacht","fiachra","elderon darksoul"}
+
+ID = 61045
+Owner = 341574
+LastTransition = 1098958068
+PaidUntil = 1101550068
+Guests = {"sir cotu"}
+Subowners = {}
+
+ID = 61046
+Owner = 3695369
+LastTransition = 1091009276
+PaidUntil = 1099998610
+Guests = {}
+Subowners = {"jenken"}
+
+ID = 61047
+Owner = 622306
+LastTransition = 1096539226
+PaidUntil = 1100772854
+Guests = {"grandia-mage","dragondruidz","conceptor","sleepykiller"}
+Subowners = {}
+
+ID = 61048
+Owner = 625052
+LastTransition = 1097921444
+PaidUntil = 1101291053
+Guests = {}
+Subowners = {"Kisha Starbreeze","Darkened Sin","Ratrisha Angelblade","Isabella Angelblade","Angel Darkwind","Yuna Silverblade","Ho'Demi","Evil Sin","Raghnall"}
+
+ID = 61049
+Owner = 1001480
+LastTransition = 1093687899
+PaidUntil = 1101463899
+Guests = {"Lady Unea northern sorceress","Rey Aiyanomi","Zhao Yunx","Whispering wind","Wind tunnel","Guan yux","Raghnall","Titaneum","Dark-Champien","Digezi","Light stallion","Qupido","rhayn"}
+Subowners = {}
+
+ID = 61050
+Owner = 2207725
+LastTransition = 1098785255
+PaidUntil = 1100171565
+Guests = {"Sir dustin","lisiv","mountain elf","Feldespar","Juanjose","Dustin the destroyer"}
+Subowners = {"Feldespar"}
+
+ID = 62000
+Owner = 1941646
+LastTransition = 1083837944
+PaidUntil = 1099389944
+Guests = {"dark-champien","Imago Dei"}
+Subowners = {"Imago Dei","Dark-Champien"}
+
+ID = 62001
+Owner = 1253610
+LastTransition = 1098785255
+PaidUntil = 1101377105
+Guests = {"Alyssa Angelsdaughter","Lex the Kex"}
+Subowners = {}
+
+ID = 62002
+Owner = 2736136
+LastTransition = 1094206073
+PaidUntil = 1100084817
+Guests = {"druid of beltazor","yedezed"}
+Subowners = {}
+
+ID = 62003
+Owner = 820676
+LastTransition = 1094206073
+PaidUntil = 1099908402
+Guests = {"Sherluk Jones","band","adanac","vijetu","lillies","shu gnilles","Saiyanprince","Saiyan Monkey"}
+Subowners = {}
+
+ID = 62004
+Owner = 874110
+LastTransition = 1097489316
+PaidUntil = 1101636601
+Guests = {"Rhayn","Spankette","Twainryder","Miel Doux","Muncher","Muncher II","marhorn","Hadessious Darkreaver","Big Jer"}
+Subowners = {"Twainryder","spankette"}
+
+ID = 62005
+Owner = 2303198
+LastTransition = 1097834911
+PaidUntil = 1099995147
+Guests = {"Dream catchers","kaaelan","alison angelsdaughter","abby angelsdaughter","yedezed"}
+Subowners = {}
+
+ID = 62006
+Owner = 511150
+LastTransition = 1079089513
+PaidUntil = 1099825513
+Guests = {"Neigle"}
+Subowners = {}
+
+ID = 62007
+Owner = 866012
+LastTransition = 1097489316
+PaidUntil = 1101038502
+Guests = {"Airykah","Curtisrusty","Ajaype","Nerrt"}
+Subowners = {}
+
+ID = 62008
+Owner = 5330722
+LastTransition = 1097575750
+PaidUntil = 1100516925
+Guests = {"karamiwa the second","triant the mage","baldoran","oneeye","mang","xureduw","sir gretz"}
+Subowners = {}
+
+ID = 62009
+Owner = 5311773
+LastTransition = 1098698843
+PaidUntil = 1101290971
+Guests = {"Amailliana","Exitus Rechterhand","Blacktears","eyesore"}
+Subowners = {}
+
+ID = 62010
+Owner = 259060
+LastTransition = 0
+PaidUntil = 1101121774
+Guests = {"tasp","scarlet tears","legaia"}
+Subowners = {"daphanie"}
+
+ID = 62012
+Owner = 1480773
+LastTransition = 1085652317
+PaidUntil = 1101032121
+Guests = {"Seshomarru","Unvincible","pallio"}
+Subowners = {"Silvah"}
+
+ID = 62013
+Owner = 919784
+LastTransition = 1085486504
+PaidUntil = 1098871927
+Guests = {"shawe","krunkster","lost druid of the relm","silvah","oddzilla"}
+Subowners = {}
+
+ID = 62014
+Owner = 250008
+LastTransition = 1073905777
+PaidUntil = 1101640450
+Guests = {"lady candilace","Burnt Bambi","bambi burnt"}
+Subowners = {}
+
+ID = 62015
+Owner = 561874
+LastTransition = 1092996572
+PaidUntil = 1100946597
+Guests = {"forbius tharos","darta","wurkjen","burned druid","lord alex furi","tadachi","purple nailo"}
+Subowners = {}
+
+ID = 62016
+Owner = 567768
+LastTransition = 1093601346
+PaidUntil = 1099735571
+Guests = {"Gugo","Calax","Megulav","Babay","Kris ten","Lotus Queen"}
+Subowners = {"Lotus Queen"}
+
+ID = 62017
+Owner = 381885
+LastTransition = 1094292704
+PaidUntil = 1099476704
+Guests = {"La Stella Del Lesanime@Dispirited corpo","Anime Mortali Per Lesanime@Dispirited corpo","Cuore Morendo@Dispirited corpo","Protettore Di Anima@Dispirited corpo","Il Buio Sorge@Dispirited Corpo","Un Altro Cuore@dispirited corpo","chronic desire","fuzzerd","chopper the great","jaemz","rheakith","born soldier","lotus queen","druid nukey","feared hero","barbariffic"}
+Subowners = {"xtrordinary","master gugowid","gugowid","doodo","juzoh"}
+
+ID = 62018
+Owner = 894553
+LastTransition = 1073301069
+PaidUntil = 1099134855
+Guests = {"Babiecakes","Chronic Desire","Ka-Heal","Vera uit Houten","Night James","Gihoh","Foogles Druid","Captain Lysander","Beatz","Dead Arrowz","Lord Bidafa","Lord Apophis","Rauager","Sir Lemon","Lord Sokar","Tysar","Fekazor","Foogle man","Gimlio","Eric The foogle","Zarinun","Runningbear","Eric the Foogle Druid","Shawe","Unvincible","Kawino","Lord Furian","Toora","Lizzybelle","Hacshel","Lord Xypher","Pixiegurl","Knemesis the second","Greedo The Great","Knight Eden","Ruzoto","Cool pally","Master Knite","Johhnypark"}
+Subowners = {}
+
+ID = 62020
+Owner = 256627
+LastTransition = 1076670610
+PaidUntil = 1099998610
+Guests = {"High mage daragon","Crysta Unikorn","Krimson Kat","Mighty Mud"}
+Subowners = {"High mage daragon","Mudwitch","Crysta Unikorn","Krimson Kat"}
+
+ID = 62021
+Owner = 915315
+LastTransition = 1083492362
+PaidUntil = 1101467402
+Guests = {"Billy the Druid","Noob the invincible","Lardhead","unnatural knight"}
+Subowners = {}
+

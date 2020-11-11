@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Runes>
+
+  <Rune>
+    <ID>3174</ID>
+    <Name>Light Magic Missile</Name>
+    <Charges>5</Charges>
+  </Rune>
+  <Rune>
+    <ID>3172</ID>
+    <Name>Poison Field</Name>
+    <Charges>3</Charges>
+  </Rune>
+  <Rune>
+    <ID>3153</ID>
+    <Name>Antidote Rune</Name>
+    <Charges>1</Charges>
+  </Rune>
+  <Rune>
+    <ID>3188</ID>
+    <Name>Fire Field</Name>
+    <Charges>3</Charges>
+  </Rune>
+  <Rune>
+    <ID>3152</ID>
+    <Name>Intense Healing</Name>
+    <Charges>1</Charges>
+  </Rune>
+  <Rune>
+    <ID>3189</ID>
+    <Name>Fireball</Name>
+    <Charges>2</Charges>
+  </Rune>
+  <Rune>
+    <ID>3148</ID>
+    <Name>Destroy Field</Name>
+    <Charges>3</Charges>
+  </Rune>
+  <Rune>
+    <ID>3198</ID>
+    <Name>Heavy Magic Missile</Name>
+    <Charges>5</Charges>
+  </Rune>
+  <Rune>
+    <ID>3164</ID>
+    <Name>Energy Field</Name>
+    <Charges>3</Charges>
+  </Rune>
+  <Rune>
+    <ID>3160</ID>
+    <Name>Ultimate Healing</Name>
+    <Charges>1</Charges>
+  </Rune>
+  <Rune>
+    <ID>3177</ID>
+    <Name>Convince Creature</Name>
+    <Charges>1</Charges>
+  </Rune>
+  <Rune>
+    <ID>3191</ID>
+    <Name>Great Fireball</Name>
+    <Charges>2</Charges>
+  </Rune>
+  <Rune>
+    <ID>3178</ID>
+    <Name>Chameleon</Name>
+    <Charges>1</Charges>
+  </Rune>
+  <Rune>
+    <ID>3192</ID>
+    <Name>Fire Bomb</Name>
+    <Charges>2</Charges>
+  </Rune>
+  <Rune>
+    <ID>3176</ID>
+    <Name>Poison Wall</Name>
+    <Charges>4</Charges>
+  </Rune>
+  <Rune>
+    <ID>3200</ID>
+    <Name>Explosion</Name>
+    <Charges>3</Charges>
+  </Rune>
+  <Rune>
+    <ID>3190</ID>
+    <Name>Fire Wall</Name>
+    <Charges>4</Charges>
+  </Rune>
+  <Rune>
+    <ID>3155</ID>
+    <Name>Sudden Death</Name>
+    <Charges>1</Charges>
+  </Rune>
+  <Rune>
+    <ID>3166</ID>
+    <Name>Energy Wall</Name>
+    <Charges>4</Charges>
+  </Rune>
+  <Rune>
+    <ID>3179</ID>
+    <Name>Envenom</Name>
+    <Charges>3</Charges>
+  </Rune>
+  <Rune>
+    <ID>3197</ID>
+    <Name>Desintegrate</Name>
+    <Charges>3</Charges>
+  </Rune>
+  <Rune>
+    <ID>3173</ID>
+    <Name>Poison Bomb</Name>
+    <Charges>2</Charges>
+  </Rune>
+  <Rune>
+    <ID>3195</ID>
+    <Name>Soulfire</Name>
+    <Charges>2</Charges>
+  </Rune>
+  <Rune>
+    <ID>3149</ID>
+    <Name>Energy Bomb</Name>
+    <Charges>2</Charges>
+  </Rune>
+  <Rune>
+    <ID>3180</ID>
+    <Name>Magic Wall</Name>
+    <Charges>3</Charges>
+  </Rune>
+  <Rune>
+    <ID>3203</ID>
+    <Name>Animate Dead</Name>
+    <Charges>1</Charges>
+  </Rune>
+  <Rune>
+    <ID>3165</ID>
+    <Name>Paralyze</Name>
+    <Charges>1</Charges>
+  </Rune>
+  
+</Runes>

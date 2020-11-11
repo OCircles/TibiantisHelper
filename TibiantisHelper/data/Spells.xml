@@ -1,0 +1,901 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Spells>
+
+  <Spell>
+    <ID>83</ID>
+    <Name>Animate Dead</Name>
+    <Words>adana mort</Words>
+    <Mana>300</Mana>
+    <ProduceID>3203</ProduceID>
+    <LevelCast>7</LevelCast>
+    <LevelUse>4</LevelUse>
+    <Price>1200</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Support</Group>
+    <Type>Rune</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>29</ID>
+    <Name>Antidote</Name>
+    <Words>exana pox</Words>
+    <Mana>30</Mana>
+    <LevelCast>2</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>150</Price>
+    <Vocation>K,P,S,D</Vocation>
+    <Group>Healing</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>31</ID>
+    <Name>Antidote Rune</Name>
+    <Words>adana pox</Words>
+    <Mana>50</Mana>
+    <ProduceID>3153</ProduceID>
+    <LevelCast>5</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>600</Price>
+    <Vocation>D</Vocation>
+    <Group>Healing</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>80</ID>
+    <Name>Berserk</Name>
+    <Words>exori</Words>
+    <Mana>0</Mana>
+    <LevelCast>5</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>2500</Price>
+    <Vocation>K</Vocation>
+    <Group>Attack</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>90</ID>
+    <Name>Cancel Invisibility</Name>
+    <Words>exana ina</Words>
+    <Mana>250</Mana>
+    <LevelCast>12</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>1600</Price>
+    <Vocation>S</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>93</ID>
+    <Name>Challenge</Name>
+    <Words>exeta res</Words>
+    <Mana>90</Mana>
+    <LevelCast>4</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>2000</Price>
+    <Vocation>K</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>14</ID>
+    <Name>Chameleon</Name>
+    <Words>adevo ina</Words>
+    <Mana>150</Mana>
+    <ProduceID>3178</ProduceID>
+    <LevelCast>11</LevelCast>
+    <LevelUse>4</LevelUse>
+    <Price>1300</Price>
+    <Vocation>D</Vocation>
+    <Group>Support</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>51</ID>
+    <Name>Conjure Arrow</Name>
+    <Words>exevo con</Words>
+    <Mana>40</Mana>
+    <ProduceID>3447</ProduceID>
+    <ProduceAmount>15</ProduceAmount>
+    <LevelCast>2</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>450</Price>
+    <Vocation>P</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>79</ID>
+    <Name>Conjure Bolt</Name>
+    <Words>exevo con mort</Words>
+    <Mana>70</Mana>
+    <ProduceID>3446</ProduceID>
+    <ProduceAmount>10</ProduceAmount>
+    <LevelCast>6</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>750</Price>
+    <Vocation>P</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>12</ID>
+    <Name>Convince Creature</Name>
+    <Words>adeta sio</Words>
+    <Mana>100</Mana>
+    <ProduceID>3177</ProduceID>
+    <LevelCast>10</LevelCast>
+    <LevelUse>5</LevelUse>
+    <Price>1300</Price>
+    <Vocation>D</Vocation>
+    <Group>Support</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>38</ID>
+    <Name>Creature Illusion</Name>
+    <Words>utevo res ina para</Words>
+    <Mana>100</Mana>
+    <LevelCast>10</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>1000</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>78</ID>
+    <Name>Desintegrate</Name>
+    <Words>adito tera</Words>
+    <Mana>100</Mana>
+    <ProduceID>3197</ProduceID>
+    <LevelCast>8</LevelCast>
+    <LevelUse>4</LevelUse>
+    <Price>900</Price>
+    <Vocation>P,S,D</Vocation>
+    <Group>Support</Group>
+    <Type>Rune</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>98</ID>
+    <Name>Desintegrate Spell</Name>
+    <Words>exito tera</Words>
+    <Mana>60</Mana>
+    <LevelCast>7</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>500</Price>
+    <Vocation>D</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>30</ID>
+    <Name>Destroy Field</Name>
+    <Words>adito grav</Words>
+    <Mana>60</Mana>
+    <ProduceID>3148</ProduceID>
+    <LevelCast>6</LevelCast>
+    <LevelUse>3</LevelUse>
+    <Price>350</Price>
+    <Vocation>P,S,D</Vocation>
+    <Group>Support</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>96</ID>
+    <Name>Discharge</Name>
+    <Words>exana vis</Words>
+    <Mana>30</Mana>
+    <LevelCast>3</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>300</Price>
+    <Vocation>D</Vocation>
+    <Group>Healing</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>92</ID>
+    <Name>Enchant Staff</Name>
+    <Words>exeta vis</Words>
+    <Mana>80</Mana>
+    <LevelCast>22</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>2000</Price>
+    <Vocation>S</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>22</ID>
+    <Name>Energy Beam</Name>
+    <Words>exevo vis lux</Words>
+    <Mana>100</Mana>
+    <LevelCast>10</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>1000</Price>
+    <Vocation>S</Vocation>
+    <Group>Attack</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>27</ID>
+    <Name>Energy Field</Name>
+    <Words>adevo grav vis</Words>
+    <Mana>80</Mana>
+    <ProduceID>3164</ProduceID>
+    <LevelCast>5</LevelCast>
+    <LevelUse>3</LevelUse>
+    <Price>700</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Attack</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>88</ID>
+    <Name>Energy Strike</Name>
+    <Words>exori vis</Words>
+    <Mana>20</Mana>
+    <LevelCast>3</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>800</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Attack</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>33</ID>
+    <Name>Energy Wall</Name>
+    <Words>adevo mas grav vis</Words>
+    <Mana>250</Mana>
+    <ProduceID>3166</ProduceID>
+    <LevelCast>18</LevelCast>
+    <LevelUse>9</LevelUse>
+    <Price>2500</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Attack</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>13</ID>
+    <Name>Energy Wave</Name>
+    <Words>exevo mort hur</Words>
+    <Mana>250</Mana>
+    <LevelCast>20</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>2500</Price>
+    <Vocation>S</Vocation>
+    <Group>Attack</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>55</ID>
+    <Name>Energy Bomb</Name>
+    <Words>adevo mas vis</Words>
+    <Mana>220</Mana>
+    <ProduceID>3149</ProduceID>
+    <LevelCast>18</LevelCast>
+    <LevelUse>10</LevelUse>
+    <Price>2300</Price>
+    <Vocation>S</Vocation>
+    <Group>Attack</Group>
+    <Type>Rune</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>77</ID>
+    <Name>Envenom</Name>
+    <Words>adevo res pox</Words>
+    <Mana>100</Mana>
+    <ProduceID>3179</ProduceID>
+    <LevelCast>7</LevelCast>
+    <LevelUse>4</LevelUse>
+    <Price>1000</Price>
+    <Vocation>D</Vocation>
+    <Group>Attack</Group>
+    <Type>Rune</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>18</ID>
+    <Name>Explosion</Name>
+    <Words>adevo mas hur</Words>
+    <Mana>180</Mana>
+    <ProduceID>3200</ProduceID>
+    <LevelCast>12</LevelCast>
+    <LevelUse>6</LevelUse>
+    <Price>1800</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Attack</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>49</ID>
+    <Name>Explosive Arrow</Name>
+    <Words>exevo con flam</Words>
+    <ProduceID>3449</ProduceID>
+    <ProduceAmount>5</ProduceAmount>
+    <Mana>120</Mana>
+    <LevelCast>10</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>1000</Price>
+    <Vocation>P</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>97</ID>
+    <Name>Extinguish</Name>
+    <Words>exana flam</Words>
+    <Mana>30</Mana>
+    <LevelCast>3</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>400</Price>
+    <Vocation>D</Vocation>
+    <Group>Healing</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>20</ID>
+    <Name>Find Person</Name>
+    <Words>exiva para</Words>
+    <Mana>20</Mana>
+    <LevelCast>0</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>80</Price>
+    <Vocation>K,P,S,D</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>25</ID>
+    <Name>Fire Field</Name>
+    <Words>adevo grav flam</Words>
+    <Mana>60</Mana>
+    <ProduceID>3188</ProduceID>
+    <LevelCast>3</LevelCast>
+    <LevelUse>1</LevelUse>
+    <Price>500</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Attack</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>28</ID>
+    <Name>Fire Wall</Name>
+    <Words>adevo mas grav flam</Words>
+    <Mana>200</Mana>
+    <ProduceID>3190</ProduceID>
+    <LevelCast>13</LevelCast>
+    <LevelUse>6</LevelUse>
+    <Price>2000</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Attack</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>19</ID>
+    <Name>Fire Wave</Name>
+    <Words>exevo flam hur</Words>
+    <Mana>80</Mana>
+    <LevelCast>7</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>850</Price>
+    <Vocation>S</Vocation>
+    <Group>Attack</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>15</ID>
+    <Name>Fireball</Name>
+    <Words>adori flam</Words>
+    <Mana>60</Mana>
+    <ProduceID>3189</ProduceID>
+    <LevelCast>5</LevelCast>
+    <LevelUse>2</LevelUse>
+    <Price>800</Price>
+    <Vocation>P,S,D</Vocation>
+    <Group>Attack</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>17</ID>
+    <Name>Fire Bomb</Name>
+    <Words>adevo mas flam</Words>
+    <Mana>150</Mana>
+    <ProduceID>3192</ProduceID>
+    <LevelCast>9</LevelCast>
+    <LevelUse>5</LevelUse>
+    <Price>1500</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Attack</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>89</ID>
+    <Name>Flame Strike</Name>
+    <Words>exori flam</Words>
+    <Mana>20</Mana>
+    <LevelCast>3</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>800</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Attack</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>42</ID>
+    <Name>Food</Name>
+    <Words>exevo pan</Words>
+    <Mana>30</Mana>
+    <LevelCast>0</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>150</Price>
+    <Vocation>P,D</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>87</ID>
+    <Name>Force Strike</Name>
+    <Words>exori mort</Words>
+    <Mana>20</Mana>
+    <LevelCast>2</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>600</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Attack</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>23</ID>
+    <Name>Great Energy Beam</Name>
+    <Words>exevo gran vis lux</Words>
+    <Mana>200</Mana>
+    <LevelCast>14</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>1800</Price>
+    <Vocation>S</Vocation>
+    <Group>Attack</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>16</ID>
+    <Name>Great Fireball</Name>
+    <Words>adori gran flam</Words>
+    <Mana>120</Mana>
+    <ProduceID>3191</ProduceID>
+    <LevelCast>9</LevelCast>
+    <LevelUse>4</LevelUse>
+    <Price>1200</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Attack</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>11</ID>
+    <Name>Great Light</Name>
+    <Words>utevo gran lux</Words>
+    <Mana>60</Mana>
+    <LevelCast>3</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>500</Price>
+    <Vocation>K,P,S,D</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>6</ID>
+    <Name>Haste</Name>
+    <Words>utani hur</Words>
+    <Mana>60</Mana>
+    <LevelCast>4</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>600</Price>
+    <Vocation>K,P,S,D</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>84</ID>
+    <Name>Heal Friend</Name>
+    <Words>exura sio para</Words>
+    <Mana>70</Mana>
+    <LevelCast>7</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>800</Price>
+    <Vocation>D</Vocation>
+    <Group>Healing</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>8</ID>
+    <Name>Heavy Magic Missile</Name>
+    <Words>adori gran</Words>
+    <Mana>70</Mana>
+    <ProduceID>3198</ProduceID>
+    <LevelCast>3</LevelCast>
+    <LevelUse>1</LevelUse>
+    <Price>600</Price>
+    <Vocation>P,S,D</Vocation>
+    <Group>Attack</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>2</ID>
+    <Name>Intense Healing</Name>
+    <Words>exura gran</Words>
+    <Mana>40</Mana>
+    <LevelCast>2</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>350</Price>
+    <Vocation>P,S,D</Vocation>
+    <Group>Healing</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>4</ID>
+    <Name>Intense Healing Rune</Name>
+    <Words>adura gran</Words>
+    <Mana>60</Mana>
+    <ProduceID>3152</ProduceID>
+    <LevelCast>4</LevelCast>
+    <LevelUse>1</LevelUse>
+    <Price>600</Price>
+    <Vocation>D</Vocation>
+    <Group>Healing</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>45</ID>
+    <Name>Invisible</Name>
+    <Words>utana vid</Words>
+    <Mana>210</Mana>
+    <LevelCast>15</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>1000</Price>
+    <Vocation>P,S,D</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>81</ID>
+    <Name>Levitate</Name>
+    <Words>exani hur para</Words>
+    <Mana>50</Mana>
+    <LevelCast>3</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>500</Price>
+    <Vocation>K,P,S,D</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>10</ID>
+    <Name>Light</Name>
+    <Words>utevo lux</Words>
+    <Mana>20</Mana>
+    <LevelCast>0</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>100</Price>
+    <Vocation>K,P,S,D</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>1</ID>
+    <Name>Light Healing</Name>
+    <Words>exura</Words>
+    <Mana>25</Mana>
+    <LevelCast>1</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>170</Price>
+    <Vocation>K,P,S,D</Vocation>
+    <Group>Healing</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>7</ID>
+    <Name>Light Magic Missile</Name>
+    <Words>adori</Words>
+    <Mana>40</Mana>
+    <ProduceID>3174</ProduceID>
+    <LevelCast>1</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>200</Price>
+    <Vocation>P,S,D</Vocation>
+    <Group>Attack</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>76</ID>
+    <Name>Magic Rope</Name>
+    <Words>exani tera</Words>
+    <Mana>20</Mana>
+    <LevelCast>1</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>200</Price>
+    <Vocation>K,P,S,D</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>44</ID>
+    <Name>Magic Shield</Name>
+    <Words>utamo vita</Words>
+    <Mana>50</Mana>
+    <LevelCast>4</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>450</Price>
+    <Vocation>P,S,D</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>86</ID>
+    <Name>Magic Wall</Name>
+    <Words>adevo grav tera</Words>
+    <Mana>250</Mana>
+    <ProduceID>3180</ProduceID>
+    <LevelCast>14</LevelCast>
+    <LevelUse>9</LevelUse>
+    <Price>2100</Price>
+    <Vocation>S</Vocation>
+    <Group>Support</Group>
+    <Type>Rune</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>82</ID>
+    <Name>Mass Healing</Name>
+    <Words>exura gran mas res</Words>
+    <Mana>120</Mana>
+    <LevelCast>19</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>2200</Price>
+    <Vocation>D</Vocation>
+    <Group>Healing</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>54</ID>
+    <Name>Paralyze</Name>
+    <Words>adana ani</Words>
+    <Mana>600</Mana>
+    <ProduceID>3165</ProduceID>
+    <LevelCast>35</LevelCast>
+    <LevelUse>18</LevelUse>
+    <Price>1900</Price>
+    <Vocation>D</Vocation>
+    <Group>Support</Group>
+    <Type>Rune</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>26</ID>
+    <Name>Poison Field</Name>
+    <Words>adevo grav pox</Words>
+    <Mana>50</Mana>
+    <ProduceID>3172</ProduceID>
+    <LevelCast>2</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>300</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Attack</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>56</ID>
+    <Name>Poison Storm</Name>
+    <Words>exevo gran mas pox</Words>
+    <Mana>400</Mana>
+    <LevelCast>28</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>3400</Price>
+    <Vocation>D</Vocation>
+    <Group>Attack</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>32</ID>
+    <Name>Poison Wall</Name>
+    <Words>adevo mas grav pox</Words>
+    <Mana>160</Mana>
+    <ProduceID>3176</ProduceID>
+    <LevelCast>11</LevelCast>
+    <LevelUse>5</LevelUse>
+    <Price>1600</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Attack</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>91</ID>
+    <Name>Poison Bomb</Name>
+    <Words>adevo mas pox</Words>
+    <Mana>130</Mana>
+    <ProduceID>3173</ProduceID>
+    <LevelCast>8</LevelCast>
+    <LevelUse>4</LevelUse>
+    <Price>1000</Price>
+    <Vocation>D</Vocation>
+    <Group>Attack</Group>
+    <Type>Rune</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>48</ID>
+    <Name>Poisoned Arrow</Name>
+    <Words>exevo con pox</Words>
+    <Mana>70</Mana>
+    <ProduceID>3448</ProduceID>
+    <ProduceAmount>7</ProduceAmount>
+    <LevelCast>5</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>700</Price>
+    <Vocation>P</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>95</ID>
+    <Name>Power Bolt</Name>
+    <Words>exevo con vis</Words>
+    <Mana>200</Mana>
+    <ProduceID>3450</ProduceID>
+    <ProduceAmount>10</ProduceAmount>
+    <LevelCast>14</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>2000</Price>
+    <Vocation>P</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>50</ID>
+    <Name>Soulfire</Name>
+    <Words>adevo res flam</Words>
+    <Mana>150</Mana>
+    <ProduceID>3195</ProduceID>
+    <LevelCast>13</LevelCast>
+    <LevelUse>7</LevelUse>
+    <Price>1800</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Attack</Group>
+    <Type>Rune</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>39</ID>
+    <Name>Strong Haste</Name>
+    <Words>utani gran hur</Words>
+    <Mana>100</Mana>
+    <LevelCast>8</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>1300</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>21</ID>
+    <Name>Sudden Death</Name>
+    <Words>adori vita vis</Words>
+    <Mana>220</Mana>
+    <ProduceID>3155</ProduceID>
+    <LevelCast>25</LevelCast>
+    <LevelUse>15</LevelUse>
+    <Price>3000</Price>
+    <Vocation>S</Vocation>
+    <Group>Attack</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>9</ID>
+    <Name>Summon Creature</Name>
+    <Words>utevo res para</Words>
+    <Mana>0</Mana>
+    <LevelCast>16</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>2000</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>24</ID>
+    <Name>Ultimate Explosion</Name>
+    <Words>exevo gran mas vis</Words>
+    <Mana>800</Mana>
+    <LevelCast>40</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>8000</Price>
+    <Vocation>S</Vocation>
+    <Group>Attack</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>3</ID>
+    <Name>Ultimate Healing</Name>
+    <Words>exura vita</Words>
+    <Mana>80</Mana>
+    <LevelCast>8</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>1000</Price>
+    <Vocation>P,S,D</Vocation>
+    <Group>Healing</Group>
+    <Type>Instant</Type>
+  </Spell>
+  <Spell>
+    <ID>5</ID>
+    <Name>Ultimate Healing Rune</Name>
+    <Words>adura vita</Words>
+    <Mana>100</Mana>
+    <ProduceID>3160</ProduceID>
+    <LevelCast>11</LevelCast>
+    <LevelUse>4</LevelUse>
+    <Price>1500</Price>
+    <Vocation>D</Vocation>
+    <Group>Healing</Group>
+    <Type>Rune</Type>
+  </Spell>
+  <Spell>
+    <ID>75</ID>
+    <Name>Ultimate Light</Name>
+    <Words>utevo vis lux</Words>
+    <Mana>140</Mana>
+    <LevelCast>12</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>1600</Price>
+    <Vocation>S,D</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>85</ID>
+    <Name>Undead Legion</Name>
+    <Words>exana mas mort</Words>
+    <Mana>400</Mana>
+    <LevelCast>15</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>2000</Price>
+    <Vocation>D</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  <Spell>
+    <ID>94</ID>
+    <Name>Wild Growth</Name>
+    <Words>exevo grav vita</Words>
+    <Mana>150</Mana>
+    <LevelCast>13</LevelCast>
+    <LevelUse>0</LevelUse>
+    <Price>2000</Price>
+    <Vocation>D</Vocation>
+    <Group>Support</Group>
+    <Type>Instant</Type>
+    <Premium />
+  </Spell>
+  
+</Spells>
