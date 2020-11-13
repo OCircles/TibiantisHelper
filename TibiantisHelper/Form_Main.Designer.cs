@@ -1081,13 +1081,13 @@
             this.label21.TabIndex = 4;
             this.label21.Text = "Exp";
             // 
-            // textBox4
+            // calculator_textBox_result
             // 
             this.calculator_textBox_result.BackColor = System.Drawing.SystemColors.ControlLight;
             this.calculator_textBox_result.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calculator_textBox_result.Location = new System.Drawing.Point(0, 0);
             this.calculator_textBox_result.Multiline = true;
-            this.calculator_textBox_result.Name = "textBox4";
+            this.calculator_textBox_result.Name = "calculator_textBox_result";
             this.calculator_textBox_result.ReadOnly = true;
             this.calculator_textBox_result.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.calculator_textBox_result.Size = new System.Drawing.Size(747, 95);
