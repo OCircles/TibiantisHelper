@@ -1,5 +1,7 @@
 # Tibiantis Helper
 
+*[Images below](#images)*
+
 Makes life a bit easier for us retrocore noobs on Tibiantis :)
 
 This is an app made to streamline the Tibiantis experience, centralizing a lot of information and useful features into one easy-to-use platform that runs neatly in your traybar. It works by parsing data from the Cipsoft 7.7 server leak (which for reasons ended up becoming public domain) which I've modified to reflect 7.4 better.
@@ -16,7 +18,9 @@ The program must be in the same folder as Tibiantis.spr and Tibiantis.dat found 
 
 I wrote this whole thing with a broken keyboard. Backspace is not working and I cannot describe to you the depths of my suffering
  
+ ## Images
+ 
 ![Monsters](img/monsters.png)
 ![Items](img/items.png)
 ![Timers](img/timers.png)
-![NPCs](img/npcs)
+![NPCs](img/npcs.png)
