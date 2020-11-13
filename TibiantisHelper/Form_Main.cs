@@ -1134,6 +1134,9 @@ namespace TibiantisHelper
 
         #region Production
 
+        string calculator_production_addTimer_time = "";
+        string calculator_production_addTimer_title = "";
+
         private void CalculateProduction()
         {
 
@@ -1181,22 +1184,31 @@ namespace TibiantisHelper
 
                         string regenString = "";
 
-                        if (regenTime.Hours != 0) regenString += string.Format("{0:D1}h", regenTime.Hours);
+                        if (regenTime.Hours != 0) regenString += string.Format("{0:D1}h", regenTime.Hours + (regenTime.Days*24));
                         if (regenTime.Minutes != 0) regenString += string.Format("{0:D1}m", regenTime.Minutes);
                         if (regenTime.Seconds != 0) regenString += string.Format("{0:D1}s", regenTime.Seconds);
 
-                        textBox4.Text = "A " + _selectedVocation.Name +
+                        calculator_production_addTimer_time = string.Format("{0:D2}:{1:D2}:{2:D2}", regenTime.Hours + (regenTime.Days * 24), regenTime.Minutes, regenTime.Seconds); ;
+                        calculator_production_addTimer_title = itemName;
+
+                        calculator_textBox_result.Text = "A " + _selectedVocation.Name +
                             " producing " + itemName + " (";
 
+                        string parenthesis = "";
+
                         if (spell.Type == 1)
-                            textBox4.Text += casts + "x";
+                            parenthesis = casts + "x";
                         else
                         {
-                            textBox4.Text += amount + " stack";
-                            if (amount != 1) textBox4.Text += "s";
+                            parenthesis += amount + " stack";
+                            if (amount != 1) parenthesis += "s";
                         }
-                    
-                        textBox4.Text += 
+
+                        calculator_textBox_result.Text += parenthesis;
+
+                        calculator_production_addTimer_title += $" {parenthesis} ({_selectedVocation.Name})";
+
+                        calculator_textBox_result.Text += 
                             ") takes " + regenString +
                             " and uses " + foodDiv + "x " + food.Name + "(" +
                             (((double)food.GetAttributeValue("Weight")) / 100) * foodDiv + "oz)";
@@ -1205,12 +1217,12 @@ namespace TibiantisHelper
                     }
                     else
                     {
-                        textBox4.Text = "Please input production amount above";
+                        calculator_textBox_result.Text = "Please input production amount above";
                     }
                 } 
                 else
                 {
-                    textBox4.Text = "Could not parse input";
+                    calculator_textBox_result.Text = "Could not parse input";
                 }
             }
         }
@@ -1242,6 +1254,16 @@ namespace TibiantisHelper
             else
                 calculator_production_comboBox_rune.SelectedIndex = 0;
         }
+
+        private void calculator_production_button_addTimer_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(calculator_production_addTimer_time))
+            {
+                TimersAdd(calculator_production_addTimer_title, calculator_production_addTimer_time, 0);
+                tabControl1.SelectedTab = tabPage_timers;
+            }
+        }
+
 
         private void calculator_production_textBox_TextChanged(object sender, EventArgs e)
         {
@@ -1314,7 +1336,7 @@ namespace TibiantisHelper
                         if (diff.Minutes != 0) durationString += string.Format("{0:D1}m", diff.Minutes);
                         if (diff.Seconds != 0) durationString += string.Format("{0:D1}s", diff.Seconds);
 
-                        textBox4.Text = "You gained " + totalExp + " experience over a duration of " +
+                        calculator_textBox_result.Text = "You gained " + totalExp + " experience over a duration of " +
                             durationString + " (" + Math.Round(expPerMin, 1) + " exp per minute)";
                          
                          

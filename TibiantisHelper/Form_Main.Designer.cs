@@ -73,32 +73,32 @@
             this.splitContainer15 = new System.Windows.Forms.SplitContainer();
             this.calculator_tabControl = new System.Windows.Forms.TabControl();
             this.calculator_production_tabPage = new System.Windows.Forms.TabPage();
-            this.calculator_production_comboBox_food = new System.Windows.Forms.ComboBox();
-            this.calculator_production_button_addTimer = new System.Windows.Forms.Button();
-            this.calculator_production_label4 = new System.Windows.Forms.Label();
+            this.calculator_label_title = new System.Windows.Forms.Label();
+            this.calculator_production_label1 = new System.Windows.Forms.Label();
+            this.calculator_production_comboBox_rune = new System.Windows.Forms.ComboBox();
+            this.calculator_production_label2 = new System.Windows.Forms.Label();
+            this.calculator_production_textBox_amountSingle = new System.Windows.Forms.TextBox();
+            this.calculator_production_label5 = new System.Windows.Forms.Label();
             this.calculator_production_textBox_amountBackpack = new System.Windows.Forms.TextBox();
             this.calculator_production_label3 = new System.Windows.Forms.Label();
-            this.calculator_production_label5 = new System.Windows.Forms.Label();
-            this.calculator_production_textBox_amountSingle = new System.Windows.Forms.TextBox();
-            this.calculator_production_label2 = new System.Windows.Forms.Label();
-            this.calculator_production_comboBox_rune = new System.Windows.Forms.ComboBox();
-            this.calculator_production_label1 = new System.Windows.Forms.Label();
-            this.calculator_label_title = new System.Windows.Forms.Label();
+            this.calculator_production_label4 = new System.Windows.Forms.Label();
+            this.calculator_production_button_addTimer = new System.Windows.Forms.Button();
+            this.calculator_production_comboBox_food = new System.Windows.Forms.ComboBox();
             this.calculator_experience_tabPage = new System.Windows.Forms.TabPage();
-            this.calculator_experience_groupBox2 = new System.Windows.Forms.GroupBox();
-            this.calculator_experience_button_endTime = new System.Windows.Forms.Button();
-            this.calculator_experience_label_timer = new System.Windows.Forms.Label();
-            this.calculator_experience_textBox_endTime = new System.Windows.Forms.TextBox();
-            this.calculator_experience_textBox_endExp = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
+            this.calculator_experience_label_title = new System.Windows.Forms.Label();
             this.calculator_experience_groupBox1 = new System.Windows.Forms.GroupBox();
             this.calculator_experience_button_startTime = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.calculator_experience_textBox_startTime = new System.Windows.Forms.TextBox();
             this.calculator_experience_textBox_startExp = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.calculator_experience_label_title = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.calculator_experience_groupBox2 = new System.Windows.Forms.GroupBox();
+            this.calculator_experience_button_endTime = new System.Windows.Forms.Button();
+            this.calculator_experience_label_timer = new System.Windows.Forms.Label();
+            this.calculator_experience_textBox_endTime = new System.Windows.Forms.TextBox();
+            this.calculator_experience_textBox_endExp = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.calculator_textBox_result = new System.Windows.Forms.TextBox();
             this.tabPage_items = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
@@ -224,8 +224,8 @@
             this.calculator_tabControl.SuspendLayout();
             this.calculator_production_tabPage.SuspendLayout();
             this.calculator_experience_tabPage.SuspendLayout();
-            this.calculator_experience_groupBox2.SuspendLayout();
             this.calculator_experience_groupBox1.SuspendLayout();
+            this.calculator_experience_groupBox2.SuspendLayout();
             this.tabPage_items.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -777,7 +777,7 @@
             // 
             // splitContainer15.Panel2
             // 
-            this.splitContainer15.Panel2.Controls.Add(this.textBox4);
+            this.splitContainer15.Panel2.Controls.Add(this.calculator_textBox_result);
             this.splitContainer15.Size = new System.Drawing.Size(747, 406);
             this.splitContainer15.SplitterDistance = 307;
             this.splitContainer15.TabIndex = 0;
@@ -817,35 +817,64 @@
             this.calculator_production_tabPage.TabIndex = 0;
             this.calculator_production_tabPage.Text = "Production";
             // 
-            // calculator_production_comboBox_food
+            // calculator_label_title
             // 
-            this.calculator_production_comboBox_food.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.calculator_production_comboBox_food.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.calculator_production_comboBox_food.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.calculator_production_comboBox_food.FormattingEnabled = true;
-            this.calculator_production_comboBox_food.Location = new System.Drawing.Point(102, 104);
-            this.calculator_production_comboBox_food.Name = "calculator_production_comboBox_food";
-            this.calculator_production_comboBox_food.Size = new System.Drawing.Size(197, 21);
-            this.calculator_production_comboBox_food.TabIndex = 10;
-            this.calculator_production_comboBox_food.SelectedIndexChanged += new System.EventHandler(this.calculator_production_comboBox_food_SelectedIndexChanged);
+            this.calculator_label_title.AutoSize = true;
+            this.calculator_label_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.calculator_label_title.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculator_label_title.Location = new System.Drawing.Point(6, 3);
+            this.calculator_label_title.Name = "calculator_label_title";
+            this.calculator_label_title.Size = new System.Drawing.Size(93, 17);
+            this.calculator_label_title.TabIndex = 0;
+            this.calculator_label_title.Text = "Production";
             // 
-            // calculator_production_button_addTimer
+            // calculator_production_label1
             // 
-            this.calculator_production_button_addTimer.Location = new System.Drawing.Point(48, 145);
-            this.calculator_production_button_addTimer.Name = "calculator_production_button_addTimer";
-            this.calculator_production_button_addTimer.Size = new System.Drawing.Size(75, 23);
-            this.calculator_production_button_addTimer.TabIndex = 10;
-            this.calculator_production_button_addTimer.Text = "Add Timer";
-            this.calculator_production_button_addTimer.UseVisualStyleBackColor = true;
+            this.calculator_production_label1.AutoSize = true;
+            this.calculator_production_label1.Location = new System.Drawing.Point(45, 43);
+            this.calculator_production_label1.Name = "calculator_production_label1";
+            this.calculator_production_label1.Size = new System.Drawing.Size(36, 13);
+            this.calculator_production_label1.TabIndex = 1;
+            this.calculator_production_label1.Text = "Rune";
             // 
-            // calculator_production_label4
+            // calculator_production_comboBox_rune
             // 
-            this.calculator_production_label4.AutoSize = true;
-            this.calculator_production_label4.Location = new System.Drawing.Point(45, 107);
-            this.calculator_production_label4.Name = "calculator_production_label4";
-            this.calculator_production_label4.Size = new System.Drawing.Size(34, 13);
-            this.calculator_production_label4.TabIndex = 10;
-            this.calculator_production_label4.Text = "Food";
+            this.calculator_production_comboBox_rune.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.calculator_production_comboBox_rune.FormattingEnabled = true;
+            this.calculator_production_comboBox_rune.Location = new System.Drawing.Point(102, 40);
+            this.calculator_production_comboBox_rune.Name = "calculator_production_comboBox_rune";
+            this.calculator_production_comboBox_rune.Size = new System.Drawing.Size(197, 21);
+            this.calculator_production_comboBox_rune.TabIndex = 2;
+            this.calculator_production_comboBox_rune.SelectedIndexChanged += new System.EventHandler(this.calculator_production_comboBox_rune_SelectedIndexChanged);
+            // 
+            // calculator_production_label2
+            // 
+            this.calculator_production_label2.AutoSize = true;
+            this.calculator_production_label2.Location = new System.Drawing.Point(45, 75);
+            this.calculator_production_label2.Name = "calculator_production_label2";
+            this.calculator_production_label2.Size = new System.Drawing.Size(51, 13);
+            this.calculator_production_label2.TabIndex = 3;
+            this.calculator_production_label2.Text = "Amount";
+            // 
+            // calculator_production_textBox_amountSingle
+            // 
+            this.calculator_production_textBox_amountSingle.Location = new System.Drawing.Point(102, 72);
+            this.calculator_production_textBox_amountSingle.Name = "calculator_production_textBox_amountSingle";
+            this.calculator_production_textBox_amountSingle.Size = new System.Drawing.Size(51, 21);
+            this.calculator_production_textBox_amountSingle.TabIndex = 4;
+            this.calculator_production_textBox_amountSingle.Text = "0";
+            this.calculator_production_textBox_amountSingle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.calculator_production_textBox_amountSingle.TextChanged += new System.EventHandler(this.calculator_production_textBox_TextChanged);
+            this.calculator_production_textBox_amountSingle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.calculator_production_textBox_KeyPress);
+            // 
+            // calculator_production_label5
+            // 
+            this.calculator_production_label5.AutoSize = true;
+            this.calculator_production_label5.Location = new System.Drawing.Point(155, 75);
+            this.calculator_production_label5.Name = "calculator_production_label5";
+            this.calculator_production_label5.Size = new System.Drawing.Size(16, 13);
+            this.calculator_production_label5.TabIndex = 5;
+            this.calculator_production_label5.Text = "+";
             // 
             // calculator_production_textBox_amountBackpack
             // 
@@ -867,64 +896,36 @@
             this.calculator_production_label3.TabIndex = 7;
             this.calculator_production_label3.Text = "backpacks";
             // 
-            // calculator_production_label5
+            // calculator_production_label4
             // 
-            this.calculator_production_label5.AutoSize = true;
-            this.calculator_production_label5.Location = new System.Drawing.Point(155, 75);
-            this.calculator_production_label5.Name = "calculator_production_label5";
-            this.calculator_production_label5.Size = new System.Drawing.Size(16, 13);
-            this.calculator_production_label5.TabIndex = 5;
-            this.calculator_production_label5.Text = "+";
+            this.calculator_production_label4.AutoSize = true;
+            this.calculator_production_label4.Location = new System.Drawing.Point(45, 107);
+            this.calculator_production_label4.Name = "calculator_production_label4";
+            this.calculator_production_label4.Size = new System.Drawing.Size(34, 13);
+            this.calculator_production_label4.TabIndex = 10;
+            this.calculator_production_label4.Text = "Food";
             // 
-            // calculator_production_textBox_amountSingle
+            // calculator_production_button_addTimer
             // 
-            this.calculator_production_textBox_amountSingle.Location = new System.Drawing.Point(102, 72);
-            this.calculator_production_textBox_amountSingle.Name = "calculator_production_textBox_amountSingle";
-            this.calculator_production_textBox_amountSingle.Size = new System.Drawing.Size(51, 21);
-            this.calculator_production_textBox_amountSingle.TabIndex = 4;
-            this.calculator_production_textBox_amountSingle.Text = "0";
-            this.calculator_production_textBox_amountSingle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.calculator_production_textBox_amountSingle.TextChanged += new System.EventHandler(this.calculator_production_textBox_TextChanged);
-            this.calculator_production_textBox_amountSingle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.calculator_production_textBox_KeyPress);
+            this.calculator_production_button_addTimer.Location = new System.Drawing.Point(48, 145);
+            this.calculator_production_button_addTimer.Name = "calculator_production_button_addTimer";
+            this.calculator_production_button_addTimer.Size = new System.Drawing.Size(75, 23);
+            this.calculator_production_button_addTimer.TabIndex = 10;
+            this.calculator_production_button_addTimer.Text = "Add Timer";
+            this.calculator_production_button_addTimer.UseVisualStyleBackColor = true;
+            this.calculator_production_button_addTimer.Click += new System.EventHandler(this.calculator_production_button_addTimer_Click);
             // 
-            // calculator_production_label2
+            // calculator_production_comboBox_food
             // 
-            this.calculator_production_label2.AutoSize = true;
-            this.calculator_production_label2.Location = new System.Drawing.Point(45, 75);
-            this.calculator_production_label2.Name = "calculator_production_label2";
-            this.calculator_production_label2.Size = new System.Drawing.Size(51, 13);
-            this.calculator_production_label2.TabIndex = 3;
-            this.calculator_production_label2.Text = "Amount";
-            // 
-            // calculator_production_comboBox_rune
-            // 
-            this.calculator_production_comboBox_rune.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.calculator_production_comboBox_rune.FormattingEnabled = true;
-            this.calculator_production_comboBox_rune.Location = new System.Drawing.Point(102, 40);
-            this.calculator_production_comboBox_rune.Name = "calculator_production_comboBox_rune";
-            this.calculator_production_comboBox_rune.Size = new System.Drawing.Size(197, 21);
-            this.calculator_production_comboBox_rune.TabIndex = 2;
-            this.calculator_production_comboBox_rune.SelectedIndexChanged += new System.EventHandler(this.calculator_production_comboBox_rune_SelectedIndexChanged);
-            // 
-            // calculator_production_label1
-            // 
-            this.calculator_production_label1.AutoSize = true;
-            this.calculator_production_label1.Location = new System.Drawing.Point(45, 43);
-            this.calculator_production_label1.Name = "calculator_production_label1";
-            this.calculator_production_label1.Size = new System.Drawing.Size(36, 13);
-            this.calculator_production_label1.TabIndex = 1;
-            this.calculator_production_label1.Text = "Rune";
-            // 
-            // calculator_label_title
-            // 
-            this.calculator_label_title.AutoSize = true;
-            this.calculator_label_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.calculator_label_title.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calculator_label_title.Location = new System.Drawing.Point(6, 3);
-            this.calculator_label_title.Name = "calculator_label_title";
-            this.calculator_label_title.Size = new System.Drawing.Size(93, 17);
-            this.calculator_label_title.TabIndex = 0;
-            this.calculator_label_title.Text = "Production";
+            this.calculator_production_comboBox_food.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.calculator_production_comboBox_food.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.calculator_production_comboBox_food.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.calculator_production_comboBox_food.FormattingEnabled = true;
+            this.calculator_production_comboBox_food.Location = new System.Drawing.Point(102, 104);
+            this.calculator_production_comboBox_food.Name = "calculator_production_comboBox_food";
+            this.calculator_production_comboBox_food.Size = new System.Drawing.Size(197, 21);
+            this.calculator_production_comboBox_food.TabIndex = 10;
+            this.calculator_production_comboBox_food.SelectedIndexChanged += new System.EventHandler(this.calculator_production_comboBox_food_SelectedIndexChanged);
             // 
             // calculator_experience_tabPage
             // 
@@ -939,70 +940,16 @@
             this.calculator_experience_tabPage.TabIndex = 1;
             this.calculator_experience_tabPage.Text = "Experience";
             // 
-            // calculator_experience_groupBox2
+            // calculator_experience_label_title
             // 
-            this.calculator_experience_groupBox2.Controls.Add(this.calculator_experience_button_endTime);
-            this.calculator_experience_groupBox2.Controls.Add(this.calculator_experience_label_timer);
-            this.calculator_experience_groupBox2.Controls.Add(this.calculator_experience_textBox_endTime);
-            this.calculator_experience_groupBox2.Controls.Add(this.calculator_experience_textBox_endExp);
-            this.calculator_experience_groupBox2.Controls.Add(this.label21);
-            this.calculator_experience_groupBox2.Location = new System.Drawing.Point(42, 123);
-            this.calculator_experience_groupBox2.Name = "calculator_experience_groupBox2";
-            this.calculator_experience_groupBox2.Size = new System.Drawing.Size(325, 82);
-            this.calculator_experience_groupBox2.TabIndex = 15;
-            this.calculator_experience_groupBox2.TabStop = false;
-            this.calculator_experience_groupBox2.Text = "End";
-            // 
-            // calculator_experience_button_endTime
-            // 
-            this.calculator_experience_button_endTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.calculator_experience_button_endTime.Location = new System.Drawing.Point(227, 45);
-            this.calculator_experience_button_endTime.Name = "calculator_experience_button_endTime";
-            this.calculator_experience_button_endTime.Size = new System.Drawing.Size(92, 23);
-            this.calculator_experience_button_endTime.TabIndex = 14;
-            this.calculator_experience_button_endTime.Text = "Current time";
-            this.calculator_experience_button_endTime.UseVisualStyleBackColor = true;
-            this.calculator_experience_button_endTime.Click += new System.EventHandler(this.calculator_experience_button_endTime_Click);
-            // 
-            // calculator_experience_label_timer
-            // 
-            this.calculator_experience_label_timer.AutoSize = true;
-            this.calculator_experience_label_timer.Location = new System.Drawing.Point(17, 50);
-            this.calculator_experience_label_timer.Name = "calculator_experience_label_timer";
-            this.calculator_experience_label_timer.Size = new System.Drawing.Size(35, 13);
-            this.calculator_experience_label_timer.TabIndex = 13;
-            this.calculator_experience_label_timer.Text = "Time";
-            // 
-            // calculator_experience_textBox_endTime
-            // 
-            this.calculator_experience_textBox_endTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.calculator_experience_textBox_endTime.Location = new System.Drawing.Point(58, 47);
-            this.calculator_experience_textBox_endTime.Name = "calculator_experience_textBox_endTime";
-            this.calculator_experience_textBox_endTime.Size = new System.Drawing.Size(163, 21);
-            this.calculator_experience_textBox_endTime.TabIndex = 12;
-            this.calculator_experience_textBox_endTime.Text = "hh:mm";
-            this.calculator_experience_textBox_endTime.TextChanged += new System.EventHandler(this.calculator_textBox_TextChanged);
-            // 
-            // calculator_experience_textBox_endExp
-            // 
-            this.calculator_experience_textBox_endExp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.calculator_experience_textBox_endExp.Location = new System.Drawing.Point(58, 23);
-            this.calculator_experience_textBox_endExp.Name = "calculator_experience_textBox_endExp";
-            this.calculator_experience_textBox_endExp.Size = new System.Drawing.Size(163, 21);
-            this.calculator_experience_textBox_endExp.TabIndex = 11;
-            this.calculator_experience_textBox_endExp.Text = "0";
-            this.calculator_experience_textBox_endExp.TextChanged += new System.EventHandler(this.calculator_textBox_TextChanged);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(17, 23);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(28, 13);
-            this.label21.TabIndex = 4;
-            this.label21.Text = "Exp";
+            this.calculator_experience_label_title.AutoSize = true;
+            this.calculator_experience_label_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.calculator_experience_label_title.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculator_experience_label_title.Location = new System.Drawing.Point(0, 0);
+            this.calculator_experience_label_title.Name = "calculator_experience_label_title";
+            this.calculator_experience_label_title.Size = new System.Drawing.Size(93, 17);
+            this.calculator_experience_label_title.TabIndex = 0;
+            this.calculator_experience_label_title.Text = "Experience";
             // 
             // calculator_experience_groupBox1
             // 
@@ -1069,28 +1016,82 @@
             this.label18.TabIndex = 4;
             this.label18.Text = "Exp";
             // 
-            // calculator_experience_label_title
+            // calculator_experience_groupBox2
             // 
-            this.calculator_experience_label_title.AutoSize = true;
-            this.calculator_experience_label_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.calculator_experience_label_title.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calculator_experience_label_title.Location = new System.Drawing.Point(0, 0);
-            this.calculator_experience_label_title.Name = "calculator_experience_label_title";
-            this.calculator_experience_label_title.Size = new System.Drawing.Size(93, 17);
-            this.calculator_experience_label_title.TabIndex = 0;
-            this.calculator_experience_label_title.Text = "Experience";
+            this.calculator_experience_groupBox2.Controls.Add(this.calculator_experience_button_endTime);
+            this.calculator_experience_groupBox2.Controls.Add(this.calculator_experience_label_timer);
+            this.calculator_experience_groupBox2.Controls.Add(this.calculator_experience_textBox_endTime);
+            this.calculator_experience_groupBox2.Controls.Add(this.calculator_experience_textBox_endExp);
+            this.calculator_experience_groupBox2.Controls.Add(this.label21);
+            this.calculator_experience_groupBox2.Location = new System.Drawing.Point(42, 123);
+            this.calculator_experience_groupBox2.Name = "calculator_experience_groupBox2";
+            this.calculator_experience_groupBox2.Size = new System.Drawing.Size(325, 82);
+            this.calculator_experience_groupBox2.TabIndex = 15;
+            this.calculator_experience_groupBox2.TabStop = false;
+            this.calculator_experience_groupBox2.Text = "End";
+            // 
+            // calculator_experience_button_endTime
+            // 
+            this.calculator_experience_button_endTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.calculator_experience_button_endTime.Location = new System.Drawing.Point(227, 45);
+            this.calculator_experience_button_endTime.Name = "calculator_experience_button_endTime";
+            this.calculator_experience_button_endTime.Size = new System.Drawing.Size(92, 23);
+            this.calculator_experience_button_endTime.TabIndex = 14;
+            this.calculator_experience_button_endTime.Text = "Current time";
+            this.calculator_experience_button_endTime.UseVisualStyleBackColor = true;
+            this.calculator_experience_button_endTime.Click += new System.EventHandler(this.calculator_experience_button_endTime_Click);
+            // 
+            // calculator_experience_label_timer
+            // 
+            this.calculator_experience_label_timer.AutoSize = true;
+            this.calculator_experience_label_timer.Location = new System.Drawing.Point(17, 50);
+            this.calculator_experience_label_timer.Name = "calculator_experience_label_timer";
+            this.calculator_experience_label_timer.Size = new System.Drawing.Size(35, 13);
+            this.calculator_experience_label_timer.TabIndex = 13;
+            this.calculator_experience_label_timer.Text = "Time";
+            // 
+            // calculator_experience_textBox_endTime
+            // 
+            this.calculator_experience_textBox_endTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calculator_experience_textBox_endTime.Location = new System.Drawing.Point(58, 47);
+            this.calculator_experience_textBox_endTime.Name = "calculator_experience_textBox_endTime";
+            this.calculator_experience_textBox_endTime.Size = new System.Drawing.Size(163, 21);
+            this.calculator_experience_textBox_endTime.TabIndex = 12;
+            this.calculator_experience_textBox_endTime.Text = "hh:mm";
+            this.calculator_experience_textBox_endTime.TextChanged += new System.EventHandler(this.calculator_textBox_TextChanged);
+            // 
+            // calculator_experience_textBox_endExp
+            // 
+            this.calculator_experience_textBox_endExp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.calculator_experience_textBox_endExp.Location = new System.Drawing.Point(58, 23);
+            this.calculator_experience_textBox_endExp.Name = "calculator_experience_textBox_endExp";
+            this.calculator_experience_textBox_endExp.Size = new System.Drawing.Size(163, 21);
+            this.calculator_experience_textBox_endExp.TabIndex = 11;
+            this.calculator_experience_textBox_endExp.Text = "0";
+            this.calculator_experience_textBox_endExp.TextChanged += new System.EventHandler(this.calculator_textBox_TextChanged);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(17, 23);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(28, 13);
+            this.label21.TabIndex = 4;
+            this.label21.Text = "Exp";
             // 
             // textBox4
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Location = new System.Drawing.Point(0, 0);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox4.Size = new System.Drawing.Size(747, 95);
-            this.textBox4.TabIndex = 8;
+            this.calculator_textBox_result.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.calculator_textBox_result.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.calculator_textBox_result.Location = new System.Drawing.Point(0, 0);
+            this.calculator_textBox_result.Multiline = true;
+            this.calculator_textBox_result.Name = "textBox4";
+            this.calculator_textBox_result.ReadOnly = true;
+            this.calculator_textBox_result.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.calculator_textBox_result.Size = new System.Drawing.Size(747, 95);
+            this.calculator_textBox_result.TabIndex = 8;
             // 
             // tabPage_items
             // 
@@ -2285,10 +2286,10 @@
             this.calculator_production_tabPage.PerformLayout();
             this.calculator_experience_tabPage.ResumeLayout(false);
             this.calculator_experience_tabPage.PerformLayout();
-            this.calculator_experience_groupBox2.ResumeLayout(false);
-            this.calculator_experience_groupBox2.PerformLayout();
             this.calculator_experience_groupBox1.ResumeLayout(false);
             this.calculator_experience_groupBox1.PerformLayout();
+            this.calculator_experience_groupBox2.ResumeLayout(false);
+            this.calculator_experience_groupBox2.PerformLayout();
             this.tabPage_items.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -2463,7 +2464,7 @@
         private System.Windows.Forms.Label calculator_production_label1;
         private System.Windows.Forms.Label calculator_label_title;
         private System.Windows.Forms.TextBox calculator_production_textBox_amountBackpack;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox calculator_textBox_result;
         private System.Windows.Forms.ComboBox calculator_production_comboBox_food;
         private System.Windows.Forms.Label calculator_production_label4;
         private System.Windows.Forms.Label calculator_experience_label_title;

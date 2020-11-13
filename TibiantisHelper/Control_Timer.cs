@@ -54,7 +54,14 @@ namespace TibiantisHelper
             this.multiplier = multiplier;
 
             this.currentTime = 0;
-            this.targetTimeBase = Convert.ToInt32(TimeSpan.Parse(time).TotalSeconds);
+
+            TimeSpan ts = new TimeSpan(int.Parse(time.Split(':')[0]),
+                           int.Parse(time.Split(':')[1]),
+                           int.Parse(time.Split(':')[2])
+                           );
+
+
+            this.targetTimeBase = (int)ts.TotalSeconds;
             this.targetTime = this.targetTimeBase;
 
             if (this.multiplier > 1) this.targetTime *= this.multiplier;
@@ -130,7 +137,7 @@ namespace TibiantisHelper
             TimeSpan t = TimeSpan.FromSeconds(secs);
 
             string answer = string.Format("{0:D2}:{1:D2}:{2:D2}",
-                            t.Hours,
+                            t.Hours + t.Days*24,
                             t.Minutes,
                             t.Seconds);
 
