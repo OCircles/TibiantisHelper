@@ -34,17 +34,17 @@
             this.tray_contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.header_linkLabel_playersOnline = new System.Windows.Forms.LinkLabel();
             this.header_label_onlineStatus = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.vocation_promo_checkBox = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.vocation_comboBox = new System.Windows.Forms.ComboBox();
+            this.header_pictureBox = new System.Windows.Forms.PictureBox();
+            this.header_panel_vocations = new System.Windows.Forms.Panel();
+            this.header_vocation_promo_checkBox = new System.Windows.Forms.CheckBox();
+            this.header_vocation_label4 = new System.Windows.Forms.Label();
+            this.header_vocation_label3 = new System.Windows.Forms.Label();
+            this.header_vocation_label1 = new System.Windows.Forms.Label();
+            this.header_vocation_label2 = new System.Windows.Forms.Label();
+            this.header_vocation_comboBox = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage_accounts = new System.Windows.Forms.TabPage();
             this.splitContainer12 = new System.Windows.Forms.SplitContainer();
             this.splitContainer13 = new System.Windows.Forms.SplitContainer();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -53,7 +53,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.accounts_dataGridView = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage_timers = new System.Windows.Forms.TabPage();
             this.timers_splitContainer = new System.Windows.Forms.SplitContainer();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -67,39 +67,37 @@
             this.bedmageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.idleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.food002000ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabPage_calculator = new System.Windows.Forms.TabPage();
             this.splitContainer14 = new System.Windows.Forms.SplitContainer();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.calculator_listBox = new System.Windows.Forms.ListBox();
             this.splitContainer15 = new System.Windows.Forms.SplitContainer();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.calculator_comboBox_rune = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.calculator_label_productionTitle = new System.Windows.Forms.Label();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.calculator_tabControl = new System.Windows.Forms.TabControl();
+            this.calculator_production_tabPage = new System.Windows.Forms.TabPage();
+            this.calculator_production_comboBox_food = new System.Windows.Forms.ComboBox();
+            this.calculator_production_button_addTimer = new System.Windows.Forms.Button();
+            this.calculator_production_label4 = new System.Windows.Forms.Label();
+            this.calculator_production_textBox_amountBackpack = new System.Windows.Forms.TextBox();
+            this.calculator_production_label3 = new System.Windows.Forms.Label();
+            this.calculator_production_label5 = new System.Windows.Forms.Label();
+            this.calculator_production_textBox_amountSingle = new System.Windows.Forms.TextBox();
+            this.calculator_production_label2 = new System.Windows.Forms.Label();
+            this.calculator_production_comboBox_rune = new System.Windows.Forms.ComboBox();
+            this.calculator_production_label1 = new System.Windows.Forms.Label();
+            this.calculator_label_title = new System.Windows.Forms.Label();
+            this.calculator_experience_tabPage = new System.Windows.Forms.TabPage();
+            this.calculator_experience_groupBox2 = new System.Windows.Forms.GroupBox();
+            this.calculator_experience_button_endTime = new System.Windows.Forms.Button();
+            this.calculator_experience_label_timer = new System.Windows.Forms.Label();
+            this.calculator_experience_textBox_endTime = new System.Windows.Forms.TextBox();
+            this.calculator_experience_textBox_endExp = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.calculator_experience_groupBox1 = new System.Windows.Forms.GroupBox();
+            this.calculator_experience_button_startTime = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.calculator_experience_textBox_startTime = new System.Windows.Forms.TextBox();
+            this.calculator_experience_textBox_startExp = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.calculator_experience_label_title = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.tabPage_items = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -144,7 +142,7 @@
             this.olvColumn29 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn35 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn32 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage_npc = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -176,7 +174,7 @@
             this.olvColumn17 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn19 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn20 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage_loginAlert = new System.Windows.Forms.TabPage();
             this.splitContainer10 = new System.Windows.Forms.SplitContainer();
             this.splitContainer11 = new System.Windows.Forms.SplitContainer();
             this.loginAlert_labelSelected = new System.Windows.Forms.Label();
@@ -190,15 +188,15 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.loginAlert_dataGridView = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.header_linkLabel_tibiantisHome = new System.Windows.Forms.LinkLabel();
+            this.header_linkLabel_tibiantisInfo = new System.Windows.Forms.LinkLabel();
+            this.header_linkLabel_discord = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.header_pictureBox)).BeginInit();
+            this.header_panel_vocations.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPage_accounts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer12)).BeginInit();
             this.splitContainer12.Panel1.SuspendLayout();
             this.splitContainer12.Panel2.SuspendLayout();
@@ -208,13 +206,13 @@
             this.splitContainer13.Panel2.SuspendLayout();
             this.splitContainer13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accounts_dataGridView)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.tabPage_timers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timers_splitContainer)).BeginInit();
             this.timers_splitContainer.Panel1.SuspendLayout();
             this.timers_splitContainer.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.timers_contextMenuStrip.SuspendLayout();
-            this.tabPage8.SuspendLayout();
+            this.tabPage_calculator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).BeginInit();
             this.splitContainer14.Panel1.SuspendLayout();
             this.splitContainer14.Panel2.SuspendLayout();
@@ -223,13 +221,11 @@
             this.splitContainer15.Panel1.SuspendLayout();
             this.splitContainer15.Panel2.SuspendLayout();
             this.splitContainer15.SuspendLayout();
-            this.tabControl2.SuspendLayout();
-            this.tabPage9.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.tabPage10.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.calculator_tabControl.SuspendLayout();
+            this.calculator_production_tabPage.SuspendLayout();
+            this.calculator_experience_tabPage.SuspendLayout();
+            this.calculator_experience_groupBox2.SuspendLayout();
+            this.calculator_experience_groupBox1.SuspendLayout();
             this.tabPage_items.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -258,7 +254,7 @@
             this.splitContainer9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spellsNpcs_listView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spells_listView)).BeginInit();
-            this.tabPage4.SuspendLayout();
+            this.tabPage_npc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -280,7 +276,7 @@
             this.splitContainer7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.monsters_dropListView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monsters_listView)).BeginInit();
-            this.tabPage6.SuspendLayout();
+            this.tabPage_loginAlert.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
             this.splitContainer10.Panel1.SuspendLayout();
             this.splitContainer10.Panel2.SuspendLayout();
@@ -331,91 +327,91 @@
             this.header_label_onlineStatus.TabIndex = 4;
             this.header_label_onlineStatus.Text = "Offline";
             // 
-            // pictureBox1
+            // header_pictureBox
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.header_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("header_pictureBox.Image")));
+            this.header_pictureBox.Location = new System.Drawing.Point(2, 5);
+            this.header_pictureBox.Name = "header_pictureBox";
+            this.header_pictureBox.Size = new System.Drawing.Size(98, 59);
+            this.header_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.header_pictureBox.TabIndex = 0;
+            this.header_pictureBox.TabStop = false;
             // 
-            // panel3
+            // header_panel_vocations
             // 
-            this.panel3.Controls.Add(this.vocation_promo_checkBox);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(269, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(128, 60);
-            this.panel3.TabIndex = 8;
+            this.header_panel_vocations.Controls.Add(this.header_vocation_promo_checkBox);
+            this.header_panel_vocations.Controls.Add(this.header_vocation_label4);
+            this.header_panel_vocations.Controls.Add(this.header_vocation_label3);
+            this.header_panel_vocations.Controls.Add(this.header_vocation_label1);
+            this.header_panel_vocations.Controls.Add(this.header_vocation_label2);
+            this.header_panel_vocations.Location = new System.Drawing.Point(269, 4);
+            this.header_panel_vocations.Name = "header_panel_vocations";
+            this.header_panel_vocations.Size = new System.Drawing.Size(128, 60);
+            this.header_panel_vocations.TabIndex = 8;
             // 
-            // vocation_promo_checkBox
+            // header_vocation_promo_checkBox
             // 
-            this.vocation_promo_checkBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.header_vocation_promo_checkBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.vocation_promo_checkBox.Appearance = System.Windows.Forms.Appearance.Button;
-            this.vocation_promo_checkBox.FlatAppearance.BorderSize = 5;
-            this.vocation_promo_checkBox.Location = new System.Drawing.Point(3, 3);
-            this.vocation_promo_checkBox.Name = "vocation_promo_checkBox";
-            this.vocation_promo_checkBox.Size = new System.Drawing.Size(122, 23);
-            this.vocation_promo_checkBox.TabIndex = 10;
-            this.vocation_promo_checkBox.Text = "checkBox1";
-            this.vocation_promo_checkBox.UseVisualStyleBackColor = true;
-            this.vocation_promo_checkBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.header_vocation_promo_checkBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.header_vocation_promo_checkBox.FlatAppearance.BorderSize = 5;
+            this.header_vocation_promo_checkBox.Location = new System.Drawing.Point(3, 3);
+            this.header_vocation_promo_checkBox.Name = "header_vocation_promo_checkBox";
+            this.header_vocation_promo_checkBox.Size = new System.Drawing.Size(122, 23);
+            this.header_vocation_promo_checkBox.TabIndex = 10;
+            this.header_vocation_promo_checkBox.Text = "Vocation";
+            this.header_vocation_promo_checkBox.UseVisualStyleBackColor = true;
+            this.header_vocation_promo_checkBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // label7
+            // header_vocation_label4
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(78, 44);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "label7";
+            this.header_vocation_label4.AutoSize = true;
+            this.header_vocation_label4.Location = new System.Drawing.Point(78, 44);
+            this.header_vocation_label4.Name = "header_vocation_label4";
+            this.header_vocation_label4.Size = new System.Drawing.Size(30, 13);
+            this.header_vocation_label4.TabIndex = 11;
+            this.header_vocation_label4.Text = "0/m";
             // 
-            // label6
+            // header_vocation_label3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 44);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "MP Regen";
+            this.header_vocation_label3.AutoSize = true;
+            this.header_vocation_label3.Location = new System.Drawing.Point(3, 44);
+            this.header_vocation_label3.Name = "header_vocation_label3";
+            this.header_vocation_label3.Size = new System.Drawing.Size(63, 13);
+            this.header_vocation_label3.TabIndex = 10;
+            this.header_vocation_label3.Text = "MP Regen";
             // 
-            // label5
+            // header_vocation_label1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 27);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "HP Regen";
+            this.header_vocation_label1.AutoSize = true;
+            this.header_vocation_label1.Location = new System.Drawing.Point(3, 27);
+            this.header_vocation_label1.Name = "header_vocation_label1";
+            this.header_vocation_label1.Size = new System.Drawing.Size(62, 13);
+            this.header_vocation_label1.TabIndex = 9;
+            this.header_vocation_label1.Text = "HP Regen";
             // 
-            // label3
+            // header_vocation_label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "label3";
+            this.header_vocation_label2.AutoSize = true;
+            this.header_vocation_label2.Location = new System.Drawing.Point(78, 27);
+            this.header_vocation_label2.Name = "header_vocation_label2";
+            this.header_vocation_label2.Size = new System.Drawing.Size(30, 13);
+            this.header_vocation_label2.TabIndex = 7;
+            this.header_vocation_label2.Text = "0/m";
             // 
-            // vocation_comboBox
+            // header_vocation_comboBox
             // 
-            this.vocation_comboBox.BackColor = System.Drawing.SystemColors.Window;
-            this.vocation_comboBox.DropDownHeight = 250;
-            this.vocation_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.vocation_comboBox.Font = new System.Drawing.Font("Verdana", 24F);
-            this.vocation_comboBox.IntegralHeight = false;
-            this.vocation_comboBox.ItemHeight = 38;
-            this.vocation_comboBox.Location = new System.Drawing.Point(195, 13);
-            this.vocation_comboBox.Name = "vocation_comboBox";
-            this.vocation_comboBox.Size = new System.Drawing.Size(68, 46);
-            this.vocation_comboBox.TabIndex = 2;
-            this.vocation_comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_vocation_SelectedIndexChanged);
+            this.header_vocation_comboBox.BackColor = System.Drawing.SystemColors.Window;
+            this.header_vocation_comboBox.DropDownHeight = 250;
+            this.header_vocation_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.header_vocation_comboBox.Font = new System.Drawing.Font("Verdana", 24F);
+            this.header_vocation_comboBox.IntegralHeight = false;
+            this.header_vocation_comboBox.ItemHeight = 38;
+            this.header_vocation_comboBox.Location = new System.Drawing.Point(195, 13);
+            this.header_vocation_comboBox.Name = "header_vocation_comboBox";
+            this.header_vocation_comboBox.Size = new System.Drawing.Size(68, 46);
+            this.header_vocation_comboBox.TabIndex = 2;
+            this.header_vocation_comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_vocation_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -434,14 +430,14 @@
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage8);
+            this.tabControl1.Controls.Add(this.tabPage_accounts);
+            this.tabControl1.Controls.Add(this.tabPage_timers);
+            this.tabControl1.Controls.Add(this.tabPage_calculator);
             this.tabControl1.Controls.Add(this.tabPage_items);
             this.tabControl1.Controls.Add(this.tabPage_spells);
-            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage_npc);
             this.tabControl1.Controls.Add(this.tabPage_monsters);
-            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage_loginAlert);
             this.tabControl1.Location = new System.Drawing.Point(14, 9);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -449,16 +445,16 @@
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage1
+            // tabPage_accounts
             // 
-            this.tabPage1.Controls.Add(this.splitContainer12);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(925, 406);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Accounts";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage_accounts.Controls.Add(this.splitContainer12);
+            this.tabPage_accounts.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_accounts.Name = "tabPage_accounts";
+            this.tabPage_accounts.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_accounts.Size = new System.Drawing.Size(925, 406);
+            this.tabPage_accounts.TabIndex = 0;
+            this.tabPage_accounts.Text = "Accounts";
+            this.tabPage_accounts.UseVisualStyleBackColor = true;
             // 
             // splitContainer12
             // 
@@ -576,16 +572,16 @@
             this.accounts_dataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.accounts_dataGridView_KeyDown);
             this.accounts_dataGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.accounts_dataGridView_MouseDown);
             // 
-            // tabPage2
+            // tabPage_timers
             // 
-            this.tabPage2.Controls.Add(this.timers_splitContainer);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(925, 406);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Timers";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage_timers.Controls.Add(this.timers_splitContainer);
+            this.tabPage_timers.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_timers.Name = "tabPage_timers";
+            this.tabPage_timers.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_timers.Size = new System.Drawing.Size(925, 406);
+            this.tabPage_timers.TabIndex = 1;
+            this.tabPage_timers.Text = "Timers";
+            this.tabPage_timers.UseVisualStyleBackColor = true;
             // 
             // timers_splitContainer
             // 
@@ -728,16 +724,16 @@
             this.food002000ToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.food002000ToolStripMenuItem.Text = "Food (00:20:00)";
             // 
-            // tabPage8
+            // tabPage_calculator
             // 
-            this.tabPage8.AutoScroll = true;
-            this.tabPage8.Controls.Add(this.splitContainer14);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(925, 406);
-            this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "Calculator";
-            this.tabPage8.UseVisualStyleBackColor = true;
+            this.tabPage_calculator.AutoScroll = true;
+            this.tabPage_calculator.Controls.Add(this.splitContainer14);
+            this.tabPage_calculator.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_calculator.Name = "tabPage_calculator";
+            this.tabPage_calculator.Size = new System.Drawing.Size(925, 406);
+            this.tabPage_calculator.TabIndex = 7;
+            this.tabPage_calculator.Text = "Calculator";
+            this.tabPage_calculator.UseVisualStyleBackColor = true;
             // 
             // splitContainer14
             // 
@@ -748,7 +744,7 @@
             // 
             // splitContainer14.Panel1
             // 
-            this.splitContainer14.Panel1.Controls.Add(this.listBox1);
+            this.splitContainer14.Panel1.Controls.Add(this.calculator_listBox);
             // 
             // splitContainer14.Panel2
             // 
@@ -757,15 +753,15 @@
             this.splitContainer14.SplitterDistance = 174;
             this.splitContainer14.TabIndex = 13;
             // 
-            // listBox1
+            // calculator_listBox
             // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(0, 0);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(174, 406);
-            this.listBox1.TabIndex = 0;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.calculator_listBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.calculator_listBox.FormattingEnabled = true;
+            this.calculator_listBox.Location = new System.Drawing.Point(0, 0);
+            this.calculator_listBox.Name = "calculator_listBox";
+            this.calculator_listBox.Size = new System.Drawing.Size(174, 406);
+            this.calculator_listBox.TabIndex = 0;
+            this.calculator_listBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // splitContainer15
             // 
@@ -777,7 +773,7 @@
             // 
             // splitContainer15.Panel1
             // 
-            this.splitContainer15.Panel1.Controls.Add(this.tabControl2);
+            this.splitContainer15.Panel1.Controls.Add(this.calculator_tabControl);
             // 
             // splitContainer15.Panel2
             // 
@@ -786,242 +782,218 @@
             this.splitContainer15.SplitterDistance = 307;
             this.splitContainer15.TabIndex = 0;
             // 
-            // tabControl2
+            // calculator_tabControl
             // 
-            this.tabControl2.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabControl2.Controls.Add(this.tabPage9);
-            this.tabControl2.Controls.Add(this.tabPage10);
-            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl2.ItemSize = new System.Drawing.Size(0, 1);
-            this.tabControl2.Location = new System.Drawing.Point(0, 0);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(747, 307);
-            this.tabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl2.TabIndex = 12;
+            this.calculator_tabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.calculator_tabControl.Controls.Add(this.calculator_production_tabPage);
+            this.calculator_tabControl.Controls.Add(this.calculator_experience_tabPage);
+            this.calculator_tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.calculator_tabControl.ItemSize = new System.Drawing.Size(0, 1);
+            this.calculator_tabControl.Location = new System.Drawing.Point(0, 0);
+            this.calculator_tabControl.Name = "calculator_tabControl";
+            this.calculator_tabControl.SelectedIndex = 0;
+            this.calculator_tabControl.Size = new System.Drawing.Size(747, 307);
+            this.calculator_tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.calculator_tabControl.TabIndex = 12;
             // 
-            // tabPage9
+            // calculator_production_tabPage
             // 
-            this.tabPage9.Controls.Add(this.panel4);
-            this.tabPage9.Location = new System.Drawing.Point(4, 5);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(739, 298);
-            this.tabPage9.TabIndex = 0;
-            this.tabPage9.Text = "Production";
-            this.tabPage9.UseVisualStyleBackColor = true;
+            this.calculator_production_tabPage.BackColor = System.Drawing.SystemColors.Window;
+            this.calculator_production_tabPage.Controls.Add(this.calculator_label_title);
+            this.calculator_production_tabPage.Controls.Add(this.calculator_production_label1);
+            this.calculator_production_tabPage.Controls.Add(this.calculator_production_comboBox_rune);
+            this.calculator_production_tabPage.Controls.Add(this.calculator_production_label2);
+            this.calculator_production_tabPage.Controls.Add(this.calculator_production_textBox_amountSingle);
+            this.calculator_production_tabPage.Controls.Add(this.calculator_production_label5);
+            this.calculator_production_tabPage.Controls.Add(this.calculator_production_textBox_amountBackpack);
+            this.calculator_production_tabPage.Controls.Add(this.calculator_production_label3);
+            this.calculator_production_tabPage.Controls.Add(this.calculator_production_label4);
+            this.calculator_production_tabPage.Controls.Add(this.calculator_production_button_addTimer);
+            this.calculator_production_tabPage.Controls.Add(this.calculator_production_comboBox_food);
+            this.calculator_production_tabPage.Location = new System.Drawing.Point(4, 5);
+            this.calculator_production_tabPage.Name = "calculator_production_tabPage";
+            this.calculator_production_tabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.calculator_production_tabPage.Size = new System.Drawing.Size(739, 298);
+            this.calculator_production_tabPage.TabIndex = 0;
+            this.calculator_production_tabPage.Text = "Production";
             // 
-            // panel4
+            // calculator_production_comboBox_food
             // 
-            this.panel4.AutoScroll = true;
-            this.panel4.BackColor = System.Drawing.SystemColors.Window;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.comboBox3);
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.label17);
-            this.panel4.Controls.Add(this.textBox3);
-            this.panel4.Controls.Add(this.label15);
-            this.panel4.Controls.Add(this.label14);
-            this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.calculator_comboBox_rune);
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.calculator_label_productionTitle);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(733, 292);
-            this.panel4.TabIndex = 0;
+            this.calculator_production_comboBox_food.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.calculator_production_comboBox_food.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.calculator_production_comboBox_food.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.calculator_production_comboBox_food.FormattingEnabled = true;
+            this.calculator_production_comboBox_food.Location = new System.Drawing.Point(102, 104);
+            this.calculator_production_comboBox_food.Name = "calculator_production_comboBox_food";
+            this.calculator_production_comboBox_food.Size = new System.Drawing.Size(197, 21);
+            this.calculator_production_comboBox_food.TabIndex = 10;
+            this.calculator_production_comboBox_food.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
-            // comboBox3
+            // calculator_production_button_addTimer
             // 
-            this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.comboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(96, 101);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(197, 21);
-            this.comboBox3.TabIndex = 10;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.calculator_production_button_addTimer.Location = new System.Drawing.Point(48, 145);
+            this.calculator_production_button_addTimer.Name = "calculator_production_button_addTimer";
+            this.calculator_production_button_addTimer.Size = new System.Drawing.Size(75, 23);
+            this.calculator_production_button_addTimer.TabIndex = 10;
+            this.calculator_production_button_addTimer.Text = "Add Timer";
+            this.calculator_production_button_addTimer.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // calculator_production_label4
             // 
-            this.button1.Location = new System.Drawing.Point(42, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Add Timer";
-            this.button1.UseVisualStyleBackColor = true;
+            this.calculator_production_label4.AutoSize = true;
+            this.calculator_production_label4.Location = new System.Drawing.Point(45, 107);
+            this.calculator_production_label4.Name = "calculator_production_label4";
+            this.calculator_production_label4.Size = new System.Drawing.Size(34, 13);
+            this.calculator_production_label4.TabIndex = 10;
+            this.calculator_production_label4.Text = "Food";
             // 
-            // label17
+            // calculator_production_textBox_amountBackpack
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(39, 104);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(34, 13);
-            this.label17.TabIndex = 10;
-            this.label17.Text = "Food";
+            this.calculator_production_textBox_amountBackpack.Location = new System.Drawing.Point(172, 72);
+            this.calculator_production_textBox_amountBackpack.Name = "calculator_production_textBox_amountBackpack";
+            this.calculator_production_textBox_amountBackpack.Size = new System.Drawing.Size(51, 21);
+            this.calculator_production_textBox_amountBackpack.TabIndex = 9;
+            this.calculator_production_textBox_amountBackpack.Text = "0";
+            this.calculator_production_textBox_amountBackpack.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.calculator_production_textBox_amountBackpack.TextChanged += new System.EventHandler(this.calculator_production_textBox_TextChanged);
+            this.calculator_production_textBox_amountBackpack.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.calculator_production_textBox_KeyPress);
             // 
-            // textBox3
+            // calculator_production_label3
             // 
-            this.textBox3.Location = new System.Drawing.Point(166, 69);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(51, 21);
-            this.textBox3.TabIndex = 9;
-            this.textBox3.Text = "0";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.calculator_production_label3.AutoSize = true;
+            this.calculator_production_label3.Location = new System.Drawing.Point(229, 75);
+            this.calculator_production_label3.Name = "calculator_production_label3";
+            this.calculator_production_label3.Size = new System.Drawing.Size(67, 13);
+            this.calculator_production_label3.TabIndex = 7;
+            this.calculator_production_label3.Text = "backpacks";
             // 
-            // label15
+            // calculator_production_label5
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(223, 72);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 13);
-            this.label15.TabIndex = 7;
-            this.label15.Text = "backpacks";
+            this.calculator_production_label5.AutoSize = true;
+            this.calculator_production_label5.Location = new System.Drawing.Point(155, 75);
+            this.calculator_production_label5.Name = "calculator_production_label5";
+            this.calculator_production_label5.Size = new System.Drawing.Size(16, 13);
+            this.calculator_production_label5.TabIndex = 5;
+            this.calculator_production_label5.Text = "+";
             // 
-            // label14
+            // calculator_production_textBox_amountSingle
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(149, 72);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(16, 13);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "+";
+            this.calculator_production_textBox_amountSingle.Location = new System.Drawing.Point(102, 72);
+            this.calculator_production_textBox_amountSingle.Name = "calculator_production_textBox_amountSingle";
+            this.calculator_production_textBox_amountSingle.Size = new System.Drawing.Size(51, 21);
+            this.calculator_production_textBox_amountSingle.TabIndex = 4;
+            this.calculator_production_textBox_amountSingle.Text = "0";
+            this.calculator_production_textBox_amountSingle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.calculator_production_textBox_amountSingle.TextChanged += new System.EventHandler(this.calculator_production_textBox_TextChanged);
+            this.calculator_production_textBox_amountSingle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.calculator_production_textBox_KeyPress);
             // 
-            // textBox2
+            // calculator_production_label2
             // 
-            this.textBox2.Location = new System.Drawing.Point(96, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(51, 21);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "0";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.calculator_production_label2.AutoSize = true;
+            this.calculator_production_label2.Location = new System.Drawing.Point(45, 75);
+            this.calculator_production_label2.Name = "calculator_production_label2";
+            this.calculator_production_label2.Size = new System.Drawing.Size(51, 13);
+            this.calculator_production_label2.TabIndex = 3;
+            this.calculator_production_label2.Text = "Amount";
             // 
-            // label13
+            // calculator_production_comboBox_rune
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(39, 72);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(51, 13);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Amount";
+            this.calculator_production_comboBox_rune.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.calculator_production_comboBox_rune.FormattingEnabled = true;
+            this.calculator_production_comboBox_rune.Location = new System.Drawing.Point(102, 40);
+            this.calculator_production_comboBox_rune.Name = "calculator_production_comboBox_rune";
+            this.calculator_production_comboBox_rune.Size = new System.Drawing.Size(197, 21);
+            this.calculator_production_comboBox_rune.TabIndex = 2;
+            this.calculator_production_comboBox_rune.SelectedIndexChanged += new System.EventHandler(this.calculator_production_comboBox_rune_SelectedIndexChanged);
             // 
-            // calculator_comboBox_rune
+            // calculator_production_label1
             // 
-            this.calculator_comboBox_rune.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.calculator_comboBox_rune.FormattingEnabled = true;
-            this.calculator_comboBox_rune.Location = new System.Drawing.Point(96, 37);
-            this.calculator_comboBox_rune.Name = "calculator_comboBox_rune";
-            this.calculator_comboBox_rune.Size = new System.Drawing.Size(197, 21);
-            this.calculator_comboBox_rune.TabIndex = 2;
-            this.calculator_comboBox_rune.SelectedIndexChanged += new System.EventHandler(this.calculator_comboBox_rune_SelectedIndexChanged);
+            this.calculator_production_label1.AutoSize = true;
+            this.calculator_production_label1.Location = new System.Drawing.Point(45, 43);
+            this.calculator_production_label1.Name = "calculator_production_label1";
+            this.calculator_production_label1.Size = new System.Drawing.Size(36, 13);
+            this.calculator_production_label1.TabIndex = 1;
+            this.calculator_production_label1.Text = "Rune";
             // 
-            // label12
+            // calculator_label_title
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(39, 40);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(36, 13);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Rune";
+            this.calculator_label_title.AutoSize = true;
+            this.calculator_label_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.calculator_label_title.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculator_label_title.Location = new System.Drawing.Point(6, 3);
+            this.calculator_label_title.Name = "calculator_label_title";
+            this.calculator_label_title.Size = new System.Drawing.Size(93, 17);
+            this.calculator_label_title.TabIndex = 0;
+            this.calculator_label_title.Text = "Production";
             // 
-            // calculator_label_productionTitle
+            // calculator_experience_tabPage
             // 
-            this.calculator_label_productionTitle.AutoSize = true;
-            this.calculator_label_productionTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.calculator_label_productionTitle.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calculator_label_productionTitle.Location = new System.Drawing.Point(4, 4);
-            this.calculator_label_productionTitle.Name = "calculator_label_productionTitle";
-            this.calculator_label_productionTitle.Size = new System.Drawing.Size(93, 17);
-            this.calculator_label_productionTitle.TabIndex = 0;
-            this.calculator_label_productionTitle.Text = "Production";
+            this.calculator_experience_tabPage.BackColor = System.Drawing.SystemColors.Window;
+            this.calculator_experience_tabPage.Controls.Add(this.calculator_experience_label_title);
+            this.calculator_experience_tabPage.Controls.Add(this.calculator_experience_groupBox1);
+            this.calculator_experience_tabPage.Controls.Add(this.calculator_experience_groupBox2);
+            this.calculator_experience_tabPage.Location = new System.Drawing.Point(4, 5);
+            this.calculator_experience_tabPage.Name = "calculator_experience_tabPage";
+            this.calculator_experience_tabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.calculator_experience_tabPage.Size = new System.Drawing.Size(739, 298);
+            this.calculator_experience_tabPage.TabIndex = 1;
+            this.calculator_experience_tabPage.Text = "Experience";
             // 
-            // tabPage10
+            // calculator_experience_groupBox2
             // 
-            this.tabPage10.Controls.Add(this.panel6);
-            this.tabPage10.Location = new System.Drawing.Point(4, 5);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(739, 298);
-            this.tabPage10.TabIndex = 1;
-            this.tabPage10.Text = "Experience";
-            this.tabPage10.UseVisualStyleBackColor = true;
+            this.calculator_experience_groupBox2.Controls.Add(this.calculator_experience_button_endTime);
+            this.calculator_experience_groupBox2.Controls.Add(this.calculator_experience_label_timer);
+            this.calculator_experience_groupBox2.Controls.Add(this.calculator_experience_textBox_endTime);
+            this.calculator_experience_groupBox2.Controls.Add(this.calculator_experience_textBox_endExp);
+            this.calculator_experience_groupBox2.Controls.Add(this.label21);
+            this.calculator_experience_groupBox2.Location = new System.Drawing.Point(42, 123);
+            this.calculator_experience_groupBox2.Name = "calculator_experience_groupBox2";
+            this.calculator_experience_groupBox2.Size = new System.Drawing.Size(325, 82);
+            this.calculator_experience_groupBox2.TabIndex = 15;
+            this.calculator_experience_groupBox2.TabStop = false;
+            this.calculator_experience_groupBox2.Text = "End";
             // 
-            // panel6
+            // calculator_experience_button_endTime
             // 
-            this.panel6.AutoScroll = true;
-            this.panel6.BackColor = System.Drawing.SystemColors.Window;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel6.Controls.Add(this.groupBox2);
-            this.panel6.Controls.Add(this.groupBox1);
-            this.panel6.Controls.Add(this.label22);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(3, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(733, 292);
-            this.panel6.TabIndex = 2;
+            this.calculator_experience_button_endTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.calculator_experience_button_endTime.Location = new System.Drawing.Point(227, 45);
+            this.calculator_experience_button_endTime.Name = "calculator_experience_button_endTime";
+            this.calculator_experience_button_endTime.Size = new System.Drawing.Size(92, 23);
+            this.calculator_experience_button_endTime.TabIndex = 14;
+            this.calculator_experience_button_endTime.Text = "Current time";
+            this.calculator_experience_button_endTime.UseVisualStyleBackColor = true;
+            this.calculator_experience_button_endTime.Click += new System.EventHandler(this.button4_Click);
             // 
-            // groupBox2
+            // calculator_experience_label_timer
             // 
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Location = new System.Drawing.Point(42, 123);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(325, 82);
-            this.groupBox2.TabIndex = 15;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "End";
+            this.calculator_experience_label_timer.AutoSize = true;
+            this.calculator_experience_label_timer.Location = new System.Drawing.Point(17, 50);
+            this.calculator_experience_label_timer.Name = "calculator_experience_label_timer";
+            this.calculator_experience_label_timer.Size = new System.Drawing.Size(35, 13);
+            this.calculator_experience_label_timer.TabIndex = 13;
+            this.calculator_experience_label_timer.Text = "Time";
             // 
-            // button4
+            // calculator_experience_textBox_endTime
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(227, 45);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(92, 23);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Current time";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(17, 50);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(35, 13);
-            this.label20.TabIndex = 13;
-            this.label20.Text = "Time";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.calculator_experience_textBox_endTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(58, 47);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(163, 21);
-            this.textBox7.TabIndex = 12;
-            this.textBox7.Text = "hh:mm";
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.calculator_experience_textBox_endTime.Location = new System.Drawing.Point(58, 47);
+            this.calculator_experience_textBox_endTime.Name = "calculator_experience_textBox_endTime";
+            this.calculator_experience_textBox_endTime.Size = new System.Drawing.Size(163, 21);
+            this.calculator_experience_textBox_endTime.TabIndex = 12;
+            this.calculator_experience_textBox_endTime.Text = "hh:mm";
+            this.calculator_experience_textBox_endTime.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // textBox8
+            // calculator_experience_textBox_endExp
             // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.calculator_experience_textBox_endExp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.Location = new System.Drawing.Point(58, 23);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(163, 21);
-            this.textBox8.TabIndex = 11;
-            this.textBox8.Text = "0";
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.calculator_experience_textBox_endExp.Location = new System.Drawing.Point(58, 23);
+            this.calculator_experience_textBox_endExp.Name = "calculator_experience_textBox_endExp";
+            this.calculator_experience_textBox_endExp.Size = new System.Drawing.Size(163, 21);
+            this.calculator_experience_textBox_endExp.TabIndex = 11;
+            this.calculator_experience_textBox_endExp.Text = "0";
+            this.calculator_experience_textBox_endExp.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label21
             // 
@@ -1032,30 +1004,30 @@
             this.label21.TabIndex = 4;
             this.label21.Text = "Exp";
             // 
-            // groupBox1
+            // calculator_experience_groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Location = new System.Drawing.Point(42, 35);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(325, 82);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Start";
+            this.calculator_experience_groupBox1.Controls.Add(this.calculator_experience_button_startTime);
+            this.calculator_experience_groupBox1.Controls.Add(this.label19);
+            this.calculator_experience_groupBox1.Controls.Add(this.calculator_experience_textBox_startTime);
+            this.calculator_experience_groupBox1.Controls.Add(this.calculator_experience_textBox_startExp);
+            this.calculator_experience_groupBox1.Controls.Add(this.label18);
+            this.calculator_experience_groupBox1.Location = new System.Drawing.Point(42, 35);
+            this.calculator_experience_groupBox1.Name = "calculator_experience_groupBox1";
+            this.calculator_experience_groupBox1.Size = new System.Drawing.Size(325, 82);
+            this.calculator_experience_groupBox1.TabIndex = 9;
+            this.calculator_experience_groupBox1.TabStop = false;
+            this.calculator_experience_groupBox1.Text = "Start";
             // 
-            // button3
+            // calculator_experience_button_startTime
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(227, 45);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(92, 23);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Current time";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.calculator_experience_button_startTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.calculator_experience_button_startTime.Location = new System.Drawing.Point(227, 45);
+            this.calculator_experience_button_startTime.Name = "calculator_experience_button_startTime";
+            this.calculator_experience_button_startTime.Size = new System.Drawing.Size(92, 23);
+            this.calculator_experience_button_startTime.TabIndex = 14;
+            this.calculator_experience_button_startTime.Text = "Current time";
+            this.calculator_experience_button_startTime.UseVisualStyleBackColor = true;
+            this.calculator_experience_button_startTime.Click += new System.EventHandler(this.button3_Click);
             // 
             // label19
             // 
@@ -1066,27 +1038,27 @@
             this.label19.TabIndex = 13;
             this.label19.Text = "Time";
             // 
-            // textBox6
+            // calculator_experience_textBox_startTime
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.calculator_experience_textBox_startTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Location = new System.Drawing.Point(58, 47);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(163, 21);
-            this.textBox6.TabIndex = 12;
-            this.textBox6.Text = "hh:mm";
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.calculator_experience_textBox_startTime.Location = new System.Drawing.Point(58, 47);
+            this.calculator_experience_textBox_startTime.Name = "calculator_experience_textBox_startTime";
+            this.calculator_experience_textBox_startTime.Size = new System.Drawing.Size(163, 21);
+            this.calculator_experience_textBox_startTime.TabIndex = 12;
+            this.calculator_experience_textBox_startTime.Text = "hh:mm";
+            this.calculator_experience_textBox_startTime.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // textBox5
+            // calculator_experience_textBox_startExp
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.calculator_experience_textBox_startExp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(58, 23);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(163, 21);
-            this.textBox5.TabIndex = 11;
-            this.textBox5.Text = "0";
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.calculator_experience_textBox_startExp.Location = new System.Drawing.Point(58, 23);
+            this.calculator_experience_textBox_startExp.Name = "calculator_experience_textBox_startExp";
+            this.calculator_experience_textBox_startExp.Size = new System.Drawing.Size(163, 21);
+            this.calculator_experience_textBox_startExp.TabIndex = 11;
+            this.calculator_experience_textBox_startExp.Text = "0";
+            this.calculator_experience_textBox_startExp.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label18
             // 
@@ -1097,16 +1069,16 @@
             this.label18.TabIndex = 4;
             this.label18.Text = "Exp";
             // 
-            // label22
+            // calculator_experience_label_title
             // 
-            this.label22.AutoSize = true;
-            this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label22.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(4, 4);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(93, 17);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "Experience";
+            this.calculator_experience_label_title.AutoSize = true;
+            this.calculator_experience_label_title.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.calculator_experience_label_title.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculator_experience_label_title.Location = new System.Drawing.Point(0, 0);
+            this.calculator_experience_label_title.Name = "calculator_experience_label_title";
+            this.calculator_experience_label_title.Size = new System.Drawing.Size(93, 17);
+            this.calculator_experience_label_title.TabIndex = 0;
+            this.calculator_experience_label_title.Text = "Experience";
             // 
             // textBox4
             // 
@@ -1664,16 +1636,16 @@
             this.olvColumn32.Text = "Class";
             this.olvColumn32.Width = 75;
             // 
-            // tabPage4
+            // tabPage_npc
             // 
-            this.tabPage4.Controls.Add(this.splitContainer2);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(925, 406);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "NPC";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage_npc.Controls.Add(this.splitContainer2);
+            this.tabPage_npc.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_npc.Name = "tabPage_npc";
+            this.tabPage_npc.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_npc.Size = new System.Drawing.Size(925, 406);
+            this.tabPage_npc.TabIndex = 3;
+            this.tabPage_npc.Text = "NPC";
+            this.tabPage_npc.UseVisualStyleBackColor = true;
             // 
             // splitContainer2
             // 
@@ -2037,16 +2009,16 @@
             this.olvColumn20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.olvColumn20.Width = 64;
             // 
-            // tabPage6
+            // tabPage_loginAlert
             // 
-            this.tabPage6.Controls.Add(this.splitContainer10);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(925, 406);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Login Alert";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.tabPage_loginAlert.Controls.Add(this.splitContainer10);
+            this.tabPage_loginAlert.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_loginAlert.Name = "tabPage_loginAlert";
+            this.tabPage_loginAlert.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_loginAlert.Size = new System.Drawing.Size(925, 406);
+            this.tabPage_loginAlert.TabIndex = 5;
+            this.tabPage_loginAlert.Text = "Login Alert";
+            this.tabPage_loginAlert.UseVisualStyleBackColor = true;
             // 
             // splitContainer10
             // 
@@ -2217,38 +2189,38 @@
             this.timer1.Interval = 300000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // linkLabel1
+            // header_linkLabel_tibiantisHome
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(427, 16);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(54, 13);
-            this.linkLabel1.TabIndex = 9;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Tibiantis";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.header_linkLabel_tibiantisHome.AutoSize = true;
+            this.header_linkLabel_tibiantisHome.Location = new System.Drawing.Point(427, 16);
+            this.header_linkLabel_tibiantisHome.Name = "header_linkLabel_tibiantisHome";
+            this.header_linkLabel_tibiantisHome.Size = new System.Drawing.Size(54, 13);
+            this.header_linkLabel_tibiantisHome.TabIndex = 9;
+            this.header_linkLabel_tibiantisHome.TabStop = true;
+            this.header_linkLabel_tibiantisHome.Text = "Tibiantis";
+            this.header_linkLabel_tibiantisHome.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // linkLabel2
+            // header_linkLabel_tibiantisInfo
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(427, 31);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(79, 13);
-            this.linkLabel2.TabIndex = 10;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Tibiantis.info";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.header_linkLabel_tibiantisInfo.AutoSize = true;
+            this.header_linkLabel_tibiantisInfo.Location = new System.Drawing.Point(427, 31);
+            this.header_linkLabel_tibiantisInfo.Name = "header_linkLabel_tibiantisInfo";
+            this.header_linkLabel_tibiantisInfo.Size = new System.Drawing.Size(79, 13);
+            this.header_linkLabel_tibiantisInfo.TabIndex = 10;
+            this.header_linkLabel_tibiantisInfo.TabStop = true;
+            this.header_linkLabel_tibiantisInfo.Text = "Tibiantis.info";
+            this.header_linkLabel_tibiantisInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // linkLabel3
+            // header_linkLabel_discord
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(427, 46);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(101, 13);
-            this.linkLabel3.TabIndex = 11;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Tibiantis Discord";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            this.header_linkLabel_discord.AutoSize = true;
+            this.header_linkLabel_discord.Location = new System.Drawing.Point(427, 46);
+            this.header_linkLabel_discord.Name = "header_linkLabel_discord";
+            this.header_linkLabel_discord.Size = new System.Drawing.Size(101, 13);
+            this.header_linkLabel_discord.TabIndex = 11;
+            this.header_linkLabel_discord.TabStop = true;
+            this.header_linkLabel_discord.Text = "Tibiantis Discord";
+            this.header_linkLabel_discord.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // Form_Main
             // 
@@ -2256,15 +2228,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PapayaWhip;
             this.ClientSize = new System.Drawing.Size(961, 521);
-            this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.header_linkLabel_discord);
+            this.Controls.Add(this.header_linkLabel_tibiantisInfo);
+            this.Controls.Add(this.header_linkLabel_tibiantisHome);
+            this.Controls.Add(this.header_panel_vocations);
             this.Controls.Add(this.header_linkLabel_playersOnline);
             this.Controls.Add(this.header_label_onlineStatus);
-            this.Controls.Add(this.vocation_comboBox);
+            this.Controls.Add(this.header_vocation_comboBox);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.header_pictureBox);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Main";
@@ -2273,12 +2245,12 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.header_pictureBox)).EndInit();
+            this.header_panel_vocations.ResumeLayout(false);
+            this.header_panel_vocations.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tabPage_accounts.ResumeLayout(false);
             this.splitContainer12.Panel1.ResumeLayout(false);
             this.splitContainer12.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer12)).EndInit();
@@ -2290,7 +2262,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).EndInit();
             this.splitContainer13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.accounts_dataGridView)).EndInit();
-            this.tabPage2.ResumeLayout(false);
+            this.tabPage_timers.ResumeLayout(false);
             this.timers_splitContainer.Panel1.ResumeLayout(false);
             this.timers_splitContainer.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timers_splitContainer)).EndInit();
@@ -2298,7 +2270,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.timers_contextMenuStrip.ResumeLayout(false);
-            this.tabPage8.ResumeLayout(false);
+            this.tabPage_calculator.ResumeLayout(false);
             this.splitContainer14.Panel1.ResumeLayout(false);
             this.splitContainer14.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).EndInit();
@@ -2308,17 +2280,15 @@
             this.splitContainer15.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer15)).EndInit();
             this.splitContainer15.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
-            this.tabPage9.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.tabPage10.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.calculator_tabControl.ResumeLayout(false);
+            this.calculator_production_tabPage.ResumeLayout(false);
+            this.calculator_production_tabPage.PerformLayout();
+            this.calculator_experience_tabPage.ResumeLayout(false);
+            this.calculator_experience_tabPage.PerformLayout();
+            this.calculator_experience_groupBox2.ResumeLayout(false);
+            this.calculator_experience_groupBox2.PerformLayout();
+            this.calculator_experience_groupBox1.ResumeLayout(false);
+            this.calculator_experience_groupBox1.PerformLayout();
             this.tabPage_items.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -2349,7 +2319,7 @@
             this.splitContainer9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.spellsNpcs_listView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spells_listView)).EndInit();
-            this.tabPage4.ResumeLayout(false);
+            this.tabPage_npc.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
@@ -2373,7 +2343,7 @@
             this.splitContainer7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.monsters_dropListView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.monsters_listView)).EndInit();
-            this.tabPage6.ResumeLayout(false);
+            this.tabPage_loginAlert.ResumeLayout(false);
             this.splitContainer10.Panel1.ResumeLayout(false);
             this.splitContainer10.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).EndInit();
@@ -2396,15 +2366,15 @@
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage_accounts;
+        private System.Windows.Forms.TabPage tabPage_timers;
         private System.Windows.Forms.DataGridView accounts_dataGridView;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox header_pictureBox;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TabPage tabPage_items;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ComboBox items_comboBox_itemCategory;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage_npc;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.TabPage tabPage_monsters;
         private System.Windows.Forms.SplitContainer splitContainer3;
@@ -2416,7 +2386,7 @@
         private BrightIdeasSoftware.ObjectListView listView_npcItems;
         private BrightIdeasSoftware.OLVColumn olvColumn5;
         private BrightIdeasSoftware.OLVColumn olvColumn6;
-        private System.Windows.Forms.ComboBox vocation_comboBox;
+        private System.Windows.Forms.ComboBox header_vocation_comboBox;
         private BrightIdeasSoftware.ObjectListView listView_items;
         private System.Windows.Forms.SplitContainer splitContainer4;
         private BrightIdeasSoftware.ObjectListView listView_trades;
@@ -2433,17 +2403,17 @@
         private System.Windows.Forms.LinkLabel header_linkLabel_playersOnline;
         private System.Windows.Forms.Label header_label_onlineStatus;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label header_vocation_label2;
+        private System.Windows.Forms.Panel header_panel_vocations;
+        private System.Windows.Forms.Label header_vocation_label4;
+        private System.Windows.Forms.Label header_vocation_label3;
+        private System.Windows.Forms.Label header_vocation_label1;
         private BrightIdeasSoftware.OLVColumn olvColumn12;
-        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.TabPage tabPage_calculator;
         private System.Windows.Forms.TabPage tabPage_spells;
         private System.Windows.Forms.SplitContainer splitContainer6;
         private BrightIdeasSoftware.ObjectListView monsters_listView;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage_loginAlert;
         private System.Windows.Forms.SplitContainer splitContainer7;
         private BrightIdeasSoftware.OLVColumn olvColumn13;
         private BrightIdeasSoftware.OLVColumn olvColumn14;
@@ -2485,32 +2455,30 @@
         private System.Windows.Forms.ComboBox spells_comboBox_premium;
         private System.Windows.Forms.ComboBox spells_comboBox_type;
         private System.Windows.Forms.ComboBox spells_comboBox_group;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox calculator_comboBox_rune;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label calculator_label_productionTitle;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label calculator_production_label3;
+        private System.Windows.Forms.Label calculator_production_label5;
+        private System.Windows.Forms.TextBox calculator_production_textBox_amountSingle;
+        private System.Windows.Forms.Label calculator_production_label2;
+        private System.Windows.Forms.ComboBox calculator_production_comboBox_rune;
+        private System.Windows.Forms.Label calculator_production_label1;
+        private System.Windows.Forms.Label calculator_label_title;
+        private System.Windows.Forms.TextBox calculator_production_textBox_amountBackpack;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.ComboBox calculator_production_comboBox_food;
+        private System.Windows.Forms.Label calculator_production_label4;
+        private System.Windows.Forms.Label calculator_experience_label_title;
+        private System.Windows.Forms.Button calculator_production_button_addTimer;
+        private System.Windows.Forms.GroupBox calculator_experience_groupBox2;
+        private System.Windows.Forms.Button calculator_experience_button_endTime;
+        private System.Windows.Forms.Label calculator_experience_label_timer;
+        private System.Windows.Forms.TextBox calculator_experience_textBox_endTime;
+        private System.Windows.Forms.TextBox calculator_experience_textBox_endExp;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.GroupBox calculator_experience_groupBox1;
+        private System.Windows.Forms.Button calculator_experience_button_startTime;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox calculator_experience_textBox_startTime;
+        private System.Windows.Forms.TextBox calculator_experience_textBox_startExp;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.SplitContainer splitContainer10;
         private System.Windows.Forms.SplitContainer splitContainer11;
@@ -2524,7 +2492,7 @@
         private System.Windows.Forms.Label loginAlert_labelSelected;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.DataGridView loginAlert_dataGridView;
-        private System.Windows.Forms.CheckBox vocation_promo_checkBox;
+        private System.Windows.Forms.CheckBox header_vocation_promo_checkBox;
         private System.Windows.Forms.SplitContainer splitContainer12;
         private System.Windows.Forms.SplitContainer splitContainer13;
         private System.Windows.Forms.Label label1;
@@ -2547,15 +2515,15 @@
         private System.Windows.Forms.ToolStripMenuItem food002000ToolStripMenuItem;
         private System.Windows.Forms.SplitContainer splitContainer14;
         private System.Windows.Forms.SplitContainer splitContainer15;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage9;
-        private System.Windows.Forms.TabPage tabPage10;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TabControl calculator_tabControl;
+        private System.Windows.Forms.TabPage calculator_production_tabPage;
+        private System.Windows.Forms.TabPage calculator_experience_tabPage;
+        private System.Windows.Forms.ListBox calculator_listBox;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.LinkLabel header_linkLabel_tibiantisHome;
+        private System.Windows.Forms.LinkLabel header_linkLabel_tibiantisInfo;
+        private System.Windows.Forms.LinkLabel header_linkLabel_discord;
         private System.Windows.Forms.ToolTip toolTip1;
     }
 }

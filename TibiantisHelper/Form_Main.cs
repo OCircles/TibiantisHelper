@@ -116,8 +116,8 @@ namespace TibiantisHelper
                 loginAlert_alertTextBox.Text = Path.GetFileName(Settings.Default.LoginAlertNotifSoundPath);
 
             // Vocation
-            vocation_comboBox.SelectedIndex = Settings.Default.Vocation;
-            vocation_promo_checkBox.Checked = Settings.Default.Promotion;
+            header_vocation_comboBox.SelectedIndex = Settings.Default.Vocation;
+            header_vocation_promo_checkBox.Checked = Settings.Default.Promotion;
 
             // Timers
             checkBox1.Checked = Settings.Default.TimerNotifTray;
@@ -478,13 +478,13 @@ namespace TibiantisHelper
         #region Vocation
         private void comboBox_vocation_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Settings.Default.Vocation = (byte)vocation_comboBox.SelectedIndex;
+            Settings.Default.Vocation = (byte)header_vocation_comboBox.SelectedIndex;
             UpdateVocation();
             UpdateProductionDropdown();
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            Settings.Default.Promotion = vocation_promo_checkBox.Checked;
+            Settings.Default.Promotion = header_vocation_promo_checkBox.Checked;
             UpdateVocation();
         }
         private void InitializeVocations()
@@ -496,7 +496,7 @@ namespace TibiantisHelper
             foreach (Vocation v in _vocations)
                 vocationIcons.Add(v.icon);
 
-            ImageComboBox.DisplayImages(vocation_comboBox, vocationIcons);
+            ImageComboBox.DisplayImages(header_vocation_comboBox, vocationIcons);
             
         }
         private void PopulateVocations()
@@ -541,33 +541,33 @@ namespace TibiantisHelper
         }
         private void UpdateVocation()
         {
-            vocation_promo_checkBox.Text = "";
+            header_vocation_promo_checkBox.Text = "";
             _selectedVocation.Name = "";
 
             Settings.Default.Save();
 
-            if (vocation_promo_checkBox.Checked) _selectedVocation.Name = _vocations[vocation_comboBox.SelectedIndex].promoPrefix + " ";
-            _selectedVocation.Name += _vocations[vocation_comboBox.SelectedIndex].name;
+            if (header_vocation_promo_checkBox.Checked) _selectedVocation.Name = _vocations[header_vocation_comboBox.SelectedIndex].promoPrefix + " ";
+            _selectedVocation.Name += _vocations[header_vocation_comboBox.SelectedIndex].name;
 
-            vocation_promo_checkBox.Text = _selectedVocation.Name;
+            header_vocation_promo_checkBox.Text = _selectedVocation.Name;
 
 
-            if (vocation_promo_checkBox.Checked)
+            if (header_vocation_promo_checkBox.Checked)
             {
-                _selectedVocation.regenHP = _vocations[vocation_comboBox.SelectedIndex].regenHP_promo;
-                _selectedVocation.regenMP = _vocations[vocation_comboBox.SelectedIndex].regenMP_promo;
+                _selectedVocation.regenHP = _vocations[header_vocation_comboBox.SelectedIndex].regenHP_promo;
+                _selectedVocation.regenMP = _vocations[header_vocation_comboBox.SelectedIndex].regenMP_promo;
             }
             else
             {
-                _selectedVocation.regenHP = _vocations[vocation_comboBox.SelectedIndex].regenHP;
-                _selectedVocation.regenMP = _vocations[vocation_comboBox.SelectedIndex].regenMP;
+                _selectedVocation.regenHP = _vocations[header_vocation_comboBox.SelectedIndex].regenHP;
+                _selectedVocation.regenMP = _vocations[header_vocation_comboBox.SelectedIndex].regenMP;
             }
 
-            label3.Text = _selectedVocation.regenHP.ToString();
-            label7.Text = _selectedVocation.regenMP.ToString();
+            header_vocation_label2.Text = _selectedVocation.regenHP.ToString();
+            header_vocation_label4.Text = _selectedVocation.regenMP.ToString();
 
-            label3.Text += "/min";
-            label7.Text += "/min";
+            header_vocation_label2.Text += "/min";
+            header_vocation_label4.Text += "/min";
 
             CalculateProduction();
         }
@@ -1111,15 +1111,15 @@ namespace TibiantisHelper
         private void InitializeCalculatorTab()
         {
 
-            foreach (TabPage t in tabControl2.TabPages)
-                listBox1.Items.Add(t.Text);
+            foreach (TabPage t in calculator_tabControl.TabPages)
+                calculator_listBox.Items.Add(t.Text);
 
-            listBox1.SelectedIndex = 0;
+            calculator_listBox.SelectedIndex = 0;
 
             // Food
             List<Item> foods = _dataReader.items.Where(i => i.Flags.Contains("Food")).OrderBy(i => i.Name).ToList();
-            foreach (var f in foods) comboBox3.Items.Add(f.Name);
-            comboBox3.SelectedIndex = 0;
+            foreach (var f in foods) calculator_production_comboBox_food.Items.Add(f.Name);
+            calculator_production_comboBox_food.SelectedIndex = 0;
 
             // Runes
             UpdateProductionDropdown();
@@ -1129,13 +1129,15 @@ namespace TibiantisHelper
         
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tabControl2.SelectedIndex = listBox1.SelectedIndex;
+            calculator_tabControl.SelectedIndex = calculator_listBox.SelectedIndex;
         }
+
+        #region Production
 
         private void CalculateProduction()
         {
 
-            if (calculator_comboBox_rune.Text != "N/A")
+            if (calculator_production_comboBox_rune.Text != "N/A")
             {
                 bool num1, num2;
                 num1 = num2 = false;
@@ -1143,16 +1145,16 @@ namespace TibiantisHelper
                 int in1, in2;
                 in1 = in2 = 0;
 
-                num1 = int.TryParse(textBox2.Text, out in1);
-                num2 = int.TryParse(textBox3.Text, out in2);
+                num1 = int.TryParse(calculator_production_textBox_amountSingle.Text, out in1);
+                num2 = int.TryParse(calculator_production_textBox_amountBackpack.Text, out in2);
 
                 if (num1 && num2)
                 {
                     if (in1+in2 > 0)
                     {
-                        Item food = _dataReader.items.Where(f => f.Name == comboBox3.Text).FirstOrDefault();
-                        Rune rune = _dataReader.runes.Where(r => r.Name == calculator_comboBox_rune.Text).FirstOrDefault();
-                        Spell spell = _dataReader.spells.Where(s => s.Name == calculator_comboBox_rune.Text).FirstOrDefault();
+                        Item food = _dataReader.items.Where(f => f.Name == calculator_production_comboBox_food.Text).FirstOrDefault();
+                        Rune rune = _dataReader.runes.Where(r => r.Name == calculator_production_comboBox_rune.Text).FirstOrDefault();
+                        Spell spell = _dataReader.spells.Where(s => s.Name == calculator_production_comboBox_rune.Text).FirstOrDefault();
                     
                         string itemName = rune.Name;
 
@@ -1212,6 +1214,52 @@ namespace TibiantisHelper
                 }
             }
         }
+        private void UpdateProductionDropdown()
+        {
+            string oldSelection = calculator_production_comboBox_rune.Text;
+
+            calculator_production_comboBox_rune.Items.Clear();
+
+            List<Spell> spells = _dataReader.spells.Where(s => s.ProduceID != 0).OrderBy(s=>s.Name).ToList();
+
+            foreach (var s in spells)
+            {
+                bool add = false;
+                if (header_vocation_comboBox.SelectedIndex == 0 && s.VocKnight) add = true;
+                if (header_vocation_comboBox.SelectedIndex == 1 && s.VocPaladin) add = true;
+                if (header_vocation_comboBox.SelectedIndex == 2 && s.VocSorcerer) add = true;
+                if (header_vocation_comboBox.SelectedIndex == 3 && s.VocDruid) add = true;
+
+                if (add)
+                    calculator_production_comboBox_rune.Items.Add(s.Name);
+            }
+            if (calculator_production_comboBox_rune.Items.Count == 0) calculator_production_comboBox_rune.Items.Add("N/A");
+
+            int oldIndex = calculator_production_comboBox_rune.Items.IndexOf(oldSelection);
+            
+            if (oldIndex != -1)
+                calculator_production_comboBox_rune.SelectedIndex = oldIndex;
+            else
+                calculator_production_comboBox_rune.SelectedIndex = 0;
+        }
+
+        private void calculator_production_textBox_TextChanged(object sender, EventArgs e)
+        {
+            CalculateProduction();
+        }
+
+        private void calculator_production_textBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+        }
+
+
+        private void calculator_production_comboBox_rune_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CalculateProduction();
+        }
+
+        #endregion
 
         private void CalculateExperience()
         {
@@ -1219,8 +1267,8 @@ namespace TibiantisHelper
             bool startTimeParsed, endTimeParsed;
             startTimeParsed = endTimeParsed = false;
 
-            startTimeParsed = TimeSpan.TryParse(textBox6.Text, out startTime);
-            endTimeParsed = TimeSpan.TryParse(textBox7.Text, out endTime);
+            startTimeParsed = TimeSpan.TryParse(calculator_experience_textBox_startTime.Text, out startTime);
+            endTimeParsed = TimeSpan.TryParse(calculator_experience_textBox_endTime.Text, out endTime);
             
             if (startTimeParsed & endTimeParsed & startTime.Days == 0 & endTime.Days == 0)
             {
@@ -1230,8 +1278,8 @@ namespace TibiantisHelper
                 bool startExpParsed, endExpParsed;
                 startExpParsed = endExpParsed = false;
 
-                startExpParsed = int.TryParse(textBox5.Text, out startExp);
-                endExpParsed = int.TryParse(textBox8.Text, out endExp);
+                startExpParsed = int.TryParse(calculator_experience_textBox_startExp.Text, out startExp);
+                endExpParsed = int.TryParse(calculator_experience_textBox_endExp.Text, out endExp);
                 
                 if (startExpParsed & endExpParsed)
                 {
@@ -1272,49 +1320,6 @@ namespace TibiantisHelper
 
         }
 
-        private void UpdateProductionDropdown()
-        {
-            string oldSelection = calculator_comboBox_rune.Text;
-
-            calculator_comboBox_rune.Items.Clear();
-
-            List<Spell> spells = _dataReader.spells.Where(s => s.ProduceID != 0).OrderBy(s=>s.Name).ToList();
-
-            foreach (var s in spells)
-            {
-                bool add = false;
-                if (vocation_comboBox.SelectedIndex == 0 && s.VocKnight) add = true;
-                if (vocation_comboBox.SelectedIndex == 1 && s.VocPaladin) add = true;
-                if (vocation_comboBox.SelectedIndex == 2 && s.VocSorcerer) add = true;
-                if (vocation_comboBox.SelectedIndex == 3 && s.VocDruid) add = true;
-
-                if (add)
-                    calculator_comboBox_rune.Items.Add(s.Name);
-            }
-            if (calculator_comboBox_rune.Items.Count == 0) calculator_comboBox_rune.Items.Add("N/A");
-
-            int oldIndex = calculator_comboBox_rune.Items.IndexOf(oldSelection);
-            
-            if (oldIndex != -1)
-                calculator_comboBox_rune.SelectedIndex = oldIndex;
-            else
-                calculator_comboBox_rune.SelectedIndex = 0;
-        }
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            CalculateProduction();
-        }
-
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
-        }
-
-        private void calculator_comboBox_rune_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CalculateProduction();
-        }
-
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             CalculateProduction();
@@ -1322,12 +1327,12 @@ namespace TibiantisHelper
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox6.Text = DateTime.Now.ToString("HH:mm:ss");
+            calculator_experience_textBox_startTime.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            textBox7.Text = DateTime.Now.ToString("HH:mm:ss");
+            calculator_experience_textBox_endTime.Text = DateTime.Now.ToString("HH:mm:ss");
         }
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
