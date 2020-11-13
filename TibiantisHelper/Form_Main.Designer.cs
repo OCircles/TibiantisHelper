@@ -761,7 +761,7 @@
             this.calculator_listBox.Name = "calculator_listBox";
             this.calculator_listBox.Size = new System.Drawing.Size(174, 406);
             this.calculator_listBox.TabIndex = 0;
-            this.calculator_listBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.calculator_listBox.SelectedIndexChanged += new System.EventHandler(this.calculator_listBox_SelectedIndexChanged);
             // 
             // splitContainer15
             // 
@@ -827,7 +827,7 @@
             this.calculator_production_comboBox_food.Name = "calculator_production_comboBox_food";
             this.calculator_production_comboBox_food.Size = new System.Drawing.Size(197, 21);
             this.calculator_production_comboBox_food.TabIndex = 10;
-            this.calculator_production_comboBox_food.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.calculator_production_comboBox_food.SelectedIndexChanged += new System.EventHandler(this.calculator_production_comboBox_food_SelectedIndexChanged);
             // 
             // calculator_production_button_addTimer
             // 
@@ -962,7 +962,7 @@
             this.calculator_experience_button_endTime.TabIndex = 14;
             this.calculator_experience_button_endTime.Text = "Current time";
             this.calculator_experience_button_endTime.UseVisualStyleBackColor = true;
-            this.calculator_experience_button_endTime.Click += new System.EventHandler(this.button4_Click);
+            this.calculator_experience_button_endTime.Click += new System.EventHandler(this.calculator_experience_button_endTime_Click);
             // 
             // calculator_experience_label_timer
             // 
@@ -982,7 +982,7 @@
             this.calculator_experience_textBox_endTime.Size = new System.Drawing.Size(163, 21);
             this.calculator_experience_textBox_endTime.TabIndex = 12;
             this.calculator_experience_textBox_endTime.Text = "hh:mm";
-            this.calculator_experience_textBox_endTime.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.calculator_experience_textBox_endTime.TextChanged += new System.EventHandler(this.calculator_textBox_TextChanged);
             // 
             // calculator_experience_textBox_endExp
             // 
@@ -993,7 +993,7 @@
             this.calculator_experience_textBox_endExp.Size = new System.Drawing.Size(163, 21);
             this.calculator_experience_textBox_endExp.TabIndex = 11;
             this.calculator_experience_textBox_endExp.Text = "0";
-            this.calculator_experience_textBox_endExp.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.calculator_experience_textBox_endExp.TextChanged += new System.EventHandler(this.calculator_textBox_TextChanged);
             // 
             // label21
             // 
@@ -1027,7 +1027,7 @@
             this.calculator_experience_button_startTime.TabIndex = 14;
             this.calculator_experience_button_startTime.Text = "Current time";
             this.calculator_experience_button_startTime.UseVisualStyleBackColor = true;
-            this.calculator_experience_button_startTime.Click += new System.EventHandler(this.button3_Click);
+            this.calculator_experience_button_startTime.Click += new System.EventHandler(this.calculator_experience_button_startTime_Click);
             // 
             // label19
             // 
@@ -1047,7 +1047,7 @@
             this.calculator_experience_textBox_startTime.Size = new System.Drawing.Size(163, 21);
             this.calculator_experience_textBox_startTime.TabIndex = 12;
             this.calculator_experience_textBox_startTime.Text = "hh:mm";
-            this.calculator_experience_textBox_startTime.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.calculator_experience_textBox_startTime.TextChanged += new System.EventHandler(this.calculator_textBox_TextChanged);
             // 
             // calculator_experience_textBox_startExp
             // 
@@ -1058,7 +1058,7 @@
             this.calculator_experience_textBox_startExp.Size = new System.Drawing.Size(163, 21);
             this.calculator_experience_textBox_startExp.TabIndex = 11;
             this.calculator_experience_textBox_startExp.Text = "0";
-            this.calculator_experience_textBox_startExp.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.calculator_experience_textBox_startExp.TextChanged += new System.EventHandler(this.calculator_textBox_TextChanged);
             // 
             // label18
             // 

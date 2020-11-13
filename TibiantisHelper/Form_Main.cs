@@ -1127,7 +1127,7 @@ namespace TibiantisHelper
             CalculateProduction();
         }
         
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void calculator_listBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             calculator_tabControl.SelectedIndex = calculator_listBox.SelectedIndex;
         }
@@ -1253,6 +1253,10 @@ namespace TibiantisHelper
             e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
         }
 
+        private void calculator_production_comboBox_food_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CalculateProduction();
+        }
 
         private void calculator_production_comboBox_rune_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1261,6 +1265,7 @@ namespace TibiantisHelper
 
         #endregion
 
+        #region Experience
         private void CalculateExperience()
         {
             TimeSpan startTime, endTime;
@@ -1319,27 +1324,25 @@ namespace TibiantisHelper
             }
 
         }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CalculateProduction();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        
+        private void calculator_experience_button_startTime_Click(object sender, EventArgs e)
         {
             calculator_experience_textBox_startTime.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void calculator_experience_button_endTime_Click(object sender, EventArgs e)
         {
             calculator_experience_textBox_endTime.Text = DateTime.Now.ToString("HH:mm:ss");
         }
-        private void textBox5_TextChanged(object sender, EventArgs e)
+        private void calculator_textBox_TextChanged(object sender, EventArgs e)
         {
             CalculateExperience();
         }
+
         #endregion
-        
+
+        #endregion
+
         #region Monsters
 
         private void InitializeMonsterTab()
