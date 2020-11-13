@@ -1,8 +1,10 @@
 # Tibiantis Helper
 
-*[Images below](#images)*
-
 Makes life a bit easier for us retrocore noobs on Tibiantis :)
+
+*[Download](../../releases)*
+
+*[Images below](#images)*
 
 This is an app made to streamline the Tibiantis experience, centralizing a lot of information and useful features into one easy-to-use platform that runs neatly in your traybar. It works by parsing data from the Cipsoft 7.7 server leak (which for reasons ended up becoming public domain) which I've modified to reflect 7.4 better.
 
