@@ -14,7 +14,7 @@ If you have any issues or ideas for improvement, feel free to contact me on Disc
 
 ## Installing
 
-The program must be in the same folder as Tibiantis.spr and Tibiantis.dat found in the "game" folder in the Tibiantis client. Just to keep things clean I'd recommend making a separate folder for Tibiantis Helper somewhere and just copy those files over (there will be a prompt to browse for those files if you run the program). Alternatively you can just put the helper directly in the game folder.
+The program must be in the same folder as Tibiantis.spr and Tibiantis.dat found in the "game" folder in the Tibiantis client. Just to keep things clean I'd recommend making a separate folder for Tibiantis Helper somewhere and just copy those files over (there will be a prompt to browse for those files if they're not already present when you run the program). Alternatively you can just put the helper directly in the game folder.
 
 I wrote this whole thing with a broken keyboard. Backspace is not working and I cannot describe to you the depths of my suffering
  
