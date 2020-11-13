@@ -1,7 +1,5 @@
 # Tibiantis Helper
 
-Makes life a bit easier for us retrocore noobs on Tibiantis :)
-
 *[Download](../../releases)*
 
 *[Images below](#images)*
