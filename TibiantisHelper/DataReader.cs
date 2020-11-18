@@ -642,7 +642,6 @@ namespace TibiantisHelper
 
                     if (split.Length >= 2)
                     {
-                        Console.WriteLine(line);
 
                         string first = split[0];
                         string second = split[2];

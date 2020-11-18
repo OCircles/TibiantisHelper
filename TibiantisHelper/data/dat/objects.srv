@@ -7771,7 +7771,7 @@ Attributes  = {Weight=41000}
 TypeID      = 1781
 Name        = "a small stone"
 Flags       = {Cumulative,Take,Throw}
-Attributes  = {Weight=360,ThrowRange=7,ThrowAttackValue=10,ThrowDefendValue=0,ThrowMissile=10,ThrowSpecialEffect=0,ThrowEffectStrength=0,ThrowFragility=7}
+Attributes  = {Weight=360,ThrowRange=7,ThrowAttackValue=10,ThrowDefendValue=0,ThrowMissile=10,ThrowSpecialEffect=0,ThrowEffectStrength=0,ThrowFragility=10}
 
 TypeID      = 1782
 Name        = "a stone"
@@ -14282,7 +14282,7 @@ Attributes  = {Weight=4100,WeaponType=1,WeaponAttackValue=26,WeaponDefendValue=1
 TypeID      = 3298
 Name        = "a throwing knife"
 Flags       = {Cumulative,Take,Throw}
-Attributes  = {Weight=500,ThrowRange=7,ThrowAttackValue=25,ThrowDefendValue=0,ThrowMissile=9,ThrowSpecialEffect=0,ThrowEffectStrength=0,ThrowFragility=7}
+Attributes  = {Weight=500,ThrowRange=7,ThrowAttackValue=25,ThrowDefendValue=0,ThrowMissile=9,ThrowSpecialEffect=0,ThrowEffectStrength=0,ThrowFragility=10}
 
 TypeID      = 3299
 Name        = "a poison dagger"
