@@ -678,6 +678,7 @@ namespace TibiantisHelper
 
                 _accounts.Add(acc);
                 AccountsPopulate();
+                AccountsSave(file_accounts);
             }
         }
         private void AccountsRemoveSelected()
@@ -774,6 +775,7 @@ namespace TibiantisHelper
                     AccountsDisplayInfo(acc);
 
                     AccountsPopulate();
+                    AccountsSave(file_accounts);
                 }
             }
 
@@ -2351,6 +2353,7 @@ namespace TibiantisHelper
                     _trackedPlayers.Add(p);
                     _trackedPlayers = _trackedPlayers.OrderBy(pp => pp.Name).ToList();
                     LoginTrackerUpdate();
+                    LoginAlertSaveData(file_loginAlert);
                 }
             }
         }
@@ -2512,7 +2515,8 @@ namespace TibiantisHelper
                     == DialogResult.Yes )
                     {
                         _trackedPlayers.Remove(ooc);
-                        LoginTrackerUpdate(); 
+                        LoginTrackerUpdate();
+                        LoginAlertSaveData(file_loginAlert);
                     }
                 }
             }
