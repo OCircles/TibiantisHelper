@@ -1,5 +1,10 @@
-﻿
-Tray icon context menu timers?
+﻿Need to find which ramps are bamboo and remove
+
+Remove weird data items
+
+	Camouflage Backpack
+	Camouflage Bag
+
 
 Spell damage bases
 

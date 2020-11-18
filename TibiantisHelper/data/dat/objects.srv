@@ -4868,50 +4868,6 @@ Name        = "a pitfall"
 Flags       = {Bottom,CollisionEvent,Unmove,Avoid,Expire}
 Attributes  = {AvoidDamageTypes=0,ExpireTarget=1066,TotalExpireTime=75}
 
-TypeID      = 1068
-Name        = "an ant trail"
-Flags       = {Clip,Unmove}
-
-TypeID      = 1069
-Name        = "an ant trail"
-Flags       = {Clip,Unmove}
-
-TypeID      = 1070
-Name        = "an ant trail"
-Flags       = {Clip,Unmove}
-
-TypeID      = 1071
-Name        = "an ant trail"
-Flags       = {Clip,Unmove}
-
-TypeID      = 1072
-Name        = "an ant trail"
-Flags       = {Clip,Unmove}
-
-TypeID      = 1073
-Name        = "an ant trail"
-Flags       = {Clip,Unmove}
-
-TypeID      = 1074
-Name        = "an ant trail"
-Flags       = {Clip,Unmove}
-
-TypeID      = 1075
-Name        = "an ant trail"
-Flags       = {Clip,Unmove}
-
-TypeID      = 1076
-Name        = "an ant trail"
-Flags       = {Clip,Unmove}
-
-TypeID      = 1077
-Name        = "an ant trail"
-Flags       = {Clip,Unmove}
-
-TypeID      = 1078
-Name        = "an ant trail"
-Flags       = {Clip,Unmove}
-
 TypeID      = 1079
 Name        = "an ant-hill"
 Flags       = {Unpass,Unmove,Unlay}
@@ -5412,59 +5368,6 @@ Flags       = {Unpass,Unmove,Unlay}
 
 TypeID      = 1196
 Name        = "a wooden roof"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 1197
-Name        = "a dried grass roof"
-Flags       = {Bank,Unmove}
-Attributes  = {Waypoints=160}
-
-TypeID      = 1198
-Name        = "a dried grass roof"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 1199
-Name        = "a dried grass roof"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 1200
-Name        = "a dried grass roof"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 1201
-Name        = "a dried grass roof"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 1202
-Name        = "a dried grass roof"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 1203
-Name        = "a dried grass roof"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 1204
-Name        = "a dried grass roof"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 1205
-Name        = "a dried grass roof"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 1206
-Name        = "a dried grass roof"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 1207
-Name        = "a dried grass roof"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 1208
-Name        = "a dried grass roof"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 1209
-Name        = "a dried grass roof"
 Flags       = {Unpass,Unmove,Unlay}
 
 TypeID      = 1210
@@ -6751,50 +6654,6 @@ TypeID      = 1511
 Name        = "a stone wall"
 Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 
-TypeID      = 1512
-Name        = "a bamboo wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay,HookEast}
-
-TypeID      = 1513
-Name        = "a bamboo wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay,HookSouth}
-
-TypeID      = 1514
-Name        = "a bamboo wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
-
-TypeID      = 1515
-Name        = "a bamboo wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
-
-TypeID      = 1516
-Name        = "a bamboo wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
-
-TypeID      = 1517
-Name        = "a bamboo wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
-
-TypeID      = 1518
-Name        = "a bamboo wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay,HookEast}
-
-TypeID      = 1519
-Name        = "a bamboo wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
-
-TypeID      = 1520
-Name        = "a bamboo wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay,HookSouth}
-
-TypeID      = 1521
-Name        = "a bamboo wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
-
-TypeID      = 1522
-Name        = "a bamboo wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
-
 TypeID      = 1523
 Name        = "a bamboo palisade"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
@@ -6805,14 +6664,6 @@ Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 1525
 Name        = "a bamboo palisade"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 1526
-Name        = "a bamboo fence"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 1527
-Name        = "a bamboo fence"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 1528
@@ -7082,14 +6933,6 @@ Flags       = {Top,Unmove}
 TypeID      = 1594
 Name        = "a grass archway"
 Flags       = {Top,Unmove}
-
-TypeID      = 1595
-Name        = "a liane"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 1596
-Name        = "a liane"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 1597
 Name        = "a palisade"
@@ -7674,30 +7517,6 @@ TypeID      = 1715
 Name        = "water"
 Flags       = {Bank,Unpass,Unmove}
 Attributes  = {Waypoints=0}
-
-TypeID      = 1716
-Name        = "a waterfall"
-Flags       = {Unmove}
-
-TypeID      = 1717
-Name        = "a waterfall"
-Flags       = {Unmove}
-
-TypeID      = 1718
-Name        = "a waterfall"
-Flags       = {Clip,CollisionEvent,Unmove}
-
-TypeID      = 1719
-Name        = "a waterfall"
-Flags       = {Clip,CollisionEvent,Unmove}
-
-TypeID      = 1720
-Name        = "a waterfall"
-Flags       = {Clip,CollisionEvent,Unmove}
-
-TypeID      = 1721
-Name        = "a waterfall"
-Flags       = {Clip,CollisionEvent,Unmove}
 
 TypeID      = 1722
 Name        = "swamp"
@@ -8487,34 +8306,6 @@ TypeID      = 1914
 Name        = "a stone"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
 
-TypeID      = 1915
-Name        = "a painted stone"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 1916
-Name        = "a painted stone"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 1917
-Name        = "a painted stone"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 1918
-Name        = "a painted stone"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 1919
-Name        = "a painted stone"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 1920
-Name        = "a painted stone"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 1921
-Name        = "a painted stone"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
 TypeID      = 1922
 Name        = "a fountain"
 Flags       = {Bottom,LiquidSource,Unpass,Unmove,Unlay}
@@ -9209,55 +9000,6 @@ Name        = "a sacral statue"
 Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
 Attributes  = {ChangeTarget=2064,Brightness=6,LightColor=206}
 
-TypeID      = 2066
-Name        = "a broken lizard statue"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2067
-Name        = "a broken lizard statue"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2068
-Name        = "a broken lizard statue"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2069
-Name        = "a broken lizard statue"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2070
-Name        = "a lizard statue"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2071
-Name        = "a lizard statue"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2072
-Name        = "a lizard statue"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2073
-Name        = "a lizard statue"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2074
-Name        = "a small pagoda"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 2075
-Name        = "a small lit pagoda"
-Flags       = {Bottom,Unpass,Unmove,Unlay,Light}
-Attributes  = {Brightness=6,LightColor=207}
-
 TypeID      = 2076
 Name        = "a stone snake wall"
 Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
@@ -9274,66 +9016,6 @@ TypeID      = 2079
 Name        = "a snake wall"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
 
-TypeID      = 2080
-Name        = "a giant lizard head"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2081
-Name        = "a giant lizard head"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2082
-Name        = "a giant lizard head"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2083
-Name        = "a giant lizard head"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2084
-Name        = "a giant lizard head"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2085
-Name        = "a giant lizard head"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2086
-Name        = "a giant lizard head"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2087
-Name        = "a giant lizard head"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2088
-Name        = "a giant lizard claw"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2089
-Name        = "a giant lizard claw"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2090
-Name        = "a giant lizard claw"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
-TypeID      = 2091
-Name        = "a giant lizard claw"
-Flags       = {Bottom,Text,Unpass,Unmove,Unlay}
-Attributes  = {FontSize=2}
-
 TypeID      = 2092
 Name        = "a stone snake wall"
 Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
@@ -9341,42 +9023,6 @@ Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 TypeID      = 2093
 Name        = "a stone snake pagoda"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 2094
-Name        = "a dried well"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 2095
-Name        = "a dried well"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 2096
-Name        = "a dried well"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 2097
-Name        = "a dried well"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 2098
-Name        = "a poison well"
-Flags       = {Bottom,LiquidSource,Unpass,Unmove,Unlay,Light}
-Attributes  = {SourceLiquidType=6,Brightness=2,LightColor=104}
-
-TypeID      = 2099
-Name        = "a poison well"
-Flags       = {Bottom,LiquidSource,Unpass,Unmove,Unlay,Light}
-Attributes  = {SourceLiquidType=6,Brightness=2,LightColor=104}
-
-TypeID      = 2100
-Name        = "a poison well"
-Flags       = {Bottom,LiquidSource,Unpass,Unmove,Unlay,Light}
-Attributes  = {SourceLiquidType=6,Brightness=2,LightColor=104}
-
-TypeID      = 2101
-Name        = "a poison well"
-Flags       = {Bottom,LiquidSource,Unpass,Unmove,Unlay,Light}
-Attributes  = {SourceLiquidType=6,Brightness=2,LightColor=104}
 
 TypeID      = 2102
 Name        = "a pagoda"
@@ -10220,18 +9866,6 @@ TypeID      = 2294
 Name        = "wooden bars"
 Flags       = {Unpass,Unmove,Unlay}
 
-TypeID      = 2295
-Name        = "wooden bars"
-Description = "They already have some cracks and look rather fragile"
-Flags       = {Unpass,Unmove,Unlay,Destroy}
-Attributes  = {DestroyTarget=3146}
-
-TypeID      = 2296
-Name        = "wooden bars"
-Description = "They already have some cracks and look rather fragile"
-Flags       = {Unpass,Unmove,Unlay,Destroy}
-Attributes  = {DestroyTarget=3145}
-
 TypeID      = 2297
 Name        = "wooden bars"
 Flags       = {Unpass,Unmove,Unlay}
@@ -10244,78 +9878,9 @@ TypeID      = 2299
 Name        = "a small totem pole"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
 
-TypeID      = 2300
-Name        = "a large totem pole"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
 TypeID      = 2301
 Name        = "a totem pole"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 2302
-Name        = "a big table"
-Flags       = {Bottom,Unpass,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 2303
-Name        = "a big table"
-Flags       = {Bottom,Unpass,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 2304
-Name        = "a big table"
-Flags       = {Bottom,Unpass,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 2305
-Name        = "a big table"
-Flags       = {Bottom,Unpass,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 2306
-Name        = "a big table"
-Flags       = {Bottom,Unpass,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 2307
-Name        = "a big table"
-Flags       = {Bottom,Unpass,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 2308
-Name        = "a big table"
-Flags       = {Bottom,Unpass,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 2309
-Name        = "a big table"
-Flags       = {Bottom,Unpass,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 2310
-Name        = "a big table"
-Flags       = {Bottom,Unpass,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 2311
-Name        = "a big table"
-Flags       = {Bottom,Unpass,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 2312
-Name        = "a big table"
-Flags       = {Bottom,Unpass,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 2313
-Name        = "a big table"
-Flags       = {Bottom,Unpass,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 2314
-Name        = "a big table"
-Flags       = {Unpass,Destroy,Height}
-Attributes  = {DestroyTarget=3138,Elevation=8}
 
 TypeID      = 2315
 Name        = "a square table"
@@ -10471,46 +10036,6 @@ TypeID      = 2345
 Name        = "a counter"
 Flags       = {Bottom,Unpass,Unmove,Height}
 Attributes  = {Elevation=8}
-
-TypeID      = 2346
-Name        = "a carved stone table"
-Flags       = {Unpass,Rotate,Destroy,Height}
-Attributes  = {RotateTarget=2347,DestroyTarget=3141,Elevation=8}
-
-TypeID      = 2347
-Name        = "a carved stone table"
-Flags       = {Unpass,Rotate,Destroy,Height}
-Attributes  = {RotateTarget=2346,DestroyTarget=3141,Elevation=8}
-
-TypeID      = 2348
-Name        = "a tusk table"
-Flags       = {Unpass,Rotate,Destroy,Height}
-Attributes  = {RotateTarget=2349,DestroyTarget=3137,Elevation=8}
-
-TypeID      = 2349
-Name        = "a tusk table"
-Flags       = {Unpass,Rotate,Destroy,Height}
-Attributes  = {RotateTarget=2348,DestroyTarget=3137,Elevation=8}
-
-TypeID      = 2350
-Name        = "a bamboo table"
-Flags       = {Unpass,Rotate,Destroy,Height}
-Attributes  = {RotateTarget=2351,DestroyTarget=3137,Elevation=8}
-
-TypeID      = 2351
-Name        = "a bamboo table"
-Flags       = {Unpass,Rotate,Destroy,Height}
-Attributes  = {RotateTarget=2350,DestroyTarget=3137,Elevation=8}
-
-TypeID      = 2352
-Name        = "a thick trunk"
-Flags       = {Unpass,Destroy,Height}
-Attributes  = {DestroyTarget=3136,Elevation=8}
-
-TypeID      = 2353
-Name        = "an ornamented stone table"
-Flags       = {Unpass,Rotate,Destroy,Height}
-Attributes  = {RotateTarget=2346,DestroyTarget=3141,Elevation=8}
 
 TypeID      = 2354
 Name        = "a throne"
@@ -10832,51 +10357,6 @@ Name        = "a luxurious couch"
 Flags       = {Unmove,Avoid,Height}
 Attributes  = {AvoidDamageTypes=0,Elevation=8}
 
-TypeID      = 2418
-Name        = "a tusk chair"
-Flags       = {Avoid,Rotate,Destroy,Height}
-Attributes  = {AvoidDamageTypes=0,RotateTarget=2421,DestroyTarget=3136,Elevation=8}
-
-TypeID      = 2419
-Name        = "a tusk chair"
-Flags       = {Avoid,Rotate,Destroy,Height}
-Attributes  = {AvoidDamageTypes=0,RotateTarget=2420,DestroyTarget=3136,Elevation=8}
-
-TypeID      = 2420
-Name        = "a tusk chair"
-Flags       = {Avoid,Rotate,Destroy,Height}
-Attributes  = {AvoidDamageTypes=0,RotateTarget=2418,DestroyTarget=3136,Elevation=8}
-
-TypeID      = 2421
-Name        = "a tusk chair"
-Flags       = {Avoid,Rotate,Destroy,Height}
-Attributes  = {AvoidDamageTypes=0,RotateTarget=2419,DestroyTarget=3136,Elevation=8}
-
-TypeID      = 2422
-Name        = "an ivory chair"
-Flags       = {Avoid,Rotate,Destroy,Height}
-Attributes  = {AvoidDamageTypes=0,RotateTarget=2425,DestroyTarget=3136,Elevation=8}
-
-TypeID      = 2423
-Name        = "an ivory chair"
-Flags       = {Avoid,Rotate,Destroy,Height}
-Attributes  = {AvoidDamageTypes=0,RotateTarget=2424,DestroyTarget=3136,Elevation=8}
-
-TypeID      = 2424
-Name        = "an ivory chair"
-Flags       = {Avoid,Rotate,Destroy,Height}
-Attributes  = {AvoidDamageTypes=0,RotateTarget=2422,DestroyTarget=3136,Elevation=8}
-
-TypeID      = 2425
-Name        = "an ivory chair"
-Flags       = {Avoid,Rotate,Destroy,Height}
-Attributes  = {AvoidDamageTypes=0,RotateTarget=2423,DestroyTarget=3136,Elevation=8}
-
-TypeID      = 2426
-Name        = "a small trunk"
-Flags       = {Avoid,Destroy,Height}
-Attributes  = {AvoidDamageTypes=0,DestroyTarget=3136,Elevation=8}
-
 TypeID      = 2427
 Name        = "a wardrobe"
 Flags       = {Container,Unpass,Unmove,Unlay}
@@ -11066,26 +10546,6 @@ TypeID      = 2464
 Name        = "a small bamboo shelf"
 Flags       = {Container,Unpass,Unmove,Unlay}
 Attributes  = {Capacity=6}
-
-TypeID      = 2465
-Name        = "a bamboo drawer"
-Flags       = {Container,Unpass,Unlay,Rotate,Destroy}
-Attributes  = {Capacity=6,RotateTarget=2468,DestroyTarget=3136}
-
-TypeID      = 2466
-Name        = "a bamboo drawer"
-Flags       = {Container,Unpass,Unlay,Rotate,Destroy}
-Attributes  = {Capacity=6,RotateTarget=2465,DestroyTarget=3136}
-
-TypeID      = 2467
-Name        = "a bamboo drawer"
-Flags       = {Container,Unpass,Unlay,Rotate,Destroy}
-Attributes  = {Capacity=6,RotateTarget=2466,DestroyTarget=3136}
-
-TypeID      = 2468
-Name        = "a bamboo drawer"
-Flags       = {Container,Unpass,Unlay,Rotate,Destroy}
-Attributes  = {Capacity=6,RotateTarget=2467,DestroyTarget=3136}
 
 TypeID      = 2469
 Name        = "a box"
@@ -11413,46 +10873,6 @@ TypeID      = 2534
 Name        = "a big wine cask"
 Flags       = {Bottom,LiquidSource,Unpass,Unmove,Unlay}
 Attributes  = {SourceLiquidType=2}
-
-TypeID      = 2535
-Name        = "an oven"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Light,Height}
-Attributes  = {ChangeTarget=2536,Brightness=3,LightColor=199,Elevation=8}
-
-TypeID      = 2536
-Name        = "an oven"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Light,Height}
-Attributes  = {ChangeTarget=2535,Brightness=0,LightColor=215,Elevation=8}
-
-TypeID      = 2537
-Name        = "an oven"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Light,Height}
-Attributes  = {ChangeTarget=2538,Brightness=3,LightColor=193,Elevation=8}
-
-TypeID      = 2538
-Name        = "an oven"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Light,Height}
-Attributes  = {ChangeTarget=2537,Brightness=0,LightColor=215,Elevation=8}
-
-TypeID      = 2539
-Name        = "an oven"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Light,Height}
-Attributes  = {ChangeTarget=2540,Brightness=3,LightColor=193,Elevation=8}
-
-TypeID      = 2540
-Name        = "an oven"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Light,Height}
-Attributes  = {ChangeTarget=2539,Brightness=0,LightColor=215,Elevation=8}
-
-TypeID      = 2541
-Name        = "an oven"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Light,Height}
-Attributes  = {ChangeTarget=2542,Brightness=3,LightColor=193,Elevation=8}
-
-TypeID      = 2542
-Name        = "an oven"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Light,Height}
-Attributes  = {ChangeTarget=2541,Brightness=0,LightColor=215,Elevation=8}
 
 TypeID      = 2543
 Name        = "a box"
@@ -12431,11 +11851,6 @@ TypeID      = 2770
 Name        = "a tiger fur"
 Flags       = {Unmove,Hang}
 
-TypeID      = 2771
-Name        = "a sundial"
-Flags       = {Bottom,Information,Unpass,Unmove,Height}
-Attributes  = {InformationType=2,Elevation=8}
-
 TypeID      = 2772
 Name        = "a lever"
 Flags       = {UseEvent,Unmove}
@@ -12449,233 +11864,11 @@ Name        = "a torch bearer"
 Flags       = {UseEvent,Unmove,Hang,Light,Disguise}
 Attributes  = {Brightness=0,LightColor=215,DisguiseTarget=2928}
 
-TypeID      = 2775
-Name        = "a furniture package"
-Description = "It contains a construction kit for a red cushioned chair"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2500,Elevation=8}
-
-TypeID      = 2776
-Name        = "a furniture package"
-Description = "It contains a construction kit for a green cushioned chair"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2500,Elevation=8}
-
-TypeID      = 2777
-Name        = "a furniture package"
-Description = "It contains a construction kit for a wooden chair"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2500,Elevation=8}
-
-TypeID      = 2778
-Name        = "a furniture package"
-Description = "It contains a construction kit for a rocking chair"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2500,Elevation=8}
-
-TypeID      = 2779
-Name        = "a furniture package"
-Description = "It contains a construction kit for a sofa chair"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2500,Elevation=8}
-
-TypeID      = 2780
-Name        = "a furniture package"
-Description = "It contains a construction kit for a tusk chair"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2500,Elevation=8}
-
-TypeID      = 2781
-Name        = "a furniture package"
-Description = "It contains a construction kit for a ivory chair"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2500,Elevation=8}
-
-TypeID      = 2782
-Name        = "a furniture package"
-Description = "It contains a construction kit for a small table"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2500,Elevation=8}
-
-TypeID      = 2783
-Name        = "a furniture package"
-Description = "It contains a construction kit for a round table"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3500,Elevation=8}
-
-TypeID      = 2784
-Name        = "a furniture package"
-Description = "It contains a construction kit for a square table"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3500,Elevation=8}
-
 TypeID      = 2785
 Name        = "a furniture package"
 Description = "It contains a construction kit for a big table"
 Flags       = {UseEvent,Avoid,Take,Height}
 Attributes  = {AvoidDamageTypes=0,Weight=3500,Elevation=8}
-
-TypeID      = 2786
-Name        = "a furniture package"
-Description = "It contains a construction kit for a stone table"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3500,Elevation=8}
-
-TypeID      = 2787
-Name        = "a furniture package"
-Description = "It contains a construction kit for a tusk table"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3500,Elevation=8}
-
-TypeID      = 2788
-Name        = "a furniture package"
-Description = "It contains a construction kit for a bamboo table"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3500,Elevation=8}
-
-TypeID      = 2789
-Name        = "a furniture package"
-Description = "It contains a construction kit for a drawer"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2500,Elevation=8}
-
-TypeID      = 2790
-Name        = "a furniture package"
-Description = "It contains a construction kit for a dresser"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2500,Elevation=8}
-
-TypeID      = 2791
-Name        = "a furniture package"
-Description = "It contains a construction kit for a locker"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3000,Elevation=8}
-
-TypeID      = 2792
-Name        = "a furniture package"
-Description = "It contains a construction kit for a trough"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3000,Elevation=8}
-
-TypeID      = 2793
-Name        = "a furniture package"
-Description = "It contains a construction kit for a barrel"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3500,Elevation=8}
-
-TypeID      = 2794
-Name        = "a furniture package"
-Description = "It contains a construction kit for a trunk"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3500,Elevation=8}
-
-TypeID      = 2795
-Name        = "a furniture package"
-Description = "It contains a construction kit for a bamboo drawer"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3500,Elevation=8}
-
-TypeID      = 2796
-Name        = "a furniture package"
-Description = "It contains a construction kit for a birdcage"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2000,Elevation=8}
-
-TypeID      = 2797
-Name        = "a furniture package"
-Description = "It contains a construction kit for a globe"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2000,Elevation=8}
-
-TypeID      = 2798
-Name        = "a furniture package"
-Description = "It contains a construction kit for a table lamp"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2000,Elevation=8}
-
-TypeID      = 2799
-Name        = "a furniture package"
-Description = "It contains a construction kit for a telescope"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2500,Elevation=8}
-
-TypeID      = 2800
-Name        = "a furniture package"
-Description = "It contains a construction kit for a rocking horse"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3500,Elevation=8}
-
-TypeID      = 2801
-Name        = "a furniture package"
-Description = "It contains a construction kit for a pendulum clock"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3000,Elevation=8}
-
-TypeID      = 2802
-Name        = "a furniture package"
-Description = "It contains a construction kit for a knight statue"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3000,Elevation=8}
-
-TypeID      = 2803
-Name        = "a furniture package"
-Description = "It contains a construction kit for a minotaur statue"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3000,Elevation=8}
-
-TypeID      = 2804
-Name        = "a furniture package"
-Description = "It contains a construction kit for a goblin statue"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2500,Elevation=8}
-
-TypeID      = 2805
-Name        = "a furniture package"
-Description = "It contains a construction kit for a large amphora"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3000,Elevation=8}
-
-TypeID      = 2806
-Name        = "a furniture package"
-Description = "It contains a construction kit for a coal basin"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3500,Elevation=8}
-
-TypeID      = 2807
-Name        = "a furniture package"
-Description = "It contains a construction kit for a piano"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3500,Elevation=8}
-
-TypeID      = 2808
-Name        = "a furniture package"
-Description = "It contains a construction kit for a harp"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3500,Elevation=8}
-
-TypeID      = 2809
-Name        = "a furniture package"
-Description = "It contains a construction kit for a trunk chair"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3500,Elevation=8}
-
-TypeID      = 2810
-Name        = "a furniture package"
-Description = "It contains a construction kit for a trunk table"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3500,Elevation=8}
-
-TypeID      = 2811
-Name        = "a furniture package"
-Description = "It contains an indoor plant"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3000,Elevation=8}
-
-TypeID      = 2812
-Name        = "a furniture package"
-Description = "It contains a christmas tree"
-Flags       = {UseEvent,Avoid,Take,Expire,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3500,ExpireTarget=0,TotalExpireTime=21600,Elevation=8}
 
 TypeID      = 2813
 Name        = "a blank paper"
@@ -12942,11 +12135,6 @@ Name        = "a bag"
 Flags       = {Container,Take,Clothes}
 Attributes  = {Capacity=8,Weight=800,BodyPosition=3}
 
-TypeID      = 2864
-Name        = "a bag"
-Flags       = {Container,Take,Clothes}
-Attributes  = {Capacity=8,Weight=800,BodyPosition=3}
-
 TypeID      = 2865
 Name        = "a backpack"
 Flags       = {Container,Take,Clothes}
@@ -12978,11 +12166,6 @@ Flags       = {Container,Take,Clothes}
 Attributes  = {Capacity=20,Weight=1800,BodyPosition=3}
 
 TypeID      = 2871
-Name        = "a backpack"
-Flags       = {Container,Take,Clothes}
-Attributes  = {Capacity=20,Weight=1800,BodyPosition=3}
-
-TypeID      = 2872
 Name        = "a backpack"
 Flags       = {Container,Take,Clothes}
 Attributes  = {Capacity=20,Weight=1800,BodyPosition=3}
@@ -13038,16 +12221,6 @@ Name        = "a jug"
 Flags       = {MultiUse,LiquidContainer,Take}
 Attributes  = {Weight=750}
 
-TypeID      = 2883
-Name        = "a cup"
-Flags       = {MultiUse,LiquidContainer,Take}
-Attributes  = {Weight=200}
-
-TypeID      = 2884
-Name        = "a cup"
-Flags       = {MultiUse,LiquidContainer,Take}
-Attributes  = {Weight=200}
-
 TypeID      = 2885
 Name        = "a brown flask"
 Flags       = {MultiUse,LiquidContainer,Take}
@@ -13087,11 +12260,6 @@ TypeID      = 2892
 Name        = "a broken bottle"
 Flags       = {Take}
 Attributes  = {Weight=200}
-
-TypeID      = 2893
-Name        = "an amphora"
-Flags       = {MultiUse,LiquidContainer,Take}
-Attributes  = {Weight=9700}
 
 TypeID      = 2894
 Name        = "a broken flask"
@@ -13372,11 +12540,6 @@ Name        = "a lute"
 Flags       = {UseEvent,Take}
 Attributes  = {Weight=3400}
 
-TypeID      = 2951
-Name        = "a bongo drum"
-Flags       = {Take}
-Attributes  = {Weight=2900}
-
 TypeID      = 2952
 Name        = "a drum"
 Flags       = {UseEvent,Take}
@@ -13442,16 +12605,6 @@ TypeID      = 2964
 Name        = "a harp"
 Flags       = {UseEvent,Unpass,Rotate,Destroy}
 Attributes  = {RotateTarget=2963,DestroyTarget=3136}
-
-TypeID      = 2965
-Name        = "a didgeridoo"
-Flags       = {UseEvent,Take}
-Attributes  = {Weight=4200}
-
-TypeID      = 2966
-Name        = "a war drum"
-Flags       = {Take}
-Attributes  = {Weight=3000}
 
 TypeID      = 2967
 Name        = "a magical key"
@@ -13622,16 +12775,6 @@ TypeID      = 3000
 Name        = "a rocking horse"
 Flags       = {Unpass,Unlay,Rotate,Destroy,Height}
 Attributes  = {RotateTarget=2997,DestroyTarget=3137,Elevation=8}
-
-TypeID      = 3001
-Name        = "a bear doll"
-Flags       = {Take}
-Attributes  = {Weight=590}
-
-TypeID      = 3002
-Name        = "a voodoo doll"
-Flags       = {Take}
-Attributes  = {Weight=650}
 
 TypeID      = 3003
 Name        = "a rope"
@@ -13839,11 +12982,6 @@ TypeID      = 3043
 Name        = "a crystal coin"
 Flags       = {Cumulative,Take,Special}
 Attributes  = {Weight=10,Meaning=3}
-
-TypeID      = 3044
-Name        = "an elephant tusk"
-Flags       = {Cumulative,Take}
-Attributes  = {Weight=1000}
 
 TypeID      = 3045
 Name        = "a strange talisman"
@@ -14145,11 +13283,6 @@ TypeID      = 3102
 Name        = "a paw amulet"
 Flags       = {Take,Clothes}
 Attributes  = {Weight=420,BodyPosition=2}
-
-TypeID      = 3103
-Name        = "a cornucopia"
-Flags       = {UseEvent,Take}
-Attributes  = {Weight=1400}
 
 TypeID      = 3104
 Name        = "a banana skin"
@@ -14877,12 +14010,6 @@ Description = "It is the djinn leader's sleeping lamp"
 Flags       = {Take}
 Attributes  = {Weight=1300}
 
-TypeID      = 3244
-Name        = "an old and used backpack"
-Description = "A label on the backpack reads: Property of Sam, Thais"
-Flags       = {Container,Take,Clothes}
-Attributes  = {Capacity=20,Weight=1800,BodyPosition=3}
-
 TypeID      = 3245
 Name        = "a ring of wishes"
 Description = "(This item has 3 charges left)"
@@ -15385,36 +14512,6 @@ Name        = "a war axe"
 Flags       = {MultiUse,Take,Weapon}
 Attributes  = {Weight=6150,WeaponType=3,WeaponAttackValue=20,WeaponDefendValue=10}
 
-TypeID      = 3343
-Name        = "a lich staff"
-Flags       = {MultiUse,Take,Weapon}
-Attributes  = {Weight=4100,WeaponType=2,WeaponAttackValue=40,WeaponDefendValue=30}
-
-TypeID      = 3344
-Name        = "a beastslayer axe"
-Flags       = {MultiUse,Take,Weapon}
-Attributes  = {Weight=6150,WeaponType=3,WeaponAttackValue=35,WeaponDefendValue=12}
-
-TypeID      = 3345
-Name        = "a templar scytheblade"
-Flags       = {MultiUse,Take,Weapon}
-Attributes  = {Weight=2900,WeaponType=1,WeaponAttackValue=23,WeaponDefendValue=15}
-
-TypeID      = 3346
-Name        = "a ripper lance"
-Flags       = {MultiUse,Take,Clothes,Weapon}
-Attributes  = {Weight=8000,BodyPosition=0,WeaponType=3,WeaponAttackValue=28,WeaponDefendValue=7}
-
-TypeID      = 3347
-Name        = "a hunting spear"
-Flags       = {MultiUse,Take,Clothes,Weapon}
-Attributes  = {Weight=8000,BodyPosition=0,WeaponType=3,WeaponAttackValue=18,WeaponDefendValue=8}
-
-TypeID      = 3348
-Name        = "a banana staff"
-Flags       = {MultiUse,Take,Weapon}
-Attributes  = {Weight=5000,WeaponType=2,WeaponAttackValue=25,WeaponDefendValue=15}
-
 TypeID      = 3349
 Name        = "a crossbow"
 Flags       = {Take,Clothes,Bow}
@@ -15691,36 +14788,6 @@ Name        = "a native armor"
 Flags       = {Take,Clothes,Armor}
 Attributes  = {Weight=8000,BodyPosition=4,ArmorValue=7}
 
-TypeID      = 3403
-Name        = "a tribal mask"
-Flags       = {Take,Clothes,Armor}
-Attributes  = {Weight=2500,BodyPosition=1,ArmorValue=2}
-
-TypeID      = 3404
-Name        = "a leopard armor"
-Flags       = {Take,Clothes,Armor}
-Attributes  = {Weight=9500,BodyPosition=4,ArmorValue=9}
-
-TypeID      = 3405
-Name        = "a horseman helmet"
-Flags       = {Take,Clothes,Armor}
-Attributes  = {Weight=4200,BodyPosition=1,ArmorValue=6}
-
-TypeID      = 3406
-Name        = "a feather headdress"
-Flags       = {Take,Clothes,Armor}
-Attributes  = {Weight=2100,BodyPosition=1,ArmorValue=2}
-
-TypeID      = 3407
-Name        = "a charmer's tiara"
-Flags       = {Take,Clothes,Armor}
-Attributes  = {Weight=2200,BodyPosition=1,ArmorValue=2}
-
-TypeID      = 3408
-Name        = "a beholder helmet"
-Flags       = {Take,Clothes,Armor}
-Attributes  = {Weight=4600,BodyPosition=1,ArmorValue=7}
-
 TypeID      = 3409
 Name        = "a steel shield"
 Flags       = {Take,Shield}
@@ -15899,21 +14966,6 @@ TypeID      = 3442
 Name        = "a tempest shield"
 Flags       = {Take,Shield}
 Attributes  = {Weight=5100,ShieldDefendValue=36}
-
-TypeID      = 3443
-Name        = "a tusk shield"
-Flags       = {Take,Shield}
-Attributes  = {Weight=6900,ShieldDefendValue=27}
-
-TypeID      = 3444
-Name        = "a sentinel shield"
-Flags       = {Take,Shield}
-Attributes  = {Weight=4900,ShieldDefendValue=22}
-
-TypeID      = 3445
-Name        = "a salamander shield"
-Flags       = {Take,Shield}
-Attributes  = {Weight=5900,ShieldDefendValue=26}
 
 TypeID      = 3446
 Name        = "a bolt"
@@ -16144,11 +15196,6 @@ TypeID      = 3491
 Name        = "a ships telescope"
 Flags       = {Unpass,Unmove,Unlay,Rotate,Height}
 Attributes  = {RotateTarget=3489,Elevation=8}
-
-TypeID      = 3492
-Name        = "a worm"
-Flags       = {Cumulative,Take}
-Attributes  = {Weight=20}
 
 TypeID      = 3493
 Name        = "a crane"
@@ -16463,11 +15510,6 @@ Name        = "golden boots"
 Flags       = {Take,Clothes,Armor}
 Attributes  = {Weight=3100,BodyPosition=8,ArmorValue=8}
 
-TypeID      = 3556
-Name        = "crocodile boots"
-Flags       = {Take,Clothes,Armor}
-Attributes  = {Weight=900,BodyPosition=8,ArmorValue=1}
-
 TypeID      = 3557
 Name        = "plate legs"
 Flags       = {Take,Clothes,Armor}
@@ -16482,11 +15524,6 @@ TypeID      = 3559
 Name        = "leather legs"
 Flags       = {Take,Clothes,Armor}
 Attributes  = {Weight=1800,BodyPosition=7,ArmorValue=1}
-
-TypeID      = 3560
-Name        = "a bast skirt"
-Flags       = {Take,Clothes}
-Attributes  = {Weight=350,BodyPosition=7}
 
 TypeID      = 3561
 Name        = "a jacket"
@@ -17417,158 +16454,6 @@ TypeID      = 3770
 Name        = "a bamboo plant"
 Flags       = {Unpass,Unmove,Unlay}
 
-TypeID      = 3771
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3772
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3773
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3774
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3775
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3776
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3777
-Name        = "a giant tree"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 3778
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3779
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3780
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3781
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3782
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3783
-Name        = "a giant tree"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 3784
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3785
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3786
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3787
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3788
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3789
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3790
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3791
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3792
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3793
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3794
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3795
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3796
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3797
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3798
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3799
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3800
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3801
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3802
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3803
-Name        = "a giant tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3804
-Name        = "jungle vines"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 3805
-Name        = "jungle vines"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 3806
-Name        = "jungle vines"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 3807
-Name        = "jungle vines"
-Flags       = {Unpass,Unmove,Unlay}
-
-TypeID      = 3808
-Name        = "jungle vines"
-Flags       = {Unpass,Unmove,Unlay}
-
 TypeID      = 3809
 Name        = "a liana"
 Flags       = {Unpass,Unmove,Unlay}
@@ -17817,14 +16702,6 @@ TypeID      = 3870
 Name        = "a chill nettle"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
 
-TypeID      = 3871
-Name        = "a monkey tail"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3872
-Name        = "a fairy queen"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
 TypeID      = 3873
 Name        = "a crane plant"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
@@ -17839,10 +16716,6 @@ Flags       = {Bottom,Unmove}
 
 TypeID      = 3876
 Name        = "a turtle sprouter"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3877
-Name        = "a bees ballroom"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 3878
@@ -17867,10 +16740,6 @@ Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 3883
 Name        = "a titans orchid"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3884
-Name        = "a purple cardinal"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 3885
@@ -17927,10 +16796,6 @@ Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 3898
 Name        = "a velvet petal"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3899
-Name        = "a devil's tongue flower"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 3900
@@ -18013,89 +16878,9 @@ TypeID      = 3919
 Name        = "glimmer cap mushrooms"
 Flags       = {Bottom,Unmove}
 
-TypeID      = 3920
-Name        = "a giant glimmer cap mushroom"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
 TypeID      = 3921
 Name        = "a large pearl flower"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3922
-Name        = "a fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3923
-Name        = "a fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3924
-Name        = "a fallen tree"
-Flags       = {Bottom,Unmove}
-
-TypeID      = 3925
-Name        = "a fallen tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3926
-Name        = "a fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3927
-Name        = "a fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3928
-Name        = "a fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3929
-Name        = "a fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3930
-Name        = "a fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3931
-Name        = "a fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3932
-Name        = "a fallen tree"
-Flags       = {Bottom,Unmove}
-
-TypeID      = 3933
-Name        = "a fallen tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3934
-Name        = "a fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3935
-Name        = "a fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3936
-Name        = "a fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3937
-Name        = "a fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
 
 TypeID      = 3938
 Name        = "jungle vines"
@@ -18120,39 +16905,6 @@ Flags       = {Unmove}
 TypeID      = 3943
 Name        = "jungle vines"
 Flags       = {Unmove}
-
-TypeID      = 3944
-Name        = "a jungle maw"
-Flags       = {Bottom,CollisionEvent,Unmove}
-
-TypeID      = 3945
-Name        = "a jungle maw"
-Flags       = {Bottom,Unmove,Expire}
-Attributes  = {ExpireTarget=3944,TotalExpireTime=150}
-
-TypeID      = 3946
-Name        = "a fallen tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3947
-Name        = "a fallen tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3948
-Name        = "a fallen tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3949
-Name        = "a fallen tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3950
-Name        = "a fallen tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
-
-TypeID      = 3951
-Name        = "a fallen tree"
-Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 3952
 Name        = "a giant tree"
@@ -18245,66 +16997,6 @@ Flags       = {Unmove}
 TypeID      = 3974
 Name        = "a giant tree root"
 Flags       = {Unmove}
-
-TypeID      = 3975
-Name        = "a mossy fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3976
-Name        = "a mossy fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3977
-Name        = "a mossy fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3978
-Name        = "a mossy fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3979
-Name        = "a mossy fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3980
-Name        = "a mossy fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3981
-Name        = "a mossy fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3982
-Name        = "a mossy fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3983
-Name        = "a mossy fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3984
-Name        = "a mossy fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3985
-Name        = "a mossy fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
-
-TypeID      = 3986
-Name        = "a mossy fallen tree"
-Flags       = {Bottom,Unmove,Height}
-Attributes  = {Elevation=8}
 
 TypeID      = 3987
 Name        = "a dead troll"
@@ -22499,10 +21191,6 @@ Description = "It might come in handy in cold regions"
 Flags       = {UseEvent,MultiUse,Take}
 Attributes  = {Weight=7000}
 
-TypeID      = 4873
-Name        = "a hydra's nest"
-Flags       = {Bottom,Chest,Unpass,Unmove,Unlay}
-
 TypeID      = 4874
 Name        = "swamp"
 Flags       = {Clip,Unmove}
@@ -23136,111 +21824,6 @@ Name        = "a magic forcefield"
 Description = "You can see the other side through it"
 Flags       = {Bottom,TeleportRelative,Unmove,Avoid,Light}
 Attributes  = {RelTeleportEffect=0,RelTeleportDisplacement=-2145189880,AvoidDamageTypes=0,Brightness=2,LightColor=29}
-
-TypeID      = 5024
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=215}
-
-TypeID      = 5025
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=208}
-
-TypeID      = 5026
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=201}
-
-TypeID      = 5027
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=194}
-
-TypeID      = 5028
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=187}
-
-TypeID      = 5029
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=180}
-
-TypeID      = 5030
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=214}
-
-TypeID      = 5031
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=207}
-
-TypeID      = 5032
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=200}
-
-TypeID      = 5033
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=193}
-
-TypeID      = 5034
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=186}
-
-TypeID      = 5035
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=213}
-
-TypeID      = 5036
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=206}
-
-TypeID      = 5037
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=199}
-
-TypeID      = 5038
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=192}
-
-TypeID      = 5039
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=212}
-
-TypeID      = 5040
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=205}
-
-TypeID      = 5041
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=198}
-
-TypeID      = 5042
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=211}
-
-TypeID      = 5043
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=204}
-
-TypeID      = 5044
-Name        = "a bamboo lamp"
-Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay,Light}
-Attributes  = {ChangeTarget=2116,Brightness=7,LightColor=210}
 
 TypeID      = 5045
 Name        = "a flat roof"

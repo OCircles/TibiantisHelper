@@ -232,6 +232,8 @@ namespace TibiantisHelper
 
             ToolStripItem accountDropdown = tray_contextMenuStrip.Items.Add("Accounts");
 
+            if (_accounts.Count == 0) accountDropdown.Enabled = false;
+
             foreach (Account acc in _accounts)
             {
                 (accountDropdown as ToolStripMenuItem).DropDownItems.Add(acc.name, null, (s, e) => StringToClipboard(acc.login));
