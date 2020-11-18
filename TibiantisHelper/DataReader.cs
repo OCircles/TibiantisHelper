@@ -663,7 +663,7 @@ namespace TibiantisHelper
                                 if (item.Name.Substring(0, 2) == "a ") item.Name = item.Name.Substring(2);
                                 else if (item.Name.Substring(0, 3) == "an ") item.Name = item.Name.Substring(3);
 
-                                item.Name = CapitalizeItemName(item.Name);
+                                item.Name = CapitalizeItemName(item.Name).TrimEnd();
                             }
 
                         }
@@ -702,7 +702,7 @@ namespace TibiantisHelper
 
                 }
 
-                return items;
+                return items.OrderBy(i => i.Name).ToList();
             }
 
         }
