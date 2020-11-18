@@ -10519,16 +10519,6 @@ Name        = "a bamboo wardrobe"
 Flags       = {Container,Unpass,Unmove,Unlay}
 Attributes  = {Capacity=6}
 
-TypeID      = 2459
-Name        = "a bamboo shelf"
-Flags       = {Container,Unpass,Unmove,Unlay}
-Attributes  = {Capacity=6}
-
-TypeID      = 2460
-Name        = "a bamboo shelf"
-Flags       = {Container,Unpass,Unmove,Unlay}
-Attributes  = {Capacity=6}
-
 TypeID      = 2461
 Name        = "a small bamboo shelf"
 Flags       = {Unpass,Unmove,Unlay}
@@ -13084,70 +13074,10 @@ TypeID      = 3064
 Name        = "the orb of nature"
 Flags       = {Unmove}
 
-TypeID      = 3065
-Name        = "a quagmire rod"
-Description = "It emits clouds of poisonous swamp gas"
-Flags       = {RestrictLevel,RestrictProfession,Take,Light,Wand}
-Attributes  = {MinimumLevel=26,Professions=16,Weight=2650,Brightness=2,LightColor=67,WandRange=2,WandManaConsumption=8,WandAttackStrength=45,WandAttackVariation=8,WandDamageType=2,WandMissile=15}
-
-TypeID      = 3066
-Name        = "a snakebite rod"
-Description = "It seems to twitch and quiver as if trying to escape your grip"
-Flags       = {RestrictLevel,RestrictProfession,Take,Wand}
-Attributes  = {MinimumLevel=7,Professions=16,Weight=4300,WandRange=4,WandManaConsumption=2,WandAttackStrength=13,WandAttackVariation=5,WandDamageType=2,WandMissile=15}
-
-TypeID      = 3067
-Name        = "a tempest rod"
-Description = "It grants you the power of striking your foes with furious thunderstorms"
-Flags       = {RestrictLevel,RestrictProfession,Take,Light,Wand}
-Attributes  = {MinimumLevel=33,Professions=16,Weight=2100,Brightness=3,LightColor=29,WandRange=1,WandManaConsumption=13,WandAttackStrength=65,WandAttackVariation=9,WandDamageType=8,WandMissile=5}
-
 TypeID      = 3068
 Name        = "a crystal wand"
 Flags       = {Take}
 Attributes  = {Weight=2800}
-
-TypeID      = 3069
-Name        = "a volcanic rod"
-Description = "It erupts powerful bursts of magma upon everything in your path"
-Flags       = {RestrictLevel,RestrictProfession,Take,Light,Wand}
-Attributes  = {MinimumLevel=19,Professions=16,Weight=2900,Brightness=2,LightColor=199,WandRange=3,WandManaConsumption=5,WandAttackStrength=30,WandAttackVariation=7,WandDamageType=4,WandMissile=4}
-
-TypeID      = 3070
-Name        = "a moonlight rod"
-Description = "Shimmering rays of moonlight radiate from its tip"
-Flags       = {RestrictLevel,RestrictProfession,Take,Light,Wand}
-Attributes  = {MinimumLevel=13,Professions=16,Weight=1950,Brightness=3,LightColor=143,WandRange=2,WandManaConsumption=3,WandAttackStrength=19,WandAttackVariation=6,WandDamageType=8,WandMissile=5}
-
-TypeID      = 3071
-Name        = "a wand of inferno"
-Description = "It unleashes the very fires of hell"
-Flags       = {RestrictLevel,RestrictProfession,Take,Light,Wand}
-Attributes  = {MinimumLevel=33,Professions=8,Weight=3050,Brightness=3,LightColor=205,WandRange=2,WandManaConsumption=13,WandAttackStrength=65,WandAttackVariation=9,WandDamageType=4,WandMissile=4}
-
-TypeID      = 3072
-Name        = "a wand of plague"
-Description = "Infectious goo covers its tip"
-Flags       = {RestrictLevel,RestrictProfession,Take,Light,Wand}
-Attributes  = {MinimumLevel=19,Professions=8,Weight=2300,Brightness=2,LightColor=67,WandRange=2,WandManaConsumption=5,WandAttackStrength=30,WandAttackVariation=7,WandDamageType=2,WandMissile=15}
-
-TypeID      = 3073
-Name        = "a wand of cosmic energy"
-Description = "The energy of a radiant star is trapped inside its globe"
-Flags       = {RestrictLevel,RestrictProfession,Take,Light,Wand}
-Attributes  = {MinimumLevel=26,Professions=8,Weight=2300,Brightness=2,LightColor=205,WandRange=1,WandManaConsumption=8,WandAttackStrength=45,WandAttackVariation=8,WandDamageType=8,WandMissile=5}
-
-TypeID      = 3074
-Name        = "a wand of vortex"
-Description = "Surges of energy rush through the tip of this wand"
-Flags       = {RestrictLevel,RestrictProfession,Take,Light,Wand}
-Attributes  = {MinimumLevel=7,Professions=8,Weight=2300,Brightness=2,LightColor=23,WandRange=3,WandManaConsumption=2,WandAttackStrength=13,WandAttackVariation=5,WandDamageType=8,WandMissile=5}
-
-TypeID      = 3075
-Name        = "a wand of dragonbreath"
-Description = "Legends say that this wand holds the soul of a young dragon"
-Flags       = {RestrictLevel,RestrictProfession,Take,Light,Wand}
-Attributes  = {MinimumLevel=13,Professions=8,Weight=2300,Brightness=2,LightColor=192,WandRange=3,WandManaConsumption=3,WandAttackStrength=19,WandAttackVariation=6,WandDamageType=4,WandMissile=4}
 
 TypeID      = 3076
 Name        = "a crystal ball"
@@ -13784,12 +13714,6 @@ Attributes  = {Weight=120,Brightness=1,LightColor=215}
 TypeID      = 3204
 Name        = "your own dead body"
 Flags       = {Unmove}
-
-TypeID      = 3205
-Name        = "a family brooch"
-Description = "You see the familyname Windtrouser engraved on this brooch"
-Flags       = {Take}
-Attributes  = {Weight=110}
 
 TypeID      = 3206
 Name        = "a dragonfetish"
@@ -20943,122 +20867,6 @@ Name        = "stairs"
 Flags       = {Bank,CollisionEvent,Unmove,Avoid}
 Attributes  = {Waypoints=100,AvoidDamageTypes=0}
 
-TypeID      = 4827
-Name        = "whisper moss"
-Flags       = {Cumulative,Take}
-Attributes  = {Weight=20}
-
-TypeID      = 4828
-Name        = "a flask of cough syrup"
-Description = "It smells like herbs"
-Flags       = {Take}
-Attributes  = {Weight=300}
-
-TypeID      = 4829
-Name        = "a witches cap mushroom"
-Flags       = {Take}
-Attributes  = {Weight=100}
-
-TypeID      = 4830
-Name        = "witches mushrooms"
-Flags       = {Bottom,Chest,Unpass,Unmove,Unlay,Disguise}
-Attributes  = {DisguiseTarget=3919}
-
-TypeID      = 4831
-Name        = "an old parchment"
-Description = "It is covered with foreign symbols"
-Flags       = {Take}
-Attributes  = {Weight=200}
-
-TypeID      = 4832
-Name        = "a giant ape's hair"
-Flags       = {Take}
-Attributes  = {Weight=2000}
-
-TypeID      = 4833
-Name        = "a giant footprint"
-Flags       = {Bottom,Chest,Unmove,Disguise}
-Attributes  = {DisguiseTarget=2753}
-
-TypeID      = 4834
-Name        = "a family brooch"
-Description = "The emblem of a dwarven family is engraved on it"
-Flags       = {Take}
-Attributes  = {Weight=110}
-
-TypeID      = 4835
-Name        = "a snake destroyer"
-Flags       = {UseEvent,MultiUse,Take}
-Attributes  = {Weight=6600}
-
-TypeID      = 4836
-Name        = "a spectral dress"
-Flags       = {Take,Clothes}
-Attributes  = {Weight=1000,BodyPosition=4}
-
-TypeID      = 4837
-Name        = "an icicle"
-Description = "It is melting rapidly"
-Flags       = {Take,Expire}
-Attributes  = {Weight=1900,ExpireTarget=0,TotalExpireTime=600}
-
-TypeID      = 4838
-Name        = "strange powder"
-Flags       = {Cumulative,Take}
-Attributes  = {Weight=500}
-
-TypeID      = 4839
-Name        = "a hydra egg"
-Flags       = {Take}
-Attributes  = {Weight=5000}
-
-TypeID      = 4840
-Name        = "a spectral stone"
-Description = "It is pulsating with spectral energy"
-Flags       = {UseEvent,MultiUse,Take,Light}
-Attributes  = {Weight=250,Brightness=2,LightColor=29}
-
-TypeID      = 4841
-Name        = "a memory stone"
-Flags       = {Take}
-Attributes  = {Weight=250}
-
-TypeID      = 4842
-Name        = "a sheet of tracing paper"
-Description = "It is blank"
-Flags       = {UseEvent,MultiUse,Take}
-Attributes  = {Weight=100}
-
-TypeID      = 4843
-Name        = "a sheet of tracing paper"
-Description = "It contains some strange symbols of the lizard language"
-Flags       = {Take}
-Attributes  = {Weight=100}
-
-TypeID      = 4844
-Name        = "an elven poetry book"
-Description = "It contains a collection of beautiful elven poems"
-Flags       = {Take}
-Attributes  = {Weight=1300}
-
-TypeID      = 4845
-Name        = "a dwarven pickaxe"
-Description = "It is a masterpiece of dwarvish smithery and made of especially hard steel"
-Flags       = {Take}
-Attributes  = {Weight=6000}
-
-TypeID      = 4846
-Name        = "a wrinkled parchment"
-Description = "It is covered with strange numbers"
-Flags       = {Take}
-Attributes  = {Weight=200}
-
-TypeID      = 4847
-Name        = "a funeral urn"
-Description = "It contains the ashes of a lizard high priest"
-Flags       = {Take}
-Attributes  = {Weight=10000}
-
 TypeID      = 4848
 Name        = "a small cask"
 Description = "It is filled with the blood of the snake god"
@@ -21070,30 +20878,6 @@ Name        = "wooden trash"
 Description = "The blood of the snake god is pouring out"
 Flags       = {Unpass,Unmove,Unlay,Expire}
 Attributes  = {ExpireTarget=4848,TotalExpireTime=120}
-
-TypeID      = 4850
-Name        = "the statue of the snake god"
-Description = "It is emitting an eerie light"
-Flags       = {Bottom,Unpass,Unmove,Unlay,Light}
-Attributes  = {Brightness=3,LightColor=102}
-
-TypeID      = 4851
-Name        = "a smashed stone head"
-Description = "It seems to repair itself rapidly"
-Flags       = {Bottom,Unpass,Unmove,Unlay,Expire}
-Attributes  = {ExpireTarget=4850,TotalExpireTime=60}
-
-TypeID      = 4852
-Name        = "an ectoplasm container"
-Description = "It is empty"
-Flags       = {UseEvent,MultiUse,Take}
-Attributes  = {Weight=600}
-
-TypeID      = 4853
-Name        = "an ectoplasm container"
-Description = "It is filled with ectoplasm"
-Flags       = {Take}
-Attributes  = {Weight=600}
 
 TypeID      = 4854
 Name        = "a red carpet"
@@ -21130,66 +20914,6 @@ Flags       = {Unmove}
 TypeID      = 4862
 Name        = "a red carpet"
 Flags       = {Unmove}
-
-TypeID      = 4863
-Name        = "a butterfly conservation kit"
-Description = "It is empty"
-Flags       = {UseEvent,MultiUse,Take}
-Attributes  = {Weight=700}
-
-TypeID      = 4864
-Name        = "a butterfly conservation kit"
-Description = "It contains a red butterfly"
-Flags       = {Take}
-Attributes  = {Weight=800}
-
-TypeID      = 4865
-Name        = "a butterfly conservation kit"
-Description = "It contains a purple butterfly"
-Flags       = {Take}
-Attributes  = {Weight=800}
-
-TypeID      = 4866
-Name        = "a butterfly conservation kit"
-Description = "It contains a blue butterfly"
-Flags       = {Take}
-Attributes  = {Weight=800}
-
-TypeID      = 4867
-Name        = "a botanist's container"
-Description = "It is empty"
-Flags       = {UseEvent,MultiUse,Take}
-Attributes  = {Weight=1800}
-
-TypeID      = 4868
-Name        = "a botanist's container"
-Description = "It holds a sample of the jungle bells plant"
-Flags       = {Take}
-Attributes  = {Weight=2000}
-
-TypeID      = 4869
-Name        = "a botanist's container"
-Description = "It holds a sample of the giant jungle rose"
-Flags       = {Take}
-Attributes  = {Weight=2000}
-
-TypeID      = 4870
-Name        = "a botanist's container"
-Description = "It holds a sample of the witches cauldron plant"
-Flags       = {Take}
-Attributes  = {Weight=2000}
-
-TypeID      = 4871
-Name        = "an explorer brooch"
-Description = "It is the official badge of the explorer society"
-Flags       = {Take}
-Attributes  = {Weight=90}
-
-TypeID      = 4872
-Name        = "an ice pick"
-Description = "It might come in handy in cold regions"
-Flags       = {UseEvent,MultiUse,Take}
-Attributes  = {Weight=7000}
 
 TypeID      = 4874
 Name        = "swamp"
@@ -21591,11 +21315,6 @@ TypeID      = 4970
 Name        = "a rudder blade"
 Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 
-TypeID      = 4971
-Name        = "a ventilation grille"
-Flags       = {Bank,Unmove}
-Attributes  = {Waypoints=100}
-
 TypeID      = 4972
 Name        = "a bollard"
 Flags       = {Unpass,Unmove,Unlay}
@@ -21691,17 +21410,6 @@ TypeID      = 4994
 Name        = "some sharp icicles"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
 
-TypeID      = 4995
-Name        = "a canopic jar"
-Description = "You feel an eerie presence"
-Flags       = {Unpass,Unmove,Unlay,Destroy}
-Attributes  = {DestroyTarget=4996}
-
-TypeID      = 4996
-Name        = "the remains of a canopic jar"
-Flags       = {Unpass,Unmove,Unlay,Expire}
-Attributes  = {ExpireTarget=4995,TotalExpireTime=300}
-
 TypeID      = 4997
 Name        = "a hawser"
 Flags       = {Unpass,Unmove,Unlay}
@@ -21777,11 +21485,6 @@ Name        = "a dead butterfly"
 Flags       = {Take,Corpse,Expire}
 Attributes  = {Weight=20,CorpseType=1,ExpireTarget=4378,TotalExpireTime=1200}
 
-TypeID      = 5014
-Name        = "a mandrake"
-Flags       = {Take}
-Attributes  = {Weight=180}
-
 TypeID      = 5015
 Name        = "a skull"
 Flags       = {Unmove}
@@ -21808,11 +21511,6 @@ Name        = "a burning skull"
 Flags       = {Unmove,Hang,Light}
 Attributes  = {Brightness=3,LightColor=199}
 
-TypeID      = 5021
-Name        = "an orichalcum pearl"
-Flags       = {Cumulative,Take}
-Attributes  = {Weight=30}
-
 TypeID      = 5022
 Name        = "a magic forcefield"
 Description = "You can see the other side through it"
@@ -21828,12 +21526,6 @@ Attributes  = {RelTeleportEffect=0,RelTeleportDisplacement=-2145189880,AvoidDama
 TypeID      = 5045
 Name        = "a flat roof"
 Flags       = {Unmove}
-
-TypeID      = 5046
-Name        = "a monkey statue"
-Description = "The words 'See no evil' are engraved on it"
-Flags       = {Unpass,Unlay,Destroy}
-Attributes  = {DestroyTarget=3142}
 
 TypeID      = 5047
 Name        = "a flat roof"
@@ -21866,18 +21558,6 @@ Flags       = {Unmove}
 TypeID      = 5054
 Name        = "a flat roof"
 Flags       = {Unmove}
-
-TypeID      = 5055
-Name        = "a monkey statue"
-Description = "The words 'Hear no evil' are engraved on it"
-Flags       = {Unpass,Unlay,Destroy}
-Attributes  = {DestroyTarget=3142}
-
-TypeID      = 5056
-Name        = "a monkey statue"
-Description = "The words 'Speak no evil' are engraved on it"
-Flags       = {Unpass,Unlay,Destroy}
-Attributes  = {DestroyTarget=3142}
 
 TypeID      = 5057
 Name        = "a snake head"
@@ -21989,11 +21669,6 @@ Name        = "a stony pond"
 Flags       = {Bottom,LiquidSource,Unpass,Unmove,Unlay}
 Attributes  = {SourceLiquidType=1}
 
-TypeID      = 5080
-Name        = "a panda teddy"
-Flags       = {UseEvent,Take}
-Attributes  = {Weight=600}
-
 TypeID      = 5081
 Name        = "a ladder"
 Flags       = {Bank,CollisionEvent,Unmove,Avoid}
@@ -22018,30 +21693,6 @@ TypeID      = 5085
 Name        = "an open door"
 Flags       = {Top,NameDoor,Text,Unmove}
 Attributes  = {NamedoorTarget=1640,FontSize=1}
-
-TypeID      = 5086
-Name        = "a furniture package"
-Description = "It contains a construction kit for a monkey statue"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2500,Elevation=8}
-
-TypeID      = 5087
-Name        = "a furniture package"
-Description = "It contains a construction kit for a monkey statue"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2500,Elevation=8}
-
-TypeID      = 5088
-Name        = "a furniture package"
-Description = "It contains a construction kit for a monkey statue"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=2500,Elevation=8}
-
-TypeID      = 5089
-Name        = "a butterfly conservation kit"
-Description = "It contains a rare yellow butterfly"
-Flags       = {Take}
-Attributes  = {Weight=800}
 
 TypeID      = 5090
 Name        = "a treasure map"
