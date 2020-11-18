@@ -1224,7 +1224,7 @@ namespace TibiantisHelper
 
                         calculator_textBox_result.Text += 
                             ") takes " + regenString +
-                            " and uses " + foodDiv + "x " + food.Name + "(" +
+                            " and uses " + foodDiv + "x " + food.Name + " (" +
                             (((double)food.GetAttributeValue("Weight")) / 100) * foodDiv + "oz)";
 
 
