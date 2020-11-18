@@ -170,7 +170,7 @@
     <Content Include="Untitled.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="data\**">
+	<Content Include="data\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

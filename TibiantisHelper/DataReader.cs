@@ -1005,7 +1005,7 @@ namespace TibiantisHelper
                         if (line.Contains("Price="))
                         {
 
-                            NPC.Transaction transaction;
+                            NPC.Transaction transaction = new NPC.Transaction();
                             transaction.Type = NPC.TransactionType.Buy;
                             transaction.ItemID = -1;
                             transaction.Price = -1;
@@ -1017,6 +1017,14 @@ namespace TibiantisHelper
 
                             int priceIndex = line.IndexOf("Price=");
                             string price = GetBetweenChars(line.Substring(priceIndex + 5), '=', ',');
+                            
+                            int dataIndex = line.IndexOf("Data=");
+
+                            if (dataIndex != -1)
+                            {
+                                string data = GetBetweenChars(line.Substring(dataIndex + 4), '=', ',');
+                                transaction.Data = short.Parse(data);
+                            }
 
                             // Console.WriteLine(filePath);
                             // Console.WriteLine(line);
@@ -1046,7 +1054,7 @@ namespace TibiantisHelper
                             else if (tuple.Item2 == spellTopic)
                                 transaction.Type = NPC.TransactionType.Spell;
 
-                            if (transaction.ItemID != -1)
+                            if (transaction.ItemID != -1) 
                                 npc.transactions.Add(transaction);
                         }
                     }
@@ -1093,6 +1101,7 @@ namespace TibiantisHelper
                 public TransactionType Type;
                 public int ItemID;
                 public int Price;
+                public short Data;
             }
 
             public List<Transaction> transactions;
