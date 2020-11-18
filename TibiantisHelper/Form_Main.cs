@@ -1394,7 +1394,13 @@ namespace TibiantisHelper
             monsters_listView.Objects = _dataReader.monsters;
 
             // Monster drop list
-            olvColumn21.AspectGetter = delegate (object x) { return _dataReader.items.Where(item => item.ID == ((Monster.Drop)x).ItemID).FirstOrDefault().Name; };
+            olvColumn21.AspectGetter = delegate (object x) {
+                Item item = _dataReader.items.Where(i => i.ID == ((Monster.Drop)x).ItemID).FirstOrDefault();
+                if (item != null)
+                    return item.Name;
+                else
+                    return "Removed post-7.4 item";
+            };
             olvColumn22.AspectGetter = delegate (object x) { return ((Monster.Drop)x).Amount; };
             olvColumn23.AspectGetter = delegate (object x) { return ((double)(((Monster.Drop)x).Rate) / 10); };
             olvColumn23.AspectToStringFormat = "{0}%";
@@ -1489,7 +1495,13 @@ namespace TibiantisHelper
             olvColumn5.AspectGetter = delegate (object x)
             {
                 if (((NPC.Transaction)x).ItemID > 100)
-                    return _dataReader.items.Where(i => i.ID == ((NPC.Transaction)x).ItemID).FirstOrDefault().Name;
+                {
+                    var item = _dataReader.items.Where(i => i.ID == ((NPC.Transaction)x).ItemID).FirstOrDefault();
+                    if (item != null)
+                        return item.Name;
+                    else
+                        return "Removed post-7.4 item";
+                }
                 else
                 {
                     Spell spell = _dataReader.spells.Where(s => s.ID == ((NPC.Transaction)x).ItemID).FirstOrDefault();
