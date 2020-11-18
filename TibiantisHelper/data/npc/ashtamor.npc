@@ -46,11 +46,9 @@ Topic=2,"no"  -> "Come to me when you have changed your mind, wanderer."
 "do","you","have" -> *
 "offer"           -> *
 
-"vase"    -> Type=2876, Amount=1, Price=3, "Do you want to buy a vase for %P gold?", Topic=3
-"amphora" -> Type=2893, Amount=1, Price=4, "Do you want to buy an amphora for %P gold?", Topic=3
+"vase"    -> Type=2876, Amount=1, Price=3, "Do you want to buy a vase for %P gold?", Topic=3 
 
 %1,1<%1,"vase"    -> Type=2876, Amount=%1, Price=3*%1, "Do you want to buy %A vases for %P gold?", Topic=3
-%1,1<%1,"amphora" -> Type=2893, Amount=%1, Price=4*%1, "Do you want to buy %A amphoras for %P gold?", Topic=3
 
 
 Topic=3,"yes",CountMoney>=Price -> "May it be of good use to you. ", DeleteMoney, Create(Type)

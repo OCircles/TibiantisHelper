@@ -55,12 +55,6 @@ VANISH,!           -> "Go...! Learn the secret to green thumbs and may Crunor be
 %1,1<%1,"hoe"          -> Type=3455, Amount=%1,  Price=15*%1,  "Do you want to buy %A hoes for %P gold?", Topic=1
 %1,1<%1,"broom"        -> Type=3454, Amount=%1,  Price=12*%1,  "Do you want to buy %A brooms for %P gold?", Topic=1
 
-"worm"          -> "I sell worms only in sixpacks for 5 gold each, how many sixpacks of worms do you want to buy?"
-"worms"         -> *
-%1,"worms"      -> Type=3492, Amount=%1*6, Price=5*%1,   "So you want to buy some of my sixpacks with altogether %A worms for %P gold?", Topic=1
-%1,"six","pack" -> *
-
-
 Topic=1,"yes",CountMoney>=Price -> "Here!", DeleteMoney, Create(Type)
 Topic=1,"yes"                   -> "No money, no deal!"
 Topic=1                         -> "Then not."

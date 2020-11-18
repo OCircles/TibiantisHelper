@@ -93,11 +93,6 @@ VANISH,!                 -> "Asha Thrazi."
 %1,1<%1,"bucket"          -> Type=2873, Data=0, Amount=%1, Price=4*%1,  "Do you want to buy %A buckets for %P gold?", Topic=1
 %1,1<%1,"bottle"          -> Type=2875, Data=0, Amount=%1, Price=3*%1,  "Do you want to buy %A bottles for %P gold?", Topic=1
 
-"worm"          -> "I sell worms only in sixpacks for 5 gold each, how many sixpacks of worms do you want to buy?"
-"worms"         -> *
-%1,"worms"      -> Type=3492, Amount=%1*6, Price=5*%1,   "So you want to buy some of my sixpacks with altogether %A worms for %P gold?", Topic=1
-%1,"six","pack" -> *
-
 "sell","rope"     -> Type=3003, Amount=1,  Price=8,    "Do you want to sell a rope for %P gold?", Topic=3
 "sell",%1,1<%1,"rope"     -> Type=3003, Amount=%1,  Price=8*%1,    "Do you want to sell %A ropes for %P gold?", Topic=3
 

@@ -47,7 +47,6 @@ VANISH,!           -> "Good bye."
 "candelabr"     -> Type=2911, Amount=1,  Price=8,    "Do you wanna buy a candelabrum for %P gold?", Topic=1
 "candlestick"   -> Type=2917, Amount=1,  Price=2,    "Do you want to buy a candlestick for %P gold?", Topic=1
 "oil"           -> Type=2874, Data=7, Amount=1, Price=20, "Do you wanna buy oil for %P gold?", Topic=2
-"coal","basin"  -> Type=2806, Amount=1, Price=25, "Do you want to buy a coal basin for %P gold?", Topic=3
 "bag"           -> Type=2859, Amount=1,  Price=5,    "Do you want to buy a bag for %P gold?", Topic=1
 "backpack"      -> Type=2867, Amount=1,  Price=20,   "Do you want to buy a backpack for %P gold?", Topic=1
 "present"       -> Type=2856, Amount=1,  Price=10,   "Do you want to buy a present for %P gold?", Topic=1
@@ -84,11 +83,6 @@ Topic=1                         -> "Hmm, but next time."
 Topic=2,"yes",CountMoney>=Price -> "Ok, take it. There is a deposit of 5 gold on the vial.", DeleteMoney, Create(Type)
 Topic=2,"yes"                   -> "That's not funny!"
 Topic=2                         -> "Then not."
-
-Topic=3,"yes",Premium,CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
-Topic=3,"yes",CountMoney>=Price         -> "I'm sorry, but you need a premium account if you want to buy furniture."
-Topic=3,"yes"                           -> "Come back, when you have enough money."
-Topic=3                                 -> "Hmm, but I'm sure, it would fit nicely into your house."
 
 "deposit" -> "I will give you 5 gold for every empty vial. Ok?", Data=0, Topic=4
 "vial"    -> *

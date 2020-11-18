@@ -65,12 +65,6 @@ VANISH,!                   -> "Bye, bye."
 %1,1<%1,"bolt"            -> Type=3446, Amount=%1, Price=4*%1,   "Do you want to buy %A bolts for %P gold?", Topic=1
 %1,1<%1,"viking","helmet" -> Type=3367, Amount=%1,  Price=265*%1,  "Do you want to buy %A viking helmets for %P gold?", Topic=1
 
-"worm"          -> "I sell worms only in sixpacks for 5 gold each, how many sixpacks of worms do you want to buy?"
-"worms"         -> *
-%1,"worms"      -> Type=3492, Amount=%1*6, Price=5*%1,   "So you want to buy some of my sixpacks with altogether %A worms for %P gold?", Topic=1
-%1,"six","pack" -> *
-
-
 "sell","bow"             -> Type=3350, Amount=1, Price=130, "Do you want to sell a bow for %P gold?", Topic=2
 "sell","crossbow"        -> Type=3349, Amount=1, Price=160, "Do you want to sell a crossbow for %P gold?", Topic=2
 "sell","viking","helmet" -> Type=3367, Amount=1, Price=66,  "Do you want to sell a viking helmet for %P gold?", Topic=2

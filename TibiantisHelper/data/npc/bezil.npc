@@ -89,12 +89,6 @@ VANISH,!                   -> "Good bye."
 %1,1<%1,"water","hose" -> Type=2901, Data=1,   Amount=%1, Price=10*%1, "Do you wanna buy %A water hoses for %P gold?", Topic=1
 %1,1<%1,"oil"          -> Type=2874, Data=7,   Amount=%1, Price=20*%1, "Do you wanna buy %A vials of oil for %P gold?", Topic=2
 
-"worm"          -> "I sell worms only in sixpacks for 5 gold each, how many sixpacks of worms do you want to buy?"
-"worms"         -> *
-%1,"worms"      -> Type=3492, Amount=%1*6, Price=5*%1,   "So you want to buy some of my sixpacks with altogether %A worms for %P gold?", Topic=1
-%1,"six","pack" -> *
-
-
 "deposit" -> "I will give you 5 gold for every empty vial. Ok?", Data=0, Topic=4
 "vial"    -> *
 "flask"   -> *

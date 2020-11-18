@@ -91,12 +91,6 @@ VANISH,!           -> "May enlightenment be your path."
 "cup"           -> Type=2881, Amount=1,  Price=2,    "Do you want to buy a cup for %P gold?", Topic=1
 "plate"         -> Type=2905, Amount=1,  Price=6,    "Do you want to buy a plate for %P gold?", Topic=1
 
-"worm"          -> "I sell worms only in sixpacks for 5 gold each, how many sixpacks of worms do you want to buy?"
-"worms"         -> *
-%1,"worms"      -> Type=3492, Amount=%1*6, Price=5*%1,   "So you want to buy some of my sixpacks with altogether %A worms for %P gold?", Topic=1
-%1,"six","pack" -> *
-
-
 %1,1<%1,"torch"           -> Type=2920, Amount=%1,  Price=2*%1,    "Do you want to buy %A torches for %P gold?", Topic=1
 %1,1<%1,"candelabr"       -> Type=2911, Amount=%1,  Price=8*%1,    "Do you want to buy %A candelabra for %P gold?", Topic=1
 %1,1<%1,"candlestick"     -> Type=2917, Amount=%1,  Price=2*%1,    "Do you want to buy %A candlesticks for %P gold?", Topic=1

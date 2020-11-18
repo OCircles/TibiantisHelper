@@ -86,11 +86,6 @@ VANISH,!           -> "Bye, bye."
 %1,1<%1,"studded","shield"   -> Type=3426, Amount=%1, Price=50*%1,  "Do you want to buy %A studded shields for %P gold?", Topic=1
 %1,1<%1,"torch"              -> Type=2920, Amount=%1, Price=2*%1,   "Do you want to buy %A torches for %P gold?", Topic=1
 
-"worm"          -> "I sell worms only in sixpacks for 5 gold each, how many sixpacks of worms do you want to buy?"
-"worms"         -> *
-%1,"worms"      -> Type=3492, Amount=%1*6, Price=5*%1,   "So you want to buy some of my sixpacks with altogether %A worms for %P gold?", Topic=1
-%1,"six","pack" -> *
-
 "bag"                -> Type=2853, Amount=1, Price=4,   "Do you want to buy a bag for %P gold?", Topic=1
 "scroll"             -> Type=2815, Amount=1, Price=5,   "Do you want to buy a scroll for %P gold?", Topic=1
 "shovel"             -> Type=3457, Amount=1, Price=10,  "Do you want to buy a shovel for %P gold?", Topic=1

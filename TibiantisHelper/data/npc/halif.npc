@@ -77,12 +77,6 @@ VANISH,!           -> "Good bye, may Daraman bless your travels."
 %1,1<%1,"oil"             -> Type=2874, Data=7,  Amount=%1, Price=20*%1, "Do you want to buy %A vials of oil for %P gold?", Topic=1
 %1,1<%1,"water","hose"    -> Type=2901, Data=1,  Amount=%1, Price=40*%1, "Do you want to buy %A water hoses for %P gold?", Topic=1
 
-"worm"          -> "I sell worms only in sixpacks for 5 gold each, how many sixpacks of worms do you want to buy?"
-"worms"         -> *
-%1,"worms"      -> Type=3492, Amount=%1*6, Price=5*%1,   "So you want to buy some of my sixpacks with altogether %A worms for %P gold?", Topic=1
-%1,"six","pack" -> *
-
-
 "sell","rope"     -> Type=3003, Amount=1,   Price=8,    "Do you want to sell a rope for %P gold?", Topic=3
 
 "sell",%1,1<%1,"rope"     -> Type=3003, Amount=%1,   Price=8*%1,    "Do you want to sell %A ropes for %P gold?", Topic=3

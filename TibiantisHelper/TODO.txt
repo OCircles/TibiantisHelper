@@ -1,4 +1,6 @@
-﻿Need to find which ramps are bamboo and remove
+﻿Figure out why NPC Tom's topic 2 transactions parses as buy item
+
+Need to find which ramps are bamboo and remove
 
 Spell damage bases
 
@@ -11,20 +13,6 @@ Continue cleaning items
 
 Figure out how multi sprite rendering / animation works
 
-Make vials appear properly
-
-	entity 2874
-
-	Sprites
-
-		[0] empty	1556	
-		[1] blue	1557	(1, water)
-		[2] red		1558	(5, blood),(11, lifefluid)
-		[3] dyellow	1559	(8, oil) (3?, beer) (4?,mud?)
-		[4] green	1560	(6, slime)
-		[5] yellow	1561	(8, urine) (12?, lemonade)
-		[6] white	1562	(9?, milk)
-		[7] purple	1563	(10, manafluid) (2?, wine)
 
 
 Berserk spell variable mana ( level * 4 )

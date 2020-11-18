@@ -131,10 +131,4 @@ Topic=3,"yes",CountMoney<Price            -> "Sorry, you do not have enough gold
 Topic=3,"yes"                             -> "Here you are. Look in your spellbook for the pronunciation of this spell.", DeleteMoney, EffectOpp(13), TeachSpell(Type)
 Topic=3                                   -> "Maybe next time."
 
-"cough", "syrup"   ->  Type=4828, Price=50,  "Do you want to buy a bottle of cough syrup for %P gold?", Topic=10
-Topic=10,"yes",CountMoney>=Price -> "Thank you. Here it is.", DeleteMoney, Create(Type)
-Topic=10,"yes"                   -> "Sorry, you do not have enough gold."
-Topic=10                         -> "Maybe you will need it another time."
-
-
 }

@@ -139,18 +139,6 @@ VANISH                                    -> "Farewell, human."
 "sell",%1,1<%1,"mysterious","fetish"      -> Type=3078, Amount=%1, Price=50*%1, "Do you want to sell %A mysterious fetishes for %P gold?", Topic=11
 "sell",%1,1<%1,"ankh"      			   -> Type=3077, Amount=%1, Price=100*%1, "Do you want to sell %A ankhs for %P gold?", Topic=11
 
-"sell","snakebite","rod"               -> Type=3066, Amount=1,  Price=100,   "Do you want to sell a snakebite rod for %P gold?", Topic=11
-"sell","moonlight","rod"               -> Type=3070, Amount=1,  Price=200,   "Do you want to sell a moonlight rod for %P gold?", Topic=11
-"sell","volcanic","rod"                -> Type=3069, Amount=1,  Price=1000,   "Do you want to sell a volcanic rod for %P gold?", Topic=11
-"sell","quagmire","rod"                -> Type=3065, Amount=1,  Price=2000,  "Do you want to sell a quagmire rod for %P gold?", Topic=11
-"sell","tempest","rod"                 -> Type=3067, Amount=1,  Price=3000,  "Do you want to sell a tempest rod for %P gold?", Topic=11
-
-"sell",%1,1<%1,"snakebite","rod"               -> Type=3066, Amount=%1,  Price=100*%1,   "Do you want to sell %A snakebite rods for %P gold?", Topic=11
-"sell",%1,1<%1,"moonlight","rod"               -> Type=3070, Amount=%1,  Price=200*%1,   "Do you want to sell %A moonlight rods for %P gold?", Topic=11
-"sell",%1,1<%1,"volcanic","rod"                -> Type=3069, Amount=%1,  Price=1000*%1,   "Do you want to sell %A volcanic rods for %P gold?", Topic=11
-"sell",%1,1<%1,"quagmire","rod"                -> Type=3065, Amount=%1,  Price=2000*%1,  "Do you want to sell %A quagmire rods for %P gold?", Topic=11
-"sell",%1,1<%1,"tempest","rod"                 -> Type=3067, Amount=%1,  Price=3000*%1,  "Do you want to sell %A tempest rods for %P gold?", Topic=11
-
 Topic=10,QuestValue(288)<3,!     -> "I'm sorry, but you don't have Malor's permission to trade with me."
 Topic=10,"yes",CountMoney>=Price -> "Good. Here you are.", DeleteMoney, Create(Type)
 Topic=10,"yes"                   -> "You do not have enough gold, human!"

@@ -105,11 +105,6 @@ VANISH,!                   -> "Bye, bye."
 %1,1<%1,"rope"               -> Type=3003, Amount=%1, Price=50*%1,  "Do you want to buy %A ropes for %P gold?", Topic=1
 %1,1<%1,"rod"                -> Type=3483, Amount=%1, Price=150*%1, "Do you want to buy %A fishing rods for %P gold?", Topic=1
 
-"worm"          -> "I sell worms only in sixpacks for 5 gold each, how many sixpacks of worms do you want to buy?"
-"worms"         -> *
-%1,"worms"      -> Type=3492, Amount=%1*6, Price=5*%1,   "So you want to buy some of my sixpacks with altogether %A worms for %P gold?", Topic=1
-%1,"six","pack" -> *
-
 "sell","club"             -> "I don't buy this garbage!"
 "sell","dagger"           -> Type=3267, Amount=1, Price=2,   "Do you want to sell this garbage? I give you %P gold, ok?", Topic=2
 "sell","spear"            -> Type=3277, Amount=1, Price=3,   "Do you want to sell this garbage? I give you %P gold, ok?", Topic=2
