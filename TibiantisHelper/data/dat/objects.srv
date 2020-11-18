@@ -18557,21 +18557,6 @@ Name        = "some bones"
 Flags       = {Take}
 Attributes  = {Weight=5000}
 
-TypeID      = 4318
-Name        = "a dead crab"
-Flags       = {Container,LiquidSource,Take,Corpse,Expire}
-Attributes  = {Capacity=5,SourceLiquidType=5,Weight=6300,CorpseType=1,ExpireTarget=4319,TotalExpireTime=1200}
-
-TypeID      = 4319
-Name        = "a dead crab"
-Flags       = {Take,Corpse,Expire}
-Attributes  = {Weight=4400,CorpseType=1,ExpireTarget=4320,TotalExpireTime=1200}
-
-TypeID      = 4320
-Name        = "a dead crab"
-Flags       = {Take,Corpse,Expire}
-Attributes  = {Weight=3000,CorpseType=1,ExpireTarget=0,TotalExpireTime=1200}
-
 TypeID      = 4321
 Name        = "a dead lizard templar"
 Flags       = {Container,LiquidSource,Corpse,Expire}
@@ -18616,21 +18601,6 @@ TypeID      = 4329
 Name        = "a dead lizard snakecharmer"
 Flags       = {Corpse,Expire}
 Attributes  = {CorpseType=1,ExpireTarget=0,TotalExpireTime=1200}
-
-TypeID      = 4330
-Name        = "a dead chicken"
-Flags       = {Container,LiquidSource,Take,Corpse,Expire}
-Attributes  = {Capacity=5,SourceLiquidType=5,Weight=6300,CorpseType=1,ExpireTarget=4331,TotalExpireTime=1200}
-
-TypeID      = 4331
-Name        = "a dead chicken"
-Flags       = {Take,Corpse,Expire}
-Attributes  = {Weight=4400,CorpseType=1,ExpireTarget=4332,TotalExpireTime=1200}
-
-TypeID      = 4332
-Name        = "a dead chicken"
-Flags       = {Take,Corpse,Expire}
-Attributes  = {Weight=3000,CorpseType=1,ExpireTarget=0,TotalExpireTime=1200}
 
 TypeID      = 4333
 Name        = "a dead kongra"
@@ -18782,21 +18752,6 @@ Name        = "a dead elephant"
 Flags       = {Corpse,Expire}
 Attributes  = {CorpseType=1,ExpireTarget=0,TotalExpireTime=10}
 
-TypeID      = 4363
-Name        = "a dead bat"
-Flags       = {Container,LiquidSource,Take,Corpse,Expire}
-Attributes  = {Capacity=5,SourceLiquidType=5,Weight=6300,CorpseType=1,ExpireTarget=4364,TotalExpireTime=1200}
-
-TypeID      = 4364
-Name        = "a dead bat"
-Flags       = {Take,Corpse,Expire}
-Attributes  = {Weight=4400,CorpseType=1,ExpireTarget=4365,TotalExpireTime=1200}
-
-TypeID      = 4365
-Name        = "a dead bat"
-Flags       = {Take,Corpse,Expire}
-Attributes  = {Weight=3000,CorpseType=1,ExpireTarget=0,TotalExpireTime=1200}
-
 TypeID      = 4366
 Name        = "a dead flamingo"
 Flags       = {Container,LiquidSource,Corpse,Expire}
@@ -18856,26 +18811,6 @@ TypeID      = 4377
 Name        = "a dead dworc"
 Flags       = {Corpse,Expire}
 Attributes  = {CorpseType=1,ExpireTarget=0,TotalExpireTime=1200}
-
-TypeID      = 4378
-Name        = "a dead butterfly"
-Flags       = {Take,Corpse,Expire}
-Attributes  = {Weight=20,CorpseType=1,ExpireTarget=0,TotalExpireTime=1200}
-
-TypeID      = 4379
-Name        = "a dead parrot"
-Flags       = {Container,LiquidSource,Take,Corpse,Expire}
-Attributes  = {Capacity=5,SourceLiquidType=5,Weight=6300,CorpseType=1,ExpireTarget=4380,TotalExpireTime=1200}
-
-TypeID      = 4380
-Name        = "a dead parrot"
-Flags       = {Take,Corpse,Expire}
-Attributes  = {Weight=4400,CorpseType=1,ExpireTarget=4381,TotalExpireTime=1200}
-
-TypeID      = 4381
-Name        = "a dead parrot"
-Flags       = {Take,Corpse,Expire}
-Attributes  = {Weight=3000,CorpseType=1,ExpireTarget=0,TotalExpireTime=1200}
 
 TypeID      = 4382
 Name        = "a dead bird"
@@ -21391,21 +21326,6 @@ TypeID      = 4990
 Name        = "a pirate flag"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
 
-TypeID      = 4991
-Name        = "a dead butterfly"
-Flags       = {Take,Corpse,Expire}
-Attributes  = {Weight=20,CorpseType=1,ExpireTarget=4378,TotalExpireTime=1200}
-
-TypeID      = 4992
-Name        = "a dead butterfly"
-Flags       = {Take,Corpse,Expire}
-Attributes  = {Weight=20,CorpseType=1,ExpireTarget=4378,TotalExpireTime=1200}
-
-TypeID      = 4993
-Name        = "a dead butterfly"
-Flags       = {Take,Corpse,Expire}
-Attributes  = {Weight=20,CorpseType=1,ExpireTarget=4378,TotalExpireTime=1200}
-
 TypeID      = 4994
 Name        = "some sharp icicles"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
@@ -21479,11 +21399,6 @@ TypeID      = 5012
 Name        = "a lava wall"
 Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay,Light}
 Attributes  = {Brightness=2,LightColor=199}
-
-TypeID      = 5013
-Name        = "a dead butterfly"
-Flags       = {Take,Corpse,Expire}
-Attributes  = {Weight=20,CorpseType=1,ExpireTarget=4378,TotalExpireTime=1200}
 
 TypeID      = 5015
 Name        = "a skull"
@@ -21694,8 +21609,4 @@ Name        = "an open door"
 Flags       = {Top,NameDoor,Text,Unmove}
 Attributes  = {NamedoorTarget=1640,FontSize=1}
 
-TypeID      = 5090
-Name        = "a treasure map"
-Flags       = {Text,Take}
-Attributes  = {FontSize=1,Weight=830}
 

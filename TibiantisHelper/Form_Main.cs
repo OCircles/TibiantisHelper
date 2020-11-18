@@ -72,21 +72,7 @@ namespace TibiantisHelper
 
             Color colorTibia_Beige = Color.FromArgb(251, 234, 208);
             this.BackColor = colorTibia_Beige;
-
-
-            foreach (NPC npc in _dataReader.npcs)
-            {
-                foreach (NPC.Transaction transaction in npc.transactions)
-                {
-                    if (transaction.Type != NPC.TransactionType.Spell)
-                    {
-                        Item item = _dataReader.items.Where(i => i.ID == transaction.ItemID).FirstOrDefault();
-
-                        if (item == null)
-                            Console.WriteLine($"{npc.Name}, {transaction.ItemID}");
-                    }
-                }
-            }
+             
 
 
             // Maybe move on to having everything embedded at some point:
