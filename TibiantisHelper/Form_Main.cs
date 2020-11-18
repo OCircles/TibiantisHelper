@@ -237,7 +237,6 @@ namespace TibiantisHelper
                 (accountDropdown as ToolStripMenuItem).DropDownItems.Add(acc.name, null, (s, e) => StringToClipboard(acc.login));
             }
 
-
             ToolStripItem settingsDropdown = tray_contextMenuStrip.Items.Add("Settings");
 
             var enableNetwork = ((ToolStripMenuItem)settingsDropdown).DropDownItems.Add("Enable Network");
@@ -288,7 +287,16 @@ namespace TibiantisHelper
 
 
 
+            ToolStripItem extraDropdown = tray_contextMenuStrip.Items.Add("Utility");
+            
+            (extraDropdown as ToolStripMenuItem).DropDownItems.Add("Keycode Detector", null, (s, e) =>
+            {
+                var keyCodeDetector = new Form_KeyCodeViewer();
+                keyCodeDetector.ShowDialog();
+            });
 
+
+            tray_contextMenuStrip.Items.Add("-");
             ToolStripItem exit = tray_contextMenuStrip.Items.Add("Exit", null, exitToolStripMenuItem_Click);
         }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
