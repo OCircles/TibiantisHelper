@@ -13,11 +13,12 @@ namespace TibiantisHelper
     public partial class Form_TimerDialog : Form
     {
 
-        public string name;
-        public string time;
-        public int multiplier;
+        public string TimerName;
+        public string Time;
+        public int Multiplier;
+        public bool AutoRestart;
 
-        public Form_TimerDialog(bool edit = false, string name = "", string time = "00:00:00", int multiplier = 0)
+        public Form_TimerDialog(bool edit = false, string name = "", string time = "00:00:00", int multiplier = 0, bool autoRestart = false)
         {
             InitializeComponent();
 
@@ -28,6 +29,7 @@ namespace TibiantisHelper
                 this.textBox1.Text = name;
                 this.textBox2.Text = time;
                 this.numericUpDown1.Value = multiplier;
+                this.checkBox1.Checked = autoRestart;
             }
         }
 
@@ -42,9 +44,10 @@ namespace TibiantisHelper
                 {
                     if (time.TotalSeconds != 0)
                     {
-                        this.name = textBox1.Text;
-                        this.time = textBox2.Text;
-                        this.multiplier = Convert.ToInt32(numericUpDown1.Value);
+                        this.TimerName = textBox1.Text;
+                        this.Time = textBox2.Text;
+                        this.Multiplier = Convert.ToInt32(numericUpDown1.Value);
+                        this.AutoRestart = checkBox1.Checked;
 
                         this.DialogResult = DialogResult.OK;
                         this.Close();
@@ -60,8 +63,7 @@ namespace TibiantisHelper
             }
             else
                 MessageBox.Show("Cannot leave timer name blank", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            // this.DialogResult = DialogResult.None; // Glitch fix
+            
         }
         
     }

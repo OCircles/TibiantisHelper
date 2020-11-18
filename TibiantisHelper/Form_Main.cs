@@ -39,6 +39,7 @@ namespace TibiantisHelper
         static string file_accounts = "Accounts.xml";
         static string file_loginAlert = "TrackedPlayers.xml";
 
+        public static NotifyIcon _trayIcon;
 
         static readonly HttpClient webClient = new HttpClient();
         static string webpage_whoIsOnline = "https://tibiantis.online/?page=WhoIsOnline";
@@ -87,6 +88,8 @@ namespace TibiantisHelper
 
         private void PostInitialize()
         {
+
+            _trayIcon = notifyIcon1;
 
             InitializeVocations();
             ReadAccounts(file_accounts);
@@ -143,9 +146,9 @@ namespace TibiantisHelper
                 {
                     if (Settings.Default.NotifOnMinimizeToTray)
                     {
-                        notifyIcon1.BalloonTipTitle = "Tibiantis Helper";
-                        notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
-                        notifyIcon1.BalloonTipText = $"Minimized to taskbar{Environment.NewLine}{Environment.NewLine}" +
+                        _trayIcon.BalloonTipTitle = "Tibiantis Helper";
+                        _trayIcon.BalloonTipIcon = ToolTipIcon.Info;
+                        _trayIcon.BalloonTipText = $"Minimized to taskbar{Environment.NewLine}{Environment.NewLine}" +
                             "(Click this if you don't want to see this message anymore)";
 
                         Tray_ShowBubble(TrayBubbleBehaviour.MuteMinimize, 5000);
@@ -199,15 +202,15 @@ namespace TibiantisHelper
             }
         }
 
-        private void Tray_ShowBubble(TrayBubbleBehaviour behaviour, int time)
+        public static void Tray_ShowBubble(TrayBubbleBehaviour behaviour, int time)
         {
             trayBubbleBehaviour = behaviour;
-            notifyIcon1.ShowBalloonTip(time);
+            _trayIcon.ShowBalloonTip(time);
         }
-        private void Tray_ShowBubble(TrayBubbleBehaviour behaviour, int time, string title, string text, ToolTipIcon icon)
+        public static void Tray_ShowBubble(TrayBubbleBehaviour behaviour, int time, string title, string text, ToolTipIcon icon)
         {
             trayBubbleBehaviour = behaviour;
-            notifyIcon1.ShowBalloonTip(time, title, text, icon);
+            _trayIcon.ShowBalloonTip(time, title, text, icon);
         }
         
         
@@ -292,7 +295,7 @@ namespace TibiantisHelper
         {
             foreach (var timer in _timers)
             {
-                timer.timer.Stop();
+                timer.TimerComponent.Stop();
             }
 
             
@@ -304,7 +307,7 @@ namespace TibiantisHelper
             Tray_BuildContextMenu();
         }
 
-        private enum TrayBubbleBehaviour
+        public enum TrayBubbleBehaviour
         {
             None,
             MuteMinimize
@@ -961,9 +964,9 @@ namespace TibiantisHelper
             }
         }
 
-        private void TimersAdd(string name, string time, int multiplier)
+        private void TimersAdd(string name, string time, int multiplier, bool autoRestart)
         {
-            Control_Timer timer = new Control_Timer(name, time, multiplier, notifyIcon1);
+            Control_Timer timer = new Control_Timer(name, time, multiplier, autoRestart, _trayIcon);
 
             _timers.Add(timer);
 
@@ -984,7 +987,7 @@ namespace TibiantisHelper
 
             if (dialog.ShowDialog(this) == DialogResult.OK)
             {
-                TimersAdd(dialog.name, dialog.time, dialog.multiplier);
+                TimersAdd(dialog.TimerName, dialog.Time, dialog.Multiplier, dialog.AutoRestart);
             }
 
 
@@ -1016,11 +1019,11 @@ namespace TibiantisHelper
 
                 (runesSingle as ToolStripMenuItem).DropDownItems.Add(r.Name, null, (s, ee) =>
                     TimersAdd($"{r.Name} ({_selectedVocation.Name})",
-                    regenStringSingle, 1));
+                    regenStringSingle, 1, false));
 
                 (runesBackpack as ToolStripMenuItem).DropDownItems.Add(r.Name, null, (s, ee) =>
                     TimersAdd($"BP of {r.Name} ({_selectedVocation.Name})",
-                    regenStringBp, 1));
+                    regenStringBp, 1, false));
 
             }
 
@@ -1055,22 +1058,22 @@ namespace TibiantisHelper
 
                 (conjuringSingle as ToolStripMenuItem).DropDownItems.Add(item.Name, null, (ss, ee) =>
                     TimersAdd($"Stack of {item.Name} ({_selectedVocation.Name})",
-                    regenStringSingle, 1));
+                    regenStringSingle, 1, false));
 
                 (conjuringBackpack as ToolStripMenuItem).DropDownItems.Add(item.Name, null, (ss, ee) =>
                     TimersAdd($"BP of {item.Name} ({_selectedVocation.Name})",
-                    regenStringBp, 1));
+                    regenStringBp, 1, false));
 
 
             }
 
             timers_contextMenuStrip.Items.Add("-");
 
-            timers_contextMenuStrip.Items.Add("Bedmage (01:40:00)", null, (ss, ee) => TimersAdd("Bedmage", "01:40:00", 1));
+            timers_contextMenuStrip.Items.Add("Bedmage (01:40:00)", null, (ss, ee) => TimersAdd("Bedmage", "01:40:00", 1, false));
 
-            timers_contextMenuStrip.Items.Add("Idle (00:15:00)", null, (ss, ee) => TimersAdd("Idle", "00:15:00", 1));
+            timers_contextMenuStrip.Items.Add("Idle (00:15:00)", null, (ss, ee) => TimersAdd("Idle", "00:15:00", 1, false));
 
-            timers_contextMenuStrip.Items.Add("Food (00:20:00)", null, (ss, ee) => TimersAdd("Food", "00:20:00", 1));
+            timers_contextMenuStrip.Items.Add("Food (00:20:00)", null, (ss, ee) => TimersAdd("Food", "00:20:00", 1, false));
         }
 
         private void button5_MouseClick(object sender, MouseEventArgs e)
@@ -1259,7 +1262,7 @@ namespace TibiantisHelper
         {
             if (!string.IsNullOrEmpty(calculator_production_addTimer_time))
             {
-                TimersAdd(calculator_production_addTimer_title, calculator_production_addTimer_time, 0);
+                TimersAdd(calculator_production_addTimer_title, calculator_production_addTimer_time, 0, false);
                 tabControl1.SelectedTab = tabPage_timers;
             }
         }
@@ -2163,8 +2166,7 @@ namespace TibiantisHelper
 
 
         }
-        #endregion
-
+        
         private void spellsNpcs_listView_ItemActivate(object sender, EventArgs e)
         {
             var npc = (NPC)spellsNpcs_listView.SelectedObject;
@@ -2172,6 +2174,9 @@ namespace TibiantisHelper
             var pos = npc.Position;
             OpenInBrowser("https://tibiantis.info/library/map#" + pos.X + "," + pos.Y + "," + pos.Z + ",8");
         }
+        
+        #endregion
+
 
         #region Login Alert
 
@@ -2689,7 +2694,7 @@ namespace TibiantisHelper
                 }
             }
 
-            notifyIcon1.Visible = false;
+            _trayIcon.Visible = false;
             Settings.Default.Save();
             Environment.Exit(0);
         }

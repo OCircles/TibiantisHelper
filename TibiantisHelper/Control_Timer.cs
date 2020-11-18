@@ -15,15 +15,14 @@ namespace TibiantisHelper
 {
     public partial class Control_Timer : UserControl
     {
-
-        public Timer timer;
-
-        public string timerName;
-
-        public int targetTimeBase;
-        public int targetTime;
-        public int currentTime;
-        public int multiplier;
+        public Timer TimerComponent;
+        public string TimerName;
+        
+        public int TargetTimeBase;
+        public int TargetTime;
+        public int CurrentTime;
+        public int Multiplier;
+        public bool AutoRestart;
 
         private string targetTimeString;
 
@@ -32,28 +31,31 @@ namespace TibiantisHelper
 
         private NotifyIcon notifier; // Lazy solution lol
 
-        public Control_Timer(string name, string time, int multiplier, NotifyIcon notifier)
+        public Control_Timer(string name, string time, int multiplier, bool autoRestart, NotifyIcon notifier)
         {
             InitializeComponent();
 
             deleteButton = removeToolStripMenuItem;
 
-            Init(name, time, multiplier, notifier);
+            Init(name, time, multiplier, autoRestart, notifier);
 
         }
 
-        private void Init(string name, string time, int multiplier, NotifyIcon notifier)
+        private void Init(string name, string time, int multiplier, bool autoRestart, NotifyIcon notifier)
         {
             this.Stop();
 
-            timer = this.timer1;
+            this.TimerComponent = this.timer1;
+
             this.notifier = notifier;
-            this.timerName = name;
+            this.TimerName = name;
 
-            this.label_name.Text = timerName;
-            this.multiplier = multiplier;
+            this.label_name.Text = TimerName;
+            this.Multiplier = multiplier;
 
-            this.currentTime = 0;
+            this.AutoRestart = autoRestart;
+
+            this.CurrentTime = 0;
 
             TimeSpan ts = new TimeSpan(int.Parse(time.Split(':')[0]),
                            int.Parse(time.Split(':')[1]),
@@ -61,32 +63,32 @@ namespace TibiantisHelper
                            );
 
 
-            this.targetTimeBase = (int)ts.TotalSeconds;
-            this.targetTime = this.targetTimeBase;
+            this.TargetTimeBase = (int)ts.TotalSeconds;
+            this.TargetTime = this.TargetTimeBase;
 
-            if (this.multiplier > 1) this.targetTime *= this.multiplier;
+            if (this.Multiplier > 1) this.TargetTime *= this.Multiplier;
 
-            this.targetTimeString = SecondsToTime(this.targetTime);
+            this.targetTimeString = SecondsToTime(this.TargetTime);
 
-            if ( this.multiplier > 1 ) this.targetTimeString += " (" + SecondsToTime(this.targetTimeBase) + " x" + this.multiplier + ")";
+            if ( this.Multiplier > 1 ) this.targetTimeString += " (" + SecondsToTime(this.TargetTimeBase) + " x" + this.Multiplier + ")";
 
             UpdateTime();
 
-            progressBar1.Maximum = targetTime;
+            progressBar1.Maximum = TargetTime;
 
             this.Start();
         }
 
         private void UpdateTime()
         { 
-            this.label_time.Text = SecondsToTime(this.currentTime) + " / " + this.targetTimeString;
-            this.progressBar1.Value = currentTime;
+            this.label_time.Text = SecondsToTime(this.CurrentTime) + " / " + this.targetTimeString;
+            this.progressBar1.Value = CurrentTime;
         }
 
         public void Start()
         {
 
-            if (this.currentTime == this.targetTime) this.currentTime = 0;
+            if (this.CurrentTime == this.TargetTime) this.CurrentTime = 0;
 
             this.Stop();
             this.timer1.Start();
@@ -99,23 +101,21 @@ namespace TibiantisHelper
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.currentTime++;
+            this.CurrentTime++;
 
             UpdateTime();
 
-            if (this.currentTime >= this.targetTime) this.Finished();
+            if (this.CurrentTime >= this.TargetTime) this.Finished();
         }
 
         private void Finished ()
         {
 
-            Stop();
+            this.Stop();
 
             if ( Settings.Default.TimerNotifTray )
             {
-                notifier.BalloonTipTitle = "Tibiantis Timer";
-                notifier.BalloonTipText = this.label_name.Text + " has finished";
-                notifier.ShowBalloonTip(5000);
+                Form_Main.Tray_ShowBubble(Form_Main.TrayBubbleBehaviour.None, 5000, "Tibiantis Timer", this.label_name.Text + " has finished", ToolTipIcon.Info);
             }
 
             if ( Settings.Default.TimerNotifSound )
@@ -125,9 +125,10 @@ namespace TibiantisHelper
                     SoundPlayer player = new SoundPlayer(Settings.Default.TimerNotifSoundPath);
                     player.Play();
                 }
-
-                
             }
+
+            if (this.AutoRestart)
+                this.Start();
 
         }
 
@@ -159,7 +160,7 @@ namespace TibiantisHelper
 
         private void button_stop_Click(object sender, EventArgs e)
         {
-            if ( this.currentTime < this.targetTime )
+            if ( this.CurrentTime < this.TargetTime )
             {
                 DialogResult dialogResult = MessageBox.Show("This timer has not yet finished. Are you sure you want to reset it?", "Reset timer", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.No)
@@ -171,7 +172,7 @@ namespace TibiantisHelper
             button_play.Text = "▶";
             timer1.Stop();
 
-            this.currentTime = 0;
+            this.CurrentTime = 0;
 
 
             UpdateTime();
@@ -180,14 +181,11 @@ namespace TibiantisHelper
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_TimerDialog dialog = new Form_TimerDialog(true, this.timerName, SecondsToTime(this.targetTimeBase), this.multiplier);
+            Form_TimerDialog dialog = new Form_TimerDialog(true, this.TimerName, SecondsToTime(this.TargetTimeBase), this.Multiplier, this.AutoRestart);
 
             if (dialog.ShowDialog(this) == DialogResult.OK)
             {
-
-                Init(dialog.name, dialog.time, dialog.multiplier, this.notifier);
-
-
+                Init(dialog.TimerName, dialog.Time, dialog.Multiplier, dialog.AutoRestart, this.notifier);
             }
         }
 
