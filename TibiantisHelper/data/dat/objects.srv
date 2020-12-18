@@ -11854,12 +11854,6 @@ Name        = "a torch bearer"
 Flags       = {UseEvent,Unmove,Hang,Light,Disguise}
 Attributes  = {Brightness=0,LightColor=215,DisguiseTarget=2928}
 
-TypeID      = 2785
-Name        = "a furniture package"
-Description = "It contains a construction kit for a big table"
-Flags       = {UseEvent,Avoid,Take,Height}
-Attributes  = {AvoidDamageTypes=0,Weight=3500,Elevation=8}
-
 TypeID      = 2813
 Name        = "a blank paper"
 Description = "It is rewriteable"
