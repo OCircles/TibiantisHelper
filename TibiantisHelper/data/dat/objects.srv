@@ -15543,7 +15543,7 @@ Flags       = {Cumulative,Food,Take}
 Attributes  = {Nutrition=10,Weight=320}
 
 TypeID      = 3580
-Name        = "a fish"
+Name        = "a northern pike"
 Flags       = {Cumulative,Food,Take}
 Attributes  = {Nutrition=17,Weight=830}
 
