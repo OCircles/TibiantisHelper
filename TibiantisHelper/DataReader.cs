@@ -1222,8 +1222,6 @@ namespace TibiantisHelper
 
                     monster.Filename = Path.GetFileName(filePath);
 
-
-
                     while ((dirtyLine = file.ReadLine()) != null)
                     {
                         if (!string.IsNullOrEmpty(dirtyLine))
@@ -1277,8 +1275,6 @@ namespace TibiantisHelper
                         string bracketName = split[0];
 
                         var bracket = GetBetweenChars(line, '{', '}');
-
-                        Console.WriteLine(bracket);
 
                         if (bracketName == "Inventory")
                         {
