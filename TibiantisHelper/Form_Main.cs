@@ -250,6 +250,7 @@ namespace TibiantisHelper
                 if (!enableNetworkToolstrip.Checked)
                 {
                     timer1.Stop();
+                    notifyIcon1.Text = "Tibiantis Helper";
                     header_label_onlineStatus.Text = "Offline";
                     header_linkLabel_playersOnline.Text = "0 players";
                     Settings.Default.EnableNetwork = false;
@@ -422,6 +423,8 @@ namespace TibiantisHelper
                             }
 
                             header_linkLabel_playersOnline.Text = line.Substring(index + 3, end) + " players";
+                            notifyIcon1.Text = "Tibiantis Helper";
+                            notifyIcon1.Text += Environment.NewLine + header_linkLabel_playersOnline.Text;
                         }
 
                     }
