@@ -57,6 +57,7 @@
             this.timers_splitContainer = new System.Windows.Forms.SplitContainer();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -610,33 +611,45 @@
             this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox14.Location = new System.Drawing.Point(0, 138);
+            this.textBox14.Location = new System.Drawing.Point(0, 154);
             this.textBox14.Multiline = true;
             this.textBox14.Name = "textBox14";
             this.textBox14.ReadOnly = true;
             this.textBox14.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox14.Size = new System.Drawing.Size(210, 259);
+            this.textBox14.Size = new System.Drawing.Size(210, 243);
             this.textBox14.TabIndex = 5;
             this.textBox14.Text = resources.GetString("textBox14.Text");
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.checkBox3);
             this.groupBox4.Controls.Add(this.textBox13);
             this.groupBox4.Controls.Add(this.button8);
             this.groupBox4.Controls.Add(this.checkBox2);
             this.groupBox4.Controls.Add(this.checkBox1);
             this.groupBox4.Location = new System.Drawing.Point(3, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(207, 100);
+            this.groupBox4.Size = new System.Drawing.Size(207, 118);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Settings";
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(6, 43);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(171, 17);
+            this.checkBox3.TabIndex = 6;
+            this.checkBox3.Text = "Tray Notifs Open on Click";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // textBox13
             // 
             this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox13.Location = new System.Drawing.Point(6, 66);
+            this.textBox13.Location = new System.Drawing.Point(4, 91);
             this.textBox13.Name = "textBox13";
             this.textBox13.ReadOnly = true;
             this.textBox13.Size = new System.Drawing.Size(132, 21);
@@ -645,7 +658,7 @@
             // button8
             // 
             this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.Location = new System.Drawing.Point(144, 65);
+            this.button8.Location = new System.Drawing.Point(142, 89);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(57, 23);
             this.button8.TabIndex = 5;
@@ -656,7 +669,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(6, 43);
+            this.checkBox2.Location = new System.Drawing.Point(6, 66);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(90, 17);
             this.checkBox2.TabIndex = 1;
@@ -677,7 +690,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(0, 109);
+            this.button2.Location = new System.Drawing.Point(1, 125);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 23);
             this.button2.TabIndex = 2;
@@ -688,7 +701,7 @@
             // button5
             // 
             this.button5.ContextMenuStrip = this.timers_contextMenuStrip;
-            this.button5.Location = new System.Drawing.Point(110, 109);
+            this.button5.Location = new System.Drawing.Point(111, 125);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 23);
             this.button5.TabIndex = 3;
@@ -2526,6 +2539,7 @@
         private System.Windows.Forms.LinkLabel header_linkLabel_tibiantisInfo;
         private System.Windows.Forms.LinkLabel header_linkLabel_discord;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.CheckBox checkBox3;
     }
 }
 

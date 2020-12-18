@@ -122,6 +122,7 @@ namespace TibiantisHelper
             // Timers
             checkBox1.Checked = Settings.Default.TimerNotifTray;
             checkBox2.Checked = Settings.Default.TimerNotifSound;
+            checkBox3.Checked = Settings.Default.NotifTimerOpen;
             if (!string.IsNullOrEmpty(Settings.Default.TimerNotifSoundPath))
                 textBox13.Text = Path.GetFileName(Settings.Default.TimerNotifSoundPath);
 
@@ -197,6 +198,16 @@ namespace TibiantisHelper
                 Settings.Default.NotifOnMinimizeToTray = false;
                 Settings.Default.Save();
             }
+            else if (trayBubbleBehaviour == TrayBubbleBehaviour.Timer && Settings.Default.NotifTimerOpen)
+            {
+                tabControl1.SelectedTab = tabPage_timers;
+
+                this.WindowState = FormWindowState.Normal;
+                this.BringToFront();
+                this.TopMost = true;
+                this.Focus();
+                this.TopMost = false;
+            }
         }
 
         public static void Tray_ShowBubble(TrayBubbleBehaviour behaviour, int time)
@@ -235,6 +246,10 @@ namespace TibiantisHelper
             {
                 (accountDropdown as ToolStripMenuItem).DropDownItems.Add(acc.name, null, (s, e) => StringToClipboard(acc.login));
             }
+
+
+
+            // ----- SETTINGS
 
             ToolStripItem settingsDropdown = tray_contextMenuStrip.Items.Add("Settings");
 
@@ -285,7 +300,18 @@ namespace TibiantisHelper
                 Settings.Default.Save();
             };
 
+            var timerNotif = ((ToolStripMenuItem)settingsDropdown).DropDownItems.Add("Timer Notif Open");
+            ToolStripMenuItem timerNotifToolstrip = minimizeOnExit as ToolStripMenuItem;
 
+            timerNotifToolstrip.CheckOnClick = true;
+            timerNotifToolstrip.Checked = Settings.Default.MinimizeOnExit;
+            timerNotifToolstrip.CheckStateChanged += (s, e) => {
+                Settings.Default.NotifTimerOpen = timerNotifToolstrip.Checked;
+                Settings.Default.Save();
+            };
+
+
+            // ----- UTILITY
 
             ToolStripItem extraDropdown = tray_contextMenuStrip.Items.Add("Utility");
             
@@ -328,7 +354,8 @@ namespace TibiantisHelper
         public enum TrayBubbleBehaviour
         {
             None,
-            MuteMinimize
+            MuteMinimize,
+            Timer
         }
 
         #endregion
@@ -1126,6 +1153,11 @@ namespace TibiantisHelper
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             Settings.Default.TimerNotifSound = checkBox2.Checked;
+            Settings.Default.Save();
+        }
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.Default.NotifTimerOpen = checkBox3.Checked;
             Settings.Default.Save();
         }
 
@@ -2823,7 +2855,7 @@ namespace TibiantisHelper
             Settings.Default.Save();
             Environment.Exit(0);
         }
-        
+
     }
 
     public static class ImageComboBox

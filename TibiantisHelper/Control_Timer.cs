@@ -115,7 +115,7 @@ namespace TibiantisHelper
 
             if ( Settings.Default.TimerNotifTray )
             {
-                Form_Main.Tray_ShowBubble(Form_Main.TrayBubbleBehaviour.None, 5000, "Tibiantis Timer", this.label_name.Text + " has finished", ToolTipIcon.Info);
+                Form_Main.Tray_ShowBubble(Form_Main.TrayBubbleBehaviour.Timer, 5000, "Tibiantis Timer", this.label_name.Text + " has finished", ToolTipIcon.Info);
             }
 
             if ( Settings.Default.TimerNotifSound )
