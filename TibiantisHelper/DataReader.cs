@@ -1214,14 +1214,15 @@ namespace TibiantisHelper
                 using (System.IO.StreamReader file = new System.IO.StreamReader(filePath))
                 {
                     string dirtyLine;
-
-                    string bracketName = "";
-                    string bracketLine = "";
                     bool inBracket = false;
+
+                    List<string> brackets = new List<string>();
 
                     Monster monster = new Monster();
 
                     monster.Filename = Path.GetFileName(filePath);
+
+
 
                     while ((dirtyLine = file.ReadLine()) != null)
                     {
@@ -1231,78 +1232,98 @@ namespace TibiantisHelper
 
                             var split = cleanLine.Split(' ');
 
-                            if (inBracket)
+                            if (cleanLine.Contains('{'))
                             {
-                                if (cleanLine.Contains('}'))
-                                {
-                                    bracketLine += cleanLine.Substring(0, cleanLine.IndexOf('}'));
-                                    inBracket = false;
-
-                                    // Assembled bracket contents into one string, now process
-
-                                    if (bracketName == "Inventory")
-                                    {
-
-                                        foreach (var item in GetParenthesisArray(bracketLine))
-                                        {
-                                            var itemSplit = item.Split(',');
-
-                                            Monster.Drop drop;
-
-                                            drop.ItemID = int.Parse(itemSplit[0]);
-                                            drop.Amount = int.Parse(itemSplit[1]);
-                                            drop.Rate = int.Parse(itemSplit[2]);
-
-                                            monster.Inventory.Add(drop);
-                                        }
-                                    } 
-                                    else if (bracketName == "Skills")
-                                    {
-                                        foreach (var item in GetParenthesisArray(bracketLine))
-                                        {
-                                            var itemSplit = item.Split(',');
-
-                                            switch (itemSplit[0])
-                                            {
-                                                case "HitPoints":
-                                                    monster.Hitpoints = int.Parse(itemSplit[1]);
-                                                    break;
-                                                case "GoStrength":
-                                                    monster.Speed = int.Parse(itemSplit[1]);
-                                                    break;
-                                                case "CarryStrength":
-                                                    monster.Capacity = int.Parse(itemSplit[1]);
-                                                    break;
-                                                // case "FistFighting":
-                                                //     monster.Fistfighting = int.Parse(itemSplit[0]);
-                                                //     break;
-                                            }
-                                        }
-                                    }
-                                    else if (bracketName == "Flags")
-                                    {
-                                        foreach (var flag in bracketLine.Split(',')) monster.Flags.Add(flag);
-                                    }
-
-                                }
-                                else
-                                    bracketLine += cleanLine;
+                                inBracket = true;
+                                brackets.Add("");
                             }
-                            else if (split[0] == "Name") monster.Name = CapitalizeItemName(GetBetweenChars(cleanLine, '"', '"')); 
-                            else if (split[0] == "Experience") monster.Experience = int.Parse(split[2]);
-                            else if (split[0] == "Attack") monster.Attack = int.Parse(split[2]);
-                            else if (split[0] == "Defend") monster.Defense = int.Parse(split[2]);
-                            else if (split[0] == "Armor") monster.Armor = int.Parse(split[2]);
-                            else if (split[0] == "SummonCost") monster.SummonCost = int.Parse(split[2]);
-                            else if (!inBracket)
-                                if (cleanLine.Contains('{'))
-                                {
-                                    bracketName = split[0];
-                                    bracketLine = cleanLine.Substring(cleanLine.IndexOf('{') + 1);
-                                    inBracket = true;
-                                }
 
+                            if (inBracket)
+                                brackets[brackets.Count - 1] += cleanLine;
+                            else
+                            {
+                                switch (split[0])
+                                {
+                                    case "Name":
+                                        monster.Name = CapitalizeItemName(GetBetweenChars(cleanLine, '"', '"'));
+                                        break;
+                                    case "Experience":
+                                        monster.Experience = int.Parse(split[2]);
+                                        break;
+                                    case "Attack":
+                                        monster.Attack = int.Parse(split[2]);
+                                        break;
+                                    case "Defend":
+                                        monster.Defense = int.Parse(split[2]);
+                                        break;
+                                    case "Armor":
+                                        monster.Armor = int.Parse(split[2]);
+                                        break;
+                                    case "SummonCost":
+                                        monster.SummonCost = int.Parse(split[2]);
+                                        break;
+                                }
+                            }
+
+                            if (cleanLine.Contains('}'))
+                                inBracket = false;
                         }
+                    }
+
+                    // Parse brackets
+                    foreach (string line in brackets)
+                    {
+                        var split = line.Split(' ');
+                        string bracketName = split[0];
+
+                        var bracket = GetBetweenChars(line, '{', '}');
+
+                        Console.WriteLine(bracket);
+
+                        if (bracketName == "Inventory")
+                        {
+
+                            foreach (var item in GetParenthesisArray(bracket))
+                            {
+                                var itemSplit = item.Split(',');
+
+                                Monster.Drop drop;
+
+                                drop.ItemID = int.Parse(itemSplit[0]);
+                                drop.Amount = int.Parse(itemSplit[1]);
+                                drop.Rate = int.Parse(itemSplit[2]);
+
+                                monster.Inventory.Add(drop);
+                            }
+                        }
+                        else if (bracketName == "Skills")
+                        {
+                            foreach (var item in GetParenthesisArray(bracket))
+                            {
+                                var itemSplit = item.Split(',');
+
+                                switch (itemSplit[0])
+                                {
+                                    case "HitPoints":
+                                        monster.Hitpoints = int.Parse(itemSplit[1]);
+                                        break;
+                                    case "GoStrength":
+                                        monster.Speed = int.Parse(itemSplit[1]);
+                                        break;
+                                    case "CarryStrength":
+                                        monster.Capacity = int.Parse(itemSplit[1]);
+                                        break;
+                                    // case "FistFighting":
+                                    //     monster.Fistfighting = int.Parse(itemSplit[0]);
+                                    //     break;
+                                }
+                            }
+                        }
+                        else if (bracketName == "Flags")
+                        {
+                            foreach (var flag in bracket.Split(',')) monster.Flags.Add(flag);
+                        }
+
                     }
 
                     monsterList.Add(monster);
