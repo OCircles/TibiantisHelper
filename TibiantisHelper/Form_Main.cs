@@ -33,7 +33,6 @@ namespace TibiantisHelper
 
         SelectedVocation _selectedVocation;
 
-
         DataReader _dataReader;
 
         static string file_accounts = "Accounts.xml";
@@ -41,7 +40,6 @@ namespace TibiantisHelper
 
         public static NotifyIcon _trayIcon;
 
-        static readonly HttpClient webClient = new HttpClient();
         static string webpage_whoIsOnline = "https://tibiantis.online/?page=WhoIsOnline";
 
         public Form_Main()
@@ -296,6 +294,16 @@ namespace TibiantisHelper
                 var keyCodeDetector = new Form_KeyCodeViewer();
                 keyCodeDetector.ShowDialog();
             });
+
+            (extraDropdown as ToolStripMenuItem).DropDownItems.Add("Player Lookup", null, (s, e) =>
+            {
+                var playerLookup = new Form_PlayerLookup();
+
+                playerLookup.StartPosition = FormStartPosition.CenterScreen;
+
+                playerLookup.ShowDialog();
+            });
+
 
 
             tray_contextMenuStrip.Items.Add("-");

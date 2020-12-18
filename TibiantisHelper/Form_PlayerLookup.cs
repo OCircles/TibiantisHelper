@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static TibiantisHelper.Utility;
+
+namespace TibiantisHelper
+{
+    public partial class Form_PlayerLookup : Form
+    {
+
+        public string TimerName;
+        public string Time;
+        public int Multiplier;
+        public bool AutoRestart;
+
+        public Form_PlayerLookup()
+        {
+            InitializeComponent();
+
+                this.button1.Text = "Edit";
+                this.Text = "Edit timer";
+        }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBox1.Text))
+            {
+                string[] info = await GetUserData(textBox1.Text);
+
+                if (info != null)
+                {
+                    var infoString = $"{textBox1.Text}{Environment.NewLine}Level {info[0]}, {info[1]}";
+                    MessageBox.Show(infoString, "Lookup Result", MessageBoxButtons.OK);
+                }
+                else
+                    MessageBox.Show($"Could not retrieve info on player \"{textBox1.Text}\", did you mistype it?", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+                MessageBox.Show("Cannot leave player name blank", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
+        }
+        
+    }
+}

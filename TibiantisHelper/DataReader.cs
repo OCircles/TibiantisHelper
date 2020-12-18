@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using static TibiantisHelper.Utility;
 
 namespace TibiantisHelper
 {
@@ -663,7 +664,7 @@ namespace TibiantisHelper
                                 if (item.Name.Substring(0, 2) == "a ") item.Name = item.Name.Substring(2);
                                 else if (item.Name.Substring(0, 3) == "an ") item.Name = item.Name.Substring(3);
 
-                                item.Name = CapitalizeItemName(item.Name).TrimEnd();
+                                item.Name = CapitalizeString(item.Name).TrimEnd();
                             }
 
                         }
@@ -1243,7 +1244,7 @@ namespace TibiantisHelper
                                 switch (split[0])
                                 {
                                     case "Name":
-                                        monster.Name = CapitalizeItemName(GetBetweenChars(cleanLine, '"', '"'));
+                                        monster.Name = CapitalizeString(GetBetweenChars(cleanLine, '"', '"'));
                                         break;
                                     case "Experience":
                                         monster.Experience = int.Parse(split[2]);
@@ -1351,29 +1352,6 @@ namespace TibiantisHelper
 
 
             return between;
-        }
-        private string CapitalizeItemName(string name)
-        {
-            string newName = "";
-            int i = 0;
-            string[] split = name.Split(' ');
-
-            foreach (string s in split)
-            {
-
-                if (s.Length != 0)
-                {
-
-                    if (i == 0) newName += char.ToUpper(s[0]) + s.Substring(1);
-                    else if (s == "of" || s == "the") newName += s;
-                    else newName += char.ToUpper(s[0]) + s.Substring(1);
-
-                    if (i < split.Length) newName += ' ';
-                    i++;
-                }
-            }
-
-            return newName;
         }
         private List<string> GetParenthesisArray(string input)
         {
