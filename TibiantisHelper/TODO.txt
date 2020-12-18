@@ -1,24 +1,19 @@
-﻿Figure out why NPC Tom's topic 2 transactions parses as buy item
+﻿---- NETWORK COMPONENTS ----
+ 
+Better online player list (name, level, class + add to login tracker context menu option)
 
-Need to find which ramps are bamboo and remove
+--- ITEMS ----
 
-Spell damage bases
-
-Training calculator
-MLevel calculator
-
-Attack/defense simulator? Probably too much work for what it does
-
-Continue cleaning items
-
-Figure out how multi sprite rendering / animation works
-
-
-
-Berserk spell variable mana ( level * 4 )
-
-Item data add:
-
-	Golden armor light attributes?
-	demon armor 3% fire protection?
-	magic plate armor 30% mana drain protection?
+Item search
+ 
+Item category rings, fix duplication + add time column
+ 
+Fix throwables attack values
+ 
+--- CALCULATORS ----
+ 
+Calculator - production: add mana
+ 
+New calculator - floor reset
+New calculator - bedmage
+New calculator - price (gold/mana, relative prices + weighting)

@@ -923,7 +923,7 @@ namespace TibiantisHelper
         public List<NPC> ParseNPC()
         {
             List<NPC> npcList = new List<NPC>();
-            string[] files = Directory.GetFiles(npcFolder, "*.npc");
+            string[] files = Directory.GetFiles(npcFolder, "*.txt");
 
             foreach (var filePath in files)
             {

@@ -224,11 +224,16 @@ namespace TibiantisHelper
         
         private void notifyIcon1_DoubleClick(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
-            this.BringToFront();
-            this.TopMost = true;
-            this.Focus();
-            this.TopMost = false;
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.BringToFront();
+                this.TopMost = true;
+                this.Focus();
+                this.TopMost = false;
+            }
+            else
+                this.WindowState = FormWindowState.Minimized;
         }
         private void Tray_BuildContextMenu()
         {
