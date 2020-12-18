@@ -22,9 +22,6 @@ namespace TibiantisHelper
         public Form_PlayerLookup()
         {
             InitializeComponent();
-
-                this.button1.Text = "Edit";
-                this.Text = "Edit timer";
         }
 
         private async void button1_Click(object sender, EventArgs e)

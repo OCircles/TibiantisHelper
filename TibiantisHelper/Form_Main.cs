@@ -305,15 +305,6 @@ namespace TibiantisHelper
                 Settings.Default.Save();
             };
 
-            var timerNotif = ((ToolStripMenuItem)settingsDropdown).DropDownItems.Add("Timer Notif Open");
-            ToolStripMenuItem timerNotifToolstrip = minimizeOnExit as ToolStripMenuItem;
-
-            timerNotifToolstrip.CheckOnClick = true;
-            timerNotifToolstrip.Checked = Settings.Default.MinimizeOnExit;
-            timerNotifToolstrip.CheckStateChanged += (s, e) => {
-                Settings.Default.NotifTimerOpen = timerNotifToolstrip.Checked;
-                Settings.Default.Save();
-            };
 
 
             // ----- UTILITY
