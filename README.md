@@ -12,12 +12,18 @@ If you have any issues or ideas for improvement, feel free to contact me on Disc
 
 ## Installing
 
-The program must be in the same folder as Tibiantis.spr and Tibiantis.dat. I recommend the following:
+I recommend the following:
 
 1. Make a new folder for Tibiantis Helper
 2. Copy Tibiantis.spr and Tibiantis.dat to this folder (found in tibiantis/game directory)
 
 ..OR you can just put it straight in the game folder, but Tibiantis Helper will generate additional files so it could get quite messy.
+
+## Updating
+
+When you download a newer version, do NOT replace **TibiantisHelper.exe.config** in order to keep your old settings.
+
+You don't have to, but you might also want to delete your old data folder, but it is never *required* to do this; at worst you'd have some unused old files left over if you just drag-and-drop overwrite it.
 
 ---
 
