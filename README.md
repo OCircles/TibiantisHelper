@@ -8,15 +8,20 @@ This is an app made to streamline the Tibiantis experience, centralizing a lot o
 
 Make sure to try right-clicking / double clicking things in the various lists! And the tray icon.
 
-**Do note that I have not yet removed all the 7.7 items!** While it is very easy to modify the data it is still quite laborious to do manually, so for upcoming updates I will prioritize removing just the main category items (armors, weapons and such). The goal will to have it perfectly reflect 7.4 by version 1.0, but for now I wanted to just put out a "good enough" pre-release since people seemed to want it.
-
 If you have any issues or ideas for improvement, feel free to contact me on Discord! (-o-#8184)
 
 ## Installing
 
-The program must be in the same folder as Tibiantis.spr and Tibiantis.dat found in the "game" folder in the Tibiantis client. Just to keep things clean I'd recommend making a separate folder for Tibiantis Helper somewhere and just copy those files over (there will be a prompt to browse for those files if they're not already present when you run the program). Alternatively you can just put the helper directly in the game folder.
+The program must be in the same folder as Tibiantis.spr and Tibiantis.dat. I recommend the following:
 
-I wrote this whole thing with a broken keyboard. Backspace is not working and I cannot describe to you the depths of my suffering
+1. Make a new folder for Tibiantis Helper
+2. Copy Tibiantis.spr and Tibiantis.dat to this folder (found in tibiantis/game directory)
+
+..OR you can just put it straight in the game folder, but Tibiantis Helper will generate additional files so it could get quite messy.
+
+---
+
+P.S. I wrote this whole program with a broken keyboard. Backspace is not working and I cannot describe to you the depths of my suffering
  
  ## Images
  
