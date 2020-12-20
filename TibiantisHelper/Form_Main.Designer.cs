@@ -1189,7 +1189,8 @@
             this.items_comboBox_itemCategory.Name = "items_comboBox_itemCategory";
             this.items_comboBox_itemCategory.Size = new System.Drawing.Size(231, 21);
             this.items_comboBox_itemCategory.TabIndex = 0;
-            this.items_comboBox_itemCategory.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.items_comboBox_itemCategory.SelectedIndexChanged += new System.EventHandler(this.items_comboBox_itemCategory_SelectedIndexChanged);
+            this.items_comboBox_itemCategory.KeyDown += new System.Windows.Forms.KeyEventHandler(this.items_comboBox_itemCategory_KeyDown);
             // 
             // itemName_label
             // 

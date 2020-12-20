@@ -1934,17 +1934,11 @@ namespace TibiantisHelper
             return items;
         } 
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void items_comboBox_itemCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-              
-            // Column headers + attribute names
-            string[] col_armorArm = { "Arm", "Weight" };
-            string[] col_shield = { "Shield Def.", "Weight" };
-            string[] col_weapon = { "Attack", "Weapon Def.", "Weight" };
-            string[] col_bow = { "Bow Range", "Bow Ammo" };
-            string[] col_throw = { "Throw Attack", "Throw Range", "Throw Def.", "Throw Effect", "Throw Effect Str.", "Throw Fragility", "Weight" };
-            string[] col_ammo = { "Ammo Attack", "Ammo Effect", "Effect Strength", "Ammo Type", "Weight" };
+            listView_items.UseFiltering = false; // Not sure this stuff is necessary but meh.
 
+            // Column headers + attribute names
 
             if (items_comboBox_itemCategory.Text == "All") PopulateItemList("Take");
 
@@ -1968,6 +1962,19 @@ namespace TibiantisHelper
             if (items_comboBox_itemCategory.Text == "Food") PopulateItemList("Food");
 
         }
+        private void items_comboBox_itemCategory_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                listView_items.UseFiltering = true;
+
+                PopulateItemList("Take");
+                listView_items.ModelFilter = new ModelFilter(delegate (object x) {
+                    return ((Item)x).Name.ToLower().Contains(items_comboBox_itemCategory.Text.ToLower());
+                });
+            }
+        }
+
         private void listView_items_SelectionChanged(object sender, EventArgs e)
         {
             if (listView_items.SelectedObject != null)
