@@ -26,10 +26,10 @@ namespace TibiantisHelper
 
         List<Account> _accounts;
         List<Control_Timer> _timers;
-        List<Vocation> _vocations;
-        List<Player> _trackedPlayers;
+        public List<Vocation> _vocations;
+        List<TrackedPlayer> _trackedPlayers;
         List<string> _lastOnline; // Separate list for _trackedPlayers
-        List<string> _currentlyOnline;
+        List<Player> _currentlyOnline;
 
         SelectedVocation _selectedVocation;
 
@@ -49,9 +49,9 @@ namespace TibiantisHelper
             _timers = new List<Control_Timer>();
             _vocations = new List<Vocation>();
             _dataReader = new DataReader();
-            _trackedPlayers = new List<Player>();
+            _trackedPlayers = new List<TrackedPlayer>();
             _lastOnline = new List<string>();
-            _currentlyOnline = new List<string>();
+            _currentlyOnline = new List<Player>();
 
 
             if (Settings.Default.UpgradeRequired)
@@ -399,37 +399,44 @@ namespace TibiantisHelper
                         if (line.Contains("class=\"tabi\""))
                         {
                             // Online users string, thankfully it's all in one line lol
+                            string currentLine = line;
 
-                            bool bracketSearch, readingName;
-                            bracketSearch = readingName = false;
-                            string playerName = "";
-
-                            int index = line.IndexOf("&#8595;Level");
-
-                            for (int i = index; i < line.Length-13; i++)
+                            while (true)
                             {
-                                if ( line.Substring(i, 13) == "menulink_hs'>")
-                                {
-                                    playerName = "";
-                                    bracketSearch = true;
-                                }  
+                                var player = new Player();
 
-                                if (readingName)
-                                {
-                                    if (line[i] == '<')
-                                    {
-                                        readingName = false;
-                                        bracketSearch = false;
-                                        _currentlyOnline.Add(playerName);
-                                    }
-                                    else
-                                        playerName += line[i];
-                                }
+                                string name, voc, level;
+                                name = voc = level = "";
 
-                                if (bracketSearch)
-                                    if (line[i] == '>')
-                                        readingName = true;
+                                int ni = currentLine.IndexOf("&name=");
+
+                                if (ni == -1) break;
+
+                                currentLine = currentLine.Substring(ni);
+                                name = GetBetweenChars(currentLine, '>', '<').Replace('+', ' ');
+
+                                int vi = currentLine.IndexOf("</td>") + 5 + 3;
+                                currentLine = currentLine.Substring(vi);
+                                voc = GetBetweenChars(currentLine, '>', '<');
+                                voc = CapitalizeString(voc);
+                                string vocInitials = "";
+                                foreach (char c in voc)
+                                    if (char.IsUpper(c))
+                                        vocInitials += c;
+
+
+                                int li = currentLine.IndexOf("</td>") + 5 + 3;
+                                currentLine = currentLine.Substring(li);
+                                level = GetBetweenChars(currentLine, '>', '<');
+
+                                player.Name = name;
+                                player.Level = short.Parse(level);
+                                player.Vocation = vocInitials;
+
+                                _currentlyOnline.Add(player);
                             }
+                            
+                            
 
                             // Console.WriteLine("Parsed " + _currentlyOnline.Count + " usernames from website");
 
@@ -508,15 +515,22 @@ namespace TibiantisHelper
                 {
                     Form_CurrentOnline form = new Form_CurrentOnline(_currentlyOnline);
 
-                    // form.Location = Cursor.Position;
+                    form.Owner = this;
+
                     form.SetDesktopLocation(Cursor.Position.X, Cursor.Position.Y);
                     form.Show();
                 }
                 else
                     OpenInBrowser(webpage_whoIsOnline);
             }
-            
+        }
 
+        // For the online players list
+        public struct Player
+        {
+            public string Name;
+            public short Level;
+            public string Vocation;
         }
 
         #endregion
@@ -2434,7 +2448,7 @@ namespace TibiantisHelper
                 if (p.ItemArray[0].GetType() != typeof(DBNull)) name = (string)p.ItemArray[0];
                 if (p.ItemArray[1].GetType() != typeof(DBNull)) alert = (string)p.ItemArray[1];
 
-                var player = new Player(name, alert);
+                var player = new TrackedPlayer(name, alert);
                 _trackedPlayers.Add(player);
 
 
@@ -2453,21 +2467,23 @@ namespace TibiantisHelper
             if (diag.ShowDialog() == DialogResult.OK)
             {
                 if (!string.IsNullOrEmpty(diag.PlayerName))
-                {
-                    Player p = new Player(diag.PlayerName);
-                    p.Alert = diag.Alert;
-                    _trackedPlayers.Add(p);
-                    _trackedPlayers = _trackedPlayers.OrderBy(pp => pp.Name).ToList();
-                    LoginTrackerUpdate();
-                    LoginAlertSaveData(file_loginAlert);
-                }
+                    LoginTrackerAddPlayer(diag.PlayerName, diag.Alert);
             }
+        }
+
+        public void LoginTrackerAddPlayer(string player, string alert = null)
+        {
+            TrackedPlayer p = new TrackedPlayer(player, alert);
+            _trackedPlayers.Add(p);
+            _trackedPlayers = _trackedPlayers.OrderBy(pp => pp.Name).ToList();
+            LoginTrackerUpdate();
+            LoginAlertSaveData(file_loginAlert);
         }
 
         private void LoginTrackerCheckOnline()
         {
             DataTable table = (DataTable)loginAlert_dataGridView.DataSource;
-            List<Player> alerts = new List<Player>();
+            List<TrackedPlayer> alerts = new List<TrackedPlayer>();
             
 
 
@@ -2476,18 +2492,18 @@ namespace TibiantisHelper
                 bool needsUpdate = false;
 
                 // Some stuff for when user has put the tracked players name in the wrong casing
-                var onlinePlayer = _currentlyOnline.Where(s => s.Equals(p.Name, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
+                var onlinePlayer = _currentlyOnline.Where(s => s.Name.Equals(p.Name, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
 
-                if (onlinePlayer != null)
+                if (!onlinePlayer.Equals(default(Player)))
                 {
-                    if (!onlinePlayer.Equals(p.Name, StringComparison.Ordinal))
+                    if (!onlinePlayer.Name.Equals(p.Name, StringComparison.Ordinal))
                     {
                         // If wrong casing, fix it
-                        p.Name = onlinePlayer;
+                        p.Name = onlinePlayer.Name;
                         needsUpdate = true;
                     }
 
-                    DataRow[] select = table.Select("Name='" + onlinePlayer + "'");
+                    DataRow[] select = table.Select("Name='" + onlinePlayer.Name + "'");
                     if (select[0] != null)
                     {
                         // Tracked player is online and everything checks out. Do the stuff
@@ -2500,16 +2516,12 @@ namespace TibiantisHelper
                         }
 
                         // Color row green :)
-                        DataRow r = (select[0]);
-                        if (select[0] != null)
-                        {
-                            var index = table.Rows.IndexOf(r);
-                            loginAlert_dataGridView.Rows[index].DefaultCellStyle.BackColor = Color.PaleGreen;
+                        var index = table.Rows.IndexOf(select[0]);
+                        loginAlert_dataGridView.Rows[index].DefaultCellStyle.BackColor = Color.PaleGreen;
 
-                            if (needsUpdate)
-                                loginAlert_dataGridView.Rows[index].Cells[0].Value = onlinePlayer; // Already updated name in _trackedPlayers, also update i
+                        if (needsUpdate)
+                            loginAlert_dataGridView.Rows[index].Cells[0].Value = onlinePlayer.Name; // Already updated name in _trackedPlayers, also update i
 
-                        }
                     }
                 }
                 else
@@ -2537,7 +2549,7 @@ namespace TibiantisHelper
 
         }
 
-        private void LoginAlert(List<Player> players)
+        private void LoginAlert(List<TrackedPlayer> players)
         {
             if (players.Count != 0)
             {
@@ -2554,7 +2566,6 @@ namespace TibiantisHelper
                     if (alertSound == "")
                         if (players[i].Alert != null)
                         {
-                            Console.WriteLine(players[i].Alert);
                             if (File.Exists(players[i].Alert))
                                 alertSound = players[i].Alert;
 
@@ -2627,6 +2638,13 @@ namespace TibiantisHelper
                 }
             }
         }
+
+
+        // For adding player via current online form. This should absolutely not exist but I'm lazy
+        // Somehow, a more generalized function that takes a string to tabControl.SelectTab() didn't work
+        public void OpenLoginAlertTab() { tabControl1.SelectTab(tabPage_loginAlert); }
+
+
 
         #region Login Alert Sidebar
 
@@ -2723,8 +2741,10 @@ namespace TibiantisHelper
 
         private void LoginAlertColorRow(int index)
         {
-            if (_currentlyOnline.Contains(loginAlert_dataGridView.Rows[index].Cells[0].Value))
+            if (!_currentlyOnline.FirstOrDefault(i => i.Name == (string)(loginAlert_dataGridView.Rows[index].Cells[0].Value)).Equals(default(Player)))
                 loginAlert_dataGridView.Rows[index].DefaultCellStyle.BackColor = Color.PaleGreen;
+            else
+                loginAlert_dataGridView.Rows[index].DefaultCellStyle.BackColor = Color.White;
         }
 
         private void loginAlert_dataGridView_SelectionChanged(object sender, EventArgs e)
@@ -2827,7 +2847,7 @@ namespace TibiantisHelper
             }
         }
 
-        private void LoginAlertChangeAlertDialog(Player player)
+        private void LoginAlertChangeAlertDialog(TrackedPlayer player)
         {
             var diag = new OpenFileDialog();
             diag.RestoreDirectory = true;
@@ -2862,12 +2882,12 @@ namespace TibiantisHelper
         }
         #endregion
 
-        private class Player
+        private class TrackedPlayer
         {
             public string Name;
             public string Alert;        // Leaving this uninitialized is good for DataTable.WriteXml, avoids writing empty xml nodes
 
-            public Player(string Name, string Alert = null)
+            public TrackedPlayer(string Name, string Alert = null)
             {
                 this.Name = Name;
                 this.Alert = Alert;

@@ -12,9 +12,9 @@ namespace TibiantisHelper
 {
     public partial class Form_CurrentOnline : Form
     {
-        private List<string> Players;
+        private List<Form_Main.Player> Players;
 
-        public Form_CurrentOnline(List<string> Players)
+        public Form_CurrentOnline(List<Form_Main.Player> Players)
         {
             this.Players = Players;
 
@@ -23,13 +23,67 @@ namespace TibiantisHelper
 
         private void CurrentOnlineForm_Shown(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
-            listBox1.Items.AddRange(this.Players.ToArray());
+            AddAllUsers();
         }
 
         private void CurrentOnlineForm_Deactivate(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBox1.Text))
+            {
+                listBox1.Items.Clear();
+                foreach (var p in Players)
+                {
+                    if (p.Name.Substring(0, textBox1.Text.Length).Equals(textBox1.Text,StringComparison.OrdinalIgnoreCase))
+                        listBox1.Items.Add($"({p.Level}, {p.Vocation}) {p.Name}");
+                }
+            }
+            else
+                AddAllUsers();
+        }
+
+        private void AddAllUsers()
+        {
+            listBox1.Items.Clear();
+            foreach (var p in Players)
+                listBox1.Items.Add($"({p.Level}, {p.Vocation}) {p.Name}");
+        }
+
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            string name = listBox1.SelectedItem.ToString().Split(')')[1].Substring(1);
+            string webSafe = System.Net.WebUtility.UrlEncode(name);
+
+            Utility.OpenInBrowser(@"https://tibiantis.online/?page=character&name=" + webSafe);
+        }
+
+        private void listBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                Point pt = new Point(e.X, e.Y);
+                var index = listBox1.IndexFromPoint(pt);
+                if ( index >= 0 )
+                {
+                    listBox1.SelectedIndex = index;
+
+                    string name = listBox1.SelectedItem.ToString().Split(')')[1].Substring(1);
+
+                    var ct = new ContextMenuStrip();
+
+                    ct.Items.Add("Name to Clipboard", null, (s,ee) => { Utility.StringToClipboard(name); });
+                    ct.Items.Add("Add to Login Alert", null, (s, ee) => {
+                        ((Form_Main)Owner).LoginTrackerAddPlayer(name);
+                        ((Form_Main)Owner).OpenLoginAlertTab();
+                    });
+
+                    ct.Show(Cursor.Position);
+                }
+            }
         }
     }
 }
