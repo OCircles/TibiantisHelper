@@ -1690,8 +1690,12 @@ namespace TibiantisHelper
 
         #region Items
 
+        string itemSearch = "";
+
         private void InitializeItemsTab()
         {
+            listView_items.UseFiltering = true;
+
             InitializeItemTrades();
             InitializeItemDrops();
 
@@ -1764,7 +1768,7 @@ namespace TibiantisHelper
                     if (splitFilter[1] != "*") value = int.Parse(splitFilter[1]);
 
                     items.AddRange(_dataReader.GetItemsByAttribute(_dataReader.items, splitFilter[0], value));
-
+                    
                     if (splitFilter[0] == "BodyPosition")
                     {
                         switch (value)
@@ -1774,13 +1778,46 @@ namespace TibiantisHelper
                             case 4:
                             case 7:
                             case 8:
-                            case 9:
                                 var armor = new OLVColumn();
                                 armor.Text = "Arm";
 
-                                armor.AspectGetter = delegate (object x)  { return ((Item)x).GetAttributeValue("ArmorValue"); };
+                                armor.AspectGetter = delegate (object x) { return ((Item)x).GetAttributeValue("ArmorValue"); };
 
                                 listView_items.Columns.Add(armor);
+
+                                break;
+                            case 9:
+
+                                var skillMod = new OLVColumn();
+                                skillMod.Text = "+Skill";
+                                skillMod.AspectGetter = delegate (object x) { return ((Item)x).GetAttributeValue("SkillModification"); };
+                                skillMod.AspectToStringConverter = delegate (object x)
+                                {
+                                    var skill = (int)x;
+
+                                    if (skill == 0) return "N/A";
+                                    else
+                                        return skill.ToString();
+                                };
+
+                                var expiry = new OLVColumn();
+                                expiry.Text = "Expiry";
+                                expiry.AspectGetter = delegate (object x) { return ((Item)x).GetAttributeValue("TotalExpireTime"); };
+                                expiry.AspectToStringConverter = delegate (object x)
+                                {
+                                    var time = (int)x;
+
+                                    if (time == 0) return "N/A";
+                                    else
+                                    {
+                                        TimeSpan t = TimeSpan.FromSeconds(time);
+                                        if ( t.Hours != 0 ) return string.Format("{0:D2}:{1:D2}:{2:D2}", t.Hours, t.Minutes, t.Seconds);
+                                        else return string.Format("{0:D2}:{1:D2}", t.Minutes, t.Seconds);
+                                    }
+                                };
+
+                                listView_items.Columns.Add(skillMod);
+                                listView_items.Columns.Add(expiry);
 
                                 break;
                             case 3:
@@ -1936,7 +1973,7 @@ namespace TibiantisHelper
 
         private void items_comboBox_itemCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listView_items.UseFiltering = false; // Not sure this stuff is necessary but meh.
+            itemSearch = "";
 
             // Column headers + attribute names
 
@@ -1966,13 +2003,36 @@ namespace TibiantisHelper
         {
             if (e.KeyCode == Keys.Enter)
             {
-                listView_items.UseFiltering = true;
+                itemSearch = items_comboBox_itemCategory.Text.ToLower();
 
                 PopulateItemList("Take");
-                listView_items.ModelFilter = new ModelFilter(delegate (object x) {
-                    return ((Item)x).Name.ToLower().Contains(items_comboBox_itemCategory.Text.ToLower());
-                });
+                listView_items.ModelFilter = Items_BuildFilter();
             }
+        }
+
+
+        private void items_checkBox_hideExpiring_CheckedChanged(object sender, EventArgs e)
+        {
+            listView_items.ModelFilter = Items_BuildFilter();
+        }
+
+
+        private ModelFilter Items_BuildFilter()
+        {
+            ModelFilter filter = new ModelFilter(delegate (object x) {
+                bool search, hideExpiring;
+                search = hideExpiring = true;
+
+                if (items_checkBox_hideExpiring.Checked)
+                    hideExpiring = !((Item)x).Name.ToLower().Contains('(');
+
+                if (!string.IsNullOrEmpty(itemSearch)) search = ((Item)x).Name.ToLower().Contains(itemSearch);
+
+                return search && hideExpiring;
+            
+            });
+
+            return filter;
         }
 
         private void listView_items_SelectionChanged(object sender, EventArgs e)

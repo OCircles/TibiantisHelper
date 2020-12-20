@@ -650,6 +650,10 @@ namespace TibiantisHelper
 
                         if (first == "TypeID")
                         {
+                            // Process last item
+                            if (item.Flags.Contains("Expire")) item.Name += " (Expiring)";
+
+                            // Then start next one
                             item = new DataReader.Item();
                             items.Add(item);
                             item.ID = int.Parse(second);
@@ -773,12 +777,13 @@ namespace TibiantisHelper
                 foreach (var i in source)
                     if (i.ID > 99)
                         foreach (var a in i.Attributes) 
-                            if (a.Name == attribute) items.Add(i);
+                            if (a.Name == attribute && attribute[0] != '!') items.Add(i);
             } else
             {
                 foreach (var i in source)
                 {
-                    if (i.Attributes.Contains(att) && i.ID > 99) items.Add(i);
+                    if (i.Attributes.Contains(att) && i.ID > 99 && attribute[0] != '!')
+                        items.Add(i);
                 }
             }
 

@@ -103,6 +103,7 @@
             this.tabPage_items = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.items_checkBox_hideExpiring = new System.Windows.Forms.CheckBox();
             this.items_comboBox_itemCategory = new System.Windows.Forms.ComboBox();
             this.itemName_label = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -1144,6 +1145,7 @@
             // 
             // splitContainer4.Panel1
             // 
+            this.splitContainer4.Panel1.Controls.Add(this.items_checkBox_hideExpiring);
             this.splitContainer4.Panel1.Controls.Add(this.items_comboBox_itemCategory);
             this.splitContainer4.Panel1.Controls.Add(this.itemName_label);
             this.splitContainer4.Panel1.Controls.Add(this.textBox1);
@@ -1153,8 +1155,19 @@
             // 
             this.splitContainer4.Panel2.Controls.Add(this.listView_itemDrops);
             this.splitContainer4.Size = new System.Drawing.Size(237, 400);
-            this.splitContainer4.SplitterDistance = 198;
+            this.splitContainer4.SplitterDistance = 219;
             this.splitContainer4.TabIndex = 0;
+            // 
+            // items_checkBox_hideExpiring
+            // 
+            this.items_checkBox_hideExpiring.AutoSize = true;
+            this.items_checkBox_hideExpiring.Location = new System.Drawing.Point(3, 200);
+            this.items_checkBox_hideExpiring.Name = "items_checkBox_hideExpiring";
+            this.items_checkBox_hideExpiring.Size = new System.Drawing.Size(138, 17);
+            this.items_checkBox_hideExpiring.TabIndex = 4;
+            this.items_checkBox_hideExpiring.Text = "Hide Expiring Items";
+            this.items_checkBox_hideExpiring.UseVisualStyleBackColor = true;
+            this.items_checkBox_hideExpiring.CheckedChanged += new System.EventHandler(this.items_checkBox_hideExpiring_CheckedChanged);
             // 
             // items_comboBox_itemCategory
             // 
@@ -1209,12 +1222,12 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(3, 67);
+            this.textBox1.Location = new System.Drawing.Point(3, 65);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(231, 128);
+            this.textBox1.Size = new System.Drawing.Size(231, 129);
             this.textBox1.TabIndex = 3;
             // 
             // itemIcon
@@ -1244,7 +1257,7 @@
             this.listView_itemDrops.MultiSelect = false;
             this.listView_itemDrops.Name = "listView_itemDrops";
             this.listView_itemDrops.ShowGroups = false;
-            this.listView_itemDrops.Size = new System.Drawing.Size(237, 198);
+            this.listView_itemDrops.Size = new System.Drawing.Size(237, 177);
             this.listView_itemDrops.TabIndex = 0;
             this.listView_itemDrops.UseCompatibleStateImageBehavior = false;
             this.listView_itemDrops.View = System.Windows.Forms.View.Details;
@@ -1258,6 +1271,7 @@
             // olvColumn12
             // 
             this.olvColumn12.Text = "Amount";
+            this.olvColumn12.Width = 61;
             // 
             // olvColumn11
             // 
@@ -1857,12 +1871,12 @@
             this.monsters_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.monsters_textBox.Location = new System.Drawing.Point(3, 68);
+            this.monsters_textBox.Location = new System.Drawing.Point(3, 53);
             this.monsters_textBox.Multiline = true;
             this.monsters_textBox.Name = "monsters_textBox";
             this.monsters_textBox.ReadOnly = true;
             this.monsters_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.monsters_textBox.Size = new System.Drawing.Size(329, 130);
+            this.monsters_textBox.Size = new System.Drawing.Size(329, 144);
             this.monsters_textBox.TabIndex = 1;
             this.monsters_textBox.WordWrap = false;
             // 
@@ -1873,7 +1887,7 @@
             this.monsters_labelName.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.monsters_labelName.Location = new System.Drawing.Point(3, 0);
             this.monsters_labelName.Name = "monsters_labelName";
-            this.monsters_labelName.Size = new System.Drawing.Size(329, 65);
+            this.monsters_labelName.Size = new System.Drawing.Size(329, 50);
             this.monsters_labelName.TabIndex = 0;
             this.monsters_labelName.Text = "No monster selected";
             this.monsters_labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2541,6 +2555,7 @@
         private System.Windows.Forms.LinkLabel header_linkLabel_discord;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox items_checkBox_hideExpiring;
     }
 }
 
