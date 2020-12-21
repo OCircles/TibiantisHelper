@@ -1214,6 +1214,18 @@ namespace TibiantisHelper
                 num1 = int.TryParse(calculator_production_textBox_amountSingle.Text, out in1);
                 num2 = int.TryParse(calculator_production_textBox_amountBackpack.Text, out in2);
 
+                if (string.IsNullOrEmpty(calculator_production_textBox_amountSingle.Text))
+                {
+                    num1 = true;
+                    in1 = 0;
+                }
+
+                if (string.IsNullOrEmpty(calculator_production_textBox_amountBackpack.Text))
+                {
+                    num2 = true;
+                    in2 = 0;
+                }
+
                 if (num1 && num2)
                 {
                     if (in1+in2 > 0)
@@ -1231,8 +1243,8 @@ namespace TibiantisHelper
                         {
                             // For arrows/bolts, adjust amount for stacks
                             itemName = _dataReader.items.Where(i => i.ID == spell.ProduceID).FirstOrDefault().Name;
-                        
-                            casts = Math.Ceiling(((double)(amount * 100)) / (double)spell.ProduceAmount);
+
+                            casts = Math.Ceiling((double)(amount * 100) / spell.ProduceAmount);
                         }
 
 
@@ -1254,28 +1266,33 @@ namespace TibiantisHelper
                         calculator_production_addTimer_time = string.Format("{0:D2}:{1:D2}:{2:D2}", regenTime.Hours + (regenTime.Days * 24), regenTime.Minutes, regenTime.Seconds); ;
                         calculator_production_addTimer_title = itemName;
 
-                        calculator_textBox_result.Text = "A " + _selectedVocation.Name +
-                            " producing " + itemName + " (";
+
+                        // Assemble result in textbox. The arrows/bolts stuff makes this a huge mess lol
+
+                        calculator_textBox_result.Text = $"A {_selectedVocation.Name} producing {itemName} (";
 
                         string parenthesis = "";
 
                         if (spell.Type == 1)
-                            parenthesis = casts + "x";
+                            parenthesis = $"{casts}x";
                         else
                         {
-                            parenthesis += amount + " stack";
+                            parenthesis += $"{amount} stack";
                             if (amount != 1) parenthesis += "s";
                         }
+                        calculator_production_addTimer_title += $" {parenthesis} ({_selectedVocation.Name})";
+
 
                         calculator_textBox_result.Text += parenthesis;
 
-                        calculator_production_addTimer_title += $" {parenthesis} ({_selectedVocation.Name})";
-
-                        calculator_textBox_result.Text += 
-                            ") takes " + regenString +
-                            " and uses " + foodDiv + "x " + food.Name + " (" +
+                        calculator_textBox_result.Text +=  $") takes {regenString} and uses {foodDiv}x {food.Name} (" +
                             (((double)food.GetAttributeValue("Weight")) / 100) * foodDiv + "oz)";
 
+                        calculator_textBox_result.Text += Environment.NewLine + Environment.NewLine;
+                        calculator_textBox_result.Text += 
+                            $"Casting \"{spell.Words}\" {casts} times," +
+                            $" generating {spell.ProduceAmount} units each time for a total of " +
+                            $"{totalMana} mana ({spell.Mana} mana per cast)";
 
                     }
                     else
@@ -1390,7 +1407,7 @@ namespace TibiantisHelper
                         else
                             diff = endTime.Subtract(startTime);
 
-                        double expPerMin = (totalExp / diff.TotalSeconds) * 60;
+                        double expPerHour = (totalExp / diff.TotalSeconds) * 60 * 60;
 
                         string durationString = "";
 
@@ -1399,8 +1416,8 @@ namespace TibiantisHelper
                         if (diff.Minutes != 0) durationString += string.Format("{0:D1}m", diff.Minutes);
                         if (diff.Seconds != 0) durationString += string.Format("{0:D1}s", diff.Seconds);
 
-                        calculator_textBox_result.Text = "You gained " + totalExp + " experience over a duration of " +
-                            durationString + " (" + Math.Round(expPerMin, 1) + " exp per minute)";
+                        calculator_textBox_result.Text = $"You gained {totalExp} experience over a duration of " +
+                            $"{durationString} ({Math.Round(expPerHour, 1)} exp per hour)";
                          
                          
                     }
