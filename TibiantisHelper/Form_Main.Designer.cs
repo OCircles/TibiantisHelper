@@ -48,7 +48,7 @@
             this.splitContainer12 = new System.Windows.Forms.SplitContainer();
             this.splitContainer13 = new System.Windows.Forms.SplitContainer();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.accounts_label_selected = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -488,7 +488,7 @@
             // splitContainer13.Panel1
             // 
             this.splitContainer13.Panel1.Controls.Add(this.textBox10);
-            this.splitContainer13.Panel1.Controls.Add(this.label1);
+            this.splitContainer13.Panel1.Controls.Add(this.accounts_label_selected);
             this.splitContainer13.Panel1.Controls.Add(this.button6);
             this.splitContainer13.Panel1.Controls.Add(this.button7);
             // 
@@ -513,17 +513,17 @@
             this.textBox10.TabIndex = 4;
             this.textBox10.WordWrap = false;
             // 
-            // label1
+            // accounts_label_selected
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.accounts_label_selected.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 18);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "No account selected";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.accounts_label_selected.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accounts_label_selected.Location = new System.Drawing.Point(1, 0);
+            this.accounts_label_selected.Name = "accounts_label_selected";
+            this.accounts_label_selected.Size = new System.Drawing.Size(231, 18);
+            this.accounts_label_selected.TabIndex = 3;
+            this.accounts_label_selected.Text = "No account selected";
+            this.accounts_label_selected.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button6
             // 
@@ -1737,7 +1737,7 @@
             // 
             this.splitContainer3.Panel2.Controls.Add(this.listView_npcItems);
             this.splitContainer3.Size = new System.Drawing.Size(706, 400);
-            this.splitContainer3.SplitterDistance = 359;
+            this.splitContainer3.SplitterDistance = 417;
             this.splitContainer3.TabIndex = 0;
             // 
             // listView_npcs
@@ -1761,7 +1761,7 @@
             this.listView_npcs.MultiSelect = false;
             this.listView_npcs.Name = "listView_npcs";
             this.listView_npcs.ShowGroups = false;
-            this.listView_npcs.Size = new System.Drawing.Size(359, 400);
+            this.listView_npcs.Size = new System.Drawing.Size(417, 400);
             this.listView_npcs.TabIndex = 0;
             this.listView_npcs.UseCompatibleStateImageBehavior = false;
             this.listView_npcs.View = System.Windows.Forms.View.Details;
@@ -1772,11 +1772,12 @@
             // olvColumn1
             // 
             this.olvColumn1.Text = "Name";
-            this.olvColumn1.Width = 99;
+            this.olvColumn1.Width = 144;
             // 
             // olvColumn2
             // 
             this.olvColumn2.Text = "Location";
+            this.olvColumn2.Width = 126;
             // 
             // olvColumn3
             // 
@@ -1801,7 +1802,7 @@
             this.listView_npcItems.HideSelection = false;
             this.listView_npcItems.Location = new System.Drawing.Point(0, 0);
             this.listView_npcItems.Name = "listView_npcItems";
-            this.listView_npcItems.Size = new System.Drawing.Size(343, 400);
+            this.listView_npcItems.Size = new System.Drawing.Size(285, 400);
             this.listView_npcItems.TabIndex = 0;
             this.listView_npcItems.UseCompatibleStateImageBehavior = false;
             this.listView_npcItems.View = System.Windows.Forms.View.Details;
@@ -1811,11 +1812,12 @@
             // 
             this.olvColumn5.FillsFreeSpace = true;
             this.olvColumn5.Text = "Item";
-            this.olvColumn5.Width = 107;
+            this.olvColumn5.Width = 145;
             // 
             // olvColumn6
             // 
             this.olvColumn6.Text = "Gold";
+            this.olvColumn6.Width = 65;
             // 
             // tabPage_monsters
             // 
@@ -2524,7 +2526,7 @@
         private System.Windows.Forms.CheckBox header_vocation_promo_checkBox;
         private System.Windows.Forms.SplitContainer splitContainer12;
         private System.Windows.Forms.SplitContainer splitContainer13;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label accounts_label_selected;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBox12;

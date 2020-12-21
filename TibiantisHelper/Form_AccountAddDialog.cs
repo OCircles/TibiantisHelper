@@ -55,7 +55,7 @@ namespace TibiantisHelper
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if ( !string.IsNullOrEmpty(textBox1.Text) && !string.IsNullOrEmpty(textBox2.Text) )
+            if ( !string.IsNullOrEmpty(textBox1.Text) )
             {
                 this.AccountName = textBox1.Text;
                 this.AccountLogin = textBox2.Text;

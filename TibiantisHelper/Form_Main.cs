@@ -840,7 +840,10 @@ namespace TibiantisHelper
                 var clickedCell = accounts_dataGridView.Rows[hit.RowIndex].Cells[hit.ColumnIndex];
                 clickedCell.Selected = true;
 
-                var acc = _accounts.Where(a => a.name == (string)accounts_dataGridView.Rows[clickedCell.RowIndex].Cells[0].Value).FirstOrDefault();
+                var accName = (string)accounts_dataGridView.Rows[clickedCell.RowIndex].Cells[0].Value;
+                accounts_label_selected.Text = accName;
+
+                var acc = _accounts.Where(a => a.name == accName).FirstOrDefault();
 
                 if (acc != null)
                 {
@@ -899,22 +902,15 @@ namespace TibiantisHelper
 
                                 if (acc.house != blank)
                                 {
-                                    var house = new MenuItem("Premium");
-                                    var houseAdd30 = new MenuItem("Add 30 days (piggybank)", (s, ee) =>
+                                    var house = new MenuItem("House");
+                                    var houseAdd30 = new MenuItem("Add 30 days", (s, ee) =>
                                     {
                                         acc.house = acc.house.AddDays(30);
                                         AccountsPopulate();
                                         AccountsSave(file_accounts);
                                     });
-                                    var houseAdd33 = new MenuItem("Add 33 days (paypal)", (s, ee) =>
-                                    {
-                                        acc.house = acc.house.AddDays(33);
-                                        AccountsPopulate();
-                                        AccountsSave(file_accounts);
-                                    });
 
                                     house.MenuItems.Add(houseAdd30);
-                                    house.MenuItems.Add(houseAdd33);
 
                                     menu.MenuItems.Add(house);
 
