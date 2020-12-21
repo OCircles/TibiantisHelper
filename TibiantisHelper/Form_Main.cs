@@ -1432,6 +1432,8 @@ namespace TibiantisHelper
 
         private void InitializeMonsterTab()
         {
+            monsters_listView.UseFiltering = true;
+
             // Monster list
             olvColumn18.AspectToStringConverter = delegate (object x)
             {
@@ -1504,6 +1506,14 @@ namespace TibiantisHelper
             }
         }
 
+
+        private void monsters_checkBox_hideUniques_CheckedChanged(object sender, EventArgs e)
+        {
+            if (monsters_checkBox_hideUniques.Checked)
+                monsters_listView.ModelFilter = new ModelFilter(delegate (object x) { return !string.IsNullOrEmpty(((Monster)x).Article); });
+            else
+                monsters_listView.ModelFilter = null;
+        }
 
         #endregion
 

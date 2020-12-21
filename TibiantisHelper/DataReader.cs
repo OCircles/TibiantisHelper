@@ -1188,6 +1188,8 @@ namespace TibiantisHelper
             public List<string> Flags;
 
             public string Name;
+            public string Article;
+
             public int Experience;
             public int SummonCost;
 
@@ -1250,6 +1252,9 @@ namespace TibiantisHelper
                                 {
                                     case "Name":
                                         monster.Name = CapitalizeString(GetBetweenChars(cleanLine, '"', '"'));
+                                        break;
+                                    case "Article":
+                                        monster.Article = CapitalizeString(GetBetweenChars(cleanLine, '"', '"'));
                                         break;
                                     case "Experience":
                                         monster.Experience = int.Parse(split[2]);

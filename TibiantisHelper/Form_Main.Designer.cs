@@ -194,6 +194,7 @@
             this.header_linkLabel_tibiantisInfo = new System.Windows.Forms.LinkLabel();
             this.header_linkLabel_discord = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.monsters_checkBox_hideUniques = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.header_pictureBox)).BeginInit();
             this.header_panel_vocations.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -1858,6 +1859,7 @@
             // 
             // splitContainer7.Panel1
             // 
+            this.splitContainer7.Panel1.Controls.Add(this.monsters_checkBox_hideUniques);
             this.splitContainer7.Panel1.Controls.Add(this.monsters_textBox);
             this.splitContainer7.Panel1.Controls.Add(this.monsters_labelName);
             // 
@@ -1878,7 +1880,7 @@
             this.monsters_textBox.Name = "monsters_textBox";
             this.monsters_textBox.ReadOnly = true;
             this.monsters_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.monsters_textBox.Size = new System.Drawing.Size(329, 144);
+            this.monsters_textBox.Size = new System.Drawing.Size(329, 121);
             this.monsters_textBox.TabIndex = 1;
             this.monsters_textBox.WordWrap = false;
             // 
@@ -2253,6 +2255,17 @@
             this.header_linkLabel_discord.Text = "Tibiantis Discord";
             this.header_linkLabel_discord.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
+            // monsters_checkBox_hideUniques
+            // 
+            this.monsters_checkBox_hideUniques.AutoSize = true;
+            this.monsters_checkBox_hideUniques.Location = new System.Drawing.Point(6, 180);
+            this.monsters_checkBox_hideUniques.Name = "monsters_checkBox_hideUniques";
+            this.monsters_checkBox_hideUniques.Size = new System.Drawing.Size(149, 17);
+            this.monsters_checkBox_hideUniques.TabIndex = 2;
+            this.monsters_checkBox_hideUniques.Text = "Hide Unique Monsters";
+            this.monsters_checkBox_hideUniques.UseVisualStyleBackColor = true;
+            this.monsters_checkBox_hideUniques.CheckedChanged += new System.EventHandler(this.monsters_checkBox_hideUniques_CheckedChanged);
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -2558,6 +2571,7 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox items_checkBox_hideExpiring;
+        private System.Windows.Forms.CheckBox monsters_checkBox_hideUniques;
     }
 }
 
