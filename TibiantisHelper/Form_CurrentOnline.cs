@@ -38,19 +38,27 @@ namespace TibiantisHelper
                 listBox1.Items.Clear();
                 foreach (var p in Players)
                 {
-                    if (p.Name.Substring(0, textBox1.Text.Length).Equals(textBox1.Text,StringComparison.OrdinalIgnoreCase))
-                        listBox1.Items.Add($"({p.Level}, {p.Vocation}) {p.Name}");
+                    if (p.Name.Length >= textBox1.Text.Length)
+                        if (p.Name.Substring(0, textBox1.Text.Length).Equals(textBox1.Text,StringComparison.OrdinalIgnoreCase))
+                            listBox1.Items.Add(GeneratePlayerString(p));
                 }
             }
             else
                 AddAllUsers();
         }
 
+        private string GeneratePlayerString(Form_Main.Player p)
+        {
+            string parenthesis = $"({p.Level}, {p.Vocation})";
+            var length = 10;
+            return parenthesis.PadRight(length).Substring(0, length) + p.Name; 
+        }
+
         private void AddAllUsers()
         {
             listBox1.Items.Clear();
             foreach (var p in Players)
-                listBox1.Items.Add($"({p.Level}, {p.Vocation}) {p.Name}");
+                listBox1.Items.Add(GeneratePlayerString(p));
         }
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
