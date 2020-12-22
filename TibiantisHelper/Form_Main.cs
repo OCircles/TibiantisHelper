@@ -1460,6 +1460,8 @@ namespace TibiantisHelper
             monsters_listView.UseFiltering = true;
 
             // Monster list
+
+            // Summon mana
             olvColumn18.AspectToStringConverter = delegate (object x)
             {
                 var s = (int)x;
@@ -1538,6 +1540,31 @@ namespace TibiantisHelper
                 monsters_listView.ModelFilter = new ModelFilter(delegate (object x) { return !string.IsNullOrEmpty(((Monster)x).Article); });
             else
                 monsters_listView.ModelFilter = null;
+        }
+
+        private void monsters_checkBox_showSummonLevel_CheckedChanged(object sender, EventArgs e)
+        {
+            if (monsters_checkBox_showSummonLevel.Checked)
+            {
+                olvColumn18.AspectToStringConverter = delegate (object x)
+                {
+                    var s = (int)x;
+
+                    if (s == 0) return "N/A";
+                    return (Math.Ceiling(((decimal)s - 35) / 30) + 8).ToString();
+                };
+            } 
+            else
+            {
+                olvColumn18.AspectToStringConverter = delegate (object x)
+                {
+                    var s = (int)x;
+
+                    if (s == 0) return "N/A";
+                    return s + " MP";
+                };
+            }
+            monsters_listView.SetObjects(monsters_listView.Objects);
         }
 
         #endregion
@@ -2969,7 +2996,6 @@ namespace TibiantisHelper
             Settings.Default.Save();
             Environment.Exit(0);
         }
-
     }
 
     public static class ImageComboBox

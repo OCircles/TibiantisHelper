@@ -1,4 +1,7 @@
-﻿
+﻿--- MONSTERS ---
+
+Manually remove all the missing post-7.4 items from drop tables
+
 --- CALCULATORS ----
  
 New calculator - floor reset

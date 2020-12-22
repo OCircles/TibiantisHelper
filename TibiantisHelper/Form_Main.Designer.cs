@@ -160,6 +160,7 @@
             this.tabPage_monsters = new System.Windows.Forms.TabPage();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.monsters_checkBox_hideUniques = new System.Windows.Forms.CheckBox();
             this.monsters_textBox = new System.Windows.Forms.TextBox();
             this.monsters_labelName = new System.Windows.Forms.Label();
             this.monsters_dropListView = new BrightIdeasSoftware.ObjectListView();
@@ -194,7 +195,7 @@
             this.header_linkLabel_tibiantisInfo = new System.Windows.Forms.LinkLabel();
             this.header_linkLabel_discord = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.monsters_checkBox_hideUniques = new System.Windows.Forms.CheckBox();
+            this.monsters_checkBox_showSummonLevel = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.header_pictureBox)).BeginInit();
             this.header_panel_vocations.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -1859,6 +1860,7 @@
             // 
             // splitContainer7.Panel1
             // 
+            this.splitContainer7.Panel1.Controls.Add(this.monsters_checkBox_showSummonLevel);
             this.splitContainer7.Panel1.Controls.Add(this.monsters_checkBox_hideUniques);
             this.splitContainer7.Panel1.Controls.Add(this.monsters_textBox);
             this.splitContainer7.Panel1.Controls.Add(this.monsters_labelName);
@@ -1867,20 +1869,32 @@
             // 
             this.splitContainer7.Panel2.Controls.Add(this.monsters_dropListView);
             this.splitContainer7.Size = new System.Drawing.Size(335, 400);
-            this.splitContainer7.SplitterDistance = 200;
+            this.splitContainer7.SplitterDistance = 215;
             this.splitContainer7.TabIndex = 0;
+            // 
+            // monsters_checkBox_hideUniques
+            // 
+            this.monsters_checkBox_hideUniques.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.monsters_checkBox_hideUniques.AutoSize = true;
+            this.monsters_checkBox_hideUniques.Location = new System.Drawing.Point(3, 195);
+            this.monsters_checkBox_hideUniques.Name = "monsters_checkBox_hideUniques";
+            this.monsters_checkBox_hideUniques.Size = new System.Drawing.Size(149, 17);
+            this.monsters_checkBox_hideUniques.TabIndex = 2;
+            this.monsters_checkBox_hideUniques.Text = "Hide Unique Monsters";
+            this.monsters_checkBox_hideUniques.UseVisualStyleBackColor = true;
+            this.monsters_checkBox_hideUniques.CheckedChanged += new System.EventHandler(this.monsters_checkBox_hideUniques_CheckedChanged);
             // 
             // monsters_textBox
             // 
             this.monsters_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.monsters_textBox.Location = new System.Drawing.Point(3, 53);
+            this.monsters_textBox.Location = new System.Drawing.Point(3, 34);
             this.monsters_textBox.Multiline = true;
             this.monsters_textBox.Name = "monsters_textBox";
             this.monsters_textBox.ReadOnly = true;
             this.monsters_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.monsters_textBox.Size = new System.Drawing.Size(329, 121);
+            this.monsters_textBox.Size = new System.Drawing.Size(329, 132);
             this.monsters_textBox.TabIndex = 1;
             this.monsters_textBox.WordWrap = false;
             // 
@@ -1891,7 +1905,7 @@
             this.monsters_labelName.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.monsters_labelName.Location = new System.Drawing.Point(3, 0);
             this.monsters_labelName.Name = "monsters_labelName";
-            this.monsters_labelName.Size = new System.Drawing.Size(329, 50);
+            this.monsters_labelName.Size = new System.Drawing.Size(329, 31);
             this.monsters_labelName.TabIndex = 0;
             this.monsters_labelName.Text = "No monster selected";
             this.monsters_labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1917,7 +1931,7 @@
             this.monsters_dropListView.MultiSelect = false;
             this.monsters_dropListView.Name = "monsters_dropListView";
             this.monsters_dropListView.ShowGroups = false;
-            this.monsters_dropListView.Size = new System.Drawing.Size(335, 196);
+            this.monsters_dropListView.Size = new System.Drawing.Size(335, 181);
             this.monsters_dropListView.TabIndex = 0;
             this.monsters_dropListView.UseCompatibleStateImageBehavior = false;
             this.monsters_dropListView.View = System.Windows.Forms.View.Details;
@@ -2255,16 +2269,17 @@
             this.header_linkLabel_discord.Text = "Tibiantis Discord";
             this.header_linkLabel_discord.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
-            // monsters_checkBox_hideUniques
+            // monsters_checkBox_showSummonLevel
             // 
-            this.monsters_checkBox_hideUniques.AutoSize = true;
-            this.monsters_checkBox_hideUniques.Location = new System.Drawing.Point(6, 180);
-            this.monsters_checkBox_hideUniques.Name = "monsters_checkBox_hideUniques";
-            this.monsters_checkBox_hideUniques.Size = new System.Drawing.Size(149, 17);
-            this.monsters_checkBox_hideUniques.TabIndex = 2;
-            this.monsters_checkBox_hideUniques.Text = "Hide Unique Monsters";
-            this.monsters_checkBox_hideUniques.UseVisualStyleBackColor = true;
-            this.monsters_checkBox_hideUniques.CheckedChanged += new System.EventHandler(this.monsters_checkBox_hideUniques_CheckedChanged);
+            this.monsters_checkBox_showSummonLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.monsters_checkBox_showSummonLevel.AutoSize = true;
+            this.monsters_checkBox_showSummonLevel.Location = new System.Drawing.Point(3, 172);
+            this.monsters_checkBox_showSummonLevel.Name = "monsters_checkBox_showSummonLevel";
+            this.monsters_checkBox_showSummonLevel.Size = new System.Drawing.Size(146, 17);
+            this.monsters_checkBox_showSummonLevel.TabIndex = 3;
+            this.monsters_checkBox_showSummonLevel.Text = "Show Summon Level";
+            this.monsters_checkBox_showSummonLevel.UseVisualStyleBackColor = true;
+            this.monsters_checkBox_showSummonLevel.CheckedChanged += new System.EventHandler(this.monsters_checkBox_showSummonLevel_CheckedChanged);
             // 
             // Form_Main
             // 
@@ -2572,6 +2587,7 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox items_checkBox_hideExpiring;
         private System.Windows.Forms.CheckBox monsters_checkBox_hideUniques;
+        private System.Windows.Forms.CheckBox monsters_checkBox_showSummonLevel;
     }
 }
 
