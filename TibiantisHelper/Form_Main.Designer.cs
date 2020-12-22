@@ -160,6 +160,7 @@
             this.tabPage_monsters = new System.Windows.Forms.TabPage();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.monsters_checkBox_showSummonLevel = new System.Windows.Forms.CheckBox();
             this.monsters_checkBox_hideUniques = new System.Windows.Forms.CheckBox();
             this.monsters_textBox = new System.Windows.Forms.TextBox();
             this.monsters_labelName = new System.Windows.Forms.Label();
@@ -195,7 +196,6 @@
             this.header_linkLabel_tibiantisInfo = new System.Windows.Forms.LinkLabel();
             this.header_linkLabel_discord = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.monsters_checkBox_showSummonLevel = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.header_pictureBox)).BeginInit();
             this.header_panel_vocations.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -1872,6 +1872,18 @@
             this.splitContainer7.SplitterDistance = 215;
             this.splitContainer7.TabIndex = 0;
             // 
+            // monsters_checkBox_showSummonLevel
+            // 
+            this.monsters_checkBox_showSummonLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.monsters_checkBox_showSummonLevel.AutoSize = true;
+            this.monsters_checkBox_showSummonLevel.Location = new System.Drawing.Point(3, 172);
+            this.monsters_checkBox_showSummonLevel.Name = "monsters_checkBox_showSummonLevel";
+            this.monsters_checkBox_showSummonLevel.Size = new System.Drawing.Size(146, 17);
+            this.monsters_checkBox_showSummonLevel.TabIndex = 3;
+            this.monsters_checkBox_showSummonLevel.Text = "Show Summon Level";
+            this.monsters_checkBox_showSummonLevel.UseVisualStyleBackColor = true;
+            this.monsters_checkBox_showSummonLevel.CheckedChanged += new System.EventHandler(this.monsters_checkBox_showSummonLevel_CheckedChanged);
+            // 
             // monsters_checkBox_hideUniques
             // 
             this.monsters_checkBox_hideUniques.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -2269,18 +2281,6 @@
             this.header_linkLabel_discord.Text = "Tibiantis Discord";
             this.header_linkLabel_discord.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
-            // monsters_checkBox_showSummonLevel
-            // 
-            this.monsters_checkBox_showSummonLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.monsters_checkBox_showSummonLevel.AutoSize = true;
-            this.monsters_checkBox_showSummonLevel.Location = new System.Drawing.Point(3, 172);
-            this.monsters_checkBox_showSummonLevel.Name = "monsters_checkBox_showSummonLevel";
-            this.monsters_checkBox_showSummonLevel.Size = new System.Drawing.Size(146, 17);
-            this.monsters_checkBox_showSummonLevel.TabIndex = 3;
-            this.monsters_checkBox_showSummonLevel.Text = "Show Summon Level";
-            this.monsters_checkBox_showSummonLevel.UseVisualStyleBackColor = true;
-            this.monsters_checkBox_showSummonLevel.CheckedChanged += new System.EventHandler(this.monsters_checkBox_showSummonLevel_CheckedChanged);
-            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -2300,7 +2300,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Main";
             this.ShowIcon = false;
-            this.Text = "Tibiantis Helper v0.92";
+            this.Text = "Tibiantis Helper v0.96";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
