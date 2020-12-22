@@ -1296,10 +1296,15 @@ namespace TibiantisHelper
                         calculator_textBox_result.Text +=  $") takes {regenString} and uses {foodDiv}x {food.Name} (" +
                             (((double)food.GetAttributeValue("Weight")) / 100) * foodDiv + "oz)";
 
+
+                        var unitsString = "";
+                        if (spell.ProduceAmount != 0) unitsString = $", generating {spell.ProduceAmount} units each time";
+
+
                         calculator_textBox_result.Text += Environment.NewLine + Environment.NewLine;
                         calculator_textBox_result.Text += 
-                            $"Casting \"{spell.Words}\" {casts} times," +
-                            $" generating {spell.ProduceAmount} units each time for a total of " +
+                            $"Casting \"{spell.Words}\" {casts} times" +
+                            $"{unitsString} for a total of " +
                             $"{totalMana} mana ({spell.Mana} mana per cast)";
 
                     }
