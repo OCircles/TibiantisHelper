@@ -1,18 +1,5 @@
-﻿---- NETWORK COMPONENTS ----
- 
-Better online player list (name, level, class + add to login tracker context menu option)
-
---- ITEMS ----
-
-Item search
- 
-Item category rings, fix duplication + add time column
- 
-Fix throwables attack values
- 
+﻿
 --- CALCULATORS ----
- 
-Calculator - production: add mana
  
 New calculator - floor reset
 New calculator - bedmage

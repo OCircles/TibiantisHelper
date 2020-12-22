@@ -1126,7 +1126,7 @@ namespace TibiantisHelper
 
             timers_contextMenuStrip.Items.Add("Bedmage (01:40:00)", null, (ss, ee) => TimersAdd("Bedmage", "01:40:00", 1, false));
 
-            timers_contextMenuStrip.Items.Add("Idle (00:15:00)", null, (ss, ee) => TimersAdd("Idle", "00:15:00", 1, false));
+            timers_contextMenuStrip.Items.Add("Idle (00:15:00)", null, (ss, ee) => TimersAdd("Idle", "00:15:00", 1, true));
 
             timers_contextMenuStrip.Items.Add("Food (00:20:00)", null, (ss, ee) => TimersAdd("Food", "00:20:00", 1, false));
         }
