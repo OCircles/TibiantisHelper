@@ -23,6 +23,7 @@ namespace TibiantisHelper
 
         private void CurrentOnlineForm_Shown(object sender, EventArgs e)
         {
+            textBox1.Focus();
             AddAllUsers();
         }
 
@@ -63,7 +64,7 @@ namespace TibiantisHelper
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
-            string name = listBox1.SelectedItem.ToString().Split(')')[1].Substring(1);
+            string name = listBox1.SelectedItem.ToString().Split(')')[1].Substring(1).TrimStart();
             string webSafe = System.Net.WebUtility.UrlEncode(name);
 
             Utility.OpenInBrowser(@"https://tibiantis.online/?page=character&name=" + webSafe);
