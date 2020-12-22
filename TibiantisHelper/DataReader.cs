@@ -63,6 +63,9 @@ namespace TibiantisHelper
                         if (!File.Exists(dataFile))
                             BrowseForFile("Data File |Tibiantis.dat", dataFile);
                         break;
+                    case DialogResult.Cancel:
+                        Environment.Exit(0);
+                        break;
                 }
             }
 
