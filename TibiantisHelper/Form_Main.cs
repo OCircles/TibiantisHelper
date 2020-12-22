@@ -369,8 +369,16 @@ namespace TibiantisHelper
         {
             if (Settings.Default.EnableNetwork)
             {
-                await GetOnlineUsers();
-                LoginTrackerCheckOnline();
+                try
+                {
+                    await GetOnlineUsers();
+                    LoginTrackerCheckOnline();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Failed something in network components" + Environment.NewLine + Environment.NewLine);
+                    Console.WriteLine(ex.Message);
+                }
             }
 
         }
