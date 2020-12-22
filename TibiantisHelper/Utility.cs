@@ -44,8 +44,12 @@ namespace TibiantisHelper
 
                             if (vocS == "none") vocS = "No Vocation";
 
+                            var prem = "Free Account";
+                            if (line.Contains("Premium")) prem = "Premium Account";
+
                             userData[0] = levS;
                             userData[1] = CapitalizeString(vocS);
+                            userData[2] = prem;
                         }
                     }
                 }

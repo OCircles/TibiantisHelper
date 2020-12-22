@@ -32,7 +32,7 @@ namespace TibiantisHelper
 
                 if (info != null)
                 {
-                    var infoString = $"{textBox1.Text}{Environment.NewLine}Level {info[0]}, {info[1]}";
+                    var infoString = $"{textBox1.Text}{Environment.NewLine}Level {info[0]}, {info[1]}{Environment.NewLine}{info[2]}";
                     MessageBox.Show(infoString, "Lookup Result", MessageBoxButtons.OK);
                 }
                 else
