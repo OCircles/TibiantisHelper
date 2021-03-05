@@ -21,7 +21,7 @@ I recommend the following:
 
 ## Updating
 
-When you download a newer version, do NOT replace **TibiantisHelper.exe.config** in order to keep your old settings.
+When you download a newer version, do NOT replace **TibiantisHelper.exe.config** if you want to keep your old settings.
 
 You don't have to, but you might also want to delete your old data folder, but it is never *required* to do this; at worst you'd have some unused old files left over if you just drag-and-drop overwrite it.
 
