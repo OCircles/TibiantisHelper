@@ -98,6 +98,12 @@
     <Compile Include="Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_MinimapProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MinimapProcessing.Designer.cs">
+      <DependentUpon>Form_MinimapProcessing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_PlayerLookup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_MinimapProcessing.resx">
+      <DependentUpon>Form_MinimapProcessing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_PlayerLookup.resx">
       <DependentUpon>Form_PlayerLookup.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,10 +182,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup> 
-    <Content Include="data\**"> 
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory> 
-    </Content> 
+  <ItemGroup>
+    <Content Include="data\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

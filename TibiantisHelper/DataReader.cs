@@ -561,6 +561,42 @@ namespace TibiantisHelper
 
         #endregion
 
+        #region Minimap
+
+        public static Bitmap ReadMinimap(string file)
+        {
+            Bitmap map = new Bitmap(256,256);
+
+            using (BinaryReader reader = new BinaryReader(File.OpenRead(file), Encoding.ASCII))
+            {
+                for (int x = 0; x < 256; x++)
+                {
+                    for (int y = 0; y < 256; y++)
+                    {
+                        byte current = reader.ReadByte();
+
+
+                        int R = 51 * (current / 36);
+                        int G = 51 * ((current / 6) % 6);
+                        int B = 51 * (current % 6);
+
+                        if (R > 255) R = 0;
+                        if (G > 255) G = 0;
+                        if (B > 255) B = 0;
+
+                        Color c = Color.FromArgb(R, G, B);
+
+
+                        map.SetPixel(x, y, c);
+                    }
+                }
+            }
+
+            return map;
+        }
+
+        #endregion
+
 
         #region Rune
 
@@ -1395,6 +1431,7 @@ namespace TibiantisHelper
         }
 
         #endregion
+
 
     }
 }
