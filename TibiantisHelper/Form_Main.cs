@@ -468,9 +468,22 @@ namespace TibiantisHelper
                                 i++;
                             }
 
+                            if (!header_linkLabel_playersOnline.Visible)
+                                header_linkLabel_playersOnline.Visible = true;
+
                             header_linkLabel_playersOnline.Text = line.Substring(index + 3, end) + " players";
                             notifyIcon1.Text = "Tibiantis Helper";
                             notifyIcon1.Text += Environment.NewLine + header_linkLabel_playersOnline.Text;
+                        }
+                        else if (line.Contains("'text-danger'>Offline"))
+                        {
+                            header_label_onlineStatus.Text = "Offline";
+
+                            header_linkLabel_playersOnline.Text = "0 players";
+                            notifyIcon1.Text = "Tibiantis Helper";
+                            notifyIcon1.Text += Environment.NewLine + header_linkLabel_playersOnline.Text;
+
+                            _currentlyOnline.Clear();
                         }
 
                     }

@@ -321,7 +321,7 @@
             this.header_linkLabel_playersOnline.Size = new System.Drawing.Size(60, 13);
             this.header_linkLabel_playersOnline.TabIndex = 5;
             this.header_linkLabel_playersOnline.TabStop = true;
-            this.header_linkLabel_playersOnline.Text = "0 Players";
+            this.header_linkLabel_playersOnline.Text = "0 players";
             this.toolTip1.SetToolTip(this.header_linkLabel_playersOnline, "Right-click to open in browser");
             this.header_linkLabel_playersOnline.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.header_linkLabel_playersOnline_LinkClicked);
             // 
