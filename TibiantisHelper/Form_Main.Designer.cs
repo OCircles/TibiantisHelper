@@ -870,6 +870,7 @@
             // 
             // items_checkBox_hideExpiring
             // 
+            this.items_checkBox_hideExpiring.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.items_checkBox_hideExpiring.AutoSize = true;
             this.items_checkBox_hideExpiring.Location = new System.Drawing.Point(3, 200);
             this.items_checkBox_hideExpiring.Name = "items_checkBox_hideExpiring";
