@@ -74,6 +74,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="calculators\Calculator_Experience.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="calculators\Calculator_Experience.Designer.cs">
+      <DependentUpon>Calculator_Experience.cs</DependentUpon>
+    </Compile>
+    <Compile Include="calculators\Calculator_Production.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="calculators\Calculator_Production.Designer.cs">
+      <DependentUpon>Calculator_Production.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_CurrentOnline.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +144,12 @@
       <DependentUpon>Control_Timer.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="calculators\Calculator_Experience.resx">
+      <DependentUpon>Calculator_Experience.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="calculators\Calculator_Production.resx">
+      <DependentUpon>Calculator_Production.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_CurrentOnline.resx">
       <DependentUpon>Form_CurrentOnline.cs</DependentUpon>
     </EmbeddedResource>

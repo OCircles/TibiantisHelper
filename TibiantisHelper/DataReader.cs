@@ -11,7 +11,7 @@ using static TibiantisHelper.Utility;
 
 namespace TibiantisHelper
 {
-    class DataReader
+    public class DataReader
     {
 
         // Thanks to https://github.com/TibiaJS/sprites-extractor for providing a neat way of reading sprite file format

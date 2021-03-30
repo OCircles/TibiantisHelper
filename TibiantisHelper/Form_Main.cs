@@ -24,16 +24,16 @@ namespace TibiantisHelper
     public partial class Form_Main : Form
     {
 
-        List<Account> _accounts;
-        List<Control_Timer> _timers;
-        public List<Vocation> _vocations;
-        List<TrackedPlayer> _trackedPlayers;
-        List<string> _lastOnline; // Separate list for _trackedPlayers
-        List<Player> _currentlyOnline;
+        public static List<Account> _accounts;
+        public static List<Control_Timer> _timers;
+        public static List<Vocation> _vocations;
+        public static List<TrackedPlayer> _trackedPlayers;
+        public static List<string> _lastOnline; // Separate list for _trackedPlayers
+        public static List<Player> _currentlyOnline;
 
-        SelectedVocation _selectedVocation;
+        public static SelectedVocation _selectedVocation;
 
-        DataReader _dataReader;
+        public DataReader _dataReader;
 
         static string file_accounts = "Accounts.xml";
         static string file_loginAlert = "TrackedPlayers.xml";
@@ -561,7 +561,7 @@ namespace TibiantisHelper
         {
             Settings.Default.Vocation = (byte)header_vocation_comboBox.SelectedIndex;
             UpdateVocation();
-            UpdateProductionDropdown();
+            Calculator_Production.UpdateProductionDropdown();
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -650,7 +650,7 @@ namespace TibiantisHelper
             header_vocation_label2.Text += "/min";
             header_vocation_label4.Text += "/min";
 
-            CalculateProduction();
+            Calculator_Production.CalculateProduction();
         }
 
         public class Vocation
@@ -679,7 +679,7 @@ namespace TibiantisHelper
 
         }
 
-        private struct SelectedVocation
+        public struct SelectedVocation
         {
             public string Name;
             public double regenHP;
@@ -1040,7 +1040,7 @@ namespace TibiantisHelper
             }
         }
 
-        private void TimersAdd(string name, string time, int multiplier, bool autoRestart)
+        public void TimersAdd(string name, string time, int multiplier, bool autoRestart)
         {
             Control_Timer timer = new Control_Timer(name, time, multiplier, autoRestart, _trayIcon);
 
@@ -1192,284 +1192,38 @@ namespace TibiantisHelper
 
         #region Calculator
 
+        Calculator_Production Calculator_Production;
+        Calculator_Experience Calculator_Experience;
+
+
         private void InitializeCalculatorTab()
         {
+            Calculator_Production = new Calculator_Production(this);
+            calculator_addPage("Production", Calculator_Production);
 
-            foreach (TabPage t in calculator_tabControl.TabPages)
-                calculator_listBox.Items.Add(t.Text);
 
-            calculator_listBox.SelectedIndex = 0;
-
-            // Food
-            List<Item> foods = _dataReader.items.Where(i => i.Flags.Contains("Food")).OrderBy(i => i.Name).ToList();
-            foreach (var f in foods) calculator_production_comboBox_food.Items.Add(f.Name);
-            calculator_production_comboBox_food.SelectedIndex = 0;
-
-            // Runes
-            UpdateProductionDropdown();
-
-            CalculateProduction();
+            Calculator_Experience = new Calculator_Experience(this);
+            calculator_addPage("Experience", Calculator_Experience);
         }
         
+        private void calculator_addPage(string title, UserControl cc)
+        {
+            var page = new TabPage();
+            page.BackColor = Color.White;
+            page.Controls.Add(cc);
+            cc.Dock = DockStyle.Fill;
+            calculator_tabControl.TabPages.Add(page);
+            calculator_listBox.Items.Add(title);
+        }
+
         private void calculator_listBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             calculator_tabControl.SelectedIndex = calculator_listBox.SelectedIndex;
         }
 
-        #region Production
-
-        string calculator_production_addTimer_time = "";
-        string calculator_production_addTimer_title = "";
-
-        private void CalculateProduction()
-        {
-
-            if (calculator_production_comboBox_rune.Text != "N/A")
-            {
-                bool num1, num2;
-                num1 = num2 = false;
-
-                int in1, in2;
-                in1 = in2 = 0;
-
-                num1 = int.TryParse(calculator_production_textBox_amountSingle.Text, out in1);
-                num2 = int.TryParse(calculator_production_textBox_amountBackpack.Text, out in2);
-
-                if (string.IsNullOrEmpty(calculator_production_textBox_amountSingle.Text))
-                {
-                    num1 = true;
-                    in1 = 0;
-                }
-
-                if (string.IsNullOrEmpty(calculator_production_textBox_amountBackpack.Text))
-                {
-                    num2 = true;
-                    in2 = 0;
-                }
-
-                if (num1 && num2)
-                {
-                    if (in1+in2 > 0)
-                    {
-                        Item food = _dataReader.items.Where(f => f.Name == calculator_production_comboBox_food.Text).FirstOrDefault();
-                        Rune rune = _dataReader.runes.Where(r => r.Name == calculator_production_comboBox_rune.Text).FirstOrDefault();
-                        Spell spell = _dataReader.spells.Where(s => s.Name == calculator_production_comboBox_rune.Text).FirstOrDefault();
-                    
-                        string itemName = rune.Name;
-
-                        int amount = in1 + (in2 * 20);
-                        double casts = amount;
-
-                        if (spell.Type == 0)
-                        {
-                            // For arrows/bolts, adjust amount for stacks
-                            itemName = _dataReader.items.Where(i => i.ID == spell.ProduceID).FirstOrDefault().Name;
-
-                            casts = Math.Ceiling((double)(amount * 100) / spell.ProduceAmount);
-                        }
-
-
-                        double totalMana = casts * spell.Mana;
-
-                        double regenSec = (totalMana / _selectedVocation.regenMP) * 60;
-                        double foodSec = ((double)((int)food.GetAttributeValue("Nutrition") * 2) / 10) * 60;
-                        double foodDiv = Math.Ceiling(regenSec / foodSec);
-
-
-                        TimeSpan regenTime = TimeSpan.FromSeconds(regenSec);
-
-                        string regenString = "";
-
-                        if (regenTime.Hours != 0) regenString += string.Format("{0:D1}h", regenTime.Hours + (regenTime.Days*24));
-                        if (regenTime.Minutes != 0) regenString += string.Format("{0:D1}m", regenTime.Minutes);
-                        if (regenTime.Seconds != 0) regenString += string.Format("{0:D1}s", regenTime.Seconds);
-
-                        calculator_production_addTimer_time = string.Format("{0:D2}:{1:D2}:{2:D2}", regenTime.Hours + (regenTime.Days * 24), regenTime.Minutes, regenTime.Seconds); ;
-                        calculator_production_addTimer_title = itemName;
-
-
-                        // Assemble result in textbox. The arrows/bolts stuff makes this a huge mess lol
-
-                        calculator_textBox_result.Text = $"A {_selectedVocation.Name} producing {itemName} (";
-
-                        string parenthesis = "";
-
-                        if (spell.Type == 1)
-                            parenthesis = $"{casts}x";
-                        else
-                        {
-                            parenthesis += $"{amount} stack";
-                            if (amount != 1) parenthesis += "s";
-                        }
-                        calculator_production_addTimer_title += $" {parenthesis} ({_selectedVocation.Name})";
-
-
-                        calculator_textBox_result.Text += parenthesis;
-
-                        calculator_textBox_result.Text +=  $") takes {regenString} and uses {foodDiv}x {food.Name} (" +
-                            (((double)food.GetAttributeValue("Weight")) / 100) * foodDiv + "oz)";
-
-
-                        var unitsString = "";
-                        if (spell.ProduceAmount != 0) unitsString = $", generating {spell.ProduceAmount} units each time";
-
-
-                        calculator_textBox_result.Text += Environment.NewLine + Environment.NewLine;
-                        calculator_textBox_result.Text += 
-                            $"Casting \"{spell.Words}\" {casts} times" +
-                            $"{unitsString} for a total of " +
-                            $"{totalMana} mana ({spell.Mana} mana per cast)";
-
-                    }
-                    else
-                    {
-                        calculator_textBox_result.Text = "Please input production amount above";
-                    }
-                } 
-                else
-                {
-                    calculator_textBox_result.Text = "Could not parse input";
-                }
-            }
-        }
-        private void UpdateProductionDropdown()
-        {
-            string oldSelection = calculator_production_comboBox_rune.Text;
-
-            calculator_production_comboBox_rune.Items.Clear();
-
-            List<Spell> spells = _dataReader.spells.Where(s => s.ProduceID != 0).OrderBy(s=>s.Name).ToList();
-
-            foreach (var s in spells)
-            {
-                bool add = false;
-                if (header_vocation_comboBox.SelectedIndex == 0 && s.VocKnight) add = true;
-                if (header_vocation_comboBox.SelectedIndex == 1 && s.VocPaladin) add = true;
-                if (header_vocation_comboBox.SelectedIndex == 2 && s.VocSorcerer) add = true;
-                if (header_vocation_comboBox.SelectedIndex == 3 && s.VocDruid) add = true;
-
-                if (add)
-                    calculator_production_comboBox_rune.Items.Add(s.Name);
-            }
-            if (calculator_production_comboBox_rune.Items.Count == 0) calculator_production_comboBox_rune.Items.Add("N/A");
-
-            int oldIndex = calculator_production_comboBox_rune.Items.IndexOf(oldSelection);
-            
-            if (oldIndex != -1)
-                calculator_production_comboBox_rune.SelectedIndex = oldIndex;
-            else
-                calculator_production_comboBox_rune.SelectedIndex = 0;
-        }
-
-        private void calculator_production_button_addTimer_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(calculator_production_addTimer_time))
-            {
-                TimersAdd(calculator_production_addTimer_title, calculator_production_addTimer_time, 0, false);
-                tabControl1.SelectedTab = tabPage_timers;
-            }
-        }
-
-
-        private void calculator_production_textBox_TextChanged(object sender, EventArgs e)
-        {
-            CalculateProduction();
-        }
-
-        private void calculator_production_textBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
-        }
-
-        private void calculator_production_comboBox_food_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CalculateProduction();
-        }
-
-        private void calculator_production_comboBox_rune_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CalculateProduction();
-        }
-
         #endregion
 
-        #region Experience
-        private void CalculateExperience()
-        {
-            TimeSpan startTime, endTime;
-            bool startTimeParsed, endTimeParsed;
-            startTimeParsed = endTimeParsed = false;
 
-            startTimeParsed = TimeSpan.TryParse(calculator_experience_textBox_startTime.Text, out startTime);
-            endTimeParsed = TimeSpan.TryParse(calculator_experience_textBox_endTime.Text, out endTime);
-            
-            if (startTimeParsed & endTimeParsed & startTime.Days == 0 & endTime.Days == 0)
-            {
-                int startExp, endExp;
-                startExp = endExp = 0;
-
-                bool startExpParsed, endExpParsed;
-                startExpParsed = endExpParsed = false;
-
-                startExpParsed = int.TryParse(calculator_experience_textBox_startExp.Text, out startExp);
-                endExpParsed = int.TryParse(calculator_experience_textBox_endExp.Text, out endExp);
-                
-                if (startExpParsed & endExpParsed)
-                {
-                    double totalExp = endExp - startExp;
-
-                    if (totalExp > 0)
-                    {
-                        TimeSpan diff = new TimeSpan();
-
-                        if (endTime.TotalSeconds < startTime.TotalSeconds)
-                        {
-                            TimeSpan endOfDay = new TimeSpan(1,0,0,0);
-                            endOfDay = endOfDay.Subtract(startTime);
-
-                            diff = diff.Add(endOfDay);
-                            diff = diff.Add(endTime);
-                        }
-                        else
-                            diff = endTime.Subtract(startTime);
-
-                        double expPerHour = (totalExp / diff.TotalSeconds) * 60 * 60;
-
-                        string durationString = "";
-
-
-                        if (diff.Hours != 0) durationString += string.Format("{0:D1}h", diff.Hours);
-                        if (diff.Minutes != 0) durationString += string.Format("{0:D1}m", diff.Minutes);
-                        if (diff.Seconds != 0) durationString += string.Format("{0:D1}s", diff.Seconds);
-
-                        calculator_textBox_result.Text = $"You gained {totalExp} experience over a duration of " +
-                            $"{durationString} ({Math.Round(expPerHour, 1)} exp per hour)";
-                         
-                         
-                    }
-                }
-
-            }
-
-        }
-        
-        private void calculator_experience_button_startTime_Click(object sender, EventArgs e)
-        {
-            calculator_experience_textBox_startTime.Text = DateTime.Now.ToString("HH:mm:ss");
-        }
-
-        private void calculator_experience_button_endTime_Click(object sender, EventArgs e)
-        {
-            calculator_experience_textBox_endTime.Text = DateTime.Now.ToString("HH:mm:ss");
-        }
-        private void calculator_textBox_TextChanged(object sender, EventArgs e)
-        {
-            CalculateExperience();
-        }
-
-        #endregion
-
-        #endregion
 
         #region Monsters
 
@@ -2958,7 +2712,7 @@ namespace TibiantisHelper
         }
         #endregion
 
-        private class TrackedPlayer
+        public class TrackedPlayer
         {
             public string Name;
             public string Alert;        // Leaving this uninitialized is good for DataTable.WriteXml, avoids writing empty xml nodes
