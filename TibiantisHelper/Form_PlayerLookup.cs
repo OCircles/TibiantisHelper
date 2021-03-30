@@ -32,8 +32,8 @@ namespace TibiantisHelper
 
                 if (info != null)
                 {
-                    var infoString = $"{textBox1.Text}{Environment.NewLine}Level {info[0]}, {info[1]}{Environment.NewLine}{info[2]}";
-                    MessageBox.Show(infoString, "Lookup Result", MessageBoxButtons.OK);
+                    var result = new Form_PlayerLookupResult(info[0], info[1], info[2], info[3], info[4], info[5]);
+                    result.ShowDialog();
                 }
                 else
                     MessageBox.Show($"Could not retrieve info on player \"{textBox1.Text}\", did you mistype it?", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

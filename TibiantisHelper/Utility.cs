@@ -16,12 +16,14 @@ namespace TibiantisHelper
 
         public static async Task<string[]> GetUserData(string username)
         {
-            string[] userData = { "", "", "" };
+            string[] userData = { "", "", "", "", "", "" };
 
             try
             {
 
-                HttpResponseMessage response = await webClient.GetAsync("https://tibiantis.online/?page=character&name=" + username.Replace(' ', '+'));
+                string webSafe = System.Net.WebUtility.UrlEncode(username);
+
+                HttpResponseMessage response = await webClient.GetAsync("https://tibiantis.online/?page=character&name=" + webSafe);
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
 
@@ -36,9 +38,15 @@ namespace TibiantisHelper
                     {
                         if (line.Contains("Name:"))
                         {
+                            var ni = line.IndexOf("Name:") + 5 + 8;
                             var li = line.IndexOf("Level:") + 6 + 8;
                             var vi = line.IndexOf("Vocation:") + 9 + 8;
+                            var gi = line.IndexOf("showguild&name");
 
+                            if (gi != -1)
+                                gi += 14;
+
+                            var namS = GetBetweenChars(line.Substring(ni), '>', '<');
                             var levS = GetBetweenChars(line.Substring(li), '>', '<');
                             var vocS = GetBetweenChars(line.Substring(vi), '>', '<');
 
@@ -47,9 +55,49 @@ namespace TibiantisHelper
                             var prem = "Free Account";
                             if (line.Contains("Premium")) prem = "Premium Account";
 
-                            userData[0] = levS;
-                            userData[1] = CapitalizeString(vocS);
-                            userData[2] = prem;
+
+                            var guild = "None";
+                            if (gi != -1)
+                                guild = GetBetweenChars(line.Substring(gi), '>', '<');
+
+                            var chars = new List<(string, string)>();
+                            var ci = line.IndexOf("<b>Characters</b>");
+
+                            if (ci != -1)
+                            {
+                                line = line.Substring(ci);
+                                ci = line.IndexOf("character&name=");
+
+                                while (ci != -1)
+                                {
+                                    line = line.Substring(ci);
+
+                                    var chrS = GetBetweenChars(line, '>', '<');
+
+                                    var etd = line.IndexOf("</td>") + 5;
+                                    line = line.Substring(etd);
+
+                                    var chlS = GetBetweenChars(line, '>', '<');
+
+                                    (string, string) tup = (chrS, chlS);
+
+                                    if (!username.Equals(chrS,StringComparison.OrdinalIgnoreCase))
+                                    chars.Add(tup);
+
+                                    ci = line.IndexOf("character&name=");
+                                    if (ci == -1) break;
+                                }
+                            }
+
+                            userData[0] = namS;
+                            userData[1] = levS;
+                            userData[2] = CapitalizeString(vocS).TrimEnd(' ');
+                            userData[3] = prem;
+                            userData[4] = guild;
+
+                            foreach ( var tup in chars )
+                                userData[5] += tup.Item1 + "," + tup.Item2 + ";";
+
                         }
                     }
                 }

@@ -116,6 +116,12 @@
     <Compile Include="Form_MinimapProcessing.Designer.cs">
       <DependentUpon>Form_MinimapProcessing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_PlayerLookupResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PlayerLookupResult.Designer.cs">
+      <DependentUpon>Form_PlayerLookupResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_PlayerLookup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_MinimapProcessing.resx">
       <DependentUpon>Form_MinimapProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_PlayerLookupResult.resx">
+      <DependentUpon>Form_PlayerLookupResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_PlayerLookup.resx">
       <DependentUpon>Form_PlayerLookup.cs</DependentUpon>
