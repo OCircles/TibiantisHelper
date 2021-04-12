@@ -14,6 +14,12 @@ namespace TibiantisHelper
     {
         private List<Form_Main.Player> Players;
 
+        Color colorKnight = Color.LightCoral;
+        Color colorPaladin = Color.SkyBlue;
+        Color colorSorcerer = Color.DarkGray;
+        Color colorDruid = Color.MediumSeaGreen;
+        Color colorNovoc = Color.WhiteSmoke;
+
         public Form_CurrentOnline(List<Form_Main.Player> Players)
         {
             this.Players = Players;
@@ -36,63 +42,95 @@ namespace TibiantisHelper
         {
             if (!string.IsNullOrEmpty(textBox1.Text))
             {
-                listBox1.Items.Clear();
+                listView1.Items.Clear();
                 foreach (var p in Players)
                 {
                     if (p.Name.Length >= textBox1.Text.Length)
-                        if (p.Name.Substring(0, textBox1.Text.Length).Equals(textBox1.Text,StringComparison.OrdinalIgnoreCase))
-                            listBox1.Items.Add(GeneratePlayerString(p));
+                        if (p.Name.Substring(0, textBox1.Text.Length).Equals(textBox1.Text, StringComparison.OrdinalIgnoreCase))
+                            AddPlayer(p);
                 }
+                listView1.Columns[1].AutoResize(ColumnHeaderAutoResizeStyle.ColumnContent);
+                listView1.Columns[3].Width = listView1.Width - listView1.Columns[1].Width - listView1.Columns[2].Width - 17;
             }
             else
                 AddAllUsers();
         }
 
-        private string GeneratePlayerString(Form_Main.Player p)
-        {
-            string parenthesis = $"({p.Level}, {p.Vocation})";
-            var length = 10;
-            return parenthesis.PadRight(length).Substring(0, length) + p.Name; 
-        }
-
         private void AddAllUsers()
         {
-            listBox1.Items.Clear();
+            listView1.Items.Clear();
             foreach (var p in Players)
-                listBox1.Items.Add(GeneratePlayerString(p));
+                AddPlayer(p);
+
+            listView1.Columns[1].AutoResize(ColumnHeaderAutoResizeStyle.ColumnContent);
+            listView1.Columns[3].Width = listView1.Width - listView1.Columns[1].Width - listView1.Columns[2].Width - 17;
         }
 
-        private void listBox1_DoubleClick(object sender, EventArgs e)
+        private void AddPlayer(Form_Main.Player player)
         {
-            string name = listBox1.SelectedItem.ToString().Split(')')[1].Substring(1).TrimStart();
-            string webSafe = System.Net.WebUtility.UrlEncode(name);
-
-            Utility.OpenInBrowser(@"https://tibiantis.online/?page=character&name=" + webSafe);
+            ListViewItem item = new ListViewItem(new string[] { "", player.Level.ToString(), player.Vocation, player.Name });
+            item.Tag = player;
+            ColorItem(item, player.Vocation);
+            listView1.Items.Add(item);
         }
 
-        private void listBox1_MouseDown(object sender, MouseEventArgs e)
+        private void ColorItem(ListViewItem item, string voc)
+        {
+            switch (voc)
+            {
+                case "EK":
+                case "K":
+                    item.BackColor = colorKnight;
+                    break;
+                case "RP":
+                case "P":
+                    item.BackColor = colorPaladin;
+                    break;
+                case "MS":
+                case "S":
+                    item.BackColor = colorSorcerer;
+                    break;
+                case "ED":
+                case "D":
+                    item.BackColor = colorDruid;
+                    break;
+                default:
+                    item.BackColor = colorNovoc;
+                    break;
+            }
+        }
+
+        private void listView1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
             {
-                Point pt = new Point(e.X, e.Y);
-                var index = listBox1.IndexFromPoint(pt);
-                if ( index >= 0 )
+                var item = listView1.GetItemAt(e.X, e.Y);
+                if ( item != null )
                 {
-                    listBox1.SelectedIndex = index;
-
-                    string name = listBox1.SelectedItem.ToString().Split(')')[1].Substring(1);
-
+                    var player = (Form_Main.Player)item.Tag;
                     var ct = new ContextMenuStrip();
 
-                    ct.Items.Add("Name to Clipboard", null, (s,ee) => { Utility.StringToClipboard(name); });
+                    ct.Items.Add("Name to Clipboard", null, (s,ee) => { Utility.StringToClipboard(player.Name); });
                     ct.Items.Add("Add to Login Alert", null, (s, ee) => {
-                        ((Form_Main)Owner).LoginTrackerAddPlayer(name);
+                        ((Form_Main)Owner).LoginTrackerAddPlayer(player.Name);
                         ((Form_Main)Owner).OpenLoginAlertTab();
                     });
 
                     ct.Show(Cursor.Position);
                 }
+
             }
+        }
+
+        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (listView1.SelectedItems[0] == null) return;
+
+            var player = (Form_Main.Player)listView1.SelectedItems[0].Tag;
+            string webSafe = System.Net.WebUtility.UrlEncode(player.Name);
+
+            Utility.OpenInBrowser(@"https://tibiantis.online/?page=character&name=" + webSafe);
+
         }
     }
 }
