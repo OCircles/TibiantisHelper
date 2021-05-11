@@ -17,6 +17,7 @@ namespace TibiantisHelper
         public string Time;
         public int Multiplier;
         public bool AutoRestart;
+        public bool TraybarFlash;
 
         public Form_TimerDialog(bool edit = false, string name = "", string time = "00:00:00", int multiplier = 0, bool autoRestart = false)
         {
@@ -30,6 +31,7 @@ namespace TibiantisHelper
                 this.textBox2.Text = time;
                 this.numericUpDown1.Value = multiplier;
                 this.checkBox1.Checked = autoRestart;
+                this.checkBox2.Checked = TraybarFlash;
             }
         }
 
@@ -48,6 +50,7 @@ namespace TibiantisHelper
                         this.Time = textBox2.Text;
                         this.Multiplier = Convert.ToInt32(numericUpDown1.Value);
                         this.AutoRestart = checkBox1.Checked;
+                        this.TraybarFlash = checkBox2.Checked;
 
                         this.DialogResult = DialogResult.OK;
                         this.Close();

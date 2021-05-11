@@ -38,7 +38,7 @@ namespace TibiantisHelper
         static string file_accounts = "Accounts.xml";
         static string file_loginAlert = "TrackedPlayers.xml";
 
-        public static NotifyIcon _trayIcon;
+        public static TraybarContainer _traybarContainer;
 
         static string webpage_whoIsOnline = "https://tibiantis.online/?page=WhoIsOnline";
 
@@ -86,7 +86,9 @@ namespace TibiantisHelper
         private void PostInitialize()
         {
 
-            _trayIcon = notifyIcon1;
+            _traybarContainer.flashTimer = timerTrayFlash;
+            _traybarContainer.notifyIcon = notifyIcon1;
+            _traybarContainer.notifyIcon.Icon = Resources.IconTrayGreen;
 
             InitializeVocations();
             ReadAccounts(file_accounts);
@@ -144,9 +146,9 @@ namespace TibiantisHelper
                 {
                     if (Settings.Default.NotifOnMinimizeToTray)
                     {
-                        _trayIcon.BalloonTipTitle = "Tibiantis Helper";
-                        _trayIcon.BalloonTipIcon = ToolTipIcon.Info;
-                        _trayIcon.BalloonTipText = $"Minimized to taskbar{Environment.NewLine}{Environment.NewLine}" +
+                        _traybarContainer.notifyIcon.BalloonTipTitle = "Tibiantis Helper";
+                        _traybarContainer.notifyIcon.BalloonTipIcon = ToolTipIcon.Info;
+                        _traybarContainer.notifyIcon.BalloonTipText = $"Minimized to taskbar{Environment.NewLine}{Environment.NewLine}" +
                             "(Click this if you don't want to see this message anymore)";
 
                         Tray_ShowBubble(TrayBubbleBehaviour.MuteMinimize, 5000);
@@ -190,6 +192,27 @@ namespace TibiantisHelper
         
         private static TrayBubbleBehaviour trayBubbleBehaviour = 0;
 
+        public struct TraybarContainer
+        {
+            public NotifyIcon notifyIcon;
+            public Timer flashTimer;
+            public bool flashIsRed;
+        }
+
+        private void timerTrayFlash_Tick(object sender, EventArgs e)
+        {
+            if (_traybarContainer.flashIsRed)
+            {
+                _traybarContainer.notifyIcon.Icon = Resources.IconTrayGreen;
+                _traybarContainer.flashIsRed = false;
+            }
+            else
+            {
+                _traybarContainer.notifyIcon.Icon = Resources.IconTrayRed;
+                _traybarContainer.flashIsRed = true;
+            }
+        }
+
 
         private void notifyIcon1_BalloonTipClicked(object sender, EventArgs e)
         {
@@ -213,12 +236,12 @@ namespace TibiantisHelper
         public static void Tray_ShowBubble(TrayBubbleBehaviour behaviour, int time)
         {
             trayBubbleBehaviour = behaviour;
-            _trayIcon.ShowBalloonTip(time);
+            _traybarContainer.notifyIcon.ShowBalloonTip(time);
         }
         public static void Tray_ShowBubble(TrayBubbleBehaviour behaviour, int time, string title, string text, ToolTipIcon icon)
         {
             trayBubbleBehaviour = behaviour;
-            _trayIcon.ShowBalloonTip(time, title, text, icon);
+            _traybarContainer.notifyIcon.ShowBalloonTip(time, title, text, icon);
         }
         
         
@@ -267,7 +290,7 @@ namespace TibiantisHelper
             {
                 if (!enableNetworkToolstrip.Checked)
                 {
-                    timer1.Stop();
+                    timerNetworkStuff.Stop();
                     notifyIcon1.Text = "Tibiantis Helper";
                     header_label_onlineStatus.Text = "Offline";
                     header_linkLabel_playersOnline.Text = "0 players";
@@ -276,7 +299,7 @@ namespace TibiantisHelper
                 }
                 else
                 {
-                    timer1.Start();
+                    timerNetworkStuff.Start();
                     Settings.Default.EnableNetwork = true;
                     Settings.Default.Save();
                     await GetNetworkStuff();
@@ -360,7 +383,7 @@ namespace TibiantisHelper
 
         #region Network Components
 
-        private async void timer1_Tick(object sender, EventArgs e)
+        private async void timerNetworkStuff_Tick(object sender, EventArgs e)
         {
             await GetNetworkStuff();
         }
@@ -1040,9 +1063,9 @@ namespace TibiantisHelper
             }
         }
 
-        public void TimersAdd(string name, string time, int multiplier, bool autoRestart)
+        public void TimersAdd(string name, string time, int multiplier, bool autoRestart, bool trayFlash)
         {
-            Control_Timer timer = new Control_Timer(name, time, multiplier, autoRestart, _trayIcon);
+            Control_Timer timer = new Control_Timer(name, time, multiplier, autoRestart, trayFlash, _traybarContainer);
 
             _timers.Add(timer);
 
@@ -1063,7 +1086,7 @@ namespace TibiantisHelper
 
             if (dialog.ShowDialog(this) == DialogResult.OK)
             {
-                TimersAdd(dialog.TimerName, dialog.Time, dialog.Multiplier, dialog.AutoRestart);
+                TimersAdd(dialog.TimerName, dialog.Time, dialog.Multiplier, dialog.AutoRestart, dialog.TraybarFlash);
             }
 
 
@@ -1095,11 +1118,11 @@ namespace TibiantisHelper
 
                 (runesSingle as ToolStripMenuItem).DropDownItems.Add(r.Name, null, (s, ee) =>
                     TimersAdd($"{r.Name} ({_selectedVocation.Name})",
-                    regenStringSingle, 1, false));
+                    regenStringSingle, 1, false, false));
 
                 (runesBackpack as ToolStripMenuItem).DropDownItems.Add(r.Name, null, (s, ee) =>
                     TimersAdd($"BP of {r.Name} ({_selectedVocation.Name})",
-                    regenStringBp, 1, false));
+                    regenStringBp, 1, false, false));
 
             }
 
@@ -1134,22 +1157,22 @@ namespace TibiantisHelper
 
                 (conjuringSingle as ToolStripMenuItem).DropDownItems.Add(item.Name, null, (ss, ee) =>
                     TimersAdd($"Stack of {item.Name} ({_selectedVocation.Name})",
-                    regenStringSingle, 1, false));
+                    regenStringSingle, 1, false, false));
 
                 (conjuringBackpack as ToolStripMenuItem).DropDownItems.Add(item.Name, null, (ss, ee) =>
                     TimersAdd($"BP of {item.Name} ({_selectedVocation.Name})",
-                    regenStringBp, 1, false));
+                    regenStringBp, 1, false, false));
 
 
             }
 
             timers_contextMenuStrip.Items.Add("-");
 
-            timers_contextMenuStrip.Items.Add("Bedmage (01:40:00)", null, (ss, ee) => TimersAdd("Bedmage", "01:40:00", 1, false));
+            timers_contextMenuStrip.Items.Add("Bedmage (01:40:00)", null, (ss, ee) => TimersAdd("Bedmage", "01:40:00", 1, false, true));
 
-            timers_contextMenuStrip.Items.Add("Idle (00:15:00)", null, (ss, ee) => TimersAdd("Idle", "00:15:00", 1, true));
+            timers_contextMenuStrip.Items.Add("Idle (00:15:00)", null, (ss, ee) => TimersAdd("Idle", "00:15:00", 1, true, false));
 
-            timers_contextMenuStrip.Items.Add("Food (00:20:00)", null, (ss, ee) => TimersAdd("Food", "00:20:00", 1, false));
+            timers_contextMenuStrip.Items.Add("Food (00:20:00)", null, (ss, ee) => TimersAdd("Food", "00:20:00", 1, false, false));
         }
 
         private void button5_MouseClick(object sender, MouseEventArgs e)
@@ -2764,10 +2787,11 @@ namespace TibiantisHelper
                 }
             }
 
-            _trayIcon.Visible = false;
+            _traybarContainer.notifyIcon.Visible = false;
             Settings.Default.Save();
             Environment.Exit(0);
         }
+
     }
 
     public static class ImageComboBox

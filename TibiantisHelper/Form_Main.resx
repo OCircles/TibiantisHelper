@@ -123,63 +123,10 @@
   <metadata name="tray_contextMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>459, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="notifyIcon1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>822, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="header_pictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAkAAAAGgCAYAAABCNtgpAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
@@ -5079,11 +5026,11 @@ This feature could definitely use some polishing as well as a way to add/subtrac
 
 If you don't like this app using network resources, there's an option in the tray bar (right click) to entirely disable this component</value>
   </data>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="timerNetworkStuff.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>372, 17</value>
   </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>822, 17</value>
+  <metadata name="timerTrayFlash.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>919, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>71</value>

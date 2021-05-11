@@ -167,11 +167,12 @@
             this.loginAlert_button_remove = new System.Windows.Forms.Button();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.loginAlert_dataGridView = new System.Windows.Forms.DataGridView();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timerNetworkStuff = new System.Windows.Forms.Timer(this.components);
             this.header_linkLabel_tibiantisHome = new System.Windows.Forms.LinkLabel();
             this.header_linkLabel_tibiantisInfo = new System.Windows.Forms.LinkLabel();
             this.header_linkLabel_discord = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.timerTrayFlash = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.header_pictureBox)).BeginInit();
             this.header_panel_vocations.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -270,7 +271,6 @@
             // 
             this.notifyIcon1.BalloonTipText = "Testy";
             this.notifyIcon1.ContextMenuStrip = this.tray_contextMenuStrip;
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "Tibiantis Helper";
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.BalloonTipClicked += new System.EventHandler(this.notifyIcon1_BalloonTipClicked);
@@ -1951,11 +1951,11 @@
             this.loginAlert_dataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.loginAlert_dataGridView_KeyDown);
             this.loginAlert_dataGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loginAlert_dataGridView_MouseDown);
             // 
-            // timer1
+            // timerNetworkStuff
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 300000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timerNetworkStuff.Enabled = true;
+            this.timerNetworkStuff.Interval = 300000;
+            this.timerNetworkStuff.Tick += new System.EventHandler(this.timerNetworkStuff_Tick);
             // 
             // header_linkLabel_tibiantisHome
             // 
@@ -1989,6 +1989,11 @@
             this.header_linkLabel_discord.TabStop = true;
             this.header_linkLabel_discord.Text = "Tibiantis Discord";
             this.header_linkLabel_discord.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            // 
+            // timerTrayFlash
+            // 
+            this.timerTrayFlash.Interval = 1000;
+            this.timerTrayFlash.Tick += new System.EventHandler(this.timerTrayFlash_Tick);
             // 
             // Form_Main
             // 
@@ -2162,7 +2167,7 @@
         private System.Windows.Forms.SplitContainer splitContainer5;
         private System.Windows.Forms.LinkLabel header_linkLabel_playersOnline;
         private System.Windows.Forms.Label header_label_onlineStatus;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timerNetworkStuff;
         private System.Windows.Forms.Label header_vocation_label2;
         private System.Windows.Forms.Panel header_panel_vocations;
         private System.Windows.Forms.Label header_vocation_label4;
@@ -2267,6 +2272,7 @@
         public System.Windows.Forms.TabControl tabControl1;
         public System.Windows.Forms.CheckBox header_vocation_promo_checkBox;
         public System.Windows.Forms.ComboBox header_vocation_comboBox;
+        private System.Windows.Forms.Timer timerTrayFlash;
     }
 }
 

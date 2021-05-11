@@ -23,37 +23,39 @@ namespace TibiantisHelper
         public int CurrentTime;
         public int Multiplier;
         public bool AutoRestart;
+        public bool TraybarFlash;
 
         private string targetTimeString;
 
         public ToolStripMenuItem deleteButton;
 
 
-        private NotifyIcon notifier; // Lazy solution lol
+        private Form_Main.TraybarContainer container; // Lazy solution lol
 
-        public Control_Timer(string name, string time, int multiplier, bool autoRestart, NotifyIcon notifier)
+        public Control_Timer(string name, string time, int multiplier, bool autoRestart, bool trayFlash, Form_Main.TraybarContainer container)
         {
             InitializeComponent();
 
             deleteButton = removeToolStripMenuItem;
 
-            Init(name, time, multiplier, autoRestart, notifier);
+            Init(name, time, multiplier, autoRestart, trayFlash, container);
 
         }
 
-        private void Init(string name, string time, int multiplier, bool autoRestart, NotifyIcon notifier)
+        private void Init(string name, string time, int multiplier, bool autoRestart, bool trayFlash, Form_Main.TraybarContainer container)
         {
             this.Stop();
 
             this.TimerComponent = this.timer1;
 
-            this.notifier = notifier;
+            this.container = container;
             this.TimerName = name;
 
             this.label_name.Text = TimerName;
             this.Multiplier = multiplier;
 
             this.AutoRestart = autoRestart;
+            this.TraybarFlash = trayFlash;
 
             this.CurrentTime = 0;
 
@@ -127,6 +129,9 @@ namespace TibiantisHelper
                 }
             }
 
+            if (this.TraybarFlash)
+                this.container.flashTimer.Enabled = true;
+
             if (this.AutoRestart)
                 this.Start();
 
@@ -174,6 +179,28 @@ namespace TibiantisHelper
 
             this.CurrentTime = 0;
 
+            if (this.TraybarFlash)
+            {
+                this.TraybarFlash = false;
+                bool keepFlashing = false;
+
+                foreach ( var t in Form_Main._timers )
+                {
+                    if (t.TraybarFlash && t.CurrentTime >= t.TargetTime)
+                        keepFlashing = true;
+                }
+
+                this.TraybarFlash = true;
+
+                if (!keepFlashing)
+                {
+                    this.container.flashTimer.Stop();
+                    this.container.notifyIcon.Icon = Resources.IconTrayGreen;
+                    this.container.flashIsRed = false;
+                }
+
+            }
+
 
             UpdateTime();
 
@@ -185,7 +212,7 @@ namespace TibiantisHelper
 
             if (dialog.ShowDialog(this) == DialogResult.OK)
             {
-                Init(dialog.TimerName, dialog.Time, dialog.Multiplier, dialog.AutoRestart, this.notifier);
+                Init(dialog.TimerName, dialog.Time, dialog.Multiplier, dialog.AutoRestart, dialog.TraybarFlash, this.container);
             }
         }
 
