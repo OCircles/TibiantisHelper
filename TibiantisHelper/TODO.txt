@@ -24,7 +24,6 @@ Save on exit
 --- Timers ---
 
 Icons for buttons
-When pressing play/restart on a completed timer, immediately set progress bar + time to 0
 
 --- TRADES ---
 
