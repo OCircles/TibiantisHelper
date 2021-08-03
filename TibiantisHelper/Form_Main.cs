@@ -152,8 +152,6 @@ namespace TibiantisHelper
                             "(Click this if you don't want to see this message anymore)";
 
                         Tray_ShowBubble(TrayBubbleBehaviour.MuteMinimize, 5000);
-
-
                     }
                     this.ShowInTaskbar = false;
                 }
@@ -161,6 +159,10 @@ namespace TibiantisHelper
             }
             else if (this.WindowState == FormWindowState.Normal)
             {
+                // Refresh sidebar in Accounts tab
+                var acc = _accounts.Where(a => a.name == accounts_label_selected.Text).FirstOrDefault();
+                AccountsDisplayInfo(acc);
+
                 this.ShowInTaskbar = true;
             }
         }
@@ -2784,6 +2786,14 @@ namespace TibiantisHelper
             Environment.Exit(0);
         }
 
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab.Text == "Accounts")
+            {
+                var acc = _accounts.Where(a => a.name == accounts_label_selected.Text).FirstOrDefault();
+                AccountsDisplayInfo(acc);
+            }
+        }
     }
 
     public static class ImageComboBox
