@@ -49,6 +49,7 @@
             this.tabPage_accounts = new System.Windows.Forms.TabPage();
             this.splitContainer12 = new System.Windows.Forms.SplitContainer();
             this.splitContainer13 = new System.Windows.Forms.SplitContainer();
+            this.accounts_checkBox_hideAcc = new System.Windows.Forms.CheckBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.accounts_label_selected = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
@@ -485,6 +486,7 @@
             // 
             // splitContainer13.Panel1
             // 
+            this.splitContainer13.Panel1.Controls.Add(this.accounts_checkBox_hideAcc);
             this.splitContainer13.Panel1.Controls.Add(this.textBox10);
             this.splitContainer13.Panel1.Controls.Add(this.accounts_label_selected);
             this.splitContainer13.Panel1.Controls.Add(this.button6);
@@ -494,8 +496,21 @@
             // 
             this.splitContainer13.Panel2.Controls.Add(this.textBox12);
             this.splitContainer13.Size = new System.Drawing.Size(235, 400);
-            this.splitContainer13.SplitterDistance = 157;
+            this.splitContainer13.SplitterDistance = 177;
             this.splitContainer13.TabIndex = 3;
+            // 
+            // accounts_checkBox_hideAcc
+            // 
+            this.accounts_checkBox_hideAcc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.accounts_checkBox_hideAcc.AutoSize = true;
+            this.accounts_checkBox_hideAcc.Checked = true;
+            this.accounts_checkBox_hideAcc.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.accounts_checkBox_hideAcc.Location = new System.Drawing.Point(4, 157);
+            this.accounts_checkBox_hideAcc.Name = "accounts_checkBox_hideAcc";
+            this.accounts_checkBox_hideAcc.Size = new System.Drawing.Size(149, 17);
+            this.accounts_checkBox_hideAcc.TabIndex = 5;
+            this.accounts_checkBox_hideAcc.Text = "Hide Account Number";
+            this.accounts_checkBox_hideAcc.UseVisualStyleBackColor = true;
             // 
             // textBox10
             // 
@@ -525,6 +540,8 @@
             // 
             // button6
             // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.Location = new System.Drawing.Point(0, 132);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(115, 23);
@@ -535,6 +552,8 @@
             // 
             // button7
             // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button7.Location = new System.Drawing.Point(121, 132);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(115, 23);
@@ -551,7 +570,7 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.ReadOnly = true;
             this.textBox12.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox12.Size = new System.Drawing.Size(235, 239);
+            this.textBox12.Size = new System.Drawing.Size(235, 219);
             this.textBox12.TabIndex = 0;
             this.textBox12.Text = resources.GetString("textBox12.Text");
             // 
@@ -2275,6 +2294,7 @@
         public System.Windows.Forms.CheckBox header_vocation_promo_checkBox;
         public System.Windows.Forms.ComboBox header_vocation_comboBox;
         private System.Windows.Forms.Timer timerTrayFlash;
+        private System.Windows.Forms.CheckBox accounts_checkBox_hideAcc;
     }
 }
 
