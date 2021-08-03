@@ -91,6 +91,7 @@ namespace TibiantisHelper
         {
 
             if (this.CurrentTime == this.TargetTime) this.CurrentTime = 0;
+            UpdateTime();
 
             this.Stop();
             this.timer1.Start();
