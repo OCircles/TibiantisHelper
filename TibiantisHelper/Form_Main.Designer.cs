@@ -511,6 +511,7 @@
             this.accounts_checkBox_hideAcc.TabIndex = 5;
             this.accounts_checkBox_hideAcc.Text = "Hide Account Number";
             this.accounts_checkBox_hideAcc.UseVisualStyleBackColor = true;
+            this.accounts_checkBox_hideAcc.CheckedChanged += new System.EventHandler(this.accounts_checkBox_hideAcc_CheckedChanged);
             // 
             // textBox10
             // 

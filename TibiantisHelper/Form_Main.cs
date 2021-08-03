@@ -110,6 +110,8 @@ namespace TibiantisHelper
 
             // App settings
 
+            accounts_checkBox_hideAcc.Checked = Settings.Default.AccountsHideLogin;
+
             // Login Alert
             loginAlert_checkBox_notifTray.Checked = Settings.Default.LoginAlertNotifTray;
             loginAlert_checkBox_notifSound.Checked = Settings.Default.LoginAlertNotifSound;
@@ -743,18 +745,21 @@ namespace TibiantisHelper
         }
         private void AccountsDisplayInfo(Account acc)
         {
-            textBox10.Text = $"Name: {acc.name}{Environment.NewLine}Account: {acc.login}";
+            if (acc != null)
+            {
+                textBox10.Text = $"Name: {acc.name}{Environment.NewLine}Account: {acc.login}";
 
-            DateTime blank = new DateTime();
+                DateTime blank = new DateTime();
              
-            if (acc.premium != blank || acc.house != blank) textBox10.Text += $"{Environment.NewLine}{Environment.NewLine}";
+                if (acc.premium != blank || acc.house != blank) textBox10.Text += $"{Environment.NewLine}{Environment.NewLine}";
 
-            if (acc.premium != blank) textBox10.Text += $"Premium ends in {(acc.premium - DateTime.Today).Days} days " +
-                    $"({acc.premium.ToString("d", CultureInfo.CreateSpecificCulture("en-US"))}){Environment.NewLine}{Environment.NewLine}";
+                if (acc.premium != blank) textBox10.Text += $"Premium ends in {(acc.premium - DateTime.Today).Days} days " +
+                        $"({acc.premium.ToString("d", CultureInfo.CreateSpecificCulture("en-US"))}){Environment.NewLine}{Environment.NewLine}";
 
 
-            if (acc.house != blank) textBox10.Text += $"House payment in {(acc.house - DateTime.Today).Days} days " +
-                    $"({acc.house.ToString("d", CultureInfo.CreateSpecificCulture("en-US"))})";
+                if (acc.house != blank) textBox10.Text += $"House payment in {(acc.house - DateTime.Today).Days} days " +
+                        $"({acc.house.ToString("d", CultureInfo.CreateSpecificCulture("en-US"))})";
+            }
 
         }
 
@@ -971,6 +976,17 @@ namespace TibiantisHelper
         }
 
 
+
+        private void accounts_checkBox_hideAcc_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.Default.AccountsHideLogin = accounts_checkBox_hideAcc.Checked;
+            Settings.Default.Save();
+
+            AccountsPopulate();
+        }
+
+
+
         private void AccountsPopulate()
         {
 
@@ -987,19 +1003,61 @@ namespace TibiantisHelper
 
             foreach (var a in _accounts)
             {
-                table.Rows.Add(a.name, a.login, a.premium, a.house);
+                var login = a.login;
+                if (accounts_checkBox_hideAcc.Checked)
+                    login = ProtectedString(a.login);
+
+                table.Rows.Add(a.name, login, a.premium, a.house);
             }
 
             accounts_dataGridView.DataSource = table;
         }
 
+        private string ProtectedString(string input)
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder(input.Length);
+            for (int i = 0; i < input.Length; i++)
+                sb.Append('*');
+            return sb.ToString();
+        }
+
         private void AccountsSave(string path)
-        { 
-            if (accounts_dataGridView.DataSource != null)
+        {
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = true;
+
+            XmlWriter xmlWriter = XmlWriter.Create("Accounts.xml",settings);
+            xmlWriter.WriteStartDocument();
+            xmlWriter.WriteStartElement("Accounts");
+
+            foreach (var a in _accounts)
             {
-                DataTable t = (DataTable)accounts_dataGridView.DataSource;
-                t.WriteXml(path);
-            } 
+                xmlWriter.WriteStartElement("Player");
+
+                xmlWriter.WriteStartElement("Name");
+                xmlWriter.WriteString(a.name);
+                xmlWriter.WriteEndElement();
+
+                xmlWriter.WriteStartElement("Account");
+                xmlWriter.WriteString(a.login);
+                xmlWriter.WriteEndElement();
+
+                xmlWriter.WriteStartElement("Premium");
+                xmlWriter.WriteString(a.premium.ToString());
+                xmlWriter.WriteEndElement();
+
+                xmlWriter.WriteStartElement("HouseDate");
+                xmlWriter.WriteString(a.house.ToString());
+                xmlWriter.WriteEndElement();
+
+                xmlWriter.WriteEndElement();
+            }
+
+            xmlWriter.WriteEndElement();
+            xmlWriter.WriteEndDocument();
+
+            xmlWriter.Close();
+
         }
 
         private void ReadAccounts(string path)
@@ -1026,10 +1084,12 @@ namespace TibiantisHelper
                                 case "Account":
                                     acc.login = accNodes.InnerText;
                                     break;
-                                case "Premium_x0020_Expiry":
+                                case "Premium_x0020_Expiry": // Need for migrating v0.96 and earlier versions
+                                case "Premium":
                                     acc.premium = DateTime.Parse(accNodes.InnerText);
                                     break;
-                                case "House_x0020_Payment":
+                                case "House_x0020_Payment": // Also legacy migration thing
+                                case "HouseDate":
                                     acc.house = DateTime.Parse(accNodes.InnerText);
                                     break;
                             }
@@ -2794,6 +2854,7 @@ namespace TibiantisHelper
                 AccountsDisplayInfo(acc);
             }
         }
+
     }
 
     public static class ImageComboBox
