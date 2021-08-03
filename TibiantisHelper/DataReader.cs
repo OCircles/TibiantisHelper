@@ -789,6 +789,55 @@ namespace TibiantisHelper
             }
 
         }
+
+        public List<Item> GetItemsByFilter(List<Item> source, string filter)
+        {
+            List<Item> items = new List<Item>();
+            string[] filters = filter.Split(',');
+
+            List<string> flags = new List<string>();
+            List<string> attributes = new List<string>();
+
+            foreach (var f in filters)
+                if (f.Contains('=')) attributes.Add(f);
+                else flags.Add(f);
+
+
+
+            foreach (var i in source)
+                if (i.ID > 99)
+                {
+                    bool hasFlags, hasAttributes;
+                    hasFlags = hasAttributes = true;
+
+                    foreach (var flag in flags)
+                        if (!i.Flags.Contains(flag))
+                            hasFlags = false;
+
+                    foreach (var att in attributes)
+                    {
+                        bool attMatch = false;
+                        foreach (var targetAtt in i.Attributes)
+                        {
+                            var splitAtt = att.Split('=');
+
+                            if (targetAtt.Name == splitAtt[0])
+                            {
+                                if (splitAtt[1] == "*") attMatch = true;
+                                else if (targetAtt.Value == int.Parse(splitAtt[1])) attMatch = true;
+                            }
+                        }
+                        if (!attMatch) hasAttributes = false;
+                    }
+
+                    if (hasFlags && hasAttributes)
+                        items.Add(i);
+                }
+
+
+            return items;
+        }
+
         
         public List<Item> GetItemsByFlag(List<Item> source, string flag)
         {

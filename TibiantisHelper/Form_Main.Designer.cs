@@ -904,6 +904,7 @@
             "",
             "--- Other ---",
             "Runes",
+            "Light",
             "Food",
             "Equippable Container",
             "",
