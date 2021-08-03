@@ -29,10 +29,6 @@ Icons for buttons
 
 Datagridview, item + amount + price + from char + to char + char owner
 
---- ITEMS ---
-
-Add lights category
-
 --- CALCULATORS ----
  
 New calculator - floor reset
