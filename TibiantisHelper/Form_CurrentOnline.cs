@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static TibiantisHelper.Utility;
 
 namespace TibiantisHelper
 {
@@ -110,6 +111,18 @@ namespace TibiantisHelper
                     var player = (Form_Main.Player)item.Tag;
                     var ct = new ContextMenuStrip();
 
+                    ct.Items.Add("Quick Lookup", null, async (s, ee) =>
+                    {
+                        string[] info = await GetUserData(player.Name);
+
+                        if (info != null)
+                        {
+                            var result = new Form_PlayerLookupResult(info[0], info[1], info[2], info[3], info[4], info[5]);
+                            result.StartPosition = FormStartPosition.Manual;
+                            result.Location = new Point { X = Cursor.Position.X - (result.Width/2), Y = Cursor.Position.Y - (result.Height / 2) };
+                            result.ShowDialog();
+                        }
+                    });
                     ct.Items.Add("Name to Clipboard", null, (s,ee) => { Utility.StringToClipboard(player.Name); });
                     ct.Items.Add("Add to Login Alert", null, (s, ee) => {
                         ((Form_Main)Owner).LoginTrackerAddPlayer(player.Name);
