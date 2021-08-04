@@ -99,6 +99,7 @@ namespace TibiantisHelper
 
         public void Stop()
         {
+            EndTraybarFlash();
             this.timer1.Stop();
         }
 
@@ -178,16 +179,22 @@ namespace TibiantisHelper
             }
 
             button_play.Image = Resources.Play;
-            timer1.Stop();
+            this.Stop();
 
             this.CurrentTime = 0;
 
+            UpdateTime();
+
+        }
+
+        private void EndTraybarFlash()
+        {
             if (this.TraybarFlash)
             {
                 this.TraybarFlash = false;
                 bool keepFlashing = false;
 
-                foreach ( var t in Form_Main._timers )
+                foreach (var t in Form_Main._timers)
                 {
                     if (t.TraybarFlash && t.CurrentTime >= t.TargetTime)
                         keepFlashing = true;
@@ -203,10 +210,6 @@ namespace TibiantisHelper
                 }
 
             }
-
-
-            UpdateTime();
-
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
