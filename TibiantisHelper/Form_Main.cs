@@ -1032,13 +1032,13 @@ namespace TibiantisHelper
 
             foreach (var a in _accounts)
             {
-                xmlWriter.WriteStartElement("Player");
+                xmlWriter.WriteStartElement("Account");
 
                 xmlWriter.WriteStartElement("Name");
                 xmlWriter.WriteString(a.name);
                 xmlWriter.WriteEndElement();
 
-                xmlWriter.WriteStartElement("Account");
+                xmlWriter.WriteStartElement("Login");
                 xmlWriter.WriteString(a.login);
                 xmlWriter.WriteEndElement();
 
@@ -1081,10 +1081,11 @@ namespace TibiantisHelper
                                 case "Name":
                                     acc.name = accNodes.InnerText;
                                     break;
-                                case "Account":
+                                case "Account": // Legacy node name, need for migrating v0.96 and earlier xml:s
+                                case "Login":
                                     acc.login = accNodes.InnerText;
                                     break;
-                                case "Premium_x0020_Expiry": // Need for migrating v0.96 and earlier versions
+                                case "Premium_x0020_Expiry": // Also legacy migration thing
                                 case "Premium":
                                     acc.premium = DateTime.Parse(accNodes.InnerText);
                                     break;
