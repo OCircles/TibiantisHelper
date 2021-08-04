@@ -89,9 +89,6 @@ namespace TibiantisHelper
             if (width > longestText)
                 longestText = width;
 
-
-            Console.WriteLine(width);
-
             lbl.AutoSize = false;
             lbl.Width = longestText;
             lbl.Height = lbl.Font.Height + 2;

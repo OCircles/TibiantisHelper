@@ -1559,7 +1559,7 @@ namespace TibiantisHelper
 
                     var file = new MenuItem("Open", (s, ee) => {
                         System.Diagnostics.Process.Start(npcFolder + "\\" + npc.Filename);
-                        Console.WriteLine(npcFolder + "\\" + npc.Filename);
+                        // Console.WriteLine(npcFolder + "\\" + npc.Filename);
                 });
 
                  
