@@ -23,5 +23,4 @@ Skills        = {(HitPoints, 23, 0, 23, 0, 0, 0),
                  (CarryStrength, 100, 0, 100, 0, 0, 0),
                  (FistFighting, 17, 17, 17, 100, 1200, 1)}
 
-Inventory     = {(3577, 1, 400),
-                 (3492, 1, 100)}
+Inventory     = {(3577, 1, 400)}

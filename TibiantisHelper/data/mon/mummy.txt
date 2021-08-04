@@ -44,8 +44,7 @@ Inventory     = {(3027, 1, 10),
                  (3294, 1, 80),
                  (3054, 1, 1),
                  (3017, 1, 40),
-                 (3045, 1, 50),
-                 (3492, 3, 700)}
+                 (3045, 1, 50)}
 
 Talk          = {"I will ssswallow your sssoul!",
                  "Ahkahra exura belil mort!",

@@ -25,5 +25,4 @@ Skills        = {(HitPoints, 20, 0, 20, 0, 0, 0),
 
 Spells        = {Destination (1, 0, 0, 21) -> Damage (2, 2, 1) : 60}
 
-Inventory     = {(3577, 2, 10),
-                 (3492, 1, 50)}
+Inventory     = {(3577, 2, 10)}
