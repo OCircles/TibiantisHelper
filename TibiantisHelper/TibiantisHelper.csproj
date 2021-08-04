@@ -214,6 +214,11 @@
     <Content Include="data\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Settings.png" />
+    <None Include="Resources\Restart.png" />
+    <None Include="Resources\Stop.png" />
+    <None Include="Resources\Pause.png" />
+    <None Include="Resources\Play.png" />
     <None Include="Resources\IconTrayRed.ico" />
     <None Include="Resources\IconTrayGreen.ico" />
   </ItemGroup>

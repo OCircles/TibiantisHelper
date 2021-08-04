@@ -33,12 +33,12 @@
             this.label_name = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label_time = new System.Windows.Forms.Label();
-            this.button_misc = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button_stop = new System.Windows.Forms.Button();
             this.button_play = new System.Windows.Forms.Button();
+            this.button_stop = new System.Windows.Forms.Button();
+            this.button_misc = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +62,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar1.Location = new System.Drawing.Point(26, 20);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(485, 23);
+            this.progressBar1.Size = new System.Drawing.Size(489, 23);
             this.progressBar1.TabIndex = 1;
             // 
             // label_time
@@ -74,18 +74,6 @@
             this.label_time.Size = new System.Drawing.Size(54, 13);
             this.label_time.TabIndex = 2;
             this.label_time.Text = "label_time";
-            // 
-            // button_misc
-            // 
-            this.button_misc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_misc.ContextMenuStrip = this.contextMenuStrip1;
-            this.button_misc.Location = new System.Drawing.Point(581, 20);
-            this.button_misc.Name = "button_misc";
-            this.button_misc.Size = new System.Drawing.Size(26, 23);
-            this.button_misc.TabIndex = 3;
-            this.button_misc.Text = "...";
-            this.button_misc.UseVisualStyleBackColor = true;
-            this.button_misc.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_misc_MouseDown);
             // 
             // contextMenuStrip1
             // 
@@ -108,27 +96,39 @@
             this.removeToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.removeToolStripMenuItem.Text = "Remove";
             // 
-            // button_stop
-            // 
-            this.button_stop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_stop.Location = new System.Drawing.Point(549, 20);
-            this.button_stop.Name = "button_stop";
-            this.button_stop.Size = new System.Drawing.Size(26, 23);
-            this.button_stop.TabIndex = 4;
-            this.button_stop.Text = "⏹";
-            this.button_stop.UseVisualStyleBackColor = true;
-            this.button_stop.Click += new System.EventHandler(this.button_stop_Click);
-            // 
             // button_play
             // 
             this.button_play.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_play.Location = new System.Drawing.Point(517, 20);
+            this.button_play.Image = global::TibiantisHelper.Properties.Resources.Pause;
+            this.button_play.Location = new System.Drawing.Point(521, 20);
             this.button_play.Name = "button_play";
-            this.button_play.Size = new System.Drawing.Size(26, 23);
+            this.button_play.Size = new System.Drawing.Size(24, 24);
             this.button_play.TabIndex = 5;
-            this.button_play.Text = "⏸";
             this.button_play.UseVisualStyleBackColor = true;
             this.button_play.Click += new System.EventHandler(this.button_play_Click);
+            // 
+            // button_stop
+            // 
+            this.button_stop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_stop.Image = global::TibiantisHelper.Properties.Resources.Stop;
+            this.button_stop.Location = new System.Drawing.Point(551, 20);
+            this.button_stop.Name = "button_stop";
+            this.button_stop.Size = new System.Drawing.Size(24, 24);
+            this.button_stop.TabIndex = 4;
+            this.button_stop.UseVisualStyleBackColor = true;
+            this.button_stop.Click += new System.EventHandler(this.button_stop_Click);
+            // 
+            // button_misc
+            // 
+            this.button_misc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_misc.ContextMenuStrip = this.contextMenuStrip1;
+            this.button_misc.Image = global::TibiantisHelper.Properties.Resources.Settings;
+            this.button_misc.Location = new System.Drawing.Point(581, 20);
+            this.button_misc.Name = "button_misc";
+            this.button_misc.Size = new System.Drawing.Size(24, 24);
+            this.button_misc.TabIndex = 3;
+            this.button_misc.UseVisualStyleBackColor = true;
+            this.button_misc.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button_misc_MouseDown);
             // 
             // Control_Timer
             // 

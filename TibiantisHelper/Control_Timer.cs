@@ -135,6 +135,8 @@ namespace TibiantisHelper
 
             if (this.AutoRestart)
                 this.Start();
+            else
+                button_play.Image = Resources.Restart;
 
         }
 
@@ -156,11 +158,11 @@ namespace TibiantisHelper
             if ( timer1.Enabled )
             {
                 this.Stop();
-                button_play.Text = "▶";
+                button_play.Image = Resources.Play;
             } else
             {
                 this.Start();
-                button_play.Text = "⏸"; 
+                button_play.Image = Resources.Pause;
             }
         }
 
@@ -175,7 +177,7 @@ namespace TibiantisHelper
                 } 
             }
 
-            button_play.Text = "▶";
+            button_play.Image = Resources.Play;
             timer1.Stop();
 
             this.CurrentTime = 0;
