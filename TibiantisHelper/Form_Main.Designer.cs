@@ -44,8 +44,6 @@
             this.header_vocation_comboBox = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage_accounts = new System.Windows.Forms.TabPage();
             this.splitContainer12 = new System.Windows.Forms.SplitContainer();
             this.splitContainer13 = new System.Windows.Forms.SplitContainer();
@@ -168,6 +166,8 @@
             this.loginAlert_button_remove = new System.Windows.Forms.Button();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.loginAlert_dataGridView = new System.Windows.Forms.DataGridView();
+            this.tabPage_map = new System.Windows.Forms.TabPage();
+            this.tab_Map1 = new TibiantisHelper.Tab_Map();
             this.timerNetworkStuff = new System.Windows.Forms.Timer(this.components);
             this.header_linkLabel_tibiantisHome = new System.Windows.Forms.LinkLabel();
             this.header_linkLabel_tibiantisInfo = new System.Windows.Forms.LinkLabel();
@@ -178,8 +178,6 @@
             this.header_panel_vocations.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage_accounts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer12)).BeginInit();
             this.splitContainer12.Panel1.SuspendLayout();
@@ -266,6 +264,7 @@
             this.splitContainer11.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginAlert_dataGridView)).BeginInit();
+            this.tabPage_map.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -408,7 +407,6 @@
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage_accounts);
             this.tabControl1.Controls.Add(this.tabPage_timers);
             this.tabControl1.Controls.Add(this.tabPage_calculator);
@@ -417,6 +415,7 @@
             this.tabControl1.Controls.Add(this.tabPage_npc);
             this.tabControl1.Controls.Add(this.tabPage_monsters);
             this.tabControl1.Controls.Add(this.tabPage_loginAlert);
+            this.tabControl1.Controls.Add(this.tabPage_map);
             this.tabControl1.Location = new System.Drawing.Point(14, 9);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -424,27 +423,6 @@
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.AutoScroll = true;
-            this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(925, 406);
-            this.tabPage1.TabIndex = 8;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(925, 406);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // tabPage_accounts
             // 
@@ -1973,6 +1951,25 @@
             this.loginAlert_dataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.loginAlert_dataGridView_KeyDown);
             this.loginAlert_dataGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loginAlert_dataGridView_MouseDown);
             // 
+            // tabPage_map
+            // 
+            this.tabPage_map.Controls.Add(this.tab_Map1);
+            this.tabPage_map.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_map.Name = "tabPage_map";
+            this.tabPage_map.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_map.Size = new System.Drawing.Size(925, 406);
+            this.tabPage_map.TabIndex = 9;
+            this.tabPage_map.Text = "Map";
+            this.tabPage_map.UseVisualStyleBackColor = true;
+            // 
+            // tab_Map1
+            // 
+            this.tab_Map1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Map1.Location = new System.Drawing.Point(3, 3);
+            this.tab_Map1.Name = "tab_Map1";
+            this.tab_Map1.Size = new System.Drawing.Size(919, 400);
+            this.tab_Map1.TabIndex = 0;
+            // 
             // timerNetworkStuff
             // 
             this.timerNetworkStuff.Enabled = true;
@@ -2034,20 +2031,20 @@
             this.Controls.Add(this.header_pictureBox);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "Form_Main";
             this.ShowIcon = false;
             this.Text = "Tibiantis Helper v0.96";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_Main_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form_Main_KeyUp);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.header_pictureBox)).EndInit();
             this.header_panel_vocations.ResumeLayout(false);
             this.header_panel_vocations.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage_accounts.ResumeLayout(false);
             this.splitContainer12.Panel1.ResumeLayout(false);
             this.splitContainer12.Panel2.ResumeLayout(false);
@@ -2145,6 +2142,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginAlert_dataGridView)).EndInit();
+            this.tabPage_map.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2288,14 +2286,14 @@
         private System.Windows.Forms.CheckBox items_checkBox_hideExpiring;
         private System.Windows.Forms.CheckBox monsters_checkBox_hideUniques;
         private System.Windows.Forms.CheckBox monsters_checkBox_showSummonLevel;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.TextBox calculator_textBox_result;
         public System.Windows.Forms.TabControl tabControl1;
         public System.Windows.Forms.CheckBox header_vocation_promo_checkBox;
         public System.Windows.Forms.ComboBox header_vocation_comboBox;
         private System.Windows.Forms.Timer timerTrayFlash;
         private System.Windows.Forms.CheckBox accounts_checkBox_hideAcc;
+        private System.Windows.Forms.TabPage tabPage_map;
+        private Tab_Map tab_Map1;
     }
 }
 

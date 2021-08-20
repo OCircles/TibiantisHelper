@@ -33,6 +33,8 @@ namespace TibiantisHelper
 
         public static SelectedVocation _selectedVocation;
 
+        public static Minimap _miniMap = new Minimap(); 
+
         public DataReader _dataReader;
 
         static string file_accounts = "Accounts.xml";
@@ -41,6 +43,8 @@ namespace TibiantisHelper
         public static TraybarContainer _traybarContainer;
 
         static string webpage_whoIsOnline = "https://tibiantis.online/?page=WhoIsOnline";
+
+        public static Color mainBackcolor = Color.FromArgb(251, 234, 208);
 
         public Form_Main()
         {
@@ -53,7 +57,6 @@ namespace TibiantisHelper
             _lastOnline = new List<string>();
             _currentlyOnline = new List<Player>();
 
-
             if (Settings.Default.UpgradeRequired)
             {
                 Settings.Default.Upgrade();
@@ -62,18 +65,15 @@ namespace TibiantisHelper
             }
 
 
-
             InitializeComponent();
 
             PostInitialize();
 
+            // control_MinimapViewer1.Minimap = _miniMap;
 
-            Color colorTibia_Beige = Color.FromArgb(251, 234, 208);
-            this.BackColor = colorTibia_Beige;
-             
+            this.BackColor = mainBackcolor;
 
-
-            // Maybe move on to having everything embedded at some point:
+            // Maybe move on to having all 7.72 data files embedded at some point:
 
             // Assembly assem = this.GetType().Assembly;
             // var resources = assem.GetManifestResourceNames();
@@ -140,6 +140,8 @@ namespace TibiantisHelper
         {
             await GetNetworkStuff();
         }
+        
+        // Minimize behaviour here
         private void Form1_Resize(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Minimized)
@@ -179,6 +181,7 @@ namespace TibiantisHelper
 
         }
 
+        // Suspend reworking control layouts while resizing, huge lag otherwise
         protected override void OnResizeBegin(EventArgs e)
         {
             SuspendLayout();
@@ -190,10 +193,44 @@ namespace TibiantisHelper
             base.OnResizeEnd(e);
         }
 
+
+        // Hacky solution to forward KeyUp and KeyDown events to minimap
+        private void Form_Main_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (((Tab_Map)tabPage_map.Controls[0]).MinimapViewer == null)
+            {
+                e.Handled = false;
+                return;
+            }
+
+            if (((Tab_Map)tabPage_map.Controls[0]).MinimapViewer.MapFocused)
+            {
+                ((Tab_Map)tabPage_map.Controls[0]).MinimapViewer.pictureBox1_KeyDown(sender, e);
+                e.Handled = true;
+                return;
+            }
+        }
+        private void Form_Main_KeyUp(object sender, KeyEventArgs e)
+        {
+
+            if (((Tab_Map)tabPage_map.Controls[0]).MinimapViewer == null)
+            {
+                e.Handled = false;
+                return;
+            }
+
+            if (((Tab_Map)tabPage_map.Controls[0]).MinimapViewer.MapFocused)
+            {
+                ((Tab_Map)tabPage_map.Controls[0]).MinimapViewer.pictureBox1_KeyUp(sender, e);
+                e.Handled = true;
+                return;
+            }
+        }
+
         #endregion
 
         #region Traybar
-        
+
         private static TrayBubbleBehaviour trayBubbleBehaviour = 0;
 
         public struct TraybarContainer
@@ -2855,6 +2892,8 @@ namespace TibiantisHelper
                 AccountsDisplayInfo(acc);
             }
         }
+
+
 
     }
 

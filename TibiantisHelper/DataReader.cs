@@ -563,7 +563,7 @@ namespace TibiantisHelper
 
         #region Minimap
 
-        public static Bitmap ReadMinimap(string file)
+        public async static Task<Bitmap> ReadMinimap(string file)
         {
             Bitmap map = new Bitmap(256,256);
 
