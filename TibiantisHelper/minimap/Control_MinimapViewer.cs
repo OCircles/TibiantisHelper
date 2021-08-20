@@ -42,6 +42,8 @@ namespace TibiantisHelper
         private Color background = Color.FromArgb(30, 34, 36);
 
         PointF _lastMousePos;
+        Point _lastCrosshair = new Point(-1, -1);
+        Color _lastCrosshairColor;
 
         PointF p_Transform;
         int p_Layer;
@@ -55,10 +57,24 @@ namespace TibiantisHelper
 
         public bool IsDrawing { get { return r_isMoving || r_isDragging || r_isSelectingSector; } }
 
+
+        // Part of hacky solution to handle KeyUp and KeyDown events for the picturebox
+        private void pictureBox1_GotFocus(object sender, EventArgs e) { _mapFocused = true; }
+        private void pictureBox1_LostFocus(object sender, EventArgs e) { _mapFocused = false; }
+
+
         // Events
         [Browsable(true)]
         [Category("Action"), Description("Raised upon a valid sector being selected")]
         public event EventHandler<SectorSelectedEventArgs> SectorSelected;
+
+        protected virtual void OnSectorSelected(SectorSelectedEventArgs e)
+        {
+            SectorSelected?.Invoke(this, e);
+        }
+
+
+
 
         public Control_MinimapViewer() {
             InitializeComponent();
@@ -84,18 +100,14 @@ namespace TibiantisHelper
                 ZoomPosition(new Point(Image.Width / 2, Image.Height / 2));
             }
         }
-
-        protected virtual void OnSectorSelected(SectorSelectedEventArgs e)
+        
+        private void Control_Minimap_Resize(object sender, EventArgs e)
         {
-            SectorSelected?.Invoke(this, e);
+            p_Transform = mouseToPos(new PointF(pictureBox1.Width / 2, pictureBox1.Height / 2));
+            UpdateLoadPromptLocation();
         }
 
-        // Part of hacky solution to handle KeyUp and KeyDown events for the picturebox
-        private void pictureBox1_GotFocus(object sender, EventArgs e) { _mapFocused = true; }
-        private void pictureBox1_LostFocus(object sender, EventArgs e) { _mapFocused = false; }
-        
 
-       
 
         public void LoadLayer(int layer)
         {
@@ -118,6 +130,7 @@ namespace TibiantisHelper
                     MapFileCheck();
             }
         }
+
 
 
 
@@ -154,6 +167,25 @@ namespace TibiantisHelper
             if (this.Image != null)
             {
                 g.Transform = transform;
+
+                var ch_x = (int)p_Transform.X;
+                var ch_y = (int)p_Transform.Y;
+
+                if (ch_x >= 0 && ch_x < Image.Width && ch_y >= 0 && ch_y < Image.Height)
+                {
+                    if (_lastCrosshair.X != -1)
+                    {
+                        Image.SetPixel(_lastCrosshair.X, _lastCrosshair.Y, _lastCrosshairColor);
+                    }
+
+                    _lastCrosshairColor = Image.GetPixel(ch_x, ch_y);
+                    _lastCrosshair.X = ch_x;
+                    _lastCrosshair.Y = ch_y;
+
+                    Image.SetPixel(ch_x, ch_y, Color.FromArgb(150, 255, 0, 0));
+
+                }
+                
                 e.Graphics.DrawImage(Image, new Point(0,0));
 
                 // Highlighting sector
@@ -230,10 +262,7 @@ namespace TibiantisHelper
 
             UpdateLoadPromptLocation();
         }
-        private void Control_Minimap_Resize(object sender, EventArgs e)
-        {
-            UpdateLoadPromptLocation();
-        }
+
 
         #endregion
 
