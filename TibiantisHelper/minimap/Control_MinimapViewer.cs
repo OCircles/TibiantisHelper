@@ -53,6 +53,8 @@ namespace TibiantisHelper
         Size s_allSectorPixels;
         Point s_lastSector;
 
+        public bool IsDrawing { get { return r_isMoving || r_isDragging || r_isSelectingSector; } }
+
         // Events
         [Browsable(true)]
         [Category("Action"), Description("Raised upon a valid sector being selected")]
@@ -74,6 +76,8 @@ namespace TibiantisHelper
             pictureBox1.GotFocus += pictureBox1_GotFocus;
             pictureBox1.LostFocus += pictureBox1_LostFocus;
 
+            MapFileCheck();
+
             if (Form_Main._miniMap.Initialized)
             {
                 LoadLayer(7);
@@ -83,18 +87,158 @@ namespace TibiantisHelper
 
         protected virtual void OnSectorSelected(SectorSelectedEventArgs e)
         {
-            EventHandler<SectorSelectedEventArgs> handler = SectorSelected;
-            if (handler != null)
-            {
-                handler(this, e);
-            }
+            SectorSelected?.Invoke(this, e);
         }
-
 
         // Part of hacky solution to handle KeyUp and KeyDown events for the picturebox
         private void pictureBox1_GotFocus(object sender, EventArgs e) { _mapFocused = true; }
         private void pictureBox1_LostFocus(object sender, EventArgs e) { _mapFocused = false; }
         
+
+       
+
+        public void LoadLayer(int layer)
+        {
+            if (Form_Main._miniMap.Initialized)
+            {
+                var path = $"{Minimap.SavePath}\\{layer}.png";
+
+                if (File.Exists(path))
+                {
+                    var imgHandle = this.Image;
+                    this.Image = new Bitmap(path);
+
+                    if (imgHandle != null)
+                        imgHandle.Dispose(); // Seeing the profiler RAM after this makes me a happy boy
+
+                    p_Layer = layer;
+                    pictureBox1.Invalidate();
+                }
+                else
+                    MapFileCheck();
+            }
+        }
+
+
+
+        #region Drawing
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (!r_isDragging)
+            {
+                var k_moveViewport = new PointF();
+
+                if (k_moveDown || k_moveLeft || k_moveRight || k_moveUp)
+                {
+                    var step = c_keyMoveScale * timer1.Interval;
+
+                    if (k_moveUp) k_moveViewport.Y -= step;
+                    if (k_moveDown) k_moveViewport.Y += step;
+                    if (k_moveLeft) k_moveViewport.X -= step;
+                    if (k_moveRight) k_moveViewport.X += step;
+                }
+
+                if (k_moveViewport.X != 0 || k_moveViewport.Y != 0)
+                    ZoomPosition(new PointF(p_Transform.X + k_moveViewport.X, p_Transform.Y + k_moveViewport.Y), c_zoomScale);
+            }
+
+            pictureBox1.Invalidate();
+        }
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            g.InterpolationMode = InterpolationMode.NearestNeighbor;
+            g.PixelOffsetMode = PixelOffsetMode.Half;
+
+            if (this.Image != null)
+            {
+                g.Transform = transform;
+                e.Graphics.DrawImage(Image, new Point(0,0));
+
+                // Highlighting sector
+                if (r_isSelectingSector)
+                    using (SolidBrush brush = new SolidBrush(Color.FromArgb(100, 255, 255, 255)))
+                        e.Graphics.FillRectangle(brush, new Rectangle(
+                            s_firstSectorImagePoint.X + s_lastSector.X * 32,
+                            s_firstSectorImagePoint.Y + s_lastSector.Y * 32,
+                            32,32
+                            ));
+            }
+            
+        }
+
+        #endregion
+
+
+        #region UI
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"- Browse to your Tibiantis\\map directory{Environment.NewLine}" +
+                $"- Select any *.map file inside",
+                "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            using (var fbd = new OpenFileDialog())
+            {
+                fbd.Title = "Find Tibia map folder";
+                fbd.Filter = "Minimap file|*.map";
+
+                DialogResult result = fbd.ShowDialog();
+
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.FileName) && Path.GetExtension(fbd.FileName) == ".map")
+                {
+                    var path = Path.GetDirectoryName(fbd.FileName);
+
+                    Form_Main._miniMap.ReadMapData(path);
+                    Form_Main._miniMap.SaveXML(Minimap.SavePath + "\\map.xml");
+
+                    var frm = new Form_MinimapParseDialog(path, Minimap.SavePath).ShowDialog();
+
+                    LoadLayer(7);
+                    ZoomPosition(new Point(Image.Width / 2, Image.Height / 2));
+                }
+            }
+        }
+        private void UpdateLoadPromptLocation()
+        {
+            var labelMargin = 20;
+
+            // Just centers the label and button that shows when map files are not found
+            button1.Location =
+                new Point(
+                    (this.Width / 2) - (button1.Width / 2),
+                    (this.Height / 2) - (button1.Height / 2)
+                );
+
+            label1.Location = new Point(0, button1.Location.Y - button1.Height - labelMargin);
+            label1.Width = pictureBox1.Width; // Dunno why it doesn't autosize when it has been anchored to the right edge, guess we fix manually
+        }
+        private void MapFileCheck()
+        {
+            if (!Form_Main._miniMap.Initialized)
+            {
+                label1.Visible = button1.Visible = true;
+                if (this.Image != null) {
+                    var imgHandle = this.Image;
+                    this.Image = null;
+                    imgHandle.Dispose();
+                }
+            }
+            else
+                label1.Visible = button1.Visible = false;
+
+            UpdateLoadPromptLocation();
+        }
+        private void Control_Minimap_Resize(object sender, EventArgs e)
+        {
+            UpdateLoadPromptLocation();
+        }
+
+        #endregion
+
+ 
+        #region Keyboard Input
 
         // Because the picturebox class doesn't have KeyUp and KeyDown events I just forward them from Form_Main.cs if picturebox has focus
         public void pictureBox1_KeyDown(object sender, KeyEventArgs e)
@@ -204,105 +348,11 @@ namespace TibiantisHelper
             }
         }
 
-        PointF k_moveViewport;
         bool k_moveUp, k_moveDown, k_moveLeft, k_moveRight;
 
-        public bool IsDrawing { get { return r_isMoving || r_isDragging || r_isSelectingSector; } }
+        #endregion
 
-        private void MapFileCheck()
-        {
-            if (Form_Main._miniMap.Initialized)
-            {
-                label1.Visible = button1.Visible = false;
-            }
-            else
-            {
-                label1.Visible = button1.Visible = true;
-                if (this.Image != null) {
-                    var imgHandle = this.Image;
-                    this.Image = null;
-                    imgHandle.Dispose();
-                }
-            }
-            UpdateLoadPromptLocation();
-        }
-
-
-
-        public void LoadLayer(int layer)
-        {
-            if (Form_Main._miniMap.Initialized)
-            {
-                var path = $"{Minimap.SavePath}\\{layer}.png";
-
-                if (File.Exists(path))
-                {
-                    var imgHandle = this.Image;
-                    this.Image = new Bitmap(path);
-
-                    if (imgHandle != null)
-                        imgHandle.Dispose(); // Seeing the profiler RAM after this makes me a happy boy
-
-                    p_Layer = layer;
-                    pictureBox1.Invalidate();
-                }
-            }
-            MapFileCheck();
-
-        }
-
-
-
-
-
-        private void ZoomPosition(PointF point, float zoom = 1f)
-        {
-            p_Transform = point;
-            c_zoomScale = zoom;
-
-            float pw = pictureBox1.Width / 2;
-            float ph = pictureBox1.Height / 2;
-
-            float dx = p_Transform.X * c_zoomScale;
-            float dy = p_Transform.Y * c_zoomScale;
-
-            transform.Reset();
-
-            transform.Translate(-dx, -dy);
-            transform.Translate(pw, ph);
-
-            transform.Scale(c_zoomScale, c_zoomScale);
-
-            FixViewport();
-            pictureBox1.Invalidate();
-        } 
-
-        private void ZoomScroll(bool zoomIn)
-        {
-            var newScale = Math.Min(Math.Max(
-                (c_zoomScale + (zoomIn ? c_scrollValue : -c_scrollValue)),
-                c_zoomMin), c_zoomMax);
-            if (c_zoomScale != newScale)
-                ZoomPosition(p_Transform, newScale);
-        }
-
-        private Point mouseToPos(PointF mousePoint)
-        {
-            PointF[] tv = new PointF[] { mousePoint };
-
-            Matrix transformRev = transform.Clone();
-            transformRev.Invert();
-
-            transformRev.TransformPoints(tv);
-
-            return new Point { X = (int)Math.Floor(tv[0].X), Y = (int)Math.Floor(tv[0].Y) };
-        }
-
-
-
-
-
-        #region Input Handling
+        #region Mouse Input
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -431,6 +481,12 @@ namespace TibiantisHelper
         #endregion
 
 
+        #region Transform stuff
+        public void CenterToPoint(Point point)
+        {
+            ZoomPosition(point, c_zoomScale);
+        }
+
         private void FixViewport()
         {
             // Keep viewport locked within image
@@ -465,107 +521,52 @@ namespace TibiantisHelper
         }
 
 
-        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        private void ZoomPosition(PointF point, float zoom = 1f)
         {
-            Graphics g = e.Graphics;
-            g.InterpolationMode = InterpolationMode.NearestNeighbor;
-            g.PixelOffsetMode = PixelOffsetMode.Half;
+            p_Transform = point;
+            c_zoomScale = zoom;
 
-            if (this.Image != null)
-            {
-                g.Transform = transform;
-                e.Graphics.DrawImage(Image, new Point(0,0));
+            float pw = pictureBox1.Width / 2;
+            float ph = pictureBox1.Height / 2;
 
-                // Highlighting sector
-                if (r_isSelectingSector)
-                    using (SolidBrush brush = new SolidBrush(Color.FromArgb(100, 255, 255, 255)))
-                        e.Graphics.FillRectangle(brush, new Rectangle(
-                            s_firstSectorImagePoint.X + s_lastSector.X * 32,
-                            s_firstSectorImagePoint.Y + s_lastSector.Y * 32,
-                            32,32
-                            ));
-            }
-            
-        }
+            float dx = p_Transform.X * c_zoomScale;
+            float dy = p_Transform.Y * c_zoomScale;
 
-        private void Control_Minimap_Resize(object sender, EventArgs e)
-        {
-            UpdateLoadPromptLocation();
-        }
+            transform.Reset();
 
-        private void UpdateLoadPromptLocation()
-        {
-            var labelMargin = 20;
+            transform.Translate(-dx, -dy);
+            transform.Translate(pw, ph);
 
-            // Just centers the label and button that shows when map files are not found
-            button1.Location =
-                new Point(
-                    (this.Width / 2) - (button1.Width / 2),
-                    (this.Height / 2) - (button1.Height / 2)
-                );
+            transform.Scale(c_zoomScale, c_zoomScale);
 
-            label1.Location = new Point(0, button1.Location.Y - button1.Height - labelMargin);
-            label1.Width = pictureBox1.Width; // Dunno why it doesn't autosize when it has been anchored to the right edge, guess we fix manually
-        }
-
-
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (!r_isDragging)
-            {
-                k_moveViewport = new PointF();
-
-                if (k_moveDown || k_moveLeft || k_moveRight || k_moveUp)
-                {
-                    var step = c_keyMoveScale * timer1.Interval;
-
-                    if (k_moveUp) k_moveViewport.Y -= step;
-                    if (k_moveDown) k_moveViewport.Y += step;
-                    if (k_moveLeft) k_moveViewport.X -= step;
-                    if (k_moveRight) k_moveViewport.X += step;
-                }
-
-                if (k_moveViewport.X != 0 || k_moveViewport.Y != 0)
-                    ZoomPosition(new PointF(p_Transform.X + k_moveViewport.X, p_Transform.Y + k_moveViewport.Y), c_zoomScale);
-            }
-
+            FixViewport();
             pictureBox1.Invalidate();
-        }
-
-
-        public void CenterToPoint(Point point)
+        } 
+        private void ZoomScroll(bool zoomIn)
         {
-            ZoomPosition(point, c_zoomScale);
+            var newScale = Math.Min(Math.Max(
+                (c_zoomScale + (zoomIn ? c_scrollValue : -c_scrollValue)),
+                c_zoomMin), c_zoomMax);
+            if (c_zoomScale != newScale)
+                ZoomPosition(p_Transform, newScale);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private Point mouseToPos(PointF mousePoint)
         {
-            MessageBox.Show($"- Browse to your Tibiantis\\map directory{Environment.NewLine}" +
-                $"- Select any *.map file inside",
-                "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            PointF[] tv = new PointF[] { mousePoint };
 
-            using (var fbd = new OpenFileDialog())
-            {
-                fbd.Title = "Find Tibia map folder";
-                fbd.Filter = "Minimap file|*.map";
+            Matrix transformRev = transform.Clone();
+            transformRev.Invert();
 
-                DialogResult result = fbd.ShowDialog();
+            transformRev.TransformPoints(tv);
 
-                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.FileName) && Path.GetExtension(fbd.FileName) == ".map")
-                {
-                    var path = Path.GetDirectoryName(fbd.FileName);
-
-                    Form_Main._miniMap.ReadMapData(path);
-                    Form_Main._miniMap.SaveXML(Minimap.SavePath + "\\map.xml");
-
-                    var frm = new Form_MinimapParseDialog(path, Minimap.SavePath).ShowDialog();
-
-                    LoadLayer(7);
-                    ZoomPosition(new Point(Image.Width / 2, Image.Height / 2));
-                }
-            }
+            return new Point { X = (int)Math.Floor(tv[0].X), Y = (int)Math.Floor(tv[0].Y) };
         }
+        #endregion
+
+
+
+
 
     }
 
