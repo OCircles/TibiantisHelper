@@ -42,6 +42,7 @@ namespace TibiantisHelper
         public List<NPC> npcs;
         public List<Item> items;
         public List<Monster> monsters;
+        public static List<Raid> raids;
         public List<Rune> runes;
         public List<Spell> spells;
 
@@ -72,10 +73,11 @@ namespace TibiantisHelper
 
             GenerateLookup();
 
-            locations = ParseLocations(); 
+            locations = ParseLocations();
             npcs = ParseNPC();
             items = ParseItems();
             monsters = ParseMonsters();
+            raids = ParseRaids();
             runes = ParseRunes();
             spells = ParseSpells();
         }
@@ -121,7 +123,7 @@ namespace TibiantisHelper
 
                     string[] split = line.Split(' ');
 
-                    if ( split[0] == "Mark" )
+                    if (split[0] == "Mark")
                     {
                         var secondPart = GetBetweenChars(line, '(', ')');
 
@@ -171,7 +173,7 @@ namespace TibiantisHelper
 
 
         #region Entity
- 
+
         public Entity ReadEntity(int entityID)
         {
 
@@ -200,7 +202,7 @@ namespace TibiantisHelper
 
                     byte flag;
 
-                    reader.BaseStream.Seek(itemOffset,SeekOrigin.Begin);
+                    reader.BaseStream.Seek(itemOffset, SeekOrigin.Begin);
 
                     do
                     {
@@ -436,7 +438,7 @@ namespace TibiantisHelper
                 Console.WriteLine("Error");
             }
         }
-         
+
         public class Entity
         {
             public List<int> sprites;
@@ -493,20 +495,20 @@ namespace TibiantisHelper
         };
 
         #endregion
-        
+
         #region Sprite
- 
+
         public Bitmap ReadSprite(int spriteID)
         {
 
-            Bitmap bmp = new Bitmap(32,32);
+            Bitmap bmp = new Bitmap(32, 32);
 
             if (spriteID == 0) return bmp;
 
-            using (BinaryReader reader = new BinaryReader(File.OpenRead(spriteFile),Encoding.ASCII))
+            using (BinaryReader reader = new BinaryReader(File.OpenRead(spriteFile), Encoding.ASCII))
             {
 
-                uint signature = reader.ReadUInt32(); 
+                uint signature = reader.ReadUInt32();
                 ushort count = reader.ReadUInt16();
 
                 // Console.WriteLine("Signature: " + signature);
@@ -529,7 +531,7 @@ namespace TibiantisHelper
 
                 // Skipping color key.
                 reader.BaseStream.Seek(3, System.IO.SeekOrigin.Current);
-                 
+
                 var endBitmap = reader.BaseStream.Position + reader.ReadUInt16();
                 var startBitmap = reader.BaseStream.Position;
 
@@ -545,12 +547,12 @@ namespace TibiantisHelper
                     var coloredPixels = reader.ReadUInt16();
                     currentPixel += transparentPixels;
 
-                    for ( var i = 0; i < coloredPixels; i++)
+                    for (var i = 0; i < coloredPixels; i++)
                     {
 
                         bmp.SetPixel((int)currentPixel % (int)size, (int)currentPixel / (int)size,
-                        Color.FromArgb(255,reader.ReadByte(), reader.ReadByte(), reader.ReadByte()));
-                    currentPixel++;
+                        Color.FromArgb(255, reader.ReadByte(), reader.ReadByte(), reader.ReadByte()));
+                        currentPixel++;
                     }
                 }
 
@@ -565,7 +567,7 @@ namespace TibiantisHelper
 
         public async static Task<Bitmap> ReadMinimap(string file)
         {
-            Bitmap map = new Bitmap(256,256);
+            Bitmap map = new Bitmap(256, 256);
 
             using (BinaryReader reader = new BinaryReader(File.OpenRead(file), Encoding.ASCII))
             {
@@ -626,7 +628,7 @@ namespace TibiantisHelper
                 string text = node.InnerText; //or loop through its children as well
                 Rune rune = new Rune();
 
-                foreach (XmlNode value in node.ChildNodes) 
+                foreach (XmlNode value in node.ChildNodes)
                 {
                     switch (value.Name)
                     {
@@ -639,11 +641,11 @@ namespace TibiantisHelper
                         case "Charges":
                             rune.Charges = byte.Parse(value.InnerText);
                             break;
-                    } 
+                    }
 
                 }
                 runes.Add(rune);
-                
+
             }
 
             runes = runes.OrderBy(r => r.Name).ToList();
@@ -763,7 +765,7 @@ namespace TibiantisHelper
             public int ID;
             public string Name;
             public string Description;
-            public List<string> Flags; 
+            public List<string> Flags;
             public List<Attribute> Attributes;
 
             public Item()
@@ -778,12 +780,12 @@ namespace TibiantisHelper
             {
                 int attr = 0;
 
-                foreach (var a in Attributes) 
+                foreach (var a in Attributes)
                     if (a.Name == name)
                     {
                         attr = a.Value;
                         break;
-                    } 
+                    }
 
                 return attr;
             }
@@ -838,19 +840,19 @@ namespace TibiantisHelper
             return items;
         }
 
-        
+
         public List<Item> GetItemsByFlag(List<Item> source, string flag)
         {
             List<Item> items = new List<Item>();
 
-            foreach (var i in source) 
+            foreach (var i in source)
                 if (i.ID > 99)
-                    if (i.Flags.Contains(flag)) items.Add(i); 
+                    if (i.Flags.Contains(flag)) items.Add(i);
 
             return items;
 
         }
-        
+
         public List<Item> GetItemsByAttribute(List<Item> source, string attribute, int value)
         {
             // If value is negative, just find every instance that has that attribute and ignore value
@@ -864,7 +866,7 @@ namespace TibiantisHelper
             {
                 foreach (var i in source)
                     if (i.ID > 99)
-                        foreach (var a in i.Attributes) 
+                        foreach (var a in i.Attributes)
                             if (a.Name == attribute && attribute[0] != '!') items.Add(i);
             } else
             {
@@ -875,7 +877,7 @@ namespace TibiantisHelper
                 }
             }
 
-            
+
 
             return items;
 
@@ -884,7 +886,7 @@ namespace TibiantisHelper
         #endregion
 
         #region Spell
-        
+
         public struct Spell
         {
             public byte ID;
@@ -907,7 +909,7 @@ namespace TibiantisHelper
 
         private List<Spell> ParseSpells()
         {
-            List<Spell> spells = new List<Spell>(); 
+            List<Spell> spells = new List<Spell>();
 
             XmlDocument doc = new XmlDocument();
             doc.Load(spellFile);
@@ -948,7 +950,7 @@ namespace TibiantisHelper
                             spell.Price = ushort.Parse(value.InnerText);
                             break;
                         case "Vocation":
-                            foreach ( char c in value.InnerText )
+                            foreach (char c in value.InnerText)
                             {
                                 switch (c)
                                 {
@@ -1022,8 +1024,8 @@ namespace TibiantisHelper
             {
                 NPC npc = new NPC();
                 npc.Filename = Path.GetFileName(filePath);
-                
-                List<Tuple<string,int>> lines = new List<Tuple<string,int>>(); // For storing line + topic so we can retroactively associate lines with sell/buy/spell topics
+
+                List<Tuple<string, int>> lines = new List<Tuple<string, int>>(); // For storing line + topic so we can retroactively associate lines with sell/buy/spell topics
 
                 int buyTopic, sellTopic, spellTopic;
                 buyTopic = sellTopic = spellTopic = -1;
@@ -1033,8 +1035,8 @@ namespace TibiantisHelper
                 {
                     string dirtyLine;
 
-                    while ((dirtyLine = file.ReadLine()) != null) 
-                    { 
+                    while ((dirtyLine = file.ReadLine()) != null)
+                    {
                         if (!string.IsNullOrEmpty(dirtyLine))
                         {
                             string cleanLine = System.Text.RegularExpressions.Regex.Replace(dirtyLine, @"\s+", " ");
@@ -1053,7 +1055,7 @@ namespace TibiantisHelper
                                     success = Int32.TryParse(GetBetweenChars(cleanLine.Substring(topicIndex + 5), '=', ' '), out topic);
 
                                 //Console.Write(topic);
-      
+
 
                                 if (cleanLine.Contains("DeleteMoney"))
                                 {
@@ -1077,7 +1079,7 @@ namespace TibiantisHelper
                 }
 
                 // Parse (this is garbage spaghetti and inefficient but it works and is fast enough so I don't care)
-                foreach ( Tuple<string,int> tuple in lines )
+                foreach (Tuple<string, int> tuple in lines)
                 {
 
                     string line = tuple.Item1;
@@ -1091,11 +1093,11 @@ namespace TibiantisHelper
                     else if (split[0] == "Home")
                     {
                         var loc = GetBetweenChars(line, '[', ']').Split(',');
-                        npc.Position = new Point3D( int.Parse(loc[0]), int.Parse(loc[1]), int.Parse(loc[2]) );
+                        npc.Position = new Point3D(int.Parse(loc[0]), int.Parse(loc[1]), int.Parse(loc[2]));
 
                     }
                     else if (npc.Vendor)
-                    { 
+                    {
                         if (line.Contains("Price="))
                         {
 
@@ -1111,7 +1113,7 @@ namespace TibiantisHelper
 
                             int priceIndex = line.IndexOf("Price=");
                             string price = GetBetweenChars(line.Substring(priceIndex + 5), '=', ',');
-                            
+
                             int dataIndex = line.IndexOf("Data=");
 
                             if (dataIndex != -1)
@@ -1124,7 +1126,7 @@ namespace TibiantisHelper
                             // Console.WriteLine(line);
 
                             if (typeIndex != -1) transaction.ItemID = int.Parse(itemID);
-                             
+
                             var priceSplit = price.Split('*');
 
 
@@ -1148,7 +1150,7 @@ namespace TibiantisHelper
                             else if (tuple.Item2 == spellTopic)
                                 transaction.Type = NPC.TransactionType.Spell;
 
-                            if (transaction.ItemID != -1) 
+                            if (transaction.ItemID != -1)
                                 npc.transactions.Add(transaction);
                         }
                     }
@@ -1177,10 +1179,10 @@ namespace TibiantisHelper
 
             }
 
-            
+
             return npcList;
         }
- 
+
         public class NPC
         {
             public enum TransactionType
@@ -1199,7 +1201,7 @@ namespace TibiantisHelper
             }
 
             public List<Transaction> transactions;
-  
+
             public bool Vendor;
             public bool IsTeacher;
 
@@ -1211,11 +1213,11 @@ namespace TibiantisHelper
 
             public NPC()
             {
-                transactions = new List<Transaction>(); 
+                transactions = new List<Transaction>();
             }
 
             public List<Transaction> GetTransactions(TransactionType type)
-            { 
+            {
                 return transactions.FindAll(i => i.Type == type);
             }
 
@@ -1235,7 +1237,7 @@ namespace TibiantisHelper
                 Location closest = locations[0];
 
                 double lowestDistance = distance(this.Position.X, this.Position.Y, closest.Position.X, closest.Position.Y);
-                 
+
                 foreach (var loc in locations)
                 {
                     var dist = distance(this.Position.X, this.Position.Y, loc.Position.X, loc.Position.Y);
@@ -1244,9 +1246,9 @@ namespace TibiantisHelper
                         closest = loc;
                         lowestDistance = dist;
 
-                    } 
-                } 
-                 
+                    }
+                }
+
 
                 return closest;
             }
@@ -1408,9 +1410,9 @@ namespace TibiantisHelper
                                     case "CarryStrength":
                                         monster.Capacity = int.Parse(itemSplit[1]);
                                         break;
-                                    // case "FistFighting":
-                                    //     monster.Fistfighting = int.Parse(itemSplit[0]);
-                                    //     break;
+                                        // case "FistFighting":
+                                        //     monster.Fistfighting = int.Parse(itemSplit[0]);
+                                        //     break;
                                 }
                             }
                         }
@@ -1427,6 +1429,173 @@ namespace TibiantisHelper
             }
 
             return monsterList;
+        }
+
+        #endregion
+
+        #region Raid
+
+        public class Raid
+        {
+
+            public enum RaidType
+            {
+                ParseFailed,
+                BigRaid,
+                SmallRaid
+            }
+
+            public class RaidSpawn
+            {
+                public int Delay;
+                public Point3D Position;
+                public int Spread;
+                public int Race;
+                public Tuple<int,int> Count;
+                public int Lifetime;
+                public string Message;
+                public List<Monster.Drop> ItemDrops;
+
+                public RaidSpawn()
+                {
+                    this.ItemDrops = new List<Monster.Drop>();
+                }
+            }
+
+            public string Filename;
+            public RaidType Type;
+            public uint Interval;
+            public List<RaidSpawn> Spawns;
+
+            public Raid()
+            {
+                this.Spawns = new List<RaidSpawn>();
+            }
+        }
+
+
+        public List<Raid> ParseRaids()
+        {
+            var raids = new List<Raid>();
+            string[] files = Directory.GetFiles(monsterFolder, "*.evt");
+
+            foreach (var filePath in files)
+            {
+                using (System.IO.StreamReader file = new System.IO.StreamReader(filePath))
+                {
+                    string dirtyLine;
+
+                    Raid raid = new Raid();
+                    Raid.RaidSpawn spawn = null;
+
+                    raid.Filename = Path.GetFileName(filePath);
+                    bool inBracket = false;
+                    List<string> bracketLines = null;
+
+                    while ((dirtyLine = file.ReadLine()) != null)
+                    {
+                        if (!string.IsNullOrEmpty(dirtyLine))
+                        {
+                            string cleanLine = System.Text.RegularExpressions.Regex.Replace(dirtyLine, @"\s+", "");
+
+                            if (cleanLine[0] != '#')
+                            {
+                                var split = cleanLine.Split('=');
+
+                                switch(split[0])
+                                {
+                                    case "Type":
+                                        Raid.RaidType type;
+                                        bool typeParse = Enum.TryParse(split[1], out type);
+                                            raid.Type = type;
+                                        break;
+                                    case "Interval":
+                                        uint interval = 0;
+                                        uint.TryParse(split[1], out interval);
+                                            raid.Interval = interval;
+                                        break;
+                                    case "Delay":
+                                        if (spawn != null)
+                                            raid.Spawns.Add(spawn);
+
+                                        spawn = new Raid.RaidSpawn();
+                                        int delay = 0;
+                                        int.TryParse(split[1], out delay);
+                                        spawn.Delay = delay;
+                                        break;
+                                    case "Position":
+                                        var posSplit = split[1].Substring(1, split[1].Length - 1).Split(',');
+                                        int posX, posY, posZ;
+                                        posX = posY = posZ = -1;
+                                        int.TryParse(posSplit[0], out posX);
+                                        int.TryParse(posSplit[1], out posY);
+                                        int.TryParse(posSplit[2], out posZ);
+                                        spawn.Position = new Point3D(posX, posY, posZ);
+                                        break;
+                                    case "Spread":
+                                        int spread = 0;
+                                        int.TryParse(split[1], out spread);
+                                        spawn.Spread = spread;
+                                        break;
+                                    case "Race":
+                                        int race = 0;
+                                        int.TryParse(split[1], out race);
+                                        spawn.Race = race;
+                                        break;
+                                    case "Count":
+                                        var countSplit = split[1].Substring(1, split[1].Length - 1).Split(',');
+                                        int countMin, countMax;
+                                        countMin = countMax = -1;
+                                        int.TryParse(countSplit[0], out countMin);
+                                        int.TryParse(countSplit[1], out countMax);
+                                        spawn.Count = new Tuple<int, int>(countMin, countMax);
+                                        break;
+                                    case "Message":
+                                        spawn.Message = split[1].Substring(1, split[1].Length - 1);
+                                        break;
+                                    case "Lifetime":
+                                        int lifetime = 0;
+                                        int.TryParse(split[1], out lifetime);
+                                        spawn.Lifetime = lifetime;
+                                        break;
+                                    case "Inventory":
+                                        inBracket = true;
+                                        bracketLines = new List<string>();
+                                        break;
+                                }
+
+                                if (inBracket)
+                                {
+                                    bracketLines.Add(cleanLine);
+                                    if (cleanLine.Contains('}')) {
+                                        inBracket = false;
+                                        foreach (var a in bracketLines)
+                                        {
+                                            var dropData = GetBetweenChars(a, '(', ')').Split(',');
+
+                                            int itemID, amount, rate;
+                                            itemID = amount = rate = 0;
+
+                                            int.TryParse(dropData[0], out itemID);
+                                            int.TryParse(dropData[1], out amount);
+                                            int.TryParse(dropData[2], out rate);
+
+                                            Monster.Drop drop = new Monster.Drop { ItemID = itemID, Amount = amount, Rate = rate };
+
+                                            spawn.ItemDrops.Add(drop);
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                    raids.Add(raid);
+                }
+            }
+            
+            return raids;
+
         }
 
         #endregion
