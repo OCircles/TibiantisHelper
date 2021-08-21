@@ -1464,7 +1464,7 @@ namespace TibiantisHelper
 
             public string Filename;
             public RaidType Type;
-            public uint Interval;
+            public int Interval;
             public List<RaidSpawn> Spawns;
 
             public Raid()
@@ -1510,8 +1510,8 @@ namespace TibiantisHelper
                                             raid.Type = type;
                                         break;
                                     case "Interval":
-                                        uint interval = 0;
-                                        uint.TryParse(split[1], out interval);
+                                        int interval = 0;
+                                        int.TryParse(split[1], out interval);
                                             raid.Interval = interval;
                                         break;
                                     case "Delay":
@@ -1551,7 +1551,7 @@ namespace TibiantisHelper
                                         spawn.Count = new Tuple<int, int>(countMin, countMax);
                                         break;
                                     case "Message":
-                                        spawn.Message = split[1].Substring(1, split[1].Length - 1);
+                                        spawn.Message = GetBetweenChars(dirtyLine, '"', '"');
                                         break;
                                     case "Lifetime":
                                         int lifetime = 0;
