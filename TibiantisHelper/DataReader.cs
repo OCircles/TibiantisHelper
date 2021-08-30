@@ -38,13 +38,13 @@ namespace TibiantisHelper
         private uint datEffects;
         private uint datMissiles;
 
-        public static List<Location> locations;
-        public static List<NPC> npcs;
-        public static List<Item> items;
-        public static List<Monster> monsters;
+        public List<Location> locations;
+        public List<NPC> npcs;
+        public List<Item> items;
+        public List<Monster> monsters;
         public static List<Raid> raids;
-        public static List<Rune> runes;
-        public static List<Spell> spells;
+        public List<Rune> runes;
+        public List<Spell> spells;
 
         public DataReader()
         {
