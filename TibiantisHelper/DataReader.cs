@@ -1544,7 +1544,7 @@ namespace TibiantisHelper
                                         spawn.Race = race;
                                         break;
                                     case "Count":
-                                        var countSplit = split[1].Substring(1, split[1].Length - 1).Split(',');
+                                        var countSplit = GetBetweenChars(split[1], '(', ')').Split(',');
                                         int countMin, countMax;
                                         countMin = countMax = -1;
                                         int.TryParse(countSplit[0], out countMin);
