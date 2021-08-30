@@ -16,7 +16,7 @@ namespace TibiantisHelper
 
         int serverStartTime = 553; // Placeholder I guess? This is 09:13 in minutes since 00:00
 
-        private void control_MinimapViewer1_SectorSelected(object sender, SectorSelectedEventArgs e)
+        private void control_MinimapViewer1_SectorSelected(object sender, MinimapSectorSelectedEventArgs e)
         {
             textBox1.Text = $"Assuming server start at 09:13, sector {e.Sector} refreshes at the following times:{Environment.NewLine}{Environment.NewLine}";
 
@@ -43,11 +43,18 @@ namespace TibiantisHelper
             MinimapViewer = new Control_MinimapViewer();
             MinimapViewer.Dock = DockStyle.Fill;
             MinimapViewer.SectorSelected += control_MinimapViewer1_SectorSelected;
+            MinimapViewer.Redraw += (ss, ee) => OnMinimapRedraw();
 
             splitContainer2.Panel1.Controls.Add(MinimapViewer);
 
             trackBar1.Value = MinimapViewer.Framerate;
             updateFramerateText();
+        }
+
+        private void OnMinimapRedraw()
+        {
+            var pos = MinimapViewer.Position;
+            label_position.Text = $"X: {pos.X} Y: {pos.Y} Z: {pos.Z}";
         }
 
         private void trackBar1_ValueChanged(object sender, System.EventArgs e)

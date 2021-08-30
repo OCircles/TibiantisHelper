@@ -44,6 +44,15 @@ namespace TibiantisHelper
         Point _lastCrosshair = new Point(-1, -1);
         Color _lastCrosshairColor;
 
+        public DataReader.Point3D Position
+        {
+            get
+            {
+                var xy = Form_Main._miniMap.ImgPosToMapPos(new Point((int)p_Transform.X, (int)p_Transform.Y));
+                return new DataReader.Point3D(xy.X, xy.Y, p_Layer);
+            }
+        }
+
         PointF p_Transform;
         int p_Layer = 7;
 
@@ -65,13 +74,16 @@ namespace TibiantisHelper
         // Events
         [Browsable(true)]
         [Category("Action"), Description("Raised upon a valid sector being selected")]
-        public event EventHandler<SectorSelectedEventArgs> SectorSelected;
+        public event EventHandler<MinimapSectorSelectedEventArgs> SectorSelected;
 
-        protected virtual void OnSectorSelected(SectorSelectedEventArgs e)
+        [Browsable(true)]
+        [Category("Action"), Description("Raised upon map redrawing")]
+        public event EventHandler Redraw;
+
+        protected virtual void OnSectorSelected(MinimapSectorSelectedEventArgs e)
         {
             SectorSelected?.Invoke(this, e);
         }
-
 
 
 
@@ -141,6 +153,9 @@ namespace TibiantisHelper
 
         public void SetLayer(int layer)
         {
+            if (layer > 15 || layer < 0)
+                return;
+
             this.p_Layer = layer;
             this.SLoad();
         }
@@ -162,7 +177,7 @@ namespace TibiantisHelper
 
                 if (k_moveDown || k_moveLeft || k_moveRight || k_moveUp)
                 {
-                    var step = c_keyMoveScale * timer1.Interval;
+                    var step = c_keyMoveScale / c_zoomScale * timer1.Interval;
 
                     if (k_moveUp) k_moveViewport.Y -= step;
                     if (k_moveDown) k_moveViewport.Y += step;
@@ -214,6 +229,8 @@ namespace TibiantisHelper
                             s_firstSectorImagePoint.Y + s_lastSector.Y * 32,
                             32,32
                             ));
+
+                Redraw?.Invoke(this, EventArgs.Empty);
             }
             
         }
@@ -415,7 +432,7 @@ namespace TibiantisHelper
                 {
                     if (r_isSelectingSector)
                     {
-                        var args = new SectorSelectedEventArgs();
+                        var args = new MinimapSectorSelectedEventArgs();
                         args.Sector = s_lastSector.X + (s_lastSector.Y * Form_Main._miniMap.allSectorSize.Width) + 1;
                         OnSectorSelected(args);
                     }
@@ -623,7 +640,7 @@ namespace TibiantisHelper
 
     }
 
-    public class SectorSelectedEventArgs : EventArgs
+    public class MinimapSectorSelectedEventArgs : EventArgs
     {
         public int Sector { get; set; }
     }

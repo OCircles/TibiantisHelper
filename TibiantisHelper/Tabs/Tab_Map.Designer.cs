@@ -40,6 +40,7 @@ namespace TibiantisHelper
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label_position = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -88,6 +89,7 @@ namespace TibiantisHelper
             // 
             // splitContainer3.Panel2
             // 
+            this.splitContainer3.Panel2.Controls.Add(this.label_position);
             this.splitContainer3.Panel2.Controls.Add(this.groupBox2);
             this.splitContainer3.Panel2.Controls.Add(this.groupBox1);
             this.splitContainer3.Panel2.Controls.Add(this.checkBox1);
@@ -209,6 +211,17 @@ namespace TibiantisHelper
     "r to calculate floor refresh";
             this.textBox1.WordWrap = false;
             // 
+            // label_position
+            // 
+            this.label_position.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_position.AutoSize = true;
+            this.label_position.Location = new System.Drawing.Point(0, 301);
+            this.label_position.Name = "label_position";
+            this.label_position.Size = new System.Drawing.Size(44, 13);
+            this.label_position.TabIndex = 5;
+            this.label_position.Text = "Position";
+            this.label_position.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Tab_Map
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,5 +264,6 @@ namespace TibiantisHelper
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label_position;
     }
 }
