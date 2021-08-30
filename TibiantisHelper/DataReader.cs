@@ -1459,6 +1459,7 @@ namespace TibiantisHelper
                 public RaidSpawn()
                 {
                     this.ItemDrops = new List<Monster.Drop>();
+                    this.Count = new Tuple<int, int>(-1, -1);
                 }
             }
 
