@@ -27,7 +27,8 @@ namespace TibiantisHelper
 
         private void Form_DateTimePicker_Deactivate(object sender, EventArgs e)
         {
-            this.Close();
+            if (this.DialogResult == DialogResult.Abort)
+                this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
