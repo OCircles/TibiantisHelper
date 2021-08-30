@@ -31,6 +31,9 @@ namespace TibiantisHelper.Tabs
         private void Tab_Raids_Load(object sender, EventArgs e)
         {
 
+            if (DesignMode)
+                return;
+
             control_MinimapViewer1.SetZoom(3.5f);
 
             ReadXML();

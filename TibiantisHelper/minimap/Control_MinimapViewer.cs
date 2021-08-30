@@ -108,6 +108,9 @@ namespace TibiantisHelper
 
         private void Control_MinimapViewer_Load(object sender, EventArgs e)
         {
+            if (DesignMode)
+                return;
+
             if (Form_Main._miniMap.Initialized)
             {
                 this.p_Transform = new PointF(Form_Main._miniMap.TotalBitmapSize.Width / 2, Form_Main._miniMap.TotalBitmapSize.Height / 2);
@@ -161,6 +164,9 @@ namespace TibiantisHelper
         }
         public void SetZoom(float zoom)
         {
+            if (DesignMode)
+                return;
+
             c_zoomScale = zoom;
             ZoomPosition(p_Transform, zoom);
         }
