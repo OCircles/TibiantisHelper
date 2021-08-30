@@ -168,14 +168,14 @@
             this.loginAlert_dataGridView = new System.Windows.Forms.DataGridView();
             this.tabPage_map = new System.Windows.Forms.TabPage();
             this.tab_Map1 = new TibiantisHelper.Tab_Map();
+            this.tabPage_Raids = new System.Windows.Forms.TabPage();
+            this.tab_Raids1 = new TibiantisHelper.Tabs.Tab_Raids();
             this.timerNetworkStuff = new System.Windows.Forms.Timer(this.components);
             this.header_linkLabel_tibiantisHome = new System.Windows.Forms.LinkLabel();
             this.header_linkLabel_tibiantisInfo = new System.Windows.Forms.LinkLabel();
             this.header_linkLabel_discord = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timerTrayFlash = new System.Windows.Forms.Timer(this.components);
-            this.tabPage_Raids = new System.Windows.Forms.TabPage();
-            this.tab_Raids1 = new TibiantisHelper.Tabs.Tab_Raids();
             ((System.ComponentModel.ISupportInitialize)(this.header_pictureBox)).BeginInit();
             this.header_panel_vocations.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -1974,6 +1974,25 @@
             this.tab_Map1.Size = new System.Drawing.Size(919, 400);
             this.tab_Map1.TabIndex = 0;
             // 
+            // tabPage_Raids
+            // 
+            this.tabPage_Raids.Controls.Add(this.tab_Raids1);
+            this.tabPage_Raids.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Raids.Name = "tabPage_Raids";
+            this.tabPage_Raids.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Raids.Size = new System.Drawing.Size(925, 406);
+            this.tabPage_Raids.TabIndex = 10;
+            this.tabPage_Raids.Text = "Raids";
+            this.tabPage_Raids.UseVisualStyleBackColor = true;
+            // 
+            // tab_Raids1
+            // 
+            this.tab_Raids1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Raids1.Location = new System.Drawing.Point(3, 3);
+            this.tab_Raids1.Name = "tab_Raids1";
+            this.tab_Raids1.Size = new System.Drawing.Size(919, 400);
+            this.tab_Raids1.TabIndex = 0;
+            // 
             // timerNetworkStuff
             // 
             this.timerNetworkStuff.Enabled = true;
@@ -2017,25 +2036,6 @@
             // 
             this.timerTrayFlash.Interval = 1000;
             this.timerTrayFlash.Tick += new System.EventHandler(this.timerTrayFlash_Tick);
-            // 
-            // tabPage_Raids
-            // 
-            this.tabPage_Raids.Controls.Add(this.tab_Raids1);
-            this.tabPage_Raids.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_Raids.Name = "tabPage_Raids";
-            this.tabPage_Raids.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Raids.Size = new System.Drawing.Size(925, 406);
-            this.tabPage_Raids.TabIndex = 10;
-            this.tabPage_Raids.Text = "Raids";
-            this.tabPage_Raids.UseVisualStyleBackColor = true;
-            // 
-            // tab_Raids1
-            // 
-            this.tab_Raids1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_Raids1.Location = new System.Drawing.Point(3, 3);
-            this.tab_Raids1.Name = "tab_Raids1";
-            this.tab_Raids1.Size = new System.Drawing.Size(919, 400);
-            this.tab_Raids1.TabIndex = 0;
             // 
             // Form_Main
             // 

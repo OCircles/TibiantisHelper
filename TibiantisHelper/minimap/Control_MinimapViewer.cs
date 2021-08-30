@@ -46,7 +46,7 @@ namespace TibiantisHelper
         Color _lastCrosshairColor;
 
         PointF p_Transform;
-        int p_Layer;
+        int p_Layer = 7;
 
 
         private Matrix transform = new Matrix();
@@ -96,8 +96,8 @@ namespace TibiantisHelper
 
             if (Form_Main._miniMap.Initialized)
             {
-                LoadLayer(7);
-                ZoomPosition(new Point(Image.Width / 2, Image.Height / 2));
+                this.p_Transform = new PointF(Form_Main._miniMap.TotalBitmapSize.Width / 2, Form_Main._miniMap.TotalBitmapSize.Height / 2);
+                SLoad();
             }
         }
         
@@ -108,12 +108,11 @@ namespace TibiantisHelper
         }
 
 
-
-        public void LoadLayer(int layer)
+        public void SLoad()
         {
             if (Form_Main._miniMap.Initialized)
             {
-                var path = $"{Minimap.SavePath}\\{layer}.png";
+                var path = $"{Minimap.SavePath}\\{this.p_Layer}.png";
 
                 if (File.Exists(path))
                 {
@@ -123,12 +122,24 @@ namespace TibiantisHelper
                     if (imgHandle != null)
                         imgHandle.Dispose(); // Seeing the profiler RAM after this makes me a happy boy
 
-                    p_Layer = layer;
+                    ZoomPosition(p_Transform, this.c_zoomScale);
+
                     pictureBox1.Invalidate();
                 }
-                else
-                    MapFileCheck();
             }
+            MapFileCheck();
+        }
+
+        public void Unload()
+        {
+            this.Image.Dispose();
+        }
+
+
+        public void SetLayer(int layer)
+        {
+            this.p_Layer = layer;
+            this.SLoad();
         }
 
 
@@ -227,8 +238,8 @@ namespace TibiantisHelper
 
                     var frm = new Form_MinimapParseDialog(path, Minimap.SavePath).ShowDialog();
 
-                    LoadLayer(7);
-                    ZoomPosition(new Point(Image.Width / 2, Image.Height / 2));
+                    this.p_Transform = new PointF(Form_Main._miniMap.TotalBitmapSize.Width / 2, Form_Main._miniMap.TotalBitmapSize.Height / 2);
+                    SLoad();
                 }
             }
         }
@@ -286,22 +297,22 @@ namespace TibiantisHelper
 
 
                 case Keys.PageUp:
-                    LoadLayer(p_Layer - 1);
+                    SetLayer(p_Layer - 1);
                     break;
                 case Keys.PageDown:
-                    LoadLayer(p_Layer + 1);
+                    SetLayer(p_Layer + 1);
                     break;
 
 
                 case Keys.R:
                     if (e.Shift)
-                        LoadLayer(p_Layer - 1);
+                        SetLayer(p_Layer - 1);
                     else
                         ZoomScroll(true);
                     break;
                 case Keys.F:
                     if (e.Shift)
-                        LoadLayer(p_Layer + 1);
+                        SetLayer(p_Layer + 1);
                     else
                         ZoomScroll(false);
                     break;
@@ -548,7 +559,6 @@ namespace TibiantisHelper
             p_Transform.X -= fix_X;
             p_Transform.Y -= fix_Y;
         }
-
 
         private void ZoomPosition(PointF point, float zoom = 1f)
         {

@@ -58,7 +58,7 @@ namespace TibiantisHelper
 
         private void numericUpDown1_ValueChanged(object sender, System.EventArgs e)
         {
-            MinimapViewer.LoadLayer(decimal.ToInt32(numericUpDown1.Value));
+            MinimapViewer.SetLayer(decimal.ToInt32(numericUpDown1.Value));
         }
 
         private void checkBox1_CheckedChanged(object sender, System.EventArgs e)

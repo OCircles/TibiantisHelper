@@ -2886,6 +2886,12 @@ namespace TibiantisHelper
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (tabControl1.SelectedTab.Text != "Map")
+                tab_Map1.MinimapViewer.Unload();
+            else
+                tab_Map1.MinimapViewer.SLoad();
+
+
             if (tabControl1.SelectedTab.Text == "Accounts")
             {
                 var acc = _accounts.Where(a => a.name == accounts_label_selected.Text).FirstOrDefault();
