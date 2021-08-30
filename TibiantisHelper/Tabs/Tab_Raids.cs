@@ -94,9 +94,12 @@ namespace TibiantisHelper.Tabs
         private void _saveXML()
         {
             if (TrackedRaids.Count == 0)
+            {
                 if (File.Exists(Filename))
                     File.Delete(Filename);
+
                 return;
+            }
 
             XmlWriterSettings settings = new XmlWriterSettings();
             settings.Indent = true;
@@ -284,15 +287,11 @@ namespace TibiantisHelper.Tabs
                 if (trackedRaid != null)
                     timePicker.SetDateTime(trackedRaid.LastSeen);
 
-                Console.WriteLine("asds");
                 timePicker.FormClosing += (s, ee) =>
                 {
-                    Console.WriteLine("TT");
                     switch (timePicker.DialogResult)
                     {
                         case DialogResult.OK:
-
-                            Console.WriteLine("OK");
                             if (trackedRaid == null)
                             {
                                 trackedRaid = new TrackedRaid(raid, timePicker.SelectedTime);
@@ -313,8 +312,11 @@ namespace TibiantisHelper.Tabs
                                 UpdateRowTime(e.RowIndex);
                             }
 
-                                break;
+                        break;
                     }
+
+                    if (timePicker.DialogResult != DialogResult.None)
+                        SaveXML();
                 };
 
                 timePicker.Show();
