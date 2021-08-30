@@ -38,13 +38,13 @@ namespace TibiantisHelper
         private uint datEffects;
         private uint datMissiles;
 
-        public List<Location> locations;
-        public List<NPC> npcs;
-        public List<Item> items;
-        public List<Monster> monsters;
-        public static List<Raid> raids;
-        public List<Rune> runes;
-        public List<Spell> spells;
+        public static List<Location> Locations;
+        public static List<NPC> Npcs;
+        public static List<Item> Items;
+        public static List<Monster> Monsters;
+        public static List<Raid> Raids;
+        public static List<Rune> Runes;
+        public static List<Spell> Spells;
 
         public DataReader()
         {
@@ -73,13 +73,13 @@ namespace TibiantisHelper
 
             GenerateLookup();
 
-            locations = ParseLocations();
-            npcs = ParseNPC();
-            items = ParseItems();
-            monsters = ParseMonsters();
-            raids = ParseRaids();
-            runes = ParseRunes();
-            spells = ParseSpells();
+            Locations = ParseLocations();
+            Npcs = ParseNPC();
+            Items = ParseItems();
+            Monsters = ParseMonsters();
+            Raids = ParseRaids();
+            Runes = ParseRunes();
+            Spells = ParseSpells();
         }
 
         private void BrowseForFile(string filter, string file)
@@ -1173,7 +1173,7 @@ namespace TibiantisHelper
 
                 }
 
-                npc.Location = npc.GetClosestLocation(locations);
+                npc.Location = npc.GetClosestLocation(Locations);
 
                 npcList.Add(npc);
 

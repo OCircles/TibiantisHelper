@@ -21,7 +21,7 @@ namespace TibiantisHelper
             InitializeComponent();
 
             // Foods
-            List<Item> foods = mainForm._dataReader.items.Where(i => i.Flags.Contains("Food")).OrderBy(i => i.Name).ToList();
+            List<Item> foods = mainForm._dataReader.Items.Where(i => i.Flags.Contains("Food")).OrderBy(i => i.Name).ToList();
             foreach (var f in foods) calculator_production_comboBox_food.Items.Add(f.Name);
             calculator_production_comboBox_food.SelectedIndex = 0;
 
@@ -63,9 +63,9 @@ namespace TibiantisHelper
                 {
                     if (in1 + in2 > 0)
                     {
-                        Item food = mainForm._dataReader.items.Where(f => f.Name == calculator_production_comboBox_food.Text).FirstOrDefault();
-                        Rune rune = mainForm._dataReader.runes.Where(r => r.Name == calculator_production_comboBox_rune.Text).FirstOrDefault();
-                        Spell spell = mainForm._dataReader.spells.Where(s => s.Name == calculator_production_comboBox_rune.Text).FirstOrDefault();
+                        Item food = mainForm._dataReader.Items.Where(f => f.Name == calculator_production_comboBox_food.Text).FirstOrDefault();
+                        Rune rune = mainForm._dataReader.Runes.Where(r => r.Name == calculator_production_comboBox_rune.Text).FirstOrDefault();
+                        Spell spell = mainForm._dataReader.Spells.Where(s => s.Name == calculator_production_comboBox_rune.Text).FirstOrDefault();
 
                         string itemName = rune.Name;
 
@@ -75,7 +75,7 @@ namespace TibiantisHelper
                         if (spell.Type == 0)
                         {
                             // For arrows/bolts, adjust amount for stacks
-                            itemName = mainForm._dataReader.items.Where(i => i.ID == spell.ProduceID).FirstOrDefault().Name;
+                            itemName = mainForm._dataReader.Items.Where(i => i.ID == spell.ProduceID).FirstOrDefault().Name;
 
                             casts = Math.Ceiling((double)(amount * 100) / spell.ProduceAmount);
                         }
@@ -150,7 +150,7 @@ namespace TibiantisHelper
 
             calculator_production_comboBox_rune.Items.Clear();
 
-            List<Spell> spells = mainForm._dataReader.spells.Where(s => s.ProduceID != 0).OrderBy(s => s.Name).ToList();
+            List<Spell> spells = mainForm._dataReader.Spells.Where(s => s.ProduceID != 0).OrderBy(s => s.Name).ToList();
 
             foreach (var s in spells)
             {

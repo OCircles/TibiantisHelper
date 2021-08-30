@@ -38,7 +38,7 @@ namespace TibiantisHelper.Tabs
 
             ReadXML();
 
-            foreach (var raid in DataReader.raids)
+            foreach (var raid in DataReader.Raids)
             {
                 var tt = new TimeSpan(0, 0, raid.Interval);
 
@@ -165,9 +165,9 @@ namespace TibiantisHelper.Tabs
                         }
                     }
 
-                    int findIndex = DataReader.raids.FindIndex(i => i.Filename == file);
+                    int findIndex = DataReader.Raids.FindIndex(i => i.Filename == file);
                     if (findIndex != -1)
-                        TrackedRaids.Add(new TrackedRaid(DataReader.raids[findIndex], lastSeen));
+                        TrackedRaids.Add(new TrackedRaid(DataReader.Raids[findIndex], lastSeen));
 
                 }
             }
