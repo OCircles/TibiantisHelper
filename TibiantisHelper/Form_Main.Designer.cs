@@ -174,6 +174,8 @@
             this.header_linkLabel_discord = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timerTrayFlash = new System.Windows.Forms.Timer(this.components);
+            this.tabPage_Raids = new System.Windows.Forms.TabPage();
+            this.tab_Raids1 = new TibiantisHelper.Tabs.Tab_Raids();
             ((System.ComponentModel.ISupportInitialize)(this.header_pictureBox)).BeginInit();
             this.header_panel_vocations.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -265,6 +267,7 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginAlert_dataGridView)).BeginInit();
             this.tabPage_map.SuspendLayout();
+            this.tabPage_Raids.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -416,6 +419,7 @@
             this.tabControl1.Controls.Add(this.tabPage_monsters);
             this.tabControl1.Controls.Add(this.tabPage_loginAlert);
             this.tabControl1.Controls.Add(this.tabPage_map);
+            this.tabControl1.Controls.Add(this.tabPage_Raids);
             this.tabControl1.Location = new System.Drawing.Point(14, 9);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -2014,6 +2018,25 @@
             this.timerTrayFlash.Interval = 1000;
             this.timerTrayFlash.Tick += new System.EventHandler(this.timerTrayFlash_Tick);
             // 
+            // tabPage_Raids
+            // 
+            this.tabPage_Raids.Controls.Add(this.tab_Raids1);
+            this.tabPage_Raids.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Raids.Name = "tabPage_Raids";
+            this.tabPage_Raids.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Raids.Size = new System.Drawing.Size(925, 406);
+            this.tabPage_Raids.TabIndex = 10;
+            this.tabPage_Raids.Text = "Raids";
+            this.tabPage_Raids.UseVisualStyleBackColor = true;
+            // 
+            // tab_Raids1
+            // 
+            this.tab_Raids1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Raids1.Location = new System.Drawing.Point(3, 3);
+            this.tab_Raids1.Name = "tab_Raids1";
+            this.tab_Raids1.Size = new System.Drawing.Size(919, 400);
+            this.tab_Raids1.TabIndex = 0;
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -2143,6 +2166,7 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginAlert_dataGridView)).EndInit();
             this.tabPage_map.ResumeLayout(false);
+            this.tabPage_Raids.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2294,6 +2318,8 @@
         private System.Windows.Forms.CheckBox accounts_checkBox_hideAcc;
         private System.Windows.Forms.TabPage tabPage_map;
         private Tab_Map tab_Map1;
+        private System.Windows.Forms.TabPage tabPage_Raids;
+        private Tabs.Tab_Raids tab_Raids1;
     }
 }
 
