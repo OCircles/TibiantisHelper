@@ -144,7 +144,11 @@ namespace TibiantisHelper
             this.p_Layer = layer;
             this.SLoad();
         }
-
+        public void SetZoom(float zoom)
+        {
+            c_zoomScale = zoom;
+            ZoomPosition(p_Transform, zoom);
+        }
 
 
 
@@ -527,13 +531,13 @@ namespace TibiantisHelper
         #region Transform stuff
         public void CenterToPoint(Point point, int layer)
         {
+            // Takes actual Tibia coordinates
+
             if (!Form_Main._miniMap.Initialized)
                 return;
 
             if (layer != this.p_Layer)
                 SetLayer(layer);
-
-            Console.WriteLine("Layer " + layer);
 
             ZoomPosition(Form_Main._miniMap.MapPosToImgPos(point), c_zoomScale);
         }

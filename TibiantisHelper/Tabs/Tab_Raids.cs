@@ -31,6 +31,8 @@ namespace TibiantisHelper.Tabs
         private void Tab_Raids_Load(object sender, EventArgs e)
         {
 
+            control_MinimapViewer1.SetZoom(3.5f);
+
             ReadXML();
 
             foreach (var raid in DataReader.raids)
@@ -69,6 +71,7 @@ namespace TibiantisHelper.Tabs
             dataGridView1.Columns[3].ReadOnly = true;
 
             dataGridView1_SelectionChanged(this, e);
+            listView1.Items[0].Selected = true;
         }
 
 
@@ -383,6 +386,12 @@ namespace TibiantisHelper.Tabs
                 return time;
             }
         }
-    
+
+        private void listView1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            var spawn = (DataReader.Raid.RaidSpawn)e.Item.Tag;
+
+            control_MinimapViewer1.CenterToPoint(new Point(spawn.Position.X, spawn.Position.Y), spawn.Position.Z);
+        }
     }
 }

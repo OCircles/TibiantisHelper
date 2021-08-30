@@ -1525,7 +1525,7 @@ namespace TibiantisHelper
                                         spawn.Delay = delay;
                                         break;
                                     case "Position":
-                                        var posSplit = split[1].Substring(1, split[1].Length - 1).Split(',');
+                                        var posSplit = GetBetweenChars(split[1],'[',']').Split(',');
                                         int posX, posY, posZ;
                                         posX = posY = posZ = -1;
                                         int.TryParse(posSplit[0], out posX);
