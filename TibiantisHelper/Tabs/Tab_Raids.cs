@@ -64,7 +64,9 @@ namespace TibiantisHelper.Tabs
 
             dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[2].ReadOnly = true;
             dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns[3].ReadOnly = true;
 
             dataGridView1_SelectionChanged(this, e);
         }
@@ -314,6 +316,8 @@ namespace TibiantisHelper.Tabs
 
                         break;
                     }
+
+                    dataGridView1.Invalidate();
 
                     if (timePicker.DialogResult != DialogResult.None)
                         SaveXML();
