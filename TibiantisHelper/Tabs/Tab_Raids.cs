@@ -248,7 +248,9 @@ namespace TibiantisHelper.Tabs
             // Race Count Delay Spread Message Items Lifetime Position
 
             string race = spawn.Race.ToString();
-            string count = spawn.Count.Item1 + "-" + spawn.Count.Item2;
+            string count = spawn.Count.Item1.ToString();
+            if (spawn.Count.Item1 != spawn.Count.Item2)
+                count += "-" + spawn.Count.Item2;
             string delay = spawn.Delay.ToString();
             string spread = spawn.Spread.ToString();
             string message = spawn.Message;
