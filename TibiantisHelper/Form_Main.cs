@@ -2887,7 +2887,10 @@ namespace TibiantisHelper
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (tabControl1.SelectedTab.Text != "Map")
-                tab_Map1.MinimapViewer.Unload();
+            {
+                if (tab_Map1.MinimapViewer != null)
+                    tab_Map1.MinimapViewer.Unload();
+            }
             else
                 tab_Map1.MinimapViewer.SLoad();
 
