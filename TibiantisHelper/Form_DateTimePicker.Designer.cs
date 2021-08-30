@@ -73,7 +73,6 @@ namespace TibiantisHelper
             // 
             // Form_DateTimePicker
             // 
-            this.AcceptButton = this.button1;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(385, 20);
             this.Controls.Add(this.button2);

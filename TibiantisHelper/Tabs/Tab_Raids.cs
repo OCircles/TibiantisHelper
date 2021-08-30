@@ -63,11 +63,14 @@ namespace TibiantisHelper.Tabs
             }
 
             dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             dataGridView1_SelectionChanged(this, e);
         }
 
+
+        #region File I/O
 
         public void SaveXML()
         {
@@ -161,6 +164,79 @@ namespace TibiantisHelper.Tabs
 
         }
 
+        #endregion
+
+
+
+        void SelectRaid(DataReader.Raid raid)
+        {
+            if (raid != null)
+            {
+
+                int findIndex = TrackedRaids.FindIndex(i => i.Raid == raid);
+                if (findIndex != -1)
+                {
+                    var tracked = TrackedRaids[findIndex];
+                    label_lastSeen.Text = tracked.LastSeen.ToShortDateString() + " " + tracked.LastSeen.ToShortTimeString();
+                    var next = tracked.Next();
+                    label_nextRaid.Text = next.ToShortDateString() + " " + next.ToShortTimeString();
+
+                    var remaining = next - DateTime.Now;
+                    label_remaining.Text = $"Remaining: {TimeString(remaining.Days, remaining.Hours, remaining.Minutes, remaining.Seconds)}";
+                }
+                else
+                {
+                    label_lastSeen.Text = label_nextRaid.Text = label_remaining.Text = "";
+                }
+
+                PopulateRaidSpawns(raid);
+
+                textBox1.Text = File.ReadAllText(DataReader.monsterFolder + "\\" + raid.Filename);
+
+            }
+            
+
+        }
+
+        void PopulateRaidSpawns(DataReader.Raid raid)
+        {
+            listView1.Items.Clear();
+
+            label_raidName.Text = raid.Filename;
+
+            foreach (var spawn in raid.Spawns)
+                AddRaidSpawn(spawn);
+
+            for (int i = 1; i < listView1.Columns.Count; i++)
+                listView1.Columns[i].AutoResize(ColumnHeaderAutoResizeStyle.HeaderSize);
+
+        }
+
+        void UpdateRowTime(int row)
+        {
+            TrackedRaid raid = (TrackedRaid)dataGridView1.Rows[row].Cells[2].Tag;
+
+            if (raid == null)
+            {
+                dataGridView1.Rows[row].Cells[2].Value =
+                    dataGridView1.Rows[row].Cells[3].Value
+                    = null;
+
+                dataGridView1.Rows[row].Cells[3].Style.BackColor = Color.White;
+
+                return;
+            }
+
+            dataGridView1.Rows[row].Cells[2].Value = raid.LastSeen;
+            var next = raid.Next();
+            dataGridView1.Rows[row].Cells[3].Value = next;
+
+            if ((next - DateTime.Now).Days == 0)
+                dataGridView1.Rows[row].Cells[3].Style.BackColor = Color.PaleVioletRed;
+        }
+    
+
+
 
         private void AddRaidSpawn(DataReader.Raid.RaidSpawn spawn)
         {
@@ -188,19 +264,60 @@ namespace TibiantisHelper.Tabs
         }
 
 
-        void SelectRaid(DataReader.Raid raid)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (raid != null)
+            if (e.ColumnIndex == 2)
             {
-                listView1.Items.Clear();
+                var cell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                var raid = (DataReader.Raid)dataGridView1.Rows[e.RowIndex].Tag;
 
-                label1.Text = raid.Filename;
+                TrackedRaid trackedRaid = null;
+                if (cell.Tag != null)
+                    trackedRaid = (TrackedRaid)cell.Tag;
 
-                foreach (var spawn in raid.Spawns)
-                    AddRaidSpawn(spawn);
 
-                for (int i = 1; i < listView1.Columns.Count; i++)
-                    listView1.Columns[i].AutoResize(ColumnHeaderAutoResizeStyle.HeaderSize);
+
+                var timePicker = new Form_DateTimePicker();
+                timePicker.StartPosition = FormStartPosition.Manual;
+                timePicker.Location = Cursor.Position;
+
+                if (trackedRaid != null)
+                    timePicker.SetDateTime(trackedRaid.LastSeen);
+
+                Console.WriteLine("asds");
+                timePicker.FormClosing += (s, ee) =>
+                {
+                    Console.WriteLine("TT");
+                    switch (timePicker.DialogResult)
+                    {
+                        case DialogResult.OK:
+
+                            Console.WriteLine("OK");
+                            if (trackedRaid == null)
+                            {
+                                trackedRaid = new TrackedRaid(raid, timePicker.SelectedTime);
+                                cell.Tag = trackedRaid;
+                                TrackedRaids.Add(trackedRaid);
+                            }
+                            else
+                                trackedRaid.LastSeen = timePicker.SelectedTime;
+
+                            UpdateRowTime(e.RowIndex);
+                        break;
+
+                        case DialogResult.Abort:
+                            if (trackedRaid != null)
+                            {
+                                cell.Tag = null;
+                                TrackedRaids.Remove(trackedRaid);
+                                UpdateRowTime(e.RowIndex);
+                            }
+
+                                break;
+                    }
+                };
+
+                timePicker.Show();
 
             }
         }
@@ -213,6 +330,23 @@ namespace TibiantisHelper.Tabs
             return raidName;
         }
 
+        string TimeString(int days, int hours, int minutes, int seconds)
+        {
+            var timeString = days + " days";
+
+            // All of the cipsoft raids are in full day intervals, but adding this in case someone adapts this for another server
+            if (hours != 0 || minutes != 0 || seconds != 0)
+            {
+                var addonString = "";
+                if (seconds != 0) addonString = seconds.ToString("D2") + "s";
+                if (minutes != 0) addonString = minutes.ToString("D2") + "m" + addonString;
+                if (hours != 0) addonString = hours + "h" + addonString;
+
+                timeString = timeString + " and " + addonString;
+            }
+
+            return timeString;
+        }
 
         public class TrackedRaid
         {
@@ -241,75 +375,6 @@ namespace TibiantisHelper.Tabs
                 return time;
             }
         }
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == 2)
-            {
-                var cell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                var raid = (DataReader.Raid)dataGridView1.Rows[e.RowIndex].Tag;
-
-                TrackedRaid trackedRaid = null;
-                if (cell.Tag != null)
-                    trackedRaid = (TrackedRaid)cell.Tag;
-
-
-
-                var timePicker = new Form_DateTimePicker();
-                timePicker.StartPosition = FormStartPosition.Manual;
-                timePicker.Location = Cursor.Position;
-
-                if (trackedRaid != null)
-                    timePicker.SetDateTime(trackedRaid.LastSeen);
-
-                timePicker.FormClosing += (s, ee) =>
-                {
-
-                    switch (timePicker.DialogResult)
-                    {
-                        case DialogResult.OK:
-                            if (trackedRaid == null)
-                            {
-                                trackedRaid = new TrackedRaid(raid, timePicker.SelectedTime);
-                                TrackedRaids.Add(trackedRaid);
-                            }
-                            else
-                                trackedRaid.LastSeen = timePicker.SelectedTime;
-
-                            UpdateRowTime(e.RowIndex);
-                        break;
-
-                        case DialogResult.Abort:
-                            if (trackedRaid != null)
-                            {
-                                cell.Tag = null;
-                                UpdateRowTime(e.RowIndex);
-                            }
-
-                                break;
-                    }
-                };
-
-                timePicker.Show();
-
-            }
-        }
-
-        void UpdateRowTime(int row)
-        {
-            TrackedRaid raid = (TrackedRaid)dataGridView1.Rows[row].Cells[2].Tag;
-
-            if (raid == null)
-            {
-                dataGridView1.Rows[row].Cells[2].Value =
-                    dataGridView1.Rows[row].Cells[3].Value
-                    = null;
-
-                return;
-            }
-
-            dataGridView1.Rows[row].Cells[2].Value = raid.LastSeen;
-            dataGridView1.Rows[row].Cells[3].Value = raid.Next();
-        }
+    
     }
 }
