@@ -150,7 +150,8 @@ namespace TibiantisHelper
 
         public void Unload()
         {
-            this.Image.Dispose();
+            if (Image != null)
+                this.Image.Dispose();
         }
 
 
