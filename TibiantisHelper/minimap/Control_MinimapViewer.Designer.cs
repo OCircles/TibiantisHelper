@@ -88,6 +88,7 @@ namespace TibiantisHelper
             this.Controls.Add(this.pictureBox1);
             this.Name = "Control_MinimapViewer";
             this.Size = new System.Drawing.Size(300, 200);
+            this.Load += new System.EventHandler(this.Control_MinimapViewer_Load);
             this.Resize += new System.EventHandler(this.Control_Minimap_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

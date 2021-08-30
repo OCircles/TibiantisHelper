@@ -87,7 +87,7 @@ namespace TibiantisHelper
 
                     this.initialized = true;
 
-                    Console.WriteLine("Initialized minimap");
+                    Console.WriteLine("Initialized minimap " + this.TotalBitmapSize.Width);
                     return;
                 }
 
@@ -174,6 +174,9 @@ namespace TibiantisHelper
 
             if (mapSize.Width == -1 || mapSize.Height == -1 || firstSubsection.X == -1 || firstSubsection.Y == -1)
                 this.initialized = false;
+
+            this.TotalBitmapSize.Width = mapSize.Width * 256;
+            this.TotalBitmapSize.Height = mapSize.Height * 256;
 
             if (!this.initialized)
                 throw new FileLoadException("Could not read map data from " + path);

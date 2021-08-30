@@ -20,7 +20,6 @@ namespace TibiantisHelper
         private bool _mapFocused = false;
         public bool MapFocused { get { return _mapFocused; } }
 
-
         public bool DragControlEnabled = true;
 
         bool r_isDragging;
@@ -92,15 +91,19 @@ namespace TibiantisHelper
             pictureBox1.GotFocus += pictureBox1_GotFocus;
             pictureBox1.LostFocus += pictureBox1_LostFocus;
 
-            MapFileCheck();
+        }
 
+
+        private void Control_MinimapViewer_Load(object sender, EventArgs e)
+        {
             if (Form_Main._miniMap.Initialized)
             {
                 this.p_Transform = new PointF(Form_Main._miniMap.TotalBitmapSize.Width / 2, Form_Main._miniMap.TotalBitmapSize.Height / 2);
                 SLoad();
             }
+            MapFileCheck();
         }
-        
+
         private void Control_Minimap_Resize(object sender, EventArgs e)
         {
             p_Transform = mouseToPos(new PointF(pictureBox1.Width / 2, pictureBox1.Height / 2));
@@ -559,7 +562,6 @@ namespace TibiantisHelper
             p_Transform.X -= fix_X;
             p_Transform.Y -= fix_Y;
         }
-
         private void ZoomPosition(PointF point, float zoom = 1f)
         {
             p_Transform = point;
