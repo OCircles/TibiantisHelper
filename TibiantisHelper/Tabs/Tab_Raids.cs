@@ -4,20 +4,26 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace TibiantisHelper.Tabs
 {
     public partial class Tab_Raids : UserControl
     {
 
-        private DataReader DataReader;
+        const string Filename = "Raids.xml";
+        public List<TrackedRaid> TrackedRaids;
+
 
         public Tab_Raids()
         {
+            TrackedRaids = new List<TrackedRaid>();
+
             InitializeComponent();
 
         }
@@ -25,12 +31,14 @@ namespace TibiantisHelper.Tabs
         private void Tab_Raids_Load(object sender, EventArgs e)
         {
 
+            ReadXML();
+
             foreach (var raid in DataReader.raids)
             {
                 var tt = new TimeSpan(0, 0, raid.Interval);
 
                 var timeString = tt.Days + " days";
-                
+
                 // All of the cipsoft raids are in full day intervals, but adding this in case someone adapts this for another server
                 if (tt.Hours != 0 || tt.Minutes != 0 || tt.Seconds != 0)
                 {
@@ -42,13 +50,114 @@ namespace TibiantisHelper.Tabs
                     timeString = timeString + " and " + addonString;
                 }
 
-                int newIndex = dataGridView1.Rows.Add(raid.Filename, timeString);
+                int newIndex = dataGridView1.Rows.Add(CleanRaidName(raid.Filename), timeString);
 
                 dataGridView1.Rows[newIndex].Tag = raid;
 
+                int findIndex = TrackedRaids.FindIndex(i => i.Raid == raid);
+                if (findIndex != -1)
+                {
+                    dataGridView1.Rows[newIndex].Cells[2].Tag = TrackedRaids[findIndex];
+                    UpdateRowTime(newIndex);
+                }
             }
 
-            dataGridView1_SelectionChanged(this,e);
+            dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            dataGridView1_SelectionChanged(this, e);
+        }
+
+
+        public void SaveXML()
+        {
+            try
+            {
+                _saveXML();
+            }
+            catch (Exception ex)
+            {
+                switch (MessageBox.Show(ex.Message, "Could not save tracked raids data", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error))
+                {
+                    case DialogResult.Abort:
+                        return;
+                    case DialogResult.Retry:
+                        SaveXML();
+                        break;
+                }
+            }
+        }
+
+        private void _saveXML()
+        {
+            if (TrackedRaids.Count == 0)
+                if (File.Exists(Filename))
+                    File.Delete(Filename);
+                return;
+
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = true;
+
+            using (var writer = XmlWriter.Create(Filename, settings))
+            {
+                writer.WriteStartDocument();
+                writer.WriteStartElement("Raids");
+
+                foreach (var r in TrackedRaids)
+                {
+                    writer.WriteStartElement("Raid");
+
+                    writer.WriteStartElement("Filename");
+                    writer.WriteString(r.Raid.Filename);
+                    writer.WriteEndElement();
+
+                    writer.WriteStartElement("LastSeen");
+                    writer.WriteString(r.LastSeen.ToFileTime().ToString());
+                    writer.WriteEndElement();
+
+                    writer.WriteEndElement();
+                }
+                writer.WriteEndElement();
+                writer.WriteEndDocument();
+            }
+        }
+
+        public void ReadXML()
+        {
+            if (File.Exists(Filename))
+            {
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load(Filename);
+
+                foreach (XmlNode node in xmlDoc.DocumentElement)
+                {
+                    DateTime lastSeen = new DateTime();
+                    string file = "";
+
+                    foreach (XmlNode data in node.ChildNodes)
+                    {
+                        if (!String.IsNullOrEmpty(node.InnerText))
+                        {
+                            switch (data.Name)
+                            {
+                                case "Filename":
+                                    file = data.InnerText;
+                                    break;
+                                case "LastSeen":
+                                    long ticks = long.Parse(data.InnerText);
+                                    lastSeen = DateTime.FromFileTimeUtc(ticks);
+                                    break;
+                            }
+                        }
+                    }
+
+                    int findIndex = DataReader.raids.FindIndex(i => i.Filename == file);
+                    if (findIndex != -1)
+                        TrackedRaids.Add(new TrackedRaid(DataReader.raids[findIndex], lastSeen));
+
+                }
+            }
+
 
         }
 
@@ -66,7 +175,7 @@ namespace TibiantisHelper.Tabs
             string lifetime = spawn.Lifetime.ToString();
             string position = spawn.Position.X + "," + spawn.Position.Y + "," + spawn.Position.Z;
 
-            ListViewItem item = new ListViewItem(new string[] { "", race, count, delay, spread, message, itemDrops, lifetime, position });
+            ListViewItem item = new ListViewItem(new string[] { "", race, count, delay, spread, itemDrops, lifetime, position, message });
             item.Tag = spawn;
             listView1.Items.Add(item);
         }
@@ -75,24 +184,132 @@ namespace TibiantisHelper.Tabs
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedCells[0] != null)
+                SelectRaid((DataReader.Raid)dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Tag);
+        }
+
+
+        void SelectRaid(DataReader.Raid raid)
+        {
+            if (raid != null)
             {
-                var raid = (DataReader.Raid)dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Tag;
+                listView1.Items.Clear();
 
-                // This gets called before grid is populated I think? Needs null check here
-                if (raid != null)
-                {
-                    listView1.Items.Clear();
+                label1.Text = raid.Filename;
 
-                    foreach (var spawn in raid.Spawns)
-                        AddRaidSpawn(spawn);
+                foreach (var spawn in raid.Spawns)
+                    AddRaidSpawn(spawn);
 
-                    for (int i = 1; i < listView1.Columns.Count; i++)
-                        listView1.Columns[i].AutoResize(ColumnHeaderAutoResizeStyle.HeaderSize);
-
-                }
-
+                for (int i = 1; i < listView1.Columns.Count; i++)
+                    listView1.Columns[i].AutoResize(ColumnHeaderAutoResizeStyle.HeaderSize);
 
             }
+        }
+
+        string CleanRaidName(string fileName)
+        {
+            string raidName = fileName.Substring(0, fileName.Length - 4);
+            raidName = char.ToUpper(raidName[0]) + raidName.Substring(1);
+
+            return raidName;
+        }
+
+
+        public class TrackedRaid
+        {
+            public DataReader.Raid Raid;
+            public DateTime LastSeen;
+
+            public TrackedRaid(DataReader.Raid raid, DateTime dateTime)
+            {
+                this.Raid = raid;
+                LastSeen = dateTime;
+            }
+
+            public TrackedRaid(DataReader.Raid raid, string dateString)
+            {
+                this.Raid = raid;
+                LastSeen = DateTime.Parse(dateString, System.Globalization.CultureInfo.InvariantCulture);
+            }
+
+            public DateTime Next()
+            {
+                var time = LastSeen.AddSeconds(Raid.Interval);
+
+                while (time.CompareTo(DateTime.Now) == -1)
+                    time = time.AddSeconds(Raid.Interval);
+
+                return time;
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 2)
+            {
+                var cell = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                var raid = (DataReader.Raid)dataGridView1.Rows[e.RowIndex].Tag;
+
+                TrackedRaid trackedRaid = null;
+                if (cell.Tag != null)
+                    trackedRaid = (TrackedRaid)cell.Tag;
+
+
+
+                var timePicker = new Form_DateTimePicker();
+                timePicker.StartPosition = FormStartPosition.Manual;
+                timePicker.Location = Cursor.Position;
+
+                if (trackedRaid != null)
+                    timePicker.SetDateTime(trackedRaid.LastSeen);
+
+                timePicker.FormClosing += (s, ee) =>
+                {
+
+                    switch (timePicker.DialogResult)
+                    {
+                        case DialogResult.OK:
+                            if (trackedRaid == null)
+                            {
+                                trackedRaid = new TrackedRaid(raid, timePicker.SelectedTime);
+                                TrackedRaids.Add(trackedRaid);
+                            }
+                            else
+                                trackedRaid.LastSeen = timePicker.SelectedTime;
+
+                            UpdateRowTime(e.RowIndex);
+                        break;
+
+                        case DialogResult.Abort:
+                            if (trackedRaid != null)
+                            {
+                                cell.Tag = null;
+                                UpdateRowTime(e.RowIndex);
+                            }
+
+                                break;
+                    }
+                };
+
+                timePicker.Show();
+
+            }
+        }
+
+        void UpdateRowTime(int row)
+        {
+            TrackedRaid raid = (TrackedRaid)dataGridView1.Rows[row].Cells[2].Tag;
+
+            if (raid == null)
+            {
+                dataGridView1.Rows[row].Cells[2].Value =
+                    dataGridView1.Rows[row].Cells[3].Value
+                    = null;
+
+                return;
+            }
+
+            dataGridView1.Rows[row].Cells[2].Value = raid.LastSeen;
+            dataGridView1.Rows[row].Cells[3].Value = raid.Next();
         }
     }
 }

@@ -89,6 +89,12 @@
     <Compile Include="calculators\Calculator_Production.Designer.cs">
       <DependentUpon>Calculator_Production.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_DateTimePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DateTimePicker.Designer.cs">
+      <DependentUpon>Form_DateTimePicker.cs</DependentUpon>
+    </Compile>
     <Compile Include="minimap\Control_MinimapViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="calculators\Calculator_Production.resx">
       <DependentUpon>Calculator_Production.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DateTimePicker.resx">
+      <DependentUpon>Form_DateTimePicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="minimap\Control_MinimapViewer.resx">
       <DependentUpon>Control_MinimapViewer.cs</DependentUpon>

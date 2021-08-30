@@ -2879,6 +2879,8 @@ namespace TibiantisHelper
                 }
             }
 
+            tab_Raids1.SaveXML();
+
             _traybarContainer.notifyIcon.Visible = false;
             Settings.Default.Save();
             Environment.Exit(0);
