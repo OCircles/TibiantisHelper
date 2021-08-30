@@ -2896,6 +2896,14 @@ namespace TibiantisHelper
             else
                 tab_Map1.MinimapViewer.SLoad();
 
+            if (tabControl1.SelectedTab.Text != "Raids")
+            {
+                if (tab_Raids1.control_MinimapViewer1 != null)
+                    tab_Raids1.control_MinimapViewer1.Unload();
+            }
+            else
+                tab_Raids1.control_MinimapViewer1.SLoad();
+
 
             if (tabControl1.SelectedTab.Text == "Accounts")
             {

@@ -31,6 +31,10 @@ namespace TibiantisHelper.Tabs
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.control_MinimapViewer1 = new TibiantisHelper.Control_MinimapViewer();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label_nextRaid = new System.Windows.Forms.Label();
+            this.label_lastSeen = new System.Windows.Forms.Label();
             this.label_remaining = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,10 +55,6 @@ namespace TibiantisHelper.Tabs
             this.columnHeader_Lifetime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader_Position = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader_Message = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label_lastSeen = new System.Windows.Forms.Label();
-            this.label_nextRaid = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.control_MinimapViewer1 = new TibiantisHelper.Control_MinimapViewer();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -112,6 +112,51 @@ namespace TibiantisHelper.Tabs
             this.splitContainer3.Size = new System.Drawing.Size(239, 424);
             this.splitContainer3.SplitterDistance = 168;
             this.splitContainer3.TabIndex = 0;
+            // 
+            // control_MinimapViewer1
+            // 
+            this.control_MinimapViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.control_MinimapViewer1.Framerate = ((byte)(90));
+            this.control_MinimapViewer1.Location = new System.Drawing.Point(0, 0);
+            this.control_MinimapViewer1.Name = "control_MinimapViewer1";
+            this.control_MinimapViewer1.Size = new System.Drawing.Size(239, 168);
+            this.control_MinimapViewer1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(0, 82);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox1.Size = new System.Drawing.Size(239, 170);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.WordWrap = false;
+            // 
+            // label_nextRaid
+            // 
+            this.label_nextRaid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_nextRaid.Location = new System.Drawing.Point(82, 39);
+            this.label_nextRaid.Name = "label_nextRaid";
+            this.label_nextRaid.Size = new System.Drawing.Size(157, 14);
+            this.label_nextRaid.TabIndex = 5;
+            this.label_nextRaid.Text = "xx-xx-xx";
+            this.label_nextRaid.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label_lastSeen
+            // 
+            this.label_lastSeen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label_lastSeen.Location = new System.Drawing.Point(82, 25);
+            this.label_lastSeen.Name = "label_lastSeen";
+            this.label_lastSeen.Size = new System.Drawing.Size(157, 14);
+            this.label_lastSeen.TabIndex = 4;
+            this.label_lastSeen.Text = "xx-xx-xx";
+            this.label_lastSeen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label_remaining
             // 
@@ -274,51 +319,6 @@ namespace TibiantisHelper.Tabs
             this.columnHeader_Message.Text = "Message";
             this.columnHeader_Message.Width = 59;
             // 
-            // label_lastSeen
-            // 
-            this.label_lastSeen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_lastSeen.Location = new System.Drawing.Point(82, 25);
-            this.label_lastSeen.Name = "label_lastSeen";
-            this.label_lastSeen.Size = new System.Drawing.Size(157, 14);
-            this.label_lastSeen.TabIndex = 4;
-            this.label_lastSeen.Text = "xx-xx-xx";
-            this.label_lastSeen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label_nextRaid
-            // 
-            this.label_nextRaid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_nextRaid.Location = new System.Drawing.Point(82, 39);
-            this.label_nextRaid.Name = "label_nextRaid";
-            this.label_nextRaid.Size = new System.Drawing.Size(157, 14);
-            this.label_nextRaid.TabIndex = 5;
-            this.label_nextRaid.Text = "xx-xx-xx";
-            this.label_nextRaid.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(0, 82);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(239, 170);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.WordWrap = false;
-            // 
-            // control_MinimapViewer1
-            // 
-            this.control_MinimapViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.control_MinimapViewer1.Framerate = ((byte)(90));
-            this.control_MinimapViewer1.Location = new System.Drawing.Point(0, 0);
-            this.control_MinimapViewer1.Name = "control_MinimapViewer1";
-            this.control_MinimapViewer1.Size = new System.Drawing.Size(239, 168);
-            this.control_MinimapViewer1.TabIndex = 0;
-            // 
             // Tab_Raids
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,9 +369,9 @@ namespace TibiantisHelper.Tabs
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label_raidName;
-        private Control_MinimapViewer control_MinimapViewer1;
         private System.Windows.Forms.Label label_nextRaid;
         private System.Windows.Forms.Label label_lastSeen;
         private System.Windows.Forms.TextBox textBox1;
+        public Control_MinimapViewer control_MinimapViewer1;
     }
 }
