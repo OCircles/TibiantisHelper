@@ -33,14 +33,15 @@ namespace TibiantisHelper
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label_position = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.control_MinimapViewer1 = new TibiantisHelper.Control_MinimapViewer();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label_position = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -54,6 +55,7 @@ namespace TibiantisHelper
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
@@ -109,6 +111,17 @@ namespace TibiantisHelper
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = resources.GetString("textBox2.Text");
             this.textBox2.WordWrap = false;
+            // 
+            // label_position
+            // 
+            this.label_position.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_position.AutoSize = true;
+            this.label_position.Location = new System.Drawing.Point(0, 301);
+            this.label_position.Name = "label_position";
+            this.label_position.Size = new System.Drawing.Size(44, 13);
+            this.label_position.TabIndex = 5;
+            this.label_position.Text = "Position";
+            this.label_position.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox2
             // 
@@ -191,12 +204,25 @@ namespace TibiantisHelper
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.control_MinimapViewer1);
+            // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.textBox1);
             this.splitContainer2.Size = new System.Drawing.Size(525, 465);
             this.splitContainer2.SplitterDistance = 298;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // control_MinimapViewer1
+            // 
+            this.control_MinimapViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.control_MinimapViewer1.Framerate = ((byte)(90));
+            this.control_MinimapViewer1.Location = new System.Drawing.Point(0, 0);
+            this.control_MinimapViewer1.Name = "control_MinimapViewer1";
+            this.control_MinimapViewer1.Size = new System.Drawing.Size(525, 298);
+            this.control_MinimapViewer1.TabIndex = 0;
             // 
             // textBox1
             // 
@@ -210,17 +236,6 @@ namespace TibiantisHelper
             this.textBox1.Text = "No sector selected\r\n\r\nHold down Ctrl or Right Mouse Button and mouse over a secto" +
     "r to calculate floor refresh";
             this.textBox1.WordWrap = false;
-            // 
-            // label_position
-            // 
-            this.label_position.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_position.AutoSize = true;
-            this.label_position.Location = new System.Drawing.Point(0, 301);
-            this.label_position.Name = "label_position";
-            this.label_position.Size = new System.Drawing.Size(44, 13);
-            this.label_position.TabIndex = 5;
-            this.label_position.Text = "Position";
-            this.label_position.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Tab_Map
             // 
@@ -244,6 +259,7 @@ namespace TibiantisHelper
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
@@ -265,5 +281,6 @@ namespace TibiantisHelper
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label_position;
+        public Control_MinimapViewer control_MinimapViewer1;
     }
 }

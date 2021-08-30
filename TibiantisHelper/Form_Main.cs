@@ -197,15 +197,15 @@ namespace TibiantisHelper
         // Hacky solution to forward KeyUp and KeyDown events to minimap
         private void Form_Main_KeyDown(object sender, KeyEventArgs e)
         {
-            if (((Tab_Map)tabPage_map.Controls[0]).MinimapViewer == null)
+            if (((Tab_Map)tabPage_map.Controls[0]).control_MinimapViewer1 == null)
             {
                 e.Handled = false;
                 return;
             }
 
-            if (((Tab_Map)tabPage_map.Controls[0]).MinimapViewer.MapFocused)
+            if (((Tab_Map)tabPage_map.Controls[0]).control_MinimapViewer1.MapFocused)
             {
-                ((Tab_Map)tabPage_map.Controls[0]).MinimapViewer.pictureBox1_KeyDown(sender, e);
+                ((Tab_Map)tabPage_map.Controls[0]).control_MinimapViewer1.pictureBox1_KeyDown(sender, e);
                 e.Handled = true;
                 return;
             }
@@ -213,15 +213,15 @@ namespace TibiantisHelper
         private void Form_Main_KeyUp(object sender, KeyEventArgs e)
         {
 
-            if (((Tab_Map)tabPage_map.Controls[0]).MinimapViewer == null)
+            if (((Tab_Map)tabPage_map.Controls[0]).control_MinimapViewer1 == null)
             {
                 e.Handled = false;
                 return;
             }
 
-            if (((Tab_Map)tabPage_map.Controls[0]).MinimapViewer.MapFocused)
+            if (((Tab_Map)tabPage_map.Controls[0]).control_MinimapViewer1.MapFocused)
             {
-                ((Tab_Map)tabPage_map.Controls[0]).MinimapViewer.pictureBox1_KeyUp(sender, e);
+                ((Tab_Map)tabPage_map.Controls[0]).control_MinimapViewer1.pictureBox1_KeyUp(sender, e);
                 e.Handled = true;
                 return;
             }
@@ -2890,11 +2890,11 @@ namespace TibiantisHelper
         {
             if (tabControl1.SelectedTab.Text != "Map")
             {
-                if (tab_Map1.MinimapViewer != null)
-                    tab_Map1.MinimapViewer.Unload();
+                if (tab_Map1.control_MinimapViewer1 != null)
+                    tab_Map1.control_MinimapViewer1.Unload();
             }
             else
-                tab_Map1.MinimapViewer.SLoad();
+                tab_Map1.control_MinimapViewer1.SLoad();
 
             if (tabControl1.SelectedTab.Text != "Raids")
             {

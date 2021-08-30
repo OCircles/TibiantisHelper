@@ -5,8 +5,6 @@ namespace TibiantisHelper
 {
     public partial class Tab_Map : UserControl
     {
-        public Control_MinimapViewer MinimapViewer;
-
         public Tab_Map()
         {
             InitializeComponent();
@@ -38,39 +36,36 @@ namespace TibiantisHelper
 
         private void Tab_Map_Load(object sender, System.EventArgs e)
         {
-            // The VS designer broke because MinimapViewer references Form_Main minimap so here we are
+            
+            control_MinimapViewer1.SectorSelected += control_MinimapViewer1_SectorSelected;
+            control_MinimapViewer1.Redraw += (ss, ee) => OnMinimapRedraw();
 
-            MinimapViewer = new Control_MinimapViewer();
-            MinimapViewer.Dock = DockStyle.Fill;
-            MinimapViewer.SectorSelected += control_MinimapViewer1_SectorSelected;
-            MinimapViewer.Redraw += (ss, ee) => OnMinimapRedraw();
+            splitContainer2.Panel1.Controls.Add(control_MinimapViewer1);
 
-            splitContainer2.Panel1.Controls.Add(MinimapViewer);
-
-            trackBar1.Value = MinimapViewer.Framerate;
+            trackBar1.Value = control_MinimapViewer1.Framerate;
             updateFramerateText();
         }
 
         private void OnMinimapRedraw()
         {
-            var pos = MinimapViewer.Position;
+            var pos = control_MinimapViewer1.Position;
             label_position.Text = $"X: {pos.X} Y: {pos.Y} Z: {pos.Z}";
         }
 
         private void trackBar1_ValueChanged(object sender, System.EventArgs e)
         {
-            MinimapViewer.Framerate = (byte)trackBar1.Value;
+            control_MinimapViewer1.Framerate = (byte)trackBar1.Value;
             updateFramerateText();
         }
 
         private void numericUpDown1_ValueChanged(object sender, System.EventArgs e)
         {
-            MinimapViewer.SetLayer(decimal.ToInt32(numericUpDown1.Value));
+            control_MinimapViewer1.SetLayer(decimal.ToInt32(numericUpDown1.Value));
         }
 
         private void checkBox1_CheckedChanged(object sender, System.EventArgs e)
         {
-            MinimapViewer.DragControlEnabled = checkBox1.Checked;
+            control_MinimapViewer1.DragControlEnabled = checkBox1.Checked;
         }
 
         private void updateFramerateText()
