@@ -193,7 +193,7 @@ namespace TibiantisHelper.Tabs
                     label_nextRaid.Text = next.ToShortDateString() + " " + next.ToShortTimeString();
 
                     var remaining = next - DateTime.Now;
-                    label_remaining.Text = $"Remaining: {TimeString(remaining.Days, remaining.Hours, remaining.Minutes, remaining.Seconds)}";
+                    label_remaining.Text = $"{TimeString(remaining.Days, remaining.Hours, remaining.Minutes, remaining.Seconds)}";
                 }
                 else
                 {
