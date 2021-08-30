@@ -525,8 +525,11 @@ namespace TibiantisHelper
 
 
         #region Transform stuff
-        public void CenterToPoint(Point point)
+        public void CenterToPoint(Point point, int layer)
         {
+            if (layer != this.p_Layer)
+                SetLayer(layer);
+
             ZoomPosition(point, c_zoomScale);
         }
 
