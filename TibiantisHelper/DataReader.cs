@@ -1591,6 +1591,7 @@ namespace TibiantisHelper
                             }
                         }
                     }
+                    raid.Spawns.Add(spawn);
                     raids.Add(raid);
                 }
             }
