@@ -39,6 +39,7 @@ namespace TibiantisHelper
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePicker1.Location = new System.Drawing.Point(199, 0);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.ShowUpDown = true;
             this.dateTimePicker1.Size = new System.Drawing.Size(69, 20);
@@ -47,6 +48,7 @@ namespace TibiantisHelper
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(0, 0);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(0);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 1;
@@ -54,6 +56,7 @@ namespace TibiantisHelper
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(266, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(60, 20);
             this.button1.TabIndex = 2;
@@ -64,6 +67,7 @@ namespace TibiantisHelper
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(325, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(60, 20);
             this.button2.TabIndex = 3;
@@ -74,12 +78,15 @@ namespace TibiantisHelper
             // Form_DateTimePicker
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(385, 20);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(385, 20);
             this.Name = "Form_DateTimePicker";
             this.ShowInTaskbar = false;
             this.Text = "Form_DateTimePicker";
