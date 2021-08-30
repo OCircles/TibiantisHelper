@@ -527,10 +527,15 @@ namespace TibiantisHelper
         #region Transform stuff
         public void CenterToPoint(Point point, int layer)
         {
+            if (!Form_Main._miniMap.Initialized)
+                return;
+
             if (layer != this.p_Layer)
                 SetLayer(layer);
 
-            ZoomPosition(point, c_zoomScale);
+            Console.WriteLine("Layer " + layer);
+
+            ZoomPosition(Form_Main._miniMap.MapPosToImgPos(point), c_zoomScale);
         }
 
         private void FixViewport()
