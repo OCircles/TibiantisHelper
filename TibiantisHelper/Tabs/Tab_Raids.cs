@@ -251,9 +251,14 @@ namespace TibiantisHelper.Tabs
 
         private void AddRaidSpawn(DataReader.Raid.RaidSpawn spawn)
         {
-            // Race Count Delay Spread Message Items Lifetime Position
-
             string race = spawn.Race.ToString();
+
+            int findRaceIndex = DataReader.Monsters.FindIndex(i => i.RaceNumber == spawn.Race);
+            if (findRaceIndex != -1)
+                race = DataReader.Monsters[findRaceIndex].Name;
+            else
+                race += " (post-7.4)";
+
             string count = spawn.Count.Item1.ToString();
             if (spawn.Count.Item1 != spawn.Count.Item2)
                 count += "-" + spawn.Count.Item2;
