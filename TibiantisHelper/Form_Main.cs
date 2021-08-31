@@ -1200,10 +1200,10 @@ namespace TibiantisHelper
             var runesSingle = (runes as ToolStripMenuItem).DropDownItems.Add("Single");
             var runesBackpack = (runes as ToolStripMenuItem).DropDownItems.Add("Backpack");
 
-            foreach (Rune r in _dataReader.Runes)
+            foreach (Rune r in DataReader.Runes)
             {
 
-                Spell spell = _dataReader.Spells.Where(s => s.Name == r.Name).FirstOrDefault();
+                Spell spell = DataReader.Spells.Where(s => s.Name == r.Name).FirstOrDefault();
 
                 double regenSingle = (spell.Mana / _selectedVocation.regenMP) * 60;
                 double regenBp = ((spell.Mana * 20) / _selectedVocation.regenMP) * 60;
@@ -1231,10 +1231,10 @@ namespace TibiantisHelper
             var conjuringSingle = (conjuring as ToolStripMenuItem).DropDownItems.Add("Stack");
             var conjuringBackpack = (conjuring as ToolStripMenuItem).DropDownItems.Add("Backpack");
 
-            foreach (Spell s in _dataReader.Spells.Where(s => s.ProduceAmount != 0))
+            foreach (Spell s in DataReader.Spells.Where(s => s.ProduceAmount != 0))
             {
 
-                Item item = _dataReader.Items.Where(i => i.ID == s.ProduceID).FirstOrDefault();
+                Item item = DataReader.Items.Where(i => i.ID == s.ProduceID).FirstOrDefault();
 
                 double castSingle = Math.Ceiling(((double)(1 * 100)) / (double)s.ProduceAmount);
                 double castBp = Math.Ceiling(((double)(20 * 100)) / (double)s.ProduceAmount);
@@ -1365,11 +1365,11 @@ namespace TibiantisHelper
                 return s + " MP";
             };
 
-            monsters_listView.Objects = _dataReader.Monsters;
+            monsters_listView.Objects = DataReader.Monsters;
 
             // Monster drop list
             olvColumn21.AspectGetter = delegate (object x) {
-                Item item = _dataReader.Items.Where(i => i.ID == ((Monster.Drop)x).ItemID).FirstOrDefault();
+                Item item = DataReader.Items.Where(i => i.ID == ((Monster.Drop)x).ItemID).FirstOrDefault();
                 if (item != null)
                     return item.Name;
                 else
@@ -1383,7 +1383,7 @@ namespace TibiantisHelper
             {
                 int id = ((Monster.Drop)x).ItemID;
                 int cheapest = 0;
-                foreach (NPC npc in _dataReader.Npcs)
+                foreach (NPC npc in DataReader.Npcs)
                 {
                     foreach (NPC.Transaction transaction in npc.transactions)
                     {
@@ -1419,7 +1419,7 @@ namespace TibiantisHelper
         private void monsters_dropListView_ItemActivate(object sender, EventArgs e)
         {
             var drop = (Monster.Drop)monsters_dropListView.SelectedObject;
-            Item item = _dataReader.Items.Where(i => i.ID == drop.ItemID).FirstOrDefault();
+            Item item = DataReader.Items.Where(i => i.ID == drop.ItemID).FirstOrDefault();
 
             if (item != null)
             {
@@ -1480,7 +1480,7 @@ namespace TibiantisHelper
                 return "No";
             };
 
-            listView_npcs.Objects = _dataReader.Npcs;
+            listView_npcs.Objects = DataReader.Npcs;
 
 
             // Items list
@@ -1510,7 +1510,7 @@ namespace TibiantisHelper
             {
                 if (((NPC.Transaction)x).ItemID > 100)
                 {
-                    var item = _dataReader.Items.Where(i => i.ID == ((NPC.Transaction)x).ItemID).FirstOrDefault();
+                    var item = DataReader.Items.Where(i => i.ID == ((NPC.Transaction)x).ItemID).FirstOrDefault();
                     if (item != null)
                     {
                         if (item.Flags.Contains("LiquidContainer"))
@@ -1529,7 +1529,7 @@ namespace TibiantisHelper
                 }
                 else
                 {
-                    Spell spell = _dataReader.Spells.Where(s => s.ID == ((NPC.Transaction)x).ItemID).FirstOrDefault();
+                    Spell spell = DataReader.Spells.Where(s => s.ID == ((NPC.Transaction)x).ItemID).FirstOrDefault();
                     return spell.Name;
                 }
             };
@@ -1627,7 +1627,7 @@ namespace TibiantisHelper
 
                 if (trade.Type != NPC.TransactionType.Spell)
                 {
-                    var item = _dataReader.Items.Where(i => i.ID == trade.ItemID).FirstOrDefault();
+                    var item = DataReader.Items.Where(i => i.ID == trade.ItemID).FirstOrDefault();
 
                     if (item != null)
                     {
@@ -1636,7 +1636,7 @@ namespace TibiantisHelper
                     }
                 } else
                 {
-                    Spell spell = _dataReader.Spells.Where(s => s.ID == trade.ItemID).FirstOrDefault();
+                    Spell spell = DataReader.Spells.Where(s => s.ID == trade.ItemID).FirstOrDefault();
                     
                     tabControl1.SelectedTab = tabPage_spells;
                     spells_listView.SelectedObject = spell;
@@ -1748,7 +1748,7 @@ namespace TibiantisHelper
             {
                 Item i = (Item)x;
 
-                Rune r = _dataReader.Runes.Where(oo => oo.ID == i.ID).FirstOrDefault();
+                Rune r = DataReader.Runes.Where(oo => oo.ID == i.ID).FirstOrDefault();
                 if (string.IsNullOrEmpty(r.Name)) return (byte)0;
                 else return r.Charges;
 
@@ -1776,7 +1776,7 @@ namespace TibiantisHelper
 
                 if (i.Flags.Contains("Rune"))
                 {
-                    Rune r = _dataReader.Runes.Where(oo => oo.ID == i.ID).FirstOrDefault();
+                    Rune r = DataReader.Runes.Where(oo => oo.ID == i.ID).FirstOrDefault();
                     if (string.IsNullOrEmpty(r.Name)) return "Spell Rune " + i.ID + " (unused)";
                     return r.Name;
                 }
@@ -1832,7 +1832,7 @@ namespace TibiantisHelper
                 // Find cheapers vendor price
                 double price = 9999;
 
-                foreach (var npc in _dataReader.Npcs)
+                foreach (var npc in DataReader.Npcs)
                     foreach (var t in npc.transactions)
                         if (t.ItemID == ((Item)x).ID && t.Type == NPC.TransactionType.Buy)
                             if (t.Price < price) price = t.Price;
@@ -1914,12 +1914,12 @@ namespace TibiantisHelper
                 var split = filter.Split(',');
 
                 foreach ( var f in split ) 
-                    items.AddRange(_dataReader.GetItemsByFilter(_dataReader.Items, f));
+                    items.AddRange(DataReader.GetItemsByFilter(DataReader.Items, f));
 
                 items = items.Distinct().ToList();
             }
             else
-                items.AddRange(_dataReader.GetItemsByFilter(_dataReader.Items, filter));
+                items.AddRange(DataReader.GetItemsByFilter(DataReader.Items, filter));
 
             if (columns != null)
                 listView_items.Columns.AddRange(columns);
@@ -2032,7 +2032,7 @@ namespace TibiantisHelper
 
             List<ItemTrade> trades = new List<ItemTrade>();
 
-            foreach (var npc in _dataReader.Npcs)
+            foreach (var npc in DataReader.Npcs)
             {
                 foreach (var t in npc.transactions)
                 {
@@ -2050,7 +2050,7 @@ namespace TibiantisHelper
 
             List<ItemDrop> drops = new List<ItemDrop>();
 
-            foreach (var mon in _dataReader.Monsters)
+            foreach (var mon in DataReader.Monsters)
             {
                 foreach (var d in mon.Inventory)
                 {
@@ -2119,7 +2119,7 @@ namespace TibiantisHelper
 
         private LiquidContainer Item_GetLiquidContainerName(NPC.Transaction transaction)
         {
-            Item item = _dataReader.Items.Where(i => i.ID == transaction.ItemID).FirstOrDefault();
+            Item item = DataReader.Items.Where(i => i.ID == transaction.ItemID).FirstOrDefault();
 
             LiquidContainer container = new LiquidContainer();
 
@@ -2249,7 +2249,7 @@ namespace TibiantisHelper
                 return "No";
             };
 
-            spells_listView.Objects = _dataReader.Spells;
+            spells_listView.Objects = DataReader.Spells;
 
 
 
@@ -2265,7 +2265,7 @@ namespace TibiantisHelper
 
                 List<NPC> npcs = new List<NPC>();
 
-                foreach (NPC n in _dataReader.Npcs)
+                foreach (NPC n in DataReader.Npcs)
                 {
                     foreach (var t in n.transactions)
                         if (t.Type == NPC.TransactionType.Spell && t.ItemID == s.ID) npcs.Add(n);

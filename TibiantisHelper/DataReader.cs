@@ -792,7 +792,7 @@ namespace TibiantisHelper
 
         }
 
-        public List<Item> GetItemsByFilter(List<Item> source, string filter)
+        public static List<Item> GetItemsByFilter(List<Item> source, string filter)
         {
             List<Item> items = new List<Item>();
             string[] filters = filter.Split(',');
@@ -841,7 +841,7 @@ namespace TibiantisHelper
         }
 
 
-        public List<Item> GetItemsByFlag(List<Item> source, string flag)
+        public static List<Item> GetItemsByFlag(List<Item> source, string flag)
         {
             List<Item> items = new List<Item>();
 
@@ -1277,6 +1277,8 @@ namespace TibiantisHelper
             public List<Drop> Inventory;
             public List<string> Flags;
 
+            public int RaceNumber;
+
             public string Name;
             public string Article;
 
@@ -1345,6 +1347,9 @@ namespace TibiantisHelper
                                         break;
                                     case "Article":
                                         monster.Article = CapitalizeString(GetBetweenChars(cleanLine, '"', '"'));
+                                        break;
+                                    case "RaceNumber":
+                                        monster.RaceNumber = int.Parse(split[2]);
                                         break;
                                     case "Experience":
                                         monster.Experience = int.Parse(split[2]);
