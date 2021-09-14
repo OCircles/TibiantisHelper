@@ -34,9 +34,9 @@ namespace TibiantisHelper
 
         private uint maxClientId;
 
-        private uint datLookTypes;
-        private uint datEffects;
-        private uint datMissiles;
+        private static uint datLookTypes;
+        private static uint datEffects;
+        private static uint datMissiles;
 
         public static List<Location> Locations;
         public static List<NPC> Npcs;
@@ -174,7 +174,7 @@ namespace TibiantisHelper
 
         #region Entity
 
-        public Entity ReadEntity(int entityID)
+        public static Entity ReadEntity(int entityID)
         {
 
             if (entityID < 100) return null;
@@ -498,7 +498,7 @@ namespace TibiantisHelper
 
         #region Sprite
 
-        public Bitmap ReadSprite(int spriteID)
+        public static Bitmap ReadSprite(int spriteID)
         {
 
             Bitmap bmp = new Bitmap(32, 32);

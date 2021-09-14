@@ -631,14 +631,14 @@ namespace TibiantisHelper
         {
 
             Vocation knight = new Vocation(
-                    _dataReader.ReadSprite(203),
+                    DataReader.ReadSprite(203),
                     "Elite", "Knight",
                     10, 15,
                     5, 5
                 );
 
             Vocation paladin = new Vocation(
-                    _dataReader.ReadSprite(506),
+                    DataReader.ReadSprite(506),
                     "Royal", "Paladin",
                     7.5, 10,
                     7.5, 10
@@ -646,7 +646,7 @@ namespace TibiantisHelper
 
 
             Vocation sorcerer = new Vocation(
-                    _dataReader.ReadSprite(1337),
+                    DataReader.ReadSprite(1337),
                     "Master", "Sorcerer",
                     5, 5,
                     10, 15
@@ -655,7 +655,7 @@ namespace TibiantisHelper
 
 
             Vocation druid = new Vocation(
-                    _dataReader.ReadSprite(1286),
+                    DataReader.ReadSprite(1286),
                     "Elder", "Druid",
                     5, 5,
                     10, 15
@@ -916,13 +916,13 @@ namespace TibiantisHelper
                 {
                     byte spriteIndex = 0;
 
-                    Entity entity = _dataReader.ReadEntity(transaction.ItemID - 100);
+                    Entity entity = DataReader.ReadEntity(transaction.ItemID - 100);
 
                     // If it's a vial
                     if (transaction.ItemID == 2874)
                         spriteIndex = (Item_GetLiquidContainerName((NPC.Transaction)x)).spriteIndex;
 
-                    return _dataReader.ReadSprite(entity.sprites[spriteIndex]);
+                    return DataReader.ReadSprite(entity.sprites[spriteIndex]);
                 }
                 else
                     return "Spell";
@@ -1207,8 +1207,8 @@ namespace TibiantisHelper
             };
             itemName.ImageGetter = delegate (object x)
             {
-                var entity = _dataReader.ReadEntity(((Item)x).ID - 100);
-                if (entity != null) return _dataReader.ReadSprite(entity.sprites[0]);
+                var entity = DataReader.ReadEntity(((Item)x).ID - 100);
+                if (entity != null) return DataReader.ReadSprite(entity.sprites[0]);
                 else return null;
             };
 
@@ -1447,9 +1447,9 @@ namespace TibiantisHelper
 
             textBox1.Lines = itemInfo.Split(',');
 
-            var entity = _dataReader.ReadEntity(item.ID - 100);
+            var entity = DataReader.ReadEntity(item.ID - 100);
 
-            itemIcon.Image = _dataReader.ReadSprite(entity.sprites[0]);
+            itemIcon.Image = DataReader.ReadSprite(entity.sprites[0]);
 
 
             List<ItemTrade> trades = new List<ItemTrade>();

@@ -47,6 +47,7 @@
             this.tabPage_accounts = new System.Windows.Forms.TabPage();
             this.tab_Accounts = new TibiantisHelper.Tabs.Tab_Accounts();
             this.tabPage_timers = new System.Windows.Forms.TabPage();
+            this.tab_Timers1 = new TibiantisHelper.Tabs.Tab_Timers();
             this.tabPage_calculator = new System.Windows.Forms.TabPage();
             this.splitContainer14 = new System.Windows.Forms.SplitContainer();
             this.calculator_listBox = new System.Windows.Forms.ListBox();
@@ -158,7 +159,6 @@
             this.header_linkLabel_discord = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timerTrayFlash = new System.Windows.Forms.Timer(this.components);
-            this.tab_Timers1 = new TibiantisHelper.Tabs.Tab_Timers();
             ((System.ComponentModel.ISupportInitialize)(this.header_pictureBox)).BeginInit();
             this.header_panel_vocations.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -427,6 +427,14 @@
             this.tabPage_timers.TabIndex = 1;
             this.tabPage_timers.Text = "Timers";
             this.tabPage_timers.UseVisualStyleBackColor = true;
+            // 
+            // tab_Timers1
+            // 
+            this.tab_Timers1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Timers1.Location = new System.Drawing.Point(3, 3);
+            this.tab_Timers1.Name = "tab_Timers1";
+            this.tab_Timers1.Size = new System.Drawing.Size(919, 400);
+            this.tab_Timers1.TabIndex = 0;
             // 
             // tabPage_calculator
             // 
@@ -1753,14 +1761,6 @@
             // 
             this.timerTrayFlash.Interval = 1000;
             this.timerTrayFlash.Tick += new System.EventHandler(this.timerTrayFlash_Tick);
-            // 
-            // tab_Timers1
-            // 
-            this.tab_Timers1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_Timers1.Location = new System.Drawing.Point(3, 3);
-            this.tab_Timers1.Name = "tab_Timers1";
-            this.tab_Timers1.Size = new System.Drawing.Size(919, 400);
-            this.tab_Timers1.TabIndex = 0;
             // 
             // Form_Main
             // 
