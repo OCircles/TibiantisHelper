@@ -45,15 +45,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_accounts = new System.Windows.Forms.TabPage();
-            this.splitContainer12 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer13 = new System.Windows.Forms.SplitContainer();
-            this.accounts_checkBox_hideAcc = new System.Windows.Forms.CheckBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.accounts_label_selected = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.accounts_dataGridView = new System.Windows.Forms.DataGridView();
+            this.tab_Accounts = new TibiantisHelper.Tabs.Tab_Accounts();
             this.tabPage_timers = new System.Windows.Forms.TabPage();
             this.timers_splitContainer = new System.Windows.Forms.SplitContainer();
             this.textBox14 = new System.Windows.Forms.TextBox();
@@ -181,15 +173,6 @@
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage_accounts.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer12)).BeginInit();
-            this.splitContainer12.Panel1.SuspendLayout();
-            this.splitContainer12.Panel2.SuspendLayout();
-            this.splitContainer12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).BeginInit();
-            this.splitContainer13.Panel1.SuspendLayout();
-            this.splitContainer13.Panel2.SuspendLayout();
-            this.splitContainer13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.accounts_dataGridView)).BeginInit();
             this.tabPage_timers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timers_splitContainer)).BeginInit();
             this.timers_splitContainer.Panel1.SuspendLayout();
@@ -430,7 +413,7 @@
             // 
             // tabPage_accounts
             // 
-            this.tabPage_accounts.Controls.Add(this.splitContainer12);
+            this.tabPage_accounts.Controls.Add(this.tab_Accounts);
             this.tabPage_accounts.Location = new System.Drawing.Point(4, 22);
             this.tabPage_accounts.Name = "tabPage_accounts";
             this.tabPage_accounts.Padding = new System.Windows.Forms.Padding(3);
@@ -439,140 +422,13 @@
             this.tabPage_accounts.Text = "Accounts";
             this.tabPage_accounts.UseVisualStyleBackColor = true;
             // 
-            // splitContainer12
+            // tab_Accounts
             // 
-            this.splitContainer12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer12.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer12.IsSplitterFixed = true;
-            this.splitContainer12.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer12.Name = "splitContainer12";
-            // 
-            // splitContainer12.Panel1
-            // 
-            this.splitContainer12.Panel1.Controls.Add(this.splitContainer13);
-            // 
-            // splitContainer12.Panel2
-            // 
-            this.splitContainer12.Panel2.Controls.Add(this.accounts_dataGridView);
-            this.splitContainer12.Size = new System.Drawing.Size(919, 400);
-            this.splitContainer12.SplitterDistance = 235;
-            this.splitContainer12.TabIndex = 1;
-            // 
-            // splitContainer13
-            // 
-            this.splitContainer13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer13.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer13.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer13.Name = "splitContainer13";
-            this.splitContainer13.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer13.Panel1
-            // 
-            this.splitContainer13.Panel1.Controls.Add(this.accounts_checkBox_hideAcc);
-            this.splitContainer13.Panel1.Controls.Add(this.textBox10);
-            this.splitContainer13.Panel1.Controls.Add(this.accounts_label_selected);
-            this.splitContainer13.Panel1.Controls.Add(this.button6);
-            this.splitContainer13.Panel1.Controls.Add(this.button7);
-            // 
-            // splitContainer13.Panel2
-            // 
-            this.splitContainer13.Panel2.Controls.Add(this.textBox12);
-            this.splitContainer13.Size = new System.Drawing.Size(235, 400);
-            this.splitContainer13.SplitterDistance = 177;
-            this.splitContainer13.TabIndex = 3;
-            // 
-            // accounts_checkBox_hideAcc
-            // 
-            this.accounts_checkBox_hideAcc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.accounts_checkBox_hideAcc.AutoSize = true;
-            this.accounts_checkBox_hideAcc.Checked = true;
-            this.accounts_checkBox_hideAcc.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.accounts_checkBox_hideAcc.Location = new System.Drawing.Point(4, 157);
-            this.accounts_checkBox_hideAcc.Name = "accounts_checkBox_hideAcc";
-            this.accounts_checkBox_hideAcc.Size = new System.Drawing.Size(149, 17);
-            this.accounts_checkBox_hideAcc.TabIndex = 5;
-            this.accounts_checkBox_hideAcc.Text = "Hide Account Number";
-            this.accounts_checkBox_hideAcc.UseVisualStyleBackColor = true;
-            this.accounts_checkBox_hideAcc.CheckedChanged += new System.EventHandler(this.accounts_checkBox_hideAcc_CheckedChanged);
-            // 
-            // textBox10
-            // 
-            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox10.Location = new System.Drawing.Point(0, 21);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox10.Size = new System.Drawing.Size(235, 105);
-            this.textBox10.TabIndex = 4;
-            this.textBox10.WordWrap = false;
-            // 
-            // accounts_label_selected
-            // 
-            this.accounts_label_selected.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.accounts_label_selected.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accounts_label_selected.Location = new System.Drawing.Point(1, 0);
-            this.accounts_label_selected.Name = "accounts_label_selected";
-            this.accounts_label_selected.Size = new System.Drawing.Size(231, 18);
-            this.accounts_label_selected.TabIndex = 3;
-            this.accounts_label_selected.Text = "No account selected";
-            this.accounts_label_selected.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Location = new System.Drawing.Point(0, 132);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(115, 23);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Add Account";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.Location = new System.Drawing.Point(121, 132);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(115, 23);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "Remove Account";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // textBox12
-            // 
-            this.textBox12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox12.Location = new System.Drawing.Point(0, 0);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox12.Size = new System.Drawing.Size(235, 219);
-            this.textBox12.TabIndex = 0;
-            this.textBox12.Text = resources.GetString("textBox12.Text");
-            // 
-            // accounts_dataGridView
-            // 
-            this.accounts_dataGridView.AllowUserToAddRows = false;
-            this.accounts_dataGridView.AllowUserToDeleteRows = false;
-            this.accounts_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.accounts_dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.accounts_dataGridView.Location = new System.Drawing.Point(0, 0);
-            this.accounts_dataGridView.Name = "accounts_dataGridView";
-            this.accounts_dataGridView.Size = new System.Drawing.Size(680, 400);
-            this.accounts_dataGridView.TabIndex = 0;
-            this.accounts_dataGridView.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.accounts_dataGridView_CellBeginEdit);
-            this.accounts_dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.accounts_dataGridView_CellDoubleClick);
-            this.accounts_dataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.accounts_dataGridView_CellFormatting);
-            this.accounts_dataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.accounts_dataGridView_DataBindingComplete);
-            this.accounts_dataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.accounts_dataGridView_KeyDown);
-            this.accounts_dataGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.accounts_dataGridView_MouseDown);
+            this.tab_Accounts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Accounts.Location = new System.Drawing.Point(3, 3);
+            this.tab_Accounts.Name = "tab_Accounts";
+            this.tab_Accounts.Size = new System.Drawing.Size(919, 400);
+            this.tab_Accounts.TabIndex = 0;
             // 
             // tabPage_timers
             // 
@@ -2069,17 +1925,6 @@
             this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage_accounts.ResumeLayout(false);
-            this.splitContainer12.Panel1.ResumeLayout(false);
-            this.splitContainer12.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer12)).EndInit();
-            this.splitContainer12.ResumeLayout(false);
-            this.splitContainer13.Panel1.ResumeLayout(false);
-            this.splitContainer13.Panel1.PerformLayout();
-            this.splitContainer13.Panel2.ResumeLayout(false);
-            this.splitContainer13.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).EndInit();
-            this.splitContainer13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.accounts_dataGridView)).EndInit();
             this.tabPage_timers.ResumeLayout(false);
             this.timers_splitContainer.Panel1.ResumeLayout(false);
             this.timers_splitContainer.Panel1.PerformLayout();
@@ -2178,7 +2023,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabPage tabPage_accounts;
         private System.Windows.Forms.TabPage tabPage_timers;
-        private System.Windows.Forms.DataGridView accounts_dataGridView;
         private System.Windows.Forms.PictureBox header_pictureBox;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TabPage tabPage_items;
@@ -2276,13 +2120,6 @@
         private System.Windows.Forms.Label loginAlert_labelSelected;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.DataGridView loginAlert_dataGridView;
-        private System.Windows.Forms.SplitContainer splitContainer12;
-        private System.Windows.Forms.SplitContainer splitContainer13;
-        private System.Windows.Forms.Label accounts_label_selected;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.SplitContainer timers_splitContainer;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ContextMenuStrip tray_contextMenuStrip;
@@ -2315,11 +2152,11 @@
         public System.Windows.Forms.CheckBox header_vocation_promo_checkBox;
         public System.Windows.Forms.ComboBox header_vocation_comboBox;
         private System.Windows.Forms.Timer timerTrayFlash;
-        private System.Windows.Forms.CheckBox accounts_checkBox_hideAcc;
         private System.Windows.Forms.TabPage tabPage_map;
         private Tab_Map tab_Map1;
         private System.Windows.Forms.TabPage tabPage_Raids;
         private Tabs.Tab_Raids tab_Raids1;
+        private Tabs.Tab_Accounts tab_Accounts;
     }
 }
 

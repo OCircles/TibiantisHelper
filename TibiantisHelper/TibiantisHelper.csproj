@@ -107,10 +107,10 @@
     <Compile Include="Form_CurrentOnline.Designer.cs">
       <DependentUpon>Form_CurrentOnline.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_AccountAddDialog.cs">
+    <Compile Include="Tabs\Accounts\Form_AccountAddDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_AccountAddDialog.Designer.cs">
+    <Compile Include="Tabs\Accounts\Form_AccountAddDialog.Designer.cs">
       <DependentUpon>Form_AccountAddDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_KeyCodeViewer.cs">
@@ -165,6 +165,12 @@
     <Compile Include="Control_Timer.Designer.cs">
       <DependentUpon>Control_Timer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tabs\Accounts\Tab_Accounts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tabs\Accounts\Tab_Accounts.Designer.cs">
+      <DependentUpon>Tab_Accounts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tabs\Tab_Map.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -193,7 +199,7 @@
     <EmbeddedResource Include="Form_CurrentOnline.resx">
       <DependentUpon>Form_CurrentOnline.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_AccountAddDialog.resx">
+    <EmbeddedResource Include="Tabs\Accounts\Form_AccountAddDialog.resx">
       <DependentUpon>Form_AccountAddDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_KeyCodeViewer.resx">
@@ -229,6 +235,9 @@
     </Compile>
     <EmbeddedResource Include="Control_Timer.resx">
       <DependentUpon>Control_Timer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabs\Accounts\Tab_Accounts.resx">
+      <DependentUpon>Tab_Accounts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tabs\Tab_Map.resx">
       <DependentUpon>Tab_Map.cs</DependentUpon>
