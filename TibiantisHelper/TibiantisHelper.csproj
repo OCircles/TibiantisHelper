@@ -137,6 +137,7 @@
     <Compile Include="Form_PlayerLookup.Designer.cs">
       <DependentUpon>Form_PlayerLookup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tabs\Items\LiquidContainers.cs" />
     <Compile Include="Tabs\Items\Tab_Items.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -154,6 +155,12 @@
     </Compile>
     <Compile Include="Tabs\Monsters\Tab_Monsters.Designer.cs">
       <DependentUpon>Tab_Monsters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\NPC\Tab_NPC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tabs\NPC\Tab_NPC.Designer.cs">
+      <DependentUpon>Tab_NPC.cs</DependentUpon>
     </Compile>
     <Compile Include="Tabs\Timers\Form_TimerDialog.cs">
       <SubType>Form</SubType>
@@ -243,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tabs\Monsters\Tab_Monsters.resx">
       <DependentUpon>Tab_Monsters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabs\NPC\Tab_NPC.resx">
+      <DependentUpon>Tab_NPC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tabs\Spells\Tab_Spells.resx">
       <DependentUpon>Tab_Spells.cs</DependentUpon>

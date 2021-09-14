@@ -59,19 +59,9 @@
             this.tabPage_spells = new System.Windows.Forms.TabPage();
             this.tab_Spells1 = new TibiantisHelper.Tabs.Tab_Spells();
             this.tabPage_npc = new System.Windows.Forms.TabPage();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.listView_npcs = new BrightIdeasSoftware.ObjectListView();
-            this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn2 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn3 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn4 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.listView_npcItems = new BrightIdeasSoftware.ObjectListView();
-            this.olvColumn5 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn6 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.tab_NPC1 = new TibiantisHelper.Tabs.Tab_NPC();
             this.tabPage_monsters = new System.Windows.Forms.TabPage();
+            this.tab_Monsters1 = new TibiantisHelper.Tabs.Tab_Monsters();
             this.tabPage_loginAlert = new System.Windows.Forms.TabPage();
             this.splitContainer10 = new System.Windows.Forms.SplitContainer();
             this.splitContainer11 = new System.Windows.Forms.SplitContainer();
@@ -99,7 +89,6 @@
             this.header_linkLabel_discord = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timerTrayFlash = new System.Windows.Forms.Timer(this.components);
-            this.tab_Monsters1 = new TibiantisHelper.Tabs.Tab_Monsters();
             ((System.ComponentModel.ISupportInitialize)(this.header_pictureBox)).BeginInit();
             this.header_panel_vocations.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -118,16 +107,6 @@
             this.tabPage_items.SuspendLayout();
             this.tabPage_spells.SuspendLayout();
             this.tabPage_npc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listView_npcs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listView_npcItems)).BeginInit();
             this.tabPage_monsters.SuspendLayout();
             this.tabPage_loginAlert.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
@@ -467,7 +446,7 @@
             // 
             // tabPage_npc
             // 
-            this.tabPage_npc.Controls.Add(this.splitContainer2);
+            this.tabPage_npc.Controls.Add(this.tab_NPC1);
             this.tabPage_npc.Location = new System.Drawing.Point(4, 22);
             this.tabPage_npc.Name = "tabPage_npc";
             this.tabPage_npc.Padding = new System.Windows.Forms.Padding(3);
@@ -476,148 +455,14 @@
             this.tabPage_npc.Text = "NPC";
             this.tabPage_npc.UseVisualStyleBackColor = true;
             // 
-            // splitContainer2
+            // tab_NPC1
             // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer2.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.textBox9);
-            this.splitContainer2.Panel1.Controls.Add(this.label2);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Size = new System.Drawing.Size(919, 400);
-            this.splitContainer2.SplitterDistance = 209;
-            this.splitContainer2.TabIndex = 0;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox9.Location = new System.Drawing.Point(-3, 55);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox9.Size = new System.Drawing.Size(210, 345);
-            this.textBox9.TabIndex = 6;
-            this.textBox9.Text = "This will have useful information one day!\r\n\r\n- Topic counts\r\n- Total interaction" +
-    "s\r\n- Associated questlines\r\n\r\nNot because anyone actually wants it, but because " +
-    "I can";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(207, 52);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "No NPC selected";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // splitContainer3
-            // 
-            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer3.Name = "splitContainer3";
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.Controls.Add(this.listView_npcs);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.Controls.Add(this.listView_npcItems);
-            this.splitContainer3.Size = new System.Drawing.Size(706, 400);
-            this.splitContainer3.SplitterDistance = 417;
-            this.splitContainer3.TabIndex = 0;
-            // 
-            // listView_npcs
-            // 
-            this.listView_npcs.AllColumns.Add(this.olvColumn1);
-            this.listView_npcs.AllColumns.Add(this.olvColumn2);
-            this.listView_npcs.AllColumns.Add(this.olvColumn3);
-            this.listView_npcs.AllColumns.Add(this.olvColumn4);
-            this.listView_npcs.CellEditUseWholeCell = false;
-            this.listView_npcs.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.olvColumn1,
-            this.olvColumn2,
-            this.olvColumn3,
-            this.olvColumn4});
-            this.listView_npcs.Cursor = System.Windows.Forms.Cursors.Default;
-            this.listView_npcs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView_npcs.FullRowSelect = true;
-            this.listView_npcs.GridLines = true;
-            this.listView_npcs.HideSelection = false;
-            this.listView_npcs.Location = new System.Drawing.Point(0, 0);
-            this.listView_npcs.MultiSelect = false;
-            this.listView_npcs.Name = "listView_npcs";
-            this.listView_npcs.ShowGroups = false;
-            this.listView_npcs.Size = new System.Drawing.Size(417, 400);
-            this.listView_npcs.TabIndex = 0;
-            this.listView_npcs.UseCompatibleStateImageBehavior = false;
-            this.listView_npcs.View = System.Windows.Forms.View.Details;
-            this.listView_npcs.SelectionChanged += new System.EventHandler(this.listView_npcs_SelectionChanged);
-            this.listView_npcs.ItemActivate += new System.EventHandler(this.listView_npcs_ItemActivate);
-            this.listView_npcs.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView_npcs_MouseClick);
-            // 
-            // olvColumn1
-            // 
-            this.olvColumn1.Text = "Name";
-            this.olvColumn1.Width = 144;
-            // 
-            // olvColumn2
-            // 
-            this.olvColumn2.Text = "Location";
-            this.olvColumn2.Width = 126;
-            // 
-            // olvColumn3
-            // 
-            this.olvColumn3.Text = "Vendor";
-            // 
-            // olvColumn4
-            // 
-            this.olvColumn4.Text = "Spells";
-            // 
-            // listView_npcItems
-            // 
-            this.listView_npcItems.AllColumns.Add(this.olvColumn5);
-            this.listView_npcItems.AllColumns.Add(this.olvColumn6);
-            this.listView_npcItems.CellEditUseWholeCell = false;
-            this.listView_npcItems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.olvColumn5,
-            this.olvColumn6});
-            this.listView_npcItems.Cursor = System.Windows.Forms.Cursors.Default;
-            this.listView_npcItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView_npcItems.FullRowSelect = true;
-            this.listView_npcItems.GridLines = true;
-            this.listView_npcItems.HideSelection = false;
-            this.listView_npcItems.Location = new System.Drawing.Point(0, 0);
-            this.listView_npcItems.Name = "listView_npcItems";
-            this.listView_npcItems.Size = new System.Drawing.Size(285, 400);
-            this.listView_npcItems.TabIndex = 0;
-            this.listView_npcItems.UseCompatibleStateImageBehavior = false;
-            this.listView_npcItems.View = System.Windows.Forms.View.Details;
-            this.listView_npcItems.ItemActivate += new System.EventHandler(this.listView_npcItems_ItemActivate);
-            // 
-            // olvColumn5
-            // 
-            this.olvColumn5.FillsFreeSpace = true;
-            this.olvColumn5.Text = "Item";
-            this.olvColumn5.Width = 145;
-            // 
-            // olvColumn6
-            // 
-            this.olvColumn6.Text = "Gold";
-            this.olvColumn6.Width = 65;
+            this.tab_NPC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_NPC1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab_NPC1.Location = new System.Drawing.Point(3, 3);
+            this.tab_NPC1.Name = "tab_NPC1";
+            this.tab_NPC1.Size = new System.Drawing.Size(919, 400);
+            this.tab_NPC1.TabIndex = 0;
             // 
             // tabPage_monsters
             // 
@@ -629,6 +474,15 @@
             this.tabPage_monsters.TabIndex = 4;
             this.tabPage_monsters.Text = "Monsters";
             this.tabPage_monsters.UseVisualStyleBackColor = true;
+            // 
+            // tab_Monsters1
+            // 
+            this.tab_Monsters1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Monsters1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab_Monsters1.Location = new System.Drawing.Point(3, 3);
+            this.tab_Monsters1.Name = "tab_Monsters1";
+            this.tab_Monsters1.Size = new System.Drawing.Size(919, 400);
+            this.tab_Monsters1.TabIndex = 0;
             // 
             // tabPage_loginAlert
             // 
@@ -915,15 +769,6 @@
             this.timerTrayFlash.Interval = 1000;
             this.timerTrayFlash.Tick += new System.EventHandler(this.timerTrayFlash_Tick);
             // 
-            // tab_Monsters1
-            // 
-            this.tab_Monsters1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_Monsters1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tab_Monsters1.Location = new System.Drawing.Point(3, 3);
-            this.tab_Monsters1.Name = "tab_Monsters1";
-            this.tab_Monsters1.Size = new System.Drawing.Size(919, 400);
-            this.tab_Monsters1.TabIndex = 0;
-            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -970,17 +815,6 @@
             this.tabPage_items.ResumeLayout(false);
             this.tabPage_spells.ResumeLayout(false);
             this.tabPage_npc.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel1.PerformLayout();
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.listView_npcs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listView_npcItems)).EndInit();
             this.tabPage_monsters.ResumeLayout(false);
             this.tabPage_loginAlert.ResumeLayout(false);
             this.splitContainer10.Panel1.ResumeLayout(false);
@@ -1010,16 +844,6 @@
         private System.Windows.Forms.TabPage tabPage_accounts;
         private System.Windows.Forms.PictureBox header_pictureBox;
         private System.Windows.Forms.TabPage tabPage_npc;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.SplitContainer splitContainer3;
-        private BrightIdeasSoftware.ObjectListView listView_npcs;
-        private BrightIdeasSoftware.OLVColumn olvColumn1;
-        private BrightIdeasSoftware.OLVColumn olvColumn2;
-        private BrightIdeasSoftware.OLVColumn olvColumn3;
-        private BrightIdeasSoftware.OLVColumn olvColumn4;
-        private BrightIdeasSoftware.ObjectListView listView_npcItems;
-        private BrightIdeasSoftware.OLVColumn olvColumn5;
-        private BrightIdeasSoftware.OLVColumn olvColumn6;
         private System.Windows.Forms.LinkLabel header_linkLabel_playersOnline;
         private System.Windows.Forms.Label header_label_onlineStatus;
         private System.Windows.Forms.Timer timerNetworkStuff;
@@ -1029,7 +853,6 @@
         private System.Windows.Forms.Label header_vocation_label3;
         private System.Windows.Forms.Label header_vocation_label1;
         private System.Windows.Forms.TabPage tabPage_calculator;
-        private System.Windows.Forms.TabPage tabPage_spells;
         private System.Windows.Forms.TabPage tabPage_loginAlert;
         private System.Windows.Forms.SplitContainer splitContainer10;
         private System.Windows.Forms.SplitContainer splitContainer11;
@@ -1052,8 +875,6 @@
         private System.Windows.Forms.SplitContainer splitContainer15;
         private System.Windows.Forms.TabControl calculator_tabControl;
         private System.Windows.Forms.ListBox calculator_listBox;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel header_linkLabel_tibiantisHome;
         private System.Windows.Forms.LinkLabel header_linkLabel_tibiantisInfo;
         private System.Windows.Forms.LinkLabel header_linkLabel_discord;
@@ -1071,10 +892,12 @@
         public System.Windows.Forms.TabPage tabPage_timers;
         public Tabs.Tab_Timers tab_Timers1;
         public System.Windows.Forms.TabPage tabPage_monsters;
-        private Tabs.Tab_Spells tab_Spells1;
         public System.Windows.Forms.TabPage tabPage_items;
         public Tabs.Tab_Items tab_Items1;
         public Tabs.Tab_Monsters tab_Monsters1;
+        public System.Windows.Forms.TabPage tabPage_spells;
+        public Tabs.Tab_Spells tab_Spells1;
+        private Tabs.Tab_NPC tab_NPC1;
     }
 }
 
