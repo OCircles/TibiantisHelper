@@ -97,7 +97,6 @@ namespace TibiantisHelper
 
             InitializeCalculatorTab();
             InitializeNpcTab();
-            InitializeSpellsTab();
             InitializeMonsterTab();
             InitializeLoginAlert();
 
@@ -1065,7 +1064,7 @@ namespace TibiantisHelper
                     Spell spell = DataReader.Spells.Where(s => s.ID == trade.ItemID).FirstOrDefault();
                     
                     tabControl1.SelectedTab = tabPage_spells;
-                    spells_listView.SelectedObject = spell;
+                    tab_Spells1.listView_spells.SelectedObject = spell;
                 }
 
             }
@@ -1079,159 +1078,6 @@ namespace TibiantisHelper
             OpenInBrowser("https://tibiantis.info/library/map#" + pos.X + "," + pos.Y + "," + pos.Z + ",8");
         }
 
-        #endregion
-
-        #region Spells
-
-        private void InitializeSpellsTab()
-        {
-            spells_comboBox_vocation.SelectedIndex = 0;
-            spells_comboBox_group.SelectedIndex = 0;
-            spells_comboBox_type.SelectedIndex = 0;
-            spells_comboBox_premium.SelectedIndex = 0;
-
-            spells_listView.UseFiltering = true;
-
-
-            olvColumn32.AspectGetter = delegate (object x)
-            {
-                Spell s = (Spell)x;
-                string classes = "";
-
-                if (s.VocKnight) classes += "K,";
-                if (s.VocPaladin) classes += "P,";
-                if (s.VocSorcerer) classes += "S,";
-                if (s.VocDruid) classes += "D";
-
-                if (classes[classes.Length-1] == ',') classes = classes.Substring(0, classes.Length - 1);
-
-                return classes;
-            };
-
-
-            olvColumn27.AspectToStringConverter = delegate (object x) { 
-                byte type = (byte)x;
-                if (type == 1) return "Rune";
-                return "Instant";
-            };
-
-            olvColumn36.AspectToStringConverter = delegate (object x) {
-                byte group = (byte)x;
-                if (group == 1) return "Support";
-                if (group == 2) return "Attack";
-                return "Healing";
-            };
-
-            olvColumn28.AspectToStringConverter = delegate (object x)
-            {
-                bool prem = (bool)x;
-                if (prem) return "Yes";
-                return "No";
-            };
-
-            spells_listView.Objects = DataReader.Spells;
-
-
-
-
-        }
-        private void spells_listView_SelectionChanged(object sender, EventArgs e)
-        {
-            if (spells_listView.SelectedObject != null)
-            {
-                Spell s = (Spell)spells_listView.SelectedObject;
-
-                spells_label.Text = s.Name;
-
-                List<NPC> npcs = new List<NPC>();
-
-                foreach (NPC n in DataReader.Npcs)
-                {
-                    foreach (var t in n.transactions)
-                        if (t.Type == NPC.TransactionType.Spell && t.ItemID == s.ID) npcs.Add(n);
-                }
-
-                spellsNpcs_listView.Objects = npcs;
-
-            }
-        }
-
-        private void spells_comboBox_filters_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            spells_listView.ModelFilter = new ModelFilter(delegate (object x) {
-                bool vocFilter, groupFilter, typeFilter, premiumFilter;
-                vocFilter = groupFilter = typeFilter = premiumFilter = false;
-                Spell s = (Spell)x;
-
-                switch (spells_comboBox_vocation.SelectedIndex)
-                {
-                    case 0:
-                        vocFilter = true;
-                        break;
-                    case 1:
-                        vocFilter = s.VocKnight;
-                        break;
-                    case 2:
-                        vocFilter = s.VocPaladin;
-                        break;
-                    case 3:
-                        vocFilter = s.VocSorcerer;
-                        break;
-                    case 4:
-                        vocFilter = s.VocDruid;
-                        break;
-                }
-
-                switch (spells_comboBox_group.SelectedIndex)
-                {
-                    case 0:
-                        groupFilter = true;
-                        break;
-                    default:
-                        groupFilter = s.Group == spells_comboBox_group.SelectedIndex - 1;
-                        break;
-                }
-
-                switch (spells_comboBox_type.SelectedIndex)
-                {
-                    case 0:
-                        typeFilter = true;
-                        break;
-                    default:
-                        typeFilter = s.Type == spells_comboBox_type.SelectedIndex - 1;
-                        break;
-                }
-
-
-                switch (spells_comboBox_premium.SelectedIndex)
-                {
-                    case 0:
-                        premiumFilter = true;
-                        break;
-                    case 1:
-                        premiumFilter = s.Premium == true;
-                        break;
-                    case 2:
-                        premiumFilter = s.Premium == false;
-                        break;
-                }
-
-
-                return vocFilter & groupFilter & typeFilter & premiumFilter;
-            });
-
-
-
-        }
-        
-        private void spellsNpcs_listView_ItemActivate(object sender, EventArgs e)
-        {
-            var npc = (NPC)spellsNpcs_listView.SelectedObject;
-
-            var pos = npc.Position;
-            OpenInBrowser("https://tibiantis.info/library/map#" + pos.X + "," + pos.Y + "," + pos.Z + ",8");
-        }
-        
         #endregion
 
 

@@ -143,6 +143,12 @@
     <Compile Include="Tabs\Items\Tab_Items.Designer.cs">
       <DependentUpon>Tab_Items.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tabs\Spells\Tab_Spells.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tabs\Spells\Tab_Spells.Designer.cs">
+      <DependentUpon>Tab_Spells.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tabs\Timers\Form_TimerDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tabs\Items\Tab_Items.resx">
       <DependentUpon>Tab_Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabs\Spells\Tab_Spells.resx">
+      <DependentUpon>Tab_Spells.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tabs\Timers\Form_TimerDialog.resx">
       <DependentUpon>Form_TimerDialog.cs</DependentUpon>
