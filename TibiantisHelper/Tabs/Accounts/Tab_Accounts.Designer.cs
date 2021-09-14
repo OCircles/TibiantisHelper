@@ -65,8 +65,9 @@ namespace TibiantisHelper.Tabs
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView);
-            this.splitContainer1.Size = new System.Drawing.Size(783, 415);
+            this.splitContainer1.Size = new System.Drawing.Size(913, 415);
             this.splitContainer1.SplitterDistance = 235;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 2;
             // 
             // splitContainer2
@@ -99,9 +100,9 @@ namespace TibiantisHelper.Tabs
             this.checkBox_hideAcc.Checked = global::TibiantisHelper.Properties.Settings.Default.AccountsHideLogin;
             this.checkBox_hideAcc.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_hideAcc.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::TibiantisHelper.Properties.Settings.Default, "AccountsHideLogin", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_hideAcc.Location = new System.Drawing.Point(4, 157);
+            this.checkBox_hideAcc.Location = new System.Drawing.Point(5, 157);
             this.checkBox_hideAcc.Name = "checkBox_hideAcc";
-            this.checkBox_hideAcc.Size = new System.Drawing.Size(131, 17);
+            this.checkBox_hideAcc.Size = new System.Drawing.Size(149, 17);
             this.checkBox_hideAcc.TabIndex = 5;
             this.checkBox_hideAcc.Text = "Hide Account Number";
             this.checkBox_hideAcc.UseVisualStyleBackColor = true;
@@ -117,7 +118,7 @@ namespace TibiantisHelper.Tabs
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
             this.textBox10.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox10.Size = new System.Drawing.Size(235, 105);
+            this.textBox10.Size = new System.Drawing.Size(234, 105);
             this.textBox10.TabIndex = 4;
             this.textBox10.WordWrap = false;
             // 
@@ -128,7 +129,7 @@ namespace TibiantisHelper.Tabs
             this.accounts_label_selected.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accounts_label_selected.Location = new System.Drawing.Point(1, 0);
             this.accounts_label_selected.Name = "accounts_label_selected";
-            this.accounts_label_selected.Size = new System.Drawing.Size(231, 18);
+            this.accounts_label_selected.Size = new System.Drawing.Size(230, 18);
             this.accounts_label_selected.TabIndex = 3;
             this.accounts_label_selected.Text = "No account selected";
             this.accounts_label_selected.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,9 +138,9 @@ namespace TibiantisHelper.Tabs
             // 
             this.button_addAccount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_addAccount.Location = new System.Drawing.Point(0, 132);
+            this.button_addAccount.Location = new System.Drawing.Point(3, 131);
             this.button_addAccount.Name = "button_addAccount";
-            this.button_addAccount.Size = new System.Drawing.Size(115, 23);
+            this.button_addAccount.Size = new System.Drawing.Size(110, 23);
             this.button_addAccount.TabIndex = 0;
             this.button_addAccount.Text = "Add Account";
             this.button_addAccount.UseVisualStyleBackColor = true;
@@ -149,9 +150,9 @@ namespace TibiantisHelper.Tabs
             // 
             this.button_removeAccount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_removeAccount.Location = new System.Drawing.Point(121, 132);
+            this.button_removeAccount.Location = new System.Drawing.Point(122, 131);
             this.button_removeAccount.Name = "button_removeAccount";
-            this.button_removeAccount.Size = new System.Drawing.Size(115, 23);
+            this.button_removeAccount.Size = new System.Drawing.Size(110, 23);
             this.button_removeAccount.TabIndex = 1;
             this.button_removeAccount.Text = "Remove Account";
             this.button_removeAccount.UseVisualStyleBackColor = true;
@@ -177,7 +178,7 @@ namespace TibiantisHelper.Tabs
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView.Location = new System.Drawing.Point(0, 0);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(544, 415);
+            this.dataGridView.Size = new System.Drawing.Size(673, 415);
             this.dataGridView.TabIndex = 0;
             this.dataGridView.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView_CellBeginEdit);
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
@@ -188,11 +189,12 @@ namespace TibiantisHelper.Tabs
             // 
             // Tab_Accounts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainer1);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Tab_Accounts";
-            this.Size = new System.Drawing.Size(783, 415);
+            this.Size = new System.Drawing.Size(913, 415);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
