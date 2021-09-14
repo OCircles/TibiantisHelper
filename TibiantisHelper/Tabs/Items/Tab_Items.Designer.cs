@@ -240,7 +240,7 @@ namespace TibiantisHelper.Tabs
             // 
             this.splitContainer5.Panel2.Controls.Add(this.listView_trades);
             this.splitContainer5.Size = new System.Drawing.Size(640, 418);
-            this.splitContainer5.SplitterDistance = 418;
+            this.splitContainer5.SplitterDistance = 417;
             this.splitContainer5.SplitterWidth = 5;
             this.splitContainer5.TabIndex = 0;
             // 
@@ -257,7 +257,7 @@ namespace TibiantisHelper.Tabs
             this.listView_items.MultiSelect = false;
             this.listView_items.Name = "listView_items";
             this.listView_items.ShowGroups = false;
-            this.listView_items.Size = new System.Drawing.Size(418, 418);
+            this.listView_items.Size = new System.Drawing.Size(417, 418);
             this.listView_items.TabIndex = 0;
             this.listView_items.UseCompatibleStateImageBehavior = false;
             this.listView_items.View = System.Windows.Forms.View.Details;
@@ -280,7 +280,7 @@ namespace TibiantisHelper.Tabs
             this.listView_trades.HideSelection = false;
             this.listView_trades.Location = new System.Drawing.Point(0, 0);
             this.listView_trades.Name = "listView_trades";
-            this.listView_trades.Size = new System.Drawing.Size(217, 418);
+            this.listView_trades.Size = new System.Drawing.Size(218, 418);
             this.listView_trades.TabIndex = 0;
             this.listView_trades.UseCompatibleStateImageBehavior = false;
             this.listView_trades.View = System.Windows.Forms.View.Details;
@@ -307,6 +307,7 @@ namespace TibiantisHelper.Tabs
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Tab_Items";
             this.Size = new System.Drawing.Size(882, 418);
+            this.Load += new System.EventHandler(this.Tab_Items_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

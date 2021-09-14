@@ -20,7 +20,10 @@ namespace TibiantisHelper.Tabs
         public Tab_Items()
         {
             InitializeComponent();
+        }
 
+        private void Tab_Items_Load(object sender, EventArgs e)
+        {
             if (!DesignMode)
             {
                 listView_items.UseFiltering = true;
