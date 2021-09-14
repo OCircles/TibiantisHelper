@@ -171,16 +171,16 @@
     <Compile Include="Tabs\Accounts\Tab_Accounts.Designer.cs">
       <DependentUpon>Tab_Accounts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tabs\Tab_Map.cs">
+    <Compile Include="Tabs\Map\Tab_Map.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Tabs\Tab_Map.Designer.cs">
+    <Compile Include="Tabs\Map\Tab_Map.Designer.cs">
       <DependentUpon>Tab_Map.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tabs\Tab_Raids.cs">
+    <Compile Include="Tabs\Raids\Tab_Raids.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Tabs\Tab_Raids.Designer.cs">
+    <Compile Include="Tabs\Raids\Tab_Raids.Designer.cs">
       <DependentUpon>Tab_Raids.cs</DependentUpon>
     </Compile>
     <Compile Include="Tabs\Timers\Tab_Timers.cs">
@@ -245,10 +245,10 @@
     <EmbeddedResource Include="Tabs\Accounts\Tab_Accounts.resx">
       <DependentUpon>Tab_Accounts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tabs\Tab_Map.resx">
+    <EmbeddedResource Include="Tabs\Map\Tab_Map.resx">
       <DependentUpon>Tab_Map.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tabs\Tab_Raids.resx">
+    <EmbeddedResource Include="Tabs\Raids\Tab_Raids.resx">
       <DependentUpon>Tab_Raids.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tabs\Timers\Tab_Timers.resx">
