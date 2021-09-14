@@ -482,7 +482,7 @@ namespace TibiantisHelper.Tabs
             var drop = (ItemDrop)listView_itemDrops.SelectedObject;
 
             Form_Main.Form.tabControl1.SelectedTab = Form_Main.Form.tabPage_monsters;
-            Form_Main.Form.monsters_listView.SelectedObject = drop.monster;
+            Form_Main.Form.tab_Monsters1.listView_monsters.SelectedObject = drop.monster;
         }
 
 

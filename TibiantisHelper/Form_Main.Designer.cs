@@ -57,6 +57,7 @@
             this.tabPage_items = new System.Windows.Forms.TabPage();
             this.tab_Items1 = new TibiantisHelper.Tabs.Tab_Items();
             this.tabPage_spells = new System.Windows.Forms.TabPage();
+            this.tab_Spells1 = new TibiantisHelper.Tabs.Tab_Spells();
             this.tabPage_npc = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -71,26 +72,6 @@
             this.olvColumn5 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn6 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.tabPage_monsters = new System.Windows.Forms.TabPage();
-            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
-            this.monsters_checkBox_showSummonLevel = new System.Windows.Forms.CheckBox();
-            this.monsters_checkBox_hideUniques = new System.Windows.Forms.CheckBox();
-            this.monsters_textBox = new System.Windows.Forms.TextBox();
-            this.monsters_labelName = new System.Windows.Forms.Label();
-            this.monsters_dropListView = new BrightIdeasSoftware.ObjectListView();
-            this.olvColumn21 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn22 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn23 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn24 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.monsters_listView = new BrightIdeasSoftware.ObjectListView();
-            this.olvColumn13 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn14 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn18 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn15 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn16 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn17 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn19 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvColumn20 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.tabPage_loginAlert = new System.Windows.Forms.TabPage();
             this.splitContainer10 = new System.Windows.Forms.SplitContainer();
             this.splitContainer11 = new System.Windows.Forms.SplitContainer();
@@ -118,7 +99,7 @@
             this.header_linkLabel_discord = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timerTrayFlash = new System.Windows.Forms.Timer(this.components);
-            this.tab_Spells1 = new TibiantisHelper.Tabs.Tab_Spells();
+            this.tab_Monsters1 = new TibiantisHelper.Tabs.Tab_Monsters();
             ((System.ComponentModel.ISupportInitialize)(this.header_pictureBox)).BeginInit();
             this.header_panel_vocations.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -148,16 +129,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.listView_npcs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listView_npcItems)).BeginInit();
             this.tabPage_monsters.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
-            this.splitContainer6.Panel1.SuspendLayout();
-            this.splitContainer6.Panel2.SuspendLayout();
-            this.splitContainer6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
-            this.splitContainer7.Panel1.SuspendLayout();
-            this.splitContainer7.Panel2.SuspendLayout();
-            this.splitContainer7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.monsters_dropListView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.monsters_listView)).BeginInit();
             this.tabPage_loginAlert.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
             this.splitContainer10.Panel1.SuspendLayout();
@@ -485,6 +456,15 @@
             this.tabPage_spells.Text = "Spells";
             this.tabPage_spells.UseVisualStyleBackColor = true;
             // 
+            // tab_Spells1
+            // 
+            this.tab_Spells1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Spells1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab_Spells1.Location = new System.Drawing.Point(3, 3);
+            this.tab_Spells1.Name = "tab_Spells1";
+            this.tab_Spells1.Size = new System.Drawing.Size(919, 400);
+            this.tab_Spells1.TabIndex = 0;
+            // 
             // tabPage_npc
             // 
             this.tabPage_npc.Controls.Add(this.splitContainer2);
@@ -641,7 +621,7 @@
             // 
             // tabPage_monsters
             // 
-            this.tabPage_monsters.Controls.Add(this.splitContainer6);
+            this.tabPage_monsters.Controls.Add(this.tab_Monsters1);
             this.tabPage_monsters.Location = new System.Drawing.Point(4, 22);
             this.tabPage_monsters.Name = "tabPage_monsters";
             this.tabPage_monsters.Padding = new System.Windows.Forms.Padding(3);
@@ -649,242 +629,6 @@
             this.tabPage_monsters.TabIndex = 4;
             this.tabPage_monsters.Text = "Monsters";
             this.tabPage_monsters.UseVisualStyleBackColor = true;
-            // 
-            // splitContainer6
-            // 
-            this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer6.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer6.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer6.Name = "splitContainer6";
-            // 
-            // splitContainer6.Panel1
-            // 
-            this.splitContainer6.Panel1.Controls.Add(this.splitContainer7);
-            // 
-            // splitContainer6.Panel2
-            // 
-            this.splitContainer6.Panel2.Controls.Add(this.monsters_listView);
-            this.splitContainer6.Size = new System.Drawing.Size(919, 400);
-            this.splitContainer6.SplitterDistance = 335;
-            this.splitContainer6.TabIndex = 1;
-            // 
-            // splitContainer7
-            // 
-            this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer7.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer7.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer7.Name = "splitContainer7";
-            this.splitContainer7.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer7.Panel1
-            // 
-            this.splitContainer7.Panel1.Controls.Add(this.monsters_checkBox_showSummonLevel);
-            this.splitContainer7.Panel1.Controls.Add(this.monsters_checkBox_hideUniques);
-            this.splitContainer7.Panel1.Controls.Add(this.monsters_textBox);
-            this.splitContainer7.Panel1.Controls.Add(this.monsters_labelName);
-            // 
-            // splitContainer7.Panel2
-            // 
-            this.splitContainer7.Panel2.Controls.Add(this.monsters_dropListView);
-            this.splitContainer7.Size = new System.Drawing.Size(335, 400);
-            this.splitContainer7.SplitterDistance = 215;
-            this.splitContainer7.TabIndex = 0;
-            // 
-            // monsters_checkBox_showSummonLevel
-            // 
-            this.monsters_checkBox_showSummonLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.monsters_checkBox_showSummonLevel.AutoSize = true;
-            this.monsters_checkBox_showSummonLevel.Location = new System.Drawing.Point(3, 172);
-            this.monsters_checkBox_showSummonLevel.Name = "monsters_checkBox_showSummonLevel";
-            this.monsters_checkBox_showSummonLevel.Size = new System.Drawing.Size(146, 17);
-            this.monsters_checkBox_showSummonLevel.TabIndex = 3;
-            this.monsters_checkBox_showSummonLevel.Text = "Show Summon Level";
-            this.monsters_checkBox_showSummonLevel.UseVisualStyleBackColor = true;
-            this.monsters_checkBox_showSummonLevel.CheckedChanged += new System.EventHandler(this.monsters_checkBox_showSummonLevel_CheckedChanged);
-            // 
-            // monsters_checkBox_hideUniques
-            // 
-            this.monsters_checkBox_hideUniques.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.monsters_checkBox_hideUniques.AutoSize = true;
-            this.monsters_checkBox_hideUniques.Location = new System.Drawing.Point(3, 195);
-            this.monsters_checkBox_hideUniques.Name = "monsters_checkBox_hideUniques";
-            this.monsters_checkBox_hideUniques.Size = new System.Drawing.Size(149, 17);
-            this.monsters_checkBox_hideUniques.TabIndex = 2;
-            this.monsters_checkBox_hideUniques.Text = "Hide Unique Monsters";
-            this.monsters_checkBox_hideUniques.UseVisualStyleBackColor = true;
-            this.monsters_checkBox_hideUniques.CheckedChanged += new System.EventHandler(this.monsters_checkBox_hideUniques_CheckedChanged);
-            // 
-            // monsters_textBox
-            // 
-            this.monsters_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.monsters_textBox.Location = new System.Drawing.Point(3, 34);
-            this.monsters_textBox.Multiline = true;
-            this.monsters_textBox.Name = "monsters_textBox";
-            this.monsters_textBox.ReadOnly = true;
-            this.monsters_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.monsters_textBox.Size = new System.Drawing.Size(329, 132);
-            this.monsters_textBox.TabIndex = 1;
-            this.monsters_textBox.WordWrap = false;
-            // 
-            // monsters_labelName
-            // 
-            this.monsters_labelName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.monsters_labelName.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monsters_labelName.Location = new System.Drawing.Point(3, 0);
-            this.monsters_labelName.Name = "monsters_labelName";
-            this.monsters_labelName.Size = new System.Drawing.Size(329, 31);
-            this.monsters_labelName.TabIndex = 0;
-            this.monsters_labelName.Text = "No monster selected";
-            this.monsters_labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // monsters_dropListView
-            // 
-            this.monsters_dropListView.AllColumns.Add(this.olvColumn21);
-            this.monsters_dropListView.AllColumns.Add(this.olvColumn22);
-            this.monsters_dropListView.AllColumns.Add(this.olvColumn23);
-            this.monsters_dropListView.AllColumns.Add(this.olvColumn24);
-            this.monsters_dropListView.CellEditUseWholeCell = false;
-            this.monsters_dropListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.olvColumn21,
-            this.olvColumn22,
-            this.olvColumn23,
-            this.olvColumn24});
-            this.monsters_dropListView.Cursor = System.Windows.Forms.Cursors.Default;
-            this.monsters_dropListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.monsters_dropListView.FullRowSelect = true;
-            this.monsters_dropListView.GridLines = true;
-            this.monsters_dropListView.HideSelection = false;
-            this.monsters_dropListView.Location = new System.Drawing.Point(0, 0);
-            this.monsters_dropListView.MultiSelect = false;
-            this.monsters_dropListView.Name = "monsters_dropListView";
-            this.monsters_dropListView.ShowGroups = false;
-            this.monsters_dropListView.Size = new System.Drawing.Size(335, 181);
-            this.monsters_dropListView.TabIndex = 0;
-            this.monsters_dropListView.UseCompatibleStateImageBehavior = false;
-            this.monsters_dropListView.View = System.Windows.Forms.View.Details;
-            this.monsters_dropListView.ItemActivate += new System.EventHandler(this.monsters_dropListView_ItemActivate);
-            // 
-            // olvColumn21
-            // 
-            this.olvColumn21.FillsFreeSpace = true;
-            this.olvColumn21.Text = "Item";
-            // 
-            // olvColumn22
-            // 
-            this.olvColumn22.Text = "Amount";
-            this.olvColumn22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn22.Width = 57;
-            // 
-            // olvColumn23
-            // 
-            this.olvColumn23.Text = "Drop%";
-            this.olvColumn23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn23.Width = 52;
-            // 
-            // olvColumn24
-            // 
-            this.olvColumn24.Text = "Sell";
-            this.olvColumn24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // monsters_listView
-            // 
-            this.monsters_listView.AllColumns.Add(this.olvColumn13);
-            this.monsters_listView.AllColumns.Add(this.olvColumn14);
-            this.monsters_listView.AllColumns.Add(this.olvColumn18);
-            this.monsters_listView.AllColumns.Add(this.olvColumn15);
-            this.monsters_listView.AllColumns.Add(this.olvColumn16);
-            this.monsters_listView.AllColumns.Add(this.olvColumn17);
-            this.monsters_listView.AllColumns.Add(this.olvColumn19);
-            this.monsters_listView.AllColumns.Add(this.olvColumn20);
-            this.monsters_listView.CellEditUseWholeCell = false;
-            this.monsters_listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.olvColumn13,
-            this.olvColumn14,
-            this.olvColumn18,
-            this.olvColumn15,
-            this.olvColumn16,
-            this.olvColumn17,
-            this.olvColumn19,
-            this.olvColumn20});
-            this.monsters_listView.Cursor = System.Windows.Forms.Cursors.Default;
-            this.monsters_listView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.monsters_listView.FullRowSelect = true;
-            this.monsters_listView.GridLines = true;
-            this.monsters_listView.HideSelection = false;
-            this.monsters_listView.Location = new System.Drawing.Point(0, 0);
-            this.monsters_listView.MultiSelect = false;
-            this.monsters_listView.Name = "monsters_listView";
-            this.monsters_listView.ShowGroups = false;
-            this.monsters_listView.Size = new System.Drawing.Size(580, 400);
-            this.monsters_listView.TabIndex = 0;
-            this.monsters_listView.UseCompatibleStateImageBehavior = false;
-            this.monsters_listView.View = System.Windows.Forms.View.Details;
-            this.monsters_listView.SelectionChanged += new System.EventHandler(this.monsters_listView_SelectionChanged);
-            // 
-            // olvColumn13
-            // 
-            this.olvColumn13.AspectName = "Name";
-            this.olvColumn13.FillsFreeSpace = true;
-            this.olvColumn13.Text = "Name";
-            // 
-            // olvColumn14
-            // 
-            this.olvColumn14.AspectName = "Experience";
-            this.olvColumn14.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn14.Text = "Exp";
-            this.olvColumn14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn14.Width = 50;
-            // 
-            // olvColumn18
-            // 
-            this.olvColumn18.AspectName = "SummonCost";
-            this.olvColumn18.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn18.Text = "Summon";
-            this.olvColumn18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn18.Width = 64;
-            // 
-            // olvColumn15
-            // 
-            this.olvColumn15.AspectName = "Attack";
-            this.olvColumn15.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn15.Text = "Attack";
-            this.olvColumn15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn15.Width = 48;
-            // 
-            // olvColumn16
-            // 
-            this.olvColumn16.AspectName = "Defense";
-            this.olvColumn16.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn16.Text = "Defense";
-            this.olvColumn16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn16.Width = 61;
-            // 
-            // olvColumn17
-            // 
-            this.olvColumn17.AspectName = "Armor";
-            this.olvColumn17.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn17.Text = "Armor";
-            this.olvColumn17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn17.Width = 48;
-            // 
-            // olvColumn19
-            // 
-            this.olvColumn19.AspectName = "Speed";
-            this.olvColumn19.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn19.Text = "Speed";
-            this.olvColumn19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn19.Width = 49;
-            // 
-            // olvColumn20
-            // 
-            this.olvColumn20.AspectName = "Capacity";
-            this.olvColumn20.HeaderTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn20.Text = "Capacity";
-            this.olvColumn20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.olvColumn20.Width = 64;
             // 
             // tabPage_loginAlert
             // 
@@ -1171,14 +915,14 @@
             this.timerTrayFlash.Interval = 1000;
             this.timerTrayFlash.Tick += new System.EventHandler(this.timerTrayFlash_Tick);
             // 
-            // tab_Spells1
+            // tab_Monsters1
             // 
-            this.tab_Spells1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_Spells1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tab_Spells1.Location = new System.Drawing.Point(3, 3);
-            this.tab_Spells1.Name = "tab_Spells1";
-            this.tab_Spells1.Size = new System.Drawing.Size(919, 400);
-            this.tab_Spells1.TabIndex = 0;
+            this.tab_Monsters1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Monsters1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab_Monsters1.Location = new System.Drawing.Point(3, 3);
+            this.tab_Monsters1.Name = "tab_Monsters1";
+            this.tab_Monsters1.Size = new System.Drawing.Size(919, 400);
+            this.tab_Monsters1.TabIndex = 0;
             // 
             // Form_Main
             // 
@@ -1238,17 +982,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.listView_npcs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listView_npcItems)).EndInit();
             this.tabPage_monsters.ResumeLayout(false);
-            this.splitContainer6.Panel1.ResumeLayout(false);
-            this.splitContainer6.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
-            this.splitContainer6.ResumeLayout(false);
-            this.splitContainer7.Panel1.ResumeLayout(false);
-            this.splitContainer7.Panel1.PerformLayout();
-            this.splitContainer7.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
-            this.splitContainer7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.monsters_dropListView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.monsters_listView)).EndInit();
             this.tabPage_loginAlert.ResumeLayout(false);
             this.splitContainer10.Panel1.ResumeLayout(false);
             this.splitContainer10.Panel2.ResumeLayout(false);
@@ -1276,7 +1009,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabPage tabPage_accounts;
         private System.Windows.Forms.PictureBox header_pictureBox;
-        private System.Windows.Forms.TabPage tabPage_items;
         private System.Windows.Forms.TabPage tabPage_npc;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.SplitContainer splitContainer3;
@@ -1298,24 +1030,7 @@
         private System.Windows.Forms.Label header_vocation_label1;
         private System.Windows.Forms.TabPage tabPage_calculator;
         private System.Windows.Forms.TabPage tabPage_spells;
-        private System.Windows.Forms.SplitContainer splitContainer6;
         private System.Windows.Forms.TabPage tabPage_loginAlert;
-        private System.Windows.Forms.SplitContainer splitContainer7;
-        private BrightIdeasSoftware.OLVColumn olvColumn13;
-        private BrightIdeasSoftware.OLVColumn olvColumn14;
-        private BrightIdeasSoftware.OLVColumn olvColumn15;
-        private BrightIdeasSoftware.OLVColumn olvColumn16;
-        private BrightIdeasSoftware.OLVColumn olvColumn17;
-        private BrightIdeasSoftware.OLVColumn olvColumn18;
-        private BrightIdeasSoftware.OLVColumn olvColumn19;
-        private BrightIdeasSoftware.OLVColumn olvColumn20;
-        private BrightIdeasSoftware.ObjectListView monsters_dropListView;
-        private System.Windows.Forms.TextBox monsters_textBox;
-        private System.Windows.Forms.Label monsters_labelName;
-        private BrightIdeasSoftware.OLVColumn olvColumn21;
-        private BrightIdeasSoftware.OLVColumn olvColumn22;
-        private BrightIdeasSoftware.OLVColumn olvColumn23;
-        private BrightIdeasSoftware.OLVColumn olvColumn24;
         private System.Windows.Forms.SplitContainer splitContainer10;
         private System.Windows.Forms.SplitContainer splitContainer11;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -1343,8 +1058,6 @@
         private System.Windows.Forms.LinkLabel header_linkLabel_tibiantisInfo;
         private System.Windows.Forms.LinkLabel header_linkLabel_discord;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.CheckBox monsters_checkBox_hideUniques;
-        private System.Windows.Forms.CheckBox monsters_checkBox_showSummonLevel;
         public System.Windows.Forms.TextBox calculator_textBox_result;
         public System.Windows.Forms.TabControl tabControl1;
         public System.Windows.Forms.CheckBox header_vocation_promo_checkBox;
@@ -1358,9 +1071,10 @@
         public System.Windows.Forms.TabPage tabPage_timers;
         public Tabs.Tab_Timers tab_Timers1;
         public System.Windows.Forms.TabPage tabPage_monsters;
-        public BrightIdeasSoftware.ObjectListView monsters_listView;
-        private Tabs.Tab_Items tab_Items1;
         private Tabs.Tab_Spells tab_Spells1;
+        public System.Windows.Forms.TabPage tabPage_items;
+        public Tabs.Tab_Items tab_Items1;
+        public Tabs.Tab_Monsters tab_Monsters1;
     }
 }
 

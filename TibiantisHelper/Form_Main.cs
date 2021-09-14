@@ -97,7 +97,6 @@ namespace TibiantisHelper
 
             InitializeCalculatorTab();
             InitializeNpcTab();
-            InitializeMonsterTab();
             InitializeLoginAlert();
 
 
@@ -772,122 +771,6 @@ namespace TibiantisHelper
         #endregion
 
 
-
-        #region Monsters
-
-        private void InitializeMonsterTab()
-        {
-            monsters_listView.UseFiltering = true;
-
-            // Monster list
-
-            // Summon mana
-            olvColumn18.AspectToStringConverter = delegate (object x)
-            {
-                var s = (int)x;
-
-                if (s == 0) return "N/A";
-                return s + " MP";
-            };
-
-            monsters_listView.Objects = DataReader.Monsters;
-
-            // Monster drop list
-            olvColumn21.AspectGetter = delegate (object x) {
-                Item item = DataReader.Items.Where(i => i.ID == ((Monster.Drop)x).ItemID).FirstOrDefault();
-                if (item != null)
-                    return item.Name;
-                else
-                    return "Removed post-7.4 item";
-            };
-            olvColumn22.AspectGetter = delegate (object x) { return ((Monster.Drop)x).Amount; };
-            olvColumn23.AspectGetter = delegate (object x) { return ((double)(((Monster.Drop)x).Rate) / 10); };
-            olvColumn23.AspectToStringFormat = "{0}%";
-            
-            olvColumn24.AspectGetter = delegate (object x)
-            {
-                int id = ((Monster.Drop)x).ItemID;
-                int cheapest = 0;
-                foreach (NPC npc in DataReader.Npcs)
-                {
-                    foreach (NPC.Transaction transaction in npc.transactions)
-                    {
-                        if (transaction.ItemID == id)
-                            if (transaction.Type == NPC.TransactionType.Sell && transaction.Price > cheapest) cheapest = transaction.Price;
-                    }
-                }
-                return cheapest;
-            };
-        }
-
-        private void monsters_listView_SelectionChanged(object sender, EventArgs e)
-        {
-
-            if (monsters_listView.SelectedObject != null)
-            {
-
-                Monster selected = (Monster)monsters_listView.SelectedObject;
-                monsters_labelName.Text = selected.Name; 
-                monsters_dropListView.Objects = selected.Inventory;
-
-                try
-                {
-                    monsters_textBox.Lines = File.ReadAllLines(monsterFolder + "\\" + selected.Filename);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "File read error");
-                }
-            }
-        }
-
-        private void monsters_dropListView_ItemActivate(object sender, EventArgs e)
-        {
-            var drop = (Monster.Drop)monsters_dropListView.SelectedObject;
-            Item item = DataReader.Items.Where(i => i.ID == drop.ItemID).FirstOrDefault();
-
-            if (item != null)
-            {
-                tabControl1.SelectedTab = tabPage_items;
-                tab_Items1.DisplayItemInfo(item);
-            }
-        }
-
-
-        private void monsters_checkBox_hideUniques_CheckedChanged(object sender, EventArgs e)
-        {
-            if (monsters_checkBox_hideUniques.Checked)
-                monsters_listView.ModelFilter = new ModelFilter(delegate (object x) { return !string.IsNullOrEmpty(((Monster)x).Article); });
-            else
-                monsters_listView.ModelFilter = null;
-        }
-
-        private void monsters_checkBox_showSummonLevel_CheckedChanged(object sender, EventArgs e)
-        {
-            if (monsters_checkBox_showSummonLevel.Checked)
-            {
-                olvColumn18.AspectToStringConverter = delegate (object x)
-                {
-                    var s = (int)x;
-
-                    if (s == 0) return "N/A";
-                    return (Math.Ceiling(((decimal)s - 35) / 30) + 8).ToString();
-                };
-            } 
-            else
-            {
-                olvColumn18.AspectToStringConverter = delegate (object x)
-                {
-                    var s = (int)x;
-
-                    if (s == 0) return "N/A";
-                    return s + " MP";
-                };
-            }
-            monsters_listView.SetObjects(monsters_listView.Objects);
-        }
-
-        #endregion
 
         #region NPC
 
