@@ -74,8 +74,9 @@ namespace TibiantisHelper
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(786, 465);
+            this.splitContainer1.Size = new System.Drawing.Size(917, 465);
             this.splitContainer1.SplitterDistance = 257;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
             // 
             // splitContainer3
@@ -118,7 +119,7 @@ namespace TibiantisHelper
             this.label_position.AutoSize = true;
             this.label_position.Location = new System.Drawing.Point(0, 301);
             this.label_position.Name = "label_position";
-            this.label_position.Size = new System.Drawing.Size(44, 13);
+            this.label_position.Size = new System.Drawing.Size(51, 13);
             this.label_position.TabIndex = 5;
             this.label_position.Text = "Position";
             this.label_position.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -130,7 +131,7 @@ namespace TibiantisHelper
             this.groupBox2.Controls.Add(this.numericUpDown1);
             this.groupBox2.Location = new System.Drawing.Point(3, 53);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(251, 53);
+            this.groupBox2.Size = new System.Drawing.Size(250, 53);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Layer";
@@ -139,14 +140,14 @@ namespace TibiantisHelper
             // 
             this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown1.Location = new System.Drawing.Point(6, 19);
+            this.numericUpDown1.Location = new System.Drawing.Point(7, 19);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             15,
             0,
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(239, 20);
+            this.numericUpDown1.Size = new System.Drawing.Size(236, 21);
             this.numericUpDown1.TabIndex = 3;
             this.numericUpDown1.Value = new decimal(new int[] {
             7,
@@ -163,7 +164,7 @@ namespace TibiantisHelper
             this.groupBox1.Controls.Add(this.trackBar1);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(251, 49);
+            this.groupBox1.Size = new System.Drawing.Size(250, 49);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Framerate";
@@ -173,11 +174,11 @@ namespace TibiantisHelper
             this.trackBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.trackBar1.AutoSize = false;
-            this.trackBar1.Location = new System.Drawing.Point(6, 14);
+            this.trackBar1.Location = new System.Drawing.Point(7, 14);
             this.trackBar1.Maximum = 140;
             this.trackBar1.Minimum = 20;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(239, 29);
+            this.trackBar1.Size = new System.Drawing.Size(236, 29);
             this.trackBar1.TabIndex = 1;
             this.trackBar1.TickFrequency = 5;
             this.trackBar1.Value = 90;
@@ -188,9 +189,9 @@ namespace TibiantisHelper
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(9, 112);
+            this.checkBox1.Location = new System.Drawing.Point(10, 112);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(93, 17);
+            this.checkBox1.Size = new System.Drawing.Size(105, 17);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Map Dragging";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -211,7 +212,7 @@ namespace TibiantisHelper
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.textBox1);
-            this.splitContainer2.Size = new System.Drawing.Size(525, 465);
+            this.splitContainer2.Size = new System.Drawing.Size(655, 465);
             this.splitContainer2.SplitterDistance = 298;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -221,7 +222,7 @@ namespace TibiantisHelper
             this.control_MinimapViewer1.Framerate = ((byte)(90));
             this.control_MinimapViewer1.Location = new System.Drawing.Point(0, 0);
             this.control_MinimapViewer1.Name = "control_MinimapViewer1";
-            this.control_MinimapViewer1.Size = new System.Drawing.Size(525, 298);
+            this.control_MinimapViewer1.Size = new System.Drawing.Size(655, 298);
             this.control_MinimapViewer1.TabIndex = 0;
             // 
             // textBox1
@@ -231,7 +232,7 @@ namespace TibiantisHelper
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(525, 163);
+            this.textBox1.Size = new System.Drawing.Size(655, 163);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "No sector selected\r\n\r\nHold down Ctrl or Right Mouse Button and mouse over a secto" +
     "r to calculate floor refresh";
@@ -239,11 +240,12 @@ namespace TibiantisHelper
             // 
             // Tab_Map
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainer1);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Tab_Map";
-            this.Size = new System.Drawing.Size(786, 465);
+            this.Size = new System.Drawing.Size(917, 465);
             this.Load += new System.EventHandler(this.Tab_Map_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
