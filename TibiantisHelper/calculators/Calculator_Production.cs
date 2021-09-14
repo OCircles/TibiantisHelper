@@ -177,8 +177,8 @@ namespace TibiantisHelper
         {
             if (!string.IsNullOrEmpty(calculator_production_addTimer_time))
             {
-                mainForm.TimersAdd(calculator_production_addTimer_title, calculator_production_addTimer_time, 0, false, false);
-                mainForm.tabControl1.SelectTab("Timers");
+                mainForm.tab_Timers1.TimersAdd(calculator_production_addTimer_title, calculator_production_addTimer_time, 0, false, false);
+                mainForm.tabControl1.SelectTab(mainForm.tabPage_timers);
             }
         }
 

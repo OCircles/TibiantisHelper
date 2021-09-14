@@ -137,10 +137,10 @@
     <Compile Include="Form_PlayerLookup.Designer.cs">
       <DependentUpon>Form_PlayerLookup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_TimerDialog.cs">
+    <Compile Include="Tabs\Timers\Form_TimerDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_TimerDialog.Designer.cs">
+    <Compile Include="Tabs\Timers\Form_TimerDialog.Designer.cs">
       <DependentUpon>Form_TimerDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_LoginAlertAddDialog.cs">
@@ -183,6 +183,12 @@
     <Compile Include="Tabs\Tab_Raids.Designer.cs">
       <DependentUpon>Tab_Raids.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tabs\Timers\Tab_Timers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tabs\Timers\Tab_Timers.Designer.cs">
+      <DependentUpon>Tab_Timers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utility.cs" />
     <EmbeddedResource Include="calculators\Calculator_Experience.resx">
       <DependentUpon>Calculator_Experience.cs</DependentUpon>
@@ -214,7 +220,7 @@
     <EmbeddedResource Include="Form_PlayerLookup.resx">
       <DependentUpon>Form_PlayerLookup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_TimerDialog.resx">
+    <EmbeddedResource Include="Tabs\Timers\Form_TimerDialog.resx">
       <DependentUpon>Form_TimerDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_LoginAlertAddDialog.resx">
@@ -244,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tabs\Tab_Raids.resx">
       <DependentUpon>Tab_Raids.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabs\Timers\Tab_Timers.resx">
+      <DependentUpon>Tab_Timers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

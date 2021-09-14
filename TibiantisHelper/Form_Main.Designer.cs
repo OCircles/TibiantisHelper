@@ -47,20 +47,6 @@
             this.tabPage_accounts = new System.Windows.Forms.TabPage();
             this.tab_Accounts = new TibiantisHelper.Tabs.Tab_Accounts();
             this.tabPage_timers = new System.Windows.Forms.TabPage();
-            this.timers_splitContainer = new System.Windows.Forms.SplitContainer();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.timers_contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.bedmageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.idleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.food002000ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage_calculator = new System.Windows.Forms.TabPage();
             this.splitContainer14 = new System.Windows.Forms.SplitContainer();
             this.calculator_listBox = new System.Windows.Forms.ListBox();
@@ -162,23 +148,23 @@
             this.tab_Map1 = new TibiantisHelper.Tab_Map();
             this.tabPage_Raids = new System.Windows.Forms.TabPage();
             this.tab_Raids1 = new TibiantisHelper.Tabs.Tab_Raids();
+            this.timers_contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.bedmageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.idleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.food002000ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timerNetworkStuff = new System.Windows.Forms.Timer(this.components);
             this.header_linkLabel_tibiantisHome = new System.Windows.Forms.LinkLabel();
             this.header_linkLabel_tibiantisInfo = new System.Windows.Forms.LinkLabel();
             this.header_linkLabel_discord = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timerTrayFlash = new System.Windows.Forms.Timer(this.components);
+            this.tab_Timers1 = new TibiantisHelper.Tabs.Tab_Timers();
             ((System.ComponentModel.ISupportInitialize)(this.header_pictureBox)).BeginInit();
             this.header_panel_vocations.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage_accounts.SuspendLayout();
             this.tabPage_timers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.timers_splitContainer)).BeginInit();
-            this.timers_splitContainer.Panel1.SuspendLayout();
-            this.timers_splitContainer.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.timers_contextMenuStrip.SuspendLayout();
             this.tabPage_calculator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).BeginInit();
             this.splitContainer14.Panel1.SuspendLayout();
@@ -251,6 +237,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.loginAlert_dataGridView)).BeginInit();
             this.tabPage_map.SuspendLayout();
             this.tabPage_Raids.SuspendLayout();
+            this.timers_contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -432,7 +419,7 @@
             // 
             // tabPage_timers
             // 
-            this.tabPage_timers.Controls.Add(this.timers_splitContainer);
+            this.tabPage_timers.Controls.Add(this.tab_Timers1);
             this.tabPage_timers.Location = new System.Drawing.Point(4, 22);
             this.tabPage_timers.Name = "tabPage_timers";
             this.tabPage_timers.Padding = new System.Windows.Forms.Padding(3);
@@ -440,159 +427,6 @@
             this.tabPage_timers.TabIndex = 1;
             this.tabPage_timers.Text = "Timers";
             this.tabPage_timers.UseVisualStyleBackColor = true;
-            // 
-            // timers_splitContainer
-            // 
-            this.timers_splitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.timers_splitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.timers_splitContainer.IsSplitterFixed = true;
-            this.timers_splitContainer.Location = new System.Drawing.Point(3, 3);
-            this.timers_splitContainer.Name = "timers_splitContainer";
-            // 
-            // timers_splitContainer.Panel1
-            // 
-            this.timers_splitContainer.Panel1.Controls.Add(this.textBox14);
-            this.timers_splitContainer.Panel1.Controls.Add(this.groupBox4);
-            this.timers_splitContainer.Panel1.Controls.Add(this.button2);
-            this.timers_splitContainer.Panel1.Controls.Add(this.button5);
-            // 
-            // timers_splitContainer.Panel2
-            // 
-            this.timers_splitContainer.Panel2.BackColor = System.Drawing.SystemColors.Window;
-            this.timers_splitContainer.Size = new System.Drawing.Size(919, 400);
-            this.timers_splitContainer.SplitterDistance = 213;
-            this.timers_splitContainer.TabIndex = 3;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox14.Location = new System.Drawing.Point(0, 154);
-            this.textBox14.Multiline = true;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox14.Size = new System.Drawing.Size(210, 243);
-            this.textBox14.TabIndex = 5;
-            this.textBox14.Text = resources.GetString("textBox14.Text");
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.checkBox3);
-            this.groupBox4.Controls.Add(this.textBox13);
-            this.groupBox4.Controls.Add(this.button8);
-            this.groupBox4.Controls.Add(this.checkBox2);
-            this.groupBox4.Controls.Add(this.checkBox1);
-            this.groupBox4.Location = new System.Drawing.Point(3, 3);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(207, 118);
-            this.groupBox4.TabIndex = 4;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Settings";
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(6, 43);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(171, 17);
-            this.checkBox3.TabIndex = 6;
-            this.checkBox3.Text = "Tray Notifs Open on Click";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
-            // 
-            // textBox13
-            // 
-            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox13.Location = new System.Drawing.Point(4, 91);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(132, 21);
-            this.textBox13.TabIndex = 4;
-            // 
-            // button8
-            // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.Location = new System.Drawing.Point(142, 89);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(57, 23);
-            this.button8.TabIndex = 5;
-            this.button8.Text = "Browse";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(6, 66);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(90, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Play Sound";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(6, 20);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(118, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Tray Notification";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(1, 125);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button5
-            // 
-            this.button5.ContextMenuStrip = this.timers_contextMenuStrip;
-            this.button5.Location = new System.Drawing.Point(111, 125);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 23);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Preset";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button5_MouseClick);
-            // 
-            // timers_contextMenuStrip
-            // 
-            this.timers_contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bedmageToolStripMenuItem,
-            this.idleToolStripMenuItem,
-            this.food002000ToolStripMenuItem});
-            this.timers_contextMenuStrip.Name = "timers_contextMenuStrip";
-            this.timers_contextMenuStrip.Size = new System.Drawing.Size(178, 70);
-            this.timers_contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.timers_contextMenuStrip_Opening);
-            // 
-            // bedmageToolStripMenuItem
-            // 
-            this.bedmageToolStripMenuItem.Name = "bedmageToolStripMenuItem";
-            this.bedmageToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.bedmageToolStripMenuItem.Text = "Bedmage (01:40:00)";
-            // 
-            // idleToolStripMenuItem
-            // 
-            this.idleToolStripMenuItem.Name = "idleToolStripMenuItem";
-            this.idleToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.idleToolStripMenuItem.Text = "Idle (00:16:00)";
-            // 
-            // food002000ToolStripMenuItem
-            // 
-            this.food002000ToolStripMenuItem.Name = "food002000ToolStripMenuItem";
-            this.food002000ToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.food002000ToolStripMenuItem.Text = "Food (00:20:00)";
             // 
             // tabPage_calculator
             // 
@@ -1849,6 +1683,33 @@
             this.tab_Raids1.Size = new System.Drawing.Size(919, 400);
             this.tab_Raids1.TabIndex = 0;
             // 
+            // timers_contextMenuStrip
+            // 
+            this.timers_contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bedmageToolStripMenuItem,
+            this.idleToolStripMenuItem,
+            this.food002000ToolStripMenuItem});
+            this.timers_contextMenuStrip.Name = "timers_contextMenuStrip";
+            this.timers_contextMenuStrip.Size = new System.Drawing.Size(178, 70);
+            // 
+            // bedmageToolStripMenuItem
+            // 
+            this.bedmageToolStripMenuItem.Name = "bedmageToolStripMenuItem";
+            this.bedmageToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.bedmageToolStripMenuItem.Text = "Bedmage (01:40:00)";
+            // 
+            // idleToolStripMenuItem
+            // 
+            this.idleToolStripMenuItem.Name = "idleToolStripMenuItem";
+            this.idleToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.idleToolStripMenuItem.Text = "Idle (00:16:00)";
+            // 
+            // food002000ToolStripMenuItem
+            // 
+            this.food002000ToolStripMenuItem.Name = "food002000ToolStripMenuItem";
+            this.food002000ToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.food002000ToolStripMenuItem.Text = "Food (00:20:00)";
+            // 
             // timerNetworkStuff
             // 
             this.timerNetworkStuff.Enabled = true;
@@ -1893,6 +1754,14 @@
             this.timerTrayFlash.Interval = 1000;
             this.timerTrayFlash.Tick += new System.EventHandler(this.timerTrayFlash_Tick);
             // 
+            // tab_Timers1
+            // 
+            this.tab_Timers1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Timers1.Location = new System.Drawing.Point(3, 3);
+            this.tab_Timers1.Name = "tab_Timers1";
+            this.tab_Timers1.Size = new System.Drawing.Size(919, 400);
+            this.tab_Timers1.TabIndex = 0;
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -1926,13 +1795,6 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage_accounts.ResumeLayout(false);
             this.tabPage_timers.ResumeLayout(false);
-            this.timers_splitContainer.Panel1.ResumeLayout(false);
-            this.timers_splitContainer.Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.timers_splitContainer)).EndInit();
-            this.timers_splitContainer.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.timers_contextMenuStrip.ResumeLayout(false);
             this.tabPage_calculator.ResumeLayout(false);
             this.splitContainer14.Panel1.ResumeLayout(false);
             this.splitContainer14.Panel2.ResumeLayout(false);
@@ -2012,6 +1874,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.loginAlert_dataGridView)).EndInit();
             this.tabPage_map.ResumeLayout(false);
             this.tabPage_Raids.ResumeLayout(false);
+            this.timers_contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2022,9 +1885,7 @@
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabPage tabPage_accounts;
-        private System.Windows.Forms.TabPage tabPage_timers;
         private System.Windows.Forms.PictureBox header_pictureBox;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TabPage tabPage_items;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ComboBox items_comboBox_itemCategory;
@@ -2120,15 +1981,7 @@
         private System.Windows.Forms.Label loginAlert_labelSelected;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.DataGridView loginAlert_dataGridView;
-        private System.Windows.Forms.SplitContainer timers_splitContainer;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ContextMenuStrip tray_contextMenuStrip;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ContextMenuStrip timers_contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem bedmageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem idleToolStripMenuItem;
@@ -2143,7 +1996,6 @@
         private System.Windows.Forms.LinkLabel header_linkLabel_tibiantisInfo;
         private System.Windows.Forms.LinkLabel header_linkLabel_discord;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox items_checkBox_hideExpiring;
         private System.Windows.Forms.CheckBox monsters_checkBox_hideUniques;
         private System.Windows.Forms.CheckBox monsters_checkBox_showSummonLevel;
@@ -2157,6 +2009,8 @@
         private System.Windows.Forms.TabPage tabPage_Raids;
         private Tabs.Tab_Raids tab_Raids1;
         private Tabs.Tab_Accounts tab_Accounts;
+        public System.Windows.Forms.TabPage tabPage_timers;
+        public Tabs.Tab_Timers tab_Timers1;
     }
 }
 
