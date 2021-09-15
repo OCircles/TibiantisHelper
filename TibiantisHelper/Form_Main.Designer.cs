@@ -49,11 +49,6 @@
             this.tabPage_timers = new System.Windows.Forms.TabPage();
             this.tab_Timers1 = new TibiantisHelper.Tabs.Tab_Timers();
             this.tabPage_calculator = new System.Windows.Forms.TabPage();
-            this.splitContainer14 = new System.Windows.Forms.SplitContainer();
-            this.calculator_listBox = new System.Windows.Forms.ListBox();
-            this.splitContainer15 = new System.Windows.Forms.SplitContainer();
-            this.calculator_tabControl = new System.Windows.Forms.TabControl();
-            this.calculator_textBox_result = new System.Windows.Forms.TextBox();
             this.tabPage_items = new System.Windows.Forms.TabPage();
             this.tab_Items1 = new TibiantisHelper.Tabs.Tab_Items();
             this.tabPage_spells = new System.Windows.Forms.TabPage();
@@ -63,6 +58,7 @@
             this.tabPage_monsters = new System.Windows.Forms.TabPage();
             this.tab_Monsters1 = new TibiantisHelper.Tabs.Tab_Monsters();
             this.tabPage_loginAlert = new System.Windows.Forms.TabPage();
+            this.tab_LoginAlert1 = new TibiantisHelper.Tabs.Tab_LoginAlert();
             this.tabPage_map = new System.Windows.Forms.TabPage();
             this.tab_Map1 = new TibiantisHelper.Tab_Map();
             this.tabPage_Raids = new System.Windows.Forms.TabPage();
@@ -77,7 +73,7 @@
             this.header_linkLabel_discord = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timerTrayFlash = new System.Windows.Forms.Timer(this.components);
-            this.tab_LoginAlert1 = new TibiantisHelper.Tabs.Tab_LoginAlert();
+            this.tab_Calculators1 = new TibiantisHelper.Tabs.Tab_Calculators();
             ((System.ComponentModel.ISupportInitialize)(this.header_pictureBox)).BeginInit();
             this.header_panel_vocations.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -85,14 +81,6 @@
             this.tabPage_accounts.SuspendLayout();
             this.tabPage_timers.SuspendLayout();
             this.tabPage_calculator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).BeginInit();
-            this.splitContainer14.Panel1.SuspendLayout();
-            this.splitContainer14.Panel2.SuspendLayout();
-            this.splitContainer14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer15)).BeginInit();
-            this.splitContainer15.Panel1.SuspendLayout();
-            this.splitContainer15.Panel2.SuspendLayout();
-            this.splitContainer15.SuspendLayout();
             this.tabPage_items.SuspendLayout();
             this.tabPage_spells.SuspendLayout();
             this.tabPage_npc.SuspendLayout();
@@ -304,84 +292,13 @@
             // tabPage_calculator
             // 
             this.tabPage_calculator.AutoScroll = true;
-            this.tabPage_calculator.Controls.Add(this.splitContainer14);
+            this.tabPage_calculator.Controls.Add(this.tab_Calculators1);
             this.tabPage_calculator.Location = new System.Drawing.Point(4, 22);
             this.tabPage_calculator.Name = "tabPage_calculator";
             this.tabPage_calculator.Size = new System.Drawing.Size(925, 406);
             this.tabPage_calculator.TabIndex = 7;
             this.tabPage_calculator.Text = "Calculator";
             this.tabPage_calculator.UseVisualStyleBackColor = true;
-            // 
-            // splitContainer14
-            // 
-            this.splitContainer14.BackColor = System.Drawing.Color.Transparent;
-            this.splitContainer14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer14.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer14.Name = "splitContainer14";
-            // 
-            // splitContainer14.Panel1
-            // 
-            this.splitContainer14.Panel1.Controls.Add(this.calculator_listBox);
-            // 
-            // splitContainer14.Panel2
-            // 
-            this.splitContainer14.Panel2.Controls.Add(this.splitContainer15);
-            this.splitContainer14.Size = new System.Drawing.Size(925, 406);
-            this.splitContainer14.SplitterDistance = 174;
-            this.splitContainer14.TabIndex = 13;
-            // 
-            // calculator_listBox
-            // 
-            this.calculator_listBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.calculator_listBox.FormattingEnabled = true;
-            this.calculator_listBox.Location = new System.Drawing.Point(0, 0);
-            this.calculator_listBox.Name = "calculator_listBox";
-            this.calculator_listBox.Size = new System.Drawing.Size(174, 406);
-            this.calculator_listBox.TabIndex = 0;
-            this.calculator_listBox.SelectedIndexChanged += new System.EventHandler(this.calculator_listBox_SelectedIndexChanged);
-            // 
-            // splitContainer15
-            // 
-            this.splitContainer15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer15.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
-            this.splitContainer15.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer15.Name = "splitContainer15";
-            this.splitContainer15.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer15.Panel1
-            // 
-            this.splitContainer15.Panel1.Controls.Add(this.calculator_tabControl);
-            // 
-            // splitContainer15.Panel2
-            // 
-            this.splitContainer15.Panel2.Controls.Add(this.calculator_textBox_result);
-            this.splitContainer15.Size = new System.Drawing.Size(747, 406);
-            this.splitContainer15.SplitterDistance = 307;
-            this.splitContainer15.TabIndex = 0;
-            // 
-            // calculator_tabControl
-            // 
-            this.calculator_tabControl.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.calculator_tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.calculator_tabControl.ItemSize = new System.Drawing.Size(0, 1);
-            this.calculator_tabControl.Location = new System.Drawing.Point(0, 0);
-            this.calculator_tabControl.Name = "calculator_tabControl";
-            this.calculator_tabControl.SelectedIndex = 0;
-            this.calculator_tabControl.Size = new System.Drawing.Size(747, 307);
-            this.calculator_tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.calculator_tabControl.TabIndex = 12;
-            // 
-            // calculator_textBox_result
-            // 
-            this.calculator_textBox_result.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.calculator_textBox_result.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.calculator_textBox_result.Location = new System.Drawing.Point(0, 0);
-            this.calculator_textBox_result.Multiline = true;
-            this.calculator_textBox_result.Name = "calculator_textBox_result";
-            this.calculator_textBox_result.ReadOnly = true;
-            this.calculator_textBox_result.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.calculator_textBox_result.Size = new System.Drawing.Size(747, 95);
-            this.calculator_textBox_result.TabIndex = 8;
             // 
             // tabPage_items
             // 
@@ -473,6 +390,15 @@
             this.tabPage_loginAlert.TabIndex = 5;
             this.tabPage_loginAlert.Text = "Login Alert";
             this.tabPage_loginAlert.UseVisualStyleBackColor = true;
+            // 
+            // tab_LoginAlert1
+            // 
+            this.tab_LoginAlert1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_LoginAlert1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab_LoginAlert1.Location = new System.Drawing.Point(3, 3);
+            this.tab_LoginAlert1.Name = "tab_LoginAlert1";
+            this.tab_LoginAlert1.Size = new System.Drawing.Size(919, 400);
+            this.tab_LoginAlert1.TabIndex = 0;
             // 
             // tabPage_map
             // 
@@ -585,14 +511,14 @@
             this.timerTrayFlash.Interval = 1000;
             this.timerTrayFlash.Tick += new System.EventHandler(this.timerTrayFlash_Tick);
             // 
-            // tab_LoginAlert1
+            // tab_Calculators1
             // 
-            this.tab_LoginAlert1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_LoginAlert1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tab_LoginAlert1.Location = new System.Drawing.Point(3, 3);
-            this.tab_LoginAlert1.Name = "tab_LoginAlert1";
-            this.tab_LoginAlert1.Size = new System.Drawing.Size(919, 400);
-            this.tab_LoginAlert1.TabIndex = 0;
+            this.tab_Calculators1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Calculators1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab_Calculators1.Location = new System.Drawing.Point(0, 0);
+            this.tab_Calculators1.Name = "tab_Calculators1";
+            this.tab_Calculators1.Size = new System.Drawing.Size(925, 406);
+            this.tab_Calculators1.TabIndex = 0;
             // 
             // Form_Main
             // 
@@ -628,15 +554,6 @@
             this.tabPage_accounts.ResumeLayout(false);
             this.tabPage_timers.ResumeLayout(false);
             this.tabPage_calculator.ResumeLayout(false);
-            this.splitContainer14.Panel1.ResumeLayout(false);
-            this.splitContainer14.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer14)).EndInit();
-            this.splitContainer14.ResumeLayout(false);
-            this.splitContainer15.Panel1.ResumeLayout(false);
-            this.splitContainer15.Panel2.ResumeLayout(false);
-            this.splitContainer15.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer15)).EndInit();
-            this.splitContainer15.ResumeLayout(false);
             this.tabPage_items.ResumeLayout(false);
             this.tabPage_spells.ResumeLayout(false);
             this.tabPage_npc.ResumeLayout(false);
@@ -671,15 +588,10 @@
         private System.Windows.Forms.ToolStripMenuItem bedmageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem idleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem food002000ToolStripMenuItem;
-        private System.Windows.Forms.SplitContainer splitContainer14;
-        private System.Windows.Forms.SplitContainer splitContainer15;
-        private System.Windows.Forms.TabControl calculator_tabControl;
-        private System.Windows.Forms.ListBox calculator_listBox;
         private System.Windows.Forms.LinkLabel header_linkLabel_tibiantisHome;
         private System.Windows.Forms.LinkLabel header_linkLabel_tibiantisInfo;
         private System.Windows.Forms.LinkLabel header_linkLabel_discord;
         private System.Windows.Forms.ToolTip toolTip1;
-        public System.Windows.Forms.TextBox calculator_textBox_result;
         public System.Windows.Forms.TabControl tabControl1;
         public System.Windows.Forms.CheckBox header_vocation_promo_checkBox;
         public System.Windows.Forms.ComboBox header_vocation_comboBox;
@@ -700,6 +612,7 @@
         private Tabs.Tab_NPC tab_NPC1;
         public System.Windows.Forms.TabPage tabPage_loginAlert;
         public Tabs.Tab_LoginAlert tab_LoginAlert1;
+        private Tabs.Tab_Calculators tab_Calculators1;
     }
 }
 

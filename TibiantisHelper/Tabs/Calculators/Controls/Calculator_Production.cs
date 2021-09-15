@@ -13,11 +13,11 @@ namespace TibiantisHelper
 {
     public partial class Calculator_Production : UserControl
     {
-        Form_Main mainForm;
+        TextBox OutputTextbox;
 
-        public Calculator_Production(Form_Main mainForm)
+        public Calculator_Production(TextBox OutputTextbox)
         {
-            this.mainForm = mainForm;
+            this.OutputTextbox = OutputTextbox;
             InitializeComponent();
 
             // Foods
@@ -102,7 +102,7 @@ namespace TibiantisHelper
 
                         // Assemble result in textbox. The arrows/bolts stuff makes this a huge mess lol
 
-                        mainForm.calculator_textBox_result.Text = $"A {Form_Main._selectedVocation.Name} producing {itemName} (";
+                        OutputTextbox.Text = $"A {Form_Main._selectedVocation.Name} producing {itemName} (";
 
                         string parenthesis = "";
 
@@ -115,10 +115,9 @@ namespace TibiantisHelper
                         }
                         calculator_production_addTimer_title += $" {parenthesis} ({Form_Main._selectedVocation.Name})";
 
+                        OutputTextbox.Text += parenthesis;
 
-                        mainForm.calculator_textBox_result.Text += parenthesis;
-
-                        mainForm.calculator_textBox_result.Text += $") takes {regenString} and uses {foodDiv}x {food.Name} (" +
+                        OutputTextbox.Text += $") takes {regenString} and uses {foodDiv}x {food.Name} (" +
                             (((double)food.GetAttributeValue("Weight")) / 100) * foodDiv + "oz)";
 
 
@@ -126,8 +125,8 @@ namespace TibiantisHelper
                         if (spell.ProduceAmount != 0) unitsString = $", generating {spell.ProduceAmount} units each time";
 
 
-                        mainForm.calculator_textBox_result.Text += Environment.NewLine + Environment.NewLine;
-                        mainForm.calculator_textBox_result.Text +=
+                        OutputTextbox.Text += Environment.NewLine + Environment.NewLine;
+                        OutputTextbox.Text +=
                             $"Casting \"{spell.Words}\" {casts} times" +
                             $"{unitsString} for a total of " +
                             $"{totalMana} mana ({spell.Mana} mana per cast)";
@@ -135,12 +134,12 @@ namespace TibiantisHelper
                     }
                     else
                     {
-                        mainForm.calculator_textBox_result.Text = "Please input production amount above";
+                        OutputTextbox.Text = "Please input production amount above";
                     }
                 }
                 else
                 {
-                    mainForm.calculator_textBox_result.Text = "Could not parse input";
+                    OutputTextbox.Text = "Could not parse input";
                 }
             }
         }
@@ -155,10 +154,10 @@ namespace TibiantisHelper
             foreach (var s in spells)
             {
                 bool add = false;
-                if (mainForm.header_vocation_comboBox.SelectedIndex == 0 && s.VocKnight) add = true;
-                if (mainForm.header_vocation_comboBox.SelectedIndex == 1 && s.VocPaladin) add = true;
-                if (mainForm.header_vocation_comboBox.SelectedIndex == 2 && s.VocSorcerer) add = true;
-                if (mainForm.header_vocation_comboBox.SelectedIndex == 3 && s.VocDruid) add = true;
+                if (Form_Main.Form.header_vocation_comboBox.SelectedIndex == 0 && s.VocKnight) add = true;
+                if (Form_Main.Form.header_vocation_comboBox.SelectedIndex == 1 && s.VocPaladin) add = true;
+                if (Form_Main.Form.header_vocation_comboBox.SelectedIndex == 2 && s.VocSorcerer) add = true;
+                if (Form_Main.Form.header_vocation_comboBox.SelectedIndex == 3 && s.VocDruid) add = true;
 
                 if (add)
                     calculator_production_comboBox_rune.Items.Add(s.Name);
@@ -177,8 +176,8 @@ namespace TibiantisHelper
         {
             if (!string.IsNullOrEmpty(calculator_production_addTimer_time))
             {
-                mainForm.tab_Timers1.TimersAdd(calculator_production_addTimer_title, calculator_production_addTimer_time, 0, false, false);
-                mainForm.tabControl1.SelectTab(mainForm.tabPage_timers);
+                Form_Main.Form.tab_Timers1.TimersAdd(calculator_production_addTimer_title, calculator_production_addTimer_time, 0, false, false);
+                Form_Main.Form.tabControl1.SelectTab(Form_Main.Form.tabPage_timers);
             }
         }
 

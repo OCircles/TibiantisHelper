@@ -93,8 +93,6 @@ namespace TibiantisHelper
 
             InitializeVocations();
 
-            InitializeCalculatorTab();
-
 
             Tray_BuildContextMenu();
 
@@ -598,7 +596,7 @@ namespace TibiantisHelper
         {
             Settings.Default.Vocation = (byte)header_vocation_comboBox.SelectedIndex;
             UpdateVocation();
-            Calculator_Production.UpdateProductionDropdown();
+            tab_Calculators1.UpdateVocation();
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -687,7 +685,8 @@ namespace TibiantisHelper
             header_vocation_label2.Text += "/min";
             header_vocation_label4.Text += "/min";
 
-            Calculator_Production.CalculateProduction();
+            // FIX B
+            // Calculator_Production.CalculateProduction();
         }
 
         public class Vocation
@@ -724,40 +723,6 @@ namespace TibiantisHelper
         }
 
         #endregion
-
-        #region Calculator
-
-        Calculator_Production Calculator_Production;
-        Calculator_Experience Calculator_Experience;
-
-
-        private void InitializeCalculatorTab()
-        {
-            Calculator_Production = new Calculator_Production(this);
-            calculator_addPage("Production", Calculator_Production);
-
-
-            Calculator_Experience = new Calculator_Experience(this);
-            calculator_addPage("Experience", Calculator_Experience);
-        }
-        
-        private void calculator_addPage(string title, UserControl cc)
-        {
-            var page = new TabPage();
-            page.BackColor = Color.White;
-            page.Controls.Add(cc);
-            cc.Dock = DockStyle.Fill;
-            calculator_tabControl.TabPages.Add(page);
-            calculator_listBox.Items.Add(title);
-        }
-
-        private void calculator_listBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            calculator_tabControl.SelectedIndex = calculator_listBox.SelectedIndex;
-        }
-
-        #endregion
-
 
 
 

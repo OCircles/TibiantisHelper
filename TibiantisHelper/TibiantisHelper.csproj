@@ -77,16 +77,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="calculators\Calculator_Experience.cs">
+    <Compile Include="Tabs\Calculators\Controls\Calculator_Experience.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="calculators\Calculator_Experience.Designer.cs">
+    <Compile Include="Tabs\Calculators\Controls\Calculator_Experience.Designer.cs">
       <DependentUpon>Calculator_Experience.cs</DependentUpon>
     </Compile>
-    <Compile Include="calculators\Calculator_Production.cs">
+    <Compile Include="Tabs\Calculators\Controls\Calculator_Production.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="calculators\Calculator_Production.Designer.cs">
+    <Compile Include="Tabs\Calculators\Controls\Calculator_Production.Designer.cs">
       <DependentUpon>Calculator_Production.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_DateTimePicker.cs">
@@ -168,6 +168,12 @@
     <Compile Include="Tabs\LoginAlert\Tab_LoginAlert.Designer.cs">
       <DependentUpon>Tab_LoginAlert.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tabs\Calculators\Tab_Calculators.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tabs\Calculators\Tab_Calculators.Designer.cs">
+      <DependentUpon>Tab_Calculators.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tabs\Timers\Form_TimerDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,10 +227,10 @@
       <DependentUpon>Tab_Timers.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility.cs" />
-    <EmbeddedResource Include="calculators\Calculator_Experience.resx">
+    <EmbeddedResource Include="Tabs\Calculators\Controls\Calculator_Experience.resx">
       <DependentUpon>Calculator_Experience.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="calculators\Calculator_Production.resx">
+    <EmbeddedResource Include="Tabs\Calculators\Controls\Calculator_Production.resx">
       <DependentUpon>Calculator_Production.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_DateTimePicker.resx">
@@ -250,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_PlayerLookup.resx">
       <DependentUpon>Form_PlayerLookup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabs\Calculators\Tab_Calculators.resx">
+      <DependentUpon>Tab_Calculators.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tabs\Items\Tab_Items.resx">
       <DependentUpon>Tab_Items.cs</DependentUpon>

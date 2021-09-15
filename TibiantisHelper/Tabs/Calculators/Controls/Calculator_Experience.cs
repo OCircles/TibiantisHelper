@@ -12,11 +12,11 @@ namespace TibiantisHelper
 {
     public partial class Calculator_Experience : UserControl
     {
-        Form_Main mainForm;
+        TextBox OutputTextbox;
 
-        public Calculator_Experience(Form_Main mainForm)
+        public Calculator_Experience(TextBox OutputTextbox)
         {
-            this.mainForm = mainForm;
+            this.OutputTextbox = OutputTextbox;
             InitializeComponent();
         }
 
@@ -68,7 +68,8 @@ namespace TibiantisHelper
                         if (diff.Minutes != 0) durationString += string.Format("{0:D1}m", diff.Minutes);
                         if (diff.Seconds != 0) durationString += string.Format("{0:D1}s", diff.Seconds);
 
-                        mainForm.calculator_textBox_result.Text = $"You gained {totalExp} experience over a duration of " +
+
+                        OutputTextbox.Text = $"You gained {totalExp} experience over a duration of " +
                             $"{durationString} ({Math.Round(expPerHour, 1)} exp per hour)";
 
 
