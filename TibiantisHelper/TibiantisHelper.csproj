@@ -162,6 +162,12 @@
     <Compile Include="Tabs\NPC\Tab_NPC.Designer.cs">
       <DependentUpon>Tab_NPC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tabs\LoginAlert\Tab_LoginAlert.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tabs\LoginAlert\Tab_LoginAlert.Designer.cs">
+      <DependentUpon>Tab_LoginAlert.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tabs\Timers\Form_TimerDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tabs\Items\Tab_Items.resx">
       <DependentUpon>Tab_Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabs\LoginAlert\Tab_LoginAlert.resx">
+      <DependentUpon>Tab_LoginAlert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tabs\Monsters\Tab_Monsters.resx">
       <DependentUpon>Tab_Monsters.cs</DependentUpon>

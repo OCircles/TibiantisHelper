@@ -63,18 +63,6 @@
             this.tabPage_monsters = new System.Windows.Forms.TabPage();
             this.tab_Monsters1 = new TibiantisHelper.Tabs.Tab_Monsters();
             this.tabPage_loginAlert = new System.Windows.Forms.TabPage();
-            this.splitContainer10 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer11 = new System.Windows.Forms.SplitContainer();
-            this.loginAlert_labelSelected = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.loginAlert_button_browseSound = new System.Windows.Forms.Button();
-            this.loginAlert_alertTextBox = new System.Windows.Forms.TextBox();
-            this.loginAlert_checkBox_notifSound = new System.Windows.Forms.CheckBox();
-            this.loginAlert_checkBox_notifTray = new System.Windows.Forms.CheckBox();
-            this.loginAlert_button_add = new System.Windows.Forms.Button();
-            this.loginAlert_button_remove = new System.Windows.Forms.Button();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.loginAlert_dataGridView = new System.Windows.Forms.DataGridView();
             this.tabPage_map = new System.Windows.Forms.TabPage();
             this.tab_Map1 = new TibiantisHelper.Tab_Map();
             this.tabPage_Raids = new System.Windows.Forms.TabPage();
@@ -89,6 +77,7 @@
             this.header_linkLabel_discord = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timerTrayFlash = new System.Windows.Forms.Timer(this.components);
+            this.tab_LoginAlert1 = new TibiantisHelper.Tabs.Tab_LoginAlert();
             ((System.ComponentModel.ISupportInitialize)(this.header_pictureBox)).BeginInit();
             this.header_panel_vocations.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -109,16 +98,6 @@
             this.tabPage_npc.SuspendLayout();
             this.tabPage_monsters.SuspendLayout();
             this.tabPage_loginAlert.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).BeginInit();
-            this.splitContainer10.Panel1.SuspendLayout();
-            this.splitContainer10.Panel2.SuspendLayout();
-            this.splitContainer10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).BeginInit();
-            this.splitContainer11.Panel1.SuspendLayout();
-            this.splitContainer11.Panel2.SuspendLayout();
-            this.splitContainer11.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loginAlert_dataGridView)).BeginInit();
             this.tabPage_map.SuspendLayout();
             this.tabPage_Raids.SuspendLayout();
             this.timers_contextMenuStrip.SuspendLayout();
@@ -486,7 +465,7 @@
             // 
             // tabPage_loginAlert
             // 
-            this.tabPage_loginAlert.Controls.Add(this.splitContainer10);
+            this.tabPage_loginAlert.Controls.Add(this.tab_LoginAlert1);
             this.tabPage_loginAlert.Location = new System.Drawing.Point(4, 22);
             this.tabPage_loginAlert.Name = "tabPage_loginAlert";
             this.tabPage_loginAlert.Padding = new System.Windows.Forms.Padding(3);
@@ -494,169 +473,6 @@
             this.tabPage_loginAlert.TabIndex = 5;
             this.tabPage_loginAlert.Text = "Login Alert";
             this.tabPage_loginAlert.UseVisualStyleBackColor = true;
-            // 
-            // splitContainer10
-            // 
-            this.splitContainer10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer10.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer10.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer10.Name = "splitContainer10";
-            // 
-            // splitContainer10.Panel1
-            // 
-            this.splitContainer10.Panel1.Controls.Add(this.splitContainer11);
-            // 
-            // splitContainer10.Panel2
-            // 
-            this.splitContainer10.Panel2.Controls.Add(this.loginAlert_dataGridView);
-            this.splitContainer10.Size = new System.Drawing.Size(919, 400);
-            this.splitContainer10.SplitterDistance = 262;
-            this.splitContainer10.TabIndex = 0;
-            // 
-            // splitContainer11
-            // 
-            this.splitContainer11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer11.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer11.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer11.Name = "splitContainer11";
-            this.splitContainer11.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer11.Panel1
-            // 
-            this.splitContainer11.Panel1.Controls.Add(this.loginAlert_labelSelected);
-            this.splitContainer11.Panel1.Controls.Add(this.groupBox3);
-            this.splitContainer11.Panel1.Controls.Add(this.loginAlert_button_add);
-            this.splitContainer11.Panel1.Controls.Add(this.loginAlert_button_remove);
-            // 
-            // splitContainer11.Panel2
-            // 
-            this.splitContainer11.Panel2.Controls.Add(this.textBox11);
-            this.splitContainer11.Size = new System.Drawing.Size(262, 400);
-            this.splitContainer11.SplitterDistance = 157;
-            this.splitContainer11.TabIndex = 2;
-            // 
-            // loginAlert_labelSelected
-            // 
-            this.loginAlert_labelSelected.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.loginAlert_labelSelected.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginAlert_labelSelected.Location = new System.Drawing.Point(4, 106);
-            this.loginAlert_labelSelected.Name = "loginAlert_labelSelected";
-            this.loginAlert_labelSelected.Size = new System.Drawing.Size(259, 18);
-            this.loginAlert_labelSelected.TabIndex = 3;
-            this.loginAlert_labelSelected.Text = "No player selected";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.loginAlert_button_browseSound);
-            this.groupBox3.Controls.Add(this.loginAlert_alertTextBox);
-            this.groupBox3.Controls.Add(this.loginAlert_checkBox_notifSound);
-            this.groupBox3.Controls.Add(this.loginAlert_checkBox_notifTray);
-            this.groupBox3.Location = new System.Drawing.Point(4, 4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(255, 99);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Settings";
-            // 
-            // loginAlert_button_browseSound
-            // 
-            this.loginAlert_button_browseSound.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.loginAlert_button_browseSound.Location = new System.Drawing.Point(192, 68);
-            this.loginAlert_button_browseSound.Name = "loginAlert_button_browseSound";
-            this.loginAlert_button_browseSound.Size = new System.Drawing.Size(57, 23);
-            this.loginAlert_button_browseSound.TabIndex = 3;
-            this.loginAlert_button_browseSound.Text = "Browse";
-            this.loginAlert_button_browseSound.UseVisualStyleBackColor = true;
-            this.loginAlert_button_browseSound.Click += new System.EventHandler(this.loginAlert_button_browseSound_Click);
-            // 
-            // loginAlert_alertTextBox
-            // 
-            this.loginAlert_alertTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.loginAlert_alertTextBox.Location = new System.Drawing.Point(7, 69);
-            this.loginAlert_alertTextBox.Name = "loginAlert_alertTextBox";
-            this.loginAlert_alertTextBox.ReadOnly = true;
-            this.loginAlert_alertTextBox.Size = new System.Drawing.Size(179, 21);
-            this.loginAlert_alertTextBox.TabIndex = 2;
-            // 
-            // loginAlert_checkBox_notifSound
-            // 
-            this.loginAlert_checkBox_notifSound.AutoSize = true;
-            this.loginAlert_checkBox_notifSound.Location = new System.Drawing.Point(7, 45);
-            this.loginAlert_checkBox_notifSound.Name = "loginAlert_checkBox_notifSound";
-            this.loginAlert_checkBox_notifSound.Size = new System.Drawing.Size(169, 17);
-            this.loginAlert_checkBox_notifSound.TabIndex = 1;
-            this.loginAlert_checkBox_notifSound.Text = "Default alerts play sound";
-            this.loginAlert_checkBox_notifSound.UseVisualStyleBackColor = true;
-            this.loginAlert_checkBox_notifSound.CheckedChanged += new System.EventHandler(this.loginAlert_checkBox_notifSound_CheckedChanged);
-            // 
-            // loginAlert_checkBox_notifTray
-            // 
-            this.loginAlert_checkBox_notifTray.AutoSize = true;
-            this.loginAlert_checkBox_notifTray.Checked = true;
-            this.loginAlert_checkBox_notifTray.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.loginAlert_checkBox_notifTray.Location = new System.Drawing.Point(7, 21);
-            this.loginAlert_checkBox_notifTray.Name = "loginAlert_checkBox_notifTray";
-            this.loginAlert_checkBox_notifTray.Size = new System.Drawing.Size(118, 17);
-            this.loginAlert_checkBox_notifTray.TabIndex = 0;
-            this.loginAlert_checkBox_notifTray.Text = "Tray Notification";
-            this.loginAlert_checkBox_notifTray.UseVisualStyleBackColor = true;
-            this.loginAlert_checkBox_notifTray.CheckedChanged += new System.EventHandler(this.loginAlert_checkBox_notifTray_CheckedChanged);
-            // 
-            // loginAlert_button_add
-            // 
-            this.loginAlert_button_add.Location = new System.Drawing.Point(4, 127);
-            this.loginAlert_button_add.Name = "loginAlert_button_add";
-            this.loginAlert_button_add.Size = new System.Drawing.Size(118, 23);
-            this.loginAlert_button_add.TabIndex = 0;
-            this.loginAlert_button_add.Text = "Add Player";
-            this.loginAlert_button_add.UseVisualStyleBackColor = true;
-            this.loginAlert_button_add.Click += new System.EventHandler(this.loginAlert_button_add_Click);
-            // 
-            // loginAlert_button_remove
-            // 
-            this.loginAlert_button_remove.Location = new System.Drawing.Point(141, 127);
-            this.loginAlert_button_remove.Name = "loginAlert_button_remove";
-            this.loginAlert_button_remove.Size = new System.Drawing.Size(118, 23);
-            this.loginAlert_button_remove.TabIndex = 1;
-            this.loginAlert_button_remove.Text = "Remove Selected";
-            this.loginAlert_button_remove.UseVisualStyleBackColor = true;
-            this.loginAlert_button_remove.Click += new System.EventHandler(this.loginAlert_button_remove_Click);
-            // 
-            // textBox11
-            // 
-            this.textBox11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox11.Location = new System.Drawing.Point(0, 0);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox11.Size = new System.Drawing.Size(262, 239);
-            this.textBox11.TabIndex = 0;
-            this.textBox11.Text = resources.GetString("textBox11.Text");
-            // 
-            // loginAlert_dataGridView
-            // 
-            this.loginAlert_dataGridView.AllowUserToAddRows = false;
-            this.loginAlert_dataGridView.AllowUserToDeleteRows = false;
-            this.loginAlert_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.loginAlert_dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.loginAlert_dataGridView.Location = new System.Drawing.Point(0, 0);
-            this.loginAlert_dataGridView.MultiSelect = false;
-            this.loginAlert_dataGridView.Name = "loginAlert_dataGridView";
-            this.loginAlert_dataGridView.Size = new System.Drawing.Size(653, 400);
-            this.loginAlert_dataGridView.TabIndex = 0;
-            this.loginAlert_dataGridView.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.loginAlert_dataGridView_CellBeginEdit);
-            this.loginAlert_dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loginAlert_dataGridView_CellDoubleClick);
-            this.loginAlert_dataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.loginAlert_dataGridView_CellEndEdit);
-            this.loginAlert_dataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.loginAlert_dataGridView_CellFormatting);
-            this.loginAlert_dataGridView.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.loginAlert_dataGridView_ColumnAdded);
-            this.loginAlert_dataGridView.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.loginAlert_dataGridView_DataBindingComplete);
-            this.loginAlert_dataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.loginAlert_dataGridView_RowsAdded);
-            this.loginAlert_dataGridView.SelectionChanged += new System.EventHandler(this.loginAlert_dataGridView_SelectionChanged);
-            this.loginAlert_dataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.loginAlert_dataGridView_KeyDown);
-            this.loginAlert_dataGridView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loginAlert_dataGridView_MouseDown);
             // 
             // tabPage_map
             // 
@@ -769,6 +585,15 @@
             this.timerTrayFlash.Interval = 1000;
             this.timerTrayFlash.Tick += new System.EventHandler(this.timerTrayFlash_Tick);
             // 
+            // tab_LoginAlert1
+            // 
+            this.tab_LoginAlert1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_LoginAlert1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab_LoginAlert1.Location = new System.Drawing.Point(3, 3);
+            this.tab_LoginAlert1.Name = "tab_LoginAlert1";
+            this.tab_LoginAlert1.Size = new System.Drawing.Size(919, 400);
+            this.tab_LoginAlert1.TabIndex = 0;
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -817,18 +642,6 @@
             this.tabPage_npc.ResumeLayout(false);
             this.tabPage_monsters.ResumeLayout(false);
             this.tabPage_loginAlert.ResumeLayout(false);
-            this.splitContainer10.Panel1.ResumeLayout(false);
-            this.splitContainer10.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer10)).EndInit();
-            this.splitContainer10.ResumeLayout(false);
-            this.splitContainer11.Panel1.ResumeLayout(false);
-            this.splitContainer11.Panel2.ResumeLayout(false);
-            this.splitContainer11.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).EndInit();
-            this.splitContainer11.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loginAlert_dataGridView)).EndInit();
             this.tabPage_map.ResumeLayout(false);
             this.tabPage_Raids.ResumeLayout(false);
             this.timers_contextMenuStrip.ResumeLayout(false);
@@ -853,19 +666,6 @@
         private System.Windows.Forms.Label header_vocation_label3;
         private System.Windows.Forms.Label header_vocation_label1;
         private System.Windows.Forms.TabPage tabPage_calculator;
-        private System.Windows.Forms.TabPage tabPage_loginAlert;
-        private System.Windows.Forms.SplitContainer splitContainer10;
-        private System.Windows.Forms.SplitContainer splitContainer11;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.CheckBox loginAlert_checkBox_notifTray;
-        private System.Windows.Forms.Button loginAlert_button_add;
-        private System.Windows.Forms.Button loginAlert_button_remove;
-        private System.Windows.Forms.Button loginAlert_button_browseSound;
-        private System.Windows.Forms.TextBox loginAlert_alertTextBox;
-        private System.Windows.Forms.CheckBox loginAlert_checkBox_notifSound;
-        private System.Windows.Forms.Label loginAlert_labelSelected;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.DataGridView loginAlert_dataGridView;
         private System.Windows.Forms.ContextMenuStrip tray_contextMenuStrip;
         private System.Windows.Forms.ContextMenuStrip timers_contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem bedmageToolStripMenuItem;
@@ -898,6 +698,8 @@
         public System.Windows.Forms.TabPage tabPage_spells;
         public Tabs.Tab_Spells tab_Spells1;
         private Tabs.Tab_NPC tab_NPC1;
+        public System.Windows.Forms.TabPage tabPage_loginAlert;
+        public Tabs.Tab_LoginAlert tab_LoginAlert1;
     }
 }
 
