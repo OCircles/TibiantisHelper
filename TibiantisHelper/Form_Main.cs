@@ -352,6 +352,15 @@ namespace TibiantisHelper
                 keyCodeDetector.ShowDialog();
             });
 
+            (extraDropdown as ToolStripMenuItem).DropDownItems.Add("Sprite Browser", null, (s, e) =>
+            {
+                var spriteBrowser = new Form_SpriteBrowser();
+
+                spriteBrowser.StartPosition = FormStartPosition.CenterScreen;
+
+                spriteBrowser.Show();
+            });
+
             (extraDropdown as ToolStripMenuItem).DropDownItems.Add("Player Lookup", null, (s, e) =>
             {
                 var playerLookup = new Form_PlayerLookup();
@@ -360,7 +369,6 @@ namespace TibiantisHelper
 
                 playerLookup.ShowDialog();
             });
-
 
 
             tray_contextMenuStrip.Items.Add("-");

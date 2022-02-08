@@ -77,6 +77,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_SpriteBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SpriteBrowser.Designer.cs">
+      <DependentUpon>Form_SpriteBrowser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tabs\Calculators\Controls\Calculator_Experience.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -245,6 +251,9 @@
       <DependentUpon>Tab_Timers.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="Form_SpriteBrowser.resx">
+      <DependentUpon>Form_SpriteBrowser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tabs\Calculators\Controls\Calculator_Experience.resx">
       <DependentUpon>Calculator_Experience.cs</DependentUpon>
     </EmbeddedResource>
