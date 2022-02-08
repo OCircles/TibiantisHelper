@@ -49,6 +49,7 @@
             this.tabPage_timers = new System.Windows.Forms.TabPage();
             this.tab_Timers1 = new TibiantisHelper.Tabs.Tab_Timers();
             this.tabPage_calculator = new System.Windows.Forms.TabPage();
+            this.tab_Calculators1 = new TibiantisHelper.Tabs.Tab_Calculators();
             this.tabPage_items = new System.Windows.Forms.TabPage();
             this.tab_Items1 = new TibiantisHelper.Tabs.Tab_Items();
             this.tabPage_spells = new System.Windows.Forms.TabPage();
@@ -63,6 +64,7 @@
             this.tab_Map1 = new TibiantisHelper.Tab_Map();
             this.tabPage_Raids = new System.Windows.Forms.TabPage();
             this.tab_Raids1 = new TibiantisHelper.Tabs.Tab_Raids();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.timers_contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.bedmageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.idleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,7 +75,7 @@
             this.header_linkLabel_discord = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timerTrayFlash = new System.Windows.Forms.Timer(this.components);
-            this.tab_Calculators1 = new TibiantisHelper.Tabs.Tab_Calculators();
+            this.tab_LoginAlertNew1 = new TibiantisHelper.Tabs.LoginAlert.Tab_LoginAlertNew();
             ((System.ComponentModel.ISupportInitialize)(this.header_pictureBox)).BeginInit();
             this.header_panel_vocations.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -88,6 +90,7 @@
             this.tabPage_loginAlert.SuspendLayout();
             this.tabPage_map.SuspendLayout();
             this.tabPage_Raids.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.timers_contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -241,6 +244,7 @@
             this.tabControl1.Controls.Add(this.tabPage_loginAlert);
             this.tabControl1.Controls.Add(this.tabPage_map);
             this.tabControl1.Controls.Add(this.tabPage_Raids);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(14, 9);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -299,6 +303,15 @@
             this.tabPage_calculator.TabIndex = 7;
             this.tabPage_calculator.Text = "Calculator";
             this.tabPage_calculator.UseVisualStyleBackColor = true;
+            // 
+            // tab_Calculators1
+            // 
+            this.tab_Calculators1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_Calculators1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab_Calculators1.Location = new System.Drawing.Point(0, 0);
+            this.tab_Calculators1.Name = "tab_Calculators1";
+            this.tab_Calculators1.Size = new System.Drawing.Size(925, 406);
+            this.tab_Calculators1.TabIndex = 0;
             // 
             // tabPage_items
             // 
@@ -440,6 +453,17 @@
             this.tab_Raids1.Size = new System.Drawing.Size(919, 400);
             this.tab_Raids1.TabIndex = 0;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.tab_LoginAlertNew1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(925, 406);
+            this.tabPage1.TabIndex = 11;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
             // timers_contextMenuStrip
             // 
             this.timers_contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -511,14 +535,13 @@
             this.timerTrayFlash.Interval = 1000;
             this.timerTrayFlash.Tick += new System.EventHandler(this.timerTrayFlash_Tick);
             // 
-            // tab_Calculators1
+            // tab_LoginAlertNew1
             // 
-            this.tab_Calculators1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_Calculators1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tab_Calculators1.Location = new System.Drawing.Point(0, 0);
-            this.tab_Calculators1.Name = "tab_Calculators1";
-            this.tab_Calculators1.Size = new System.Drawing.Size(925, 406);
-            this.tab_Calculators1.TabIndex = 0;
+            this.tab_LoginAlertNew1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tab_LoginAlertNew1.Location = new System.Drawing.Point(3, 3);
+            this.tab_LoginAlertNew1.Name = "tab_LoginAlertNew1";
+            this.tab_LoginAlertNew1.Size = new System.Drawing.Size(919, 400);
+            this.tab_LoginAlertNew1.TabIndex = 0;
             // 
             // Form_Main
             // 
@@ -561,6 +584,7 @@
             this.tabPage_loginAlert.ResumeLayout(false);
             this.tabPage_map.ResumeLayout(false);
             this.tabPage_Raids.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.timers_contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -613,6 +637,8 @@
         public System.Windows.Forms.TabPage tabPage_loginAlert;
         public Tabs.Tab_LoginAlert tab_LoginAlert1;
         private Tabs.Tab_Calculators tab_Calculators1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private Tabs.LoginAlert.Tab_LoginAlertNew tab_LoginAlertNew1;
     }
 }
 

@@ -104,7 +104,7 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Alert";
             // 
-            // LoginTrackerDialog
+            // Form_LoginAlertAddDialog
             // 
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,10 +121,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "LoginTrackerDialog";
+            this.Name = "Form_LoginAlertAddDialog";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add Player";
             this.TopMost = true;
             this.Shown += new System.EventHandler(this.LoginTrackerDialog_Shown);
