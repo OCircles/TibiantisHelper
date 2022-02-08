@@ -523,8 +523,8 @@ namespace TibiantisHelper
 
                 if (address == 0)
                 {
-                    Console.WriteLine("Empty sprite");
-                    return bmp;
+                    //Console.WriteLine("Empty sprite");
+                    return null;
                 }
 
                 reader.BaseStream.Seek(address, System.IO.SeekOrigin.Begin);
