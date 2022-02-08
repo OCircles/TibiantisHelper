@@ -17,6 +17,8 @@ namespace TibiantisHelper
     {
         Bitmap Image;
 
+        public List<HighlightedArea> HighlightedAreas;
+
         private bool _mapFocused = false;
         public bool MapFocused { get { return _mapFocused; } }
 
@@ -34,7 +36,7 @@ namespace TibiantisHelper
 
         private byte c_framerate = 90;
         private const float c_keyMoveScale = 0.4f;
-        private const float c_zoomMax= 5.6f;
+        private const float c_zoomMax = 5.6f;
         private const float c_zoomMin = 0.6f;
         private float c_zoomScale = 1.0f;
         public const float c_scrollValue = 0.4f; // Determines how much is zoomed per scroll
@@ -90,6 +92,8 @@ namespace TibiantisHelper
         public Control_MinimapViewer() {
             InitializeComponent();
 
+            HighlightedAreas = new List<HighlightedArea>();
+
             label1.BackColor = background;
             pictureBox1.BackColor = background;
 
@@ -125,6 +129,20 @@ namespace TibiantisHelper
             UpdateLoadPromptLocation();
         }
 
+
+        public void SetHighlightedAreas(List<HighlightedArea> areas)
+        {
+            HighlightedAreas = areas;
+            pictureBox1.Invalidate();
+        }
+
+
+        public void SetHighlightedAreas(HighlightedArea area)
+        {
+            var areas = new List<HighlightedArea>();
+            areas.Add(area);
+            SetHighlightedAreas(areas);
+        }
 
         public void SLoad()
         {
@@ -225,8 +243,8 @@ namespace TibiantisHelper
                     Image.SetPixel(ch_x, ch_y, Color.FromArgb(150, 255, 0, 0));
 
                 }
-                
-                e.Graphics.DrawImage(Image, new Point(0,0));
+
+                e.Graphics.DrawImage(Image, new Point(0, 0));
 
                 // Highlighting sector
                 if (r_isSelectingSector)
@@ -234,12 +252,32 @@ namespace TibiantisHelper
                         e.Graphics.FillRectangle(brush, new Rectangle(
                             s_firstSectorImagePoint.X + s_lastSector.X * 32,
                             s_firstSectorImagePoint.Y + s_lastSector.Y * 32,
-                            32,32
+                            32, 32
                             ));
+
+
+
+                if (HighlightedAreas.Count != 0)
+                    foreach (var area in HighlightedAreas)
+                        using (SolidBrush brush = new SolidBrush(Color.FromArgb(150, 255, 255, 255)))
+                            if (area.Position.Z == p_Layer)
+                            {
+                                e.Graphics.FillRectangle(brush, new Rectangle(Form_Main._miniMap.MapPosToImgPos(
+                                    new Point(
+                                        area.Position.X - area.Size.Width,
+                                        area.Position.Y - area.Size.Height)),
+                                    new Size(
+                                        1+area.Size.Width*2,
+                                        1+area.Size.Height *2
+                                        )
+                                    ));
+
+                                //Console.WriteLine("drawing");
+                            }
 
                 Redraw?.Invoke(this, EventArgs.Empty);
             }
-            
+
         }
 
         #endregion
@@ -308,7 +346,7 @@ namespace TibiantisHelper
 
         #endregion
 
- 
+
         #region Keyboard Input
 
         // Because the picturebox class doesn't have KeyUp and KeyDown events I just forward them from Form_Main.cs if picturebox has focus
@@ -496,7 +534,7 @@ namespace TibiantisHelper
                     var sec_X = (int)Math.Floor((double)adjust_X / 32);
                     var sec_Y = (int)Math.Floor((double)adjust_Y / 32);
 
-                    if (sec_X != s_lastSector.X ||sec_Y != s_lastSector.Y)
+                    if (sec_X != s_lastSector.X || sec_Y != s_lastSector.Y)
                     {
                         var sec = sec_X + (sec_Y * Form_Main._miniMap.allSectorSize.Width) + 1;
                         s_lastSector.X = sec_X;
@@ -539,8 +577,8 @@ namespace TibiantisHelper
                 pictureBox1.Invalidate();
 
             }
-            
-            
+
+
         }
         private void pictureBox1_MouseWheel(object sender, System.Windows.Forms.MouseEventArgs e)
         {
@@ -618,7 +656,7 @@ namespace TibiantisHelper
 
             FixViewport();
             pictureBox1.Invalidate();
-        } 
+        }
         private void ZoomScroll(bool zoomIn)
         {
             var newScale = Math.Min(Math.Max(
@@ -645,6 +683,11 @@ namespace TibiantisHelper
 
 
 
+    }
+
+    public class HighlightedArea {
+        public DataReader.Point3D Position;
+        public Size Size;
     }
 
     public class MinimapSectorSelectedEventArgs : EventArgs

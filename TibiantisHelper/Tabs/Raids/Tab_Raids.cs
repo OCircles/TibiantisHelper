@@ -184,6 +184,20 @@ namespace TibiantisHelper.Tabs
             if (raid != null)
             {
 
+                List<HighlightedArea> highlightedAreas = new List<HighlightedArea>();
+
+                foreach (var spawn in raid.Spawns)
+                {
+                    HighlightedArea highlighted = new HighlightedArea();
+                    highlighted.Position = spawn.Position;
+                    highlighted.Size = new Size(spawn.Spread, spawn.Spread);
+
+                    highlightedAreas.Add(highlighted);
+                }
+
+                control_MinimapViewer1.SetHighlightedAreas(highlightedAreas);
+
+
                 int findIndex = TrackedRaids.FindIndex(i => i.Raid == raid);
                 if (findIndex != -1)
                 {
