@@ -864,7 +864,7 @@ namespace TibiantisHelper
             e.Graphics.DrawImage(img, rect);
 
             // Draw the focus rectangle if appropriate.
-            e.DrawFocusRectangle();
+            // e.DrawFocusRectangle();
         }
 
 
