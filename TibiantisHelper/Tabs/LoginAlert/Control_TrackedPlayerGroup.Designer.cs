@@ -1,5 +1,5 @@
 ﻿
-namespace TibiantisHelper
+namespace TibiantisHelper.Tabs.LoginAlert
 {
     partial class Control_TrackedPlayerGroup
     {
@@ -30,120 +30,92 @@ namespace TibiantisHelper
         private void InitializeComponent()
         {
             this.label_name = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader_blank = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader_name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkBox_trayNotif = new System.Windows.Forms.CheckBox();
+            this.checkBox_soundEnabled = new System.Windows.Forms.CheckBox();
+            this.textBox_soundPath = new System.Windows.Forms.TextBox();
             this.button_browseSound = new System.Windows.Forms.Button();
             this.panel_header = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button_addPlayer = new System.Windows.Forms.Button();
-            this.button_deletePlayer = new System.Windows.Forms.Button();
+            this.checkBox_minimize = new System.Windows.Forms.CheckBox();
             this.button_save = new System.Windows.Forms.Button();
             this.button_deleteGroup = new System.Windows.Forms.Button();
             this.button_edit = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label_playerControl = new System.Windows.Forms.Label();
+            this.panel_playerControls = new System.Windows.Forms.Panel();
+            this.button_addPlayer = new System.Windows.Forms.Button();
+            this.button_deletePlayer = new System.Windows.Forms.Button();
+            this.button_icon = new System.Windows.Forms.Button();
+            this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
+            this.panel_main = new System.Windows.Forms.Panel();
             this.panel_header.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel_playerControls.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
+            this.panel_main.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_name
             // 
             this.label_name.AutoSize = true;
-            this.label_name.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_name.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_name.Location = new System.Drawing.Point(3, 5);
             this.label_name.Name = "label_name";
-            this.label_name.Size = new System.Drawing.Size(110, 18);
+            this.label_name.Size = new System.Drawing.Size(101, 18);
             this.label_name.TabIndex = 0;
             this.label_name.Text = "Group Name";
             // 
-            // listView1
+            // checkBox_trayNotif
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.AutoArrange = false;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader_blank,
-            this.columnHeader_name});
-            this.listView1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.FullRowSelect = true;
-            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.HideSelection = false;
-            this.listView1.LabelWrap = false;
-            this.listView1.Location = new System.Drawing.Point(83, 42);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(588, 64);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.checkBox_trayNotif.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.checkBox_trayNotif.AutoSize = true;
+            this.checkBox_trayNotif.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_trayNotif.Location = new System.Drawing.Point(6, 74);
+            this.checkBox_trayNotif.Name = "checkBox_trayNotif";
+            this.checkBox_trayNotif.Size = new System.Drawing.Size(84, 17);
+            this.checkBox_trayNotif.TabIndex = 7;
+            this.checkBox_trayNotif.Text = "Tray Notif.";
+            this.checkBox_trayNotif.UseVisualStyleBackColor = true;
+            this.checkBox_trayNotif.CheckedChanged += new System.EventHandler(this.checkBox_trayNotif_CheckedChanged);
             // 
-            // columnHeader_blank
+            // checkBox_soundEnabled
             // 
-            this.columnHeader_blank.DisplayIndex = 1;
-            this.columnHeader_blank.Text = "";
-            this.columnHeader_blank.Width = 0;
+            this.checkBox_soundEnabled.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.checkBox_soundEnabled.AutoSize = true;
+            this.checkBox_soundEnabled.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_soundEnabled.Location = new System.Drawing.Point(105, 74);
+            this.checkBox_soundEnabled.Name = "checkBox_soundEnabled";
+            this.checkBox_soundEnabled.Size = new System.Drawing.Size(62, 17);
+            this.checkBox_soundEnabled.TabIndex = 8;
+            this.checkBox_soundEnabled.Text = "Sound";
+            this.checkBox_soundEnabled.UseVisualStyleBackColor = true;
+            this.checkBox_soundEnabled.CheckedChanged += new System.EventHandler(this.checkBox_soundEnabled_CheckedChanged);
             // 
-            // columnHeader_name
+            // textBox_soundPath
             // 
-            this.columnHeader_name.DisplayIndex = 0;
-            this.columnHeader_name.Text = "Name";
-            this.columnHeader_name.Width = 209;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(3, 114);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(84, 17);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Tray Notif.";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(106, 114);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(62, 17);
-            this.checkBox2.TabIndex = 8;
-            this.checkBox2.Text = "Sound";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(184, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 21);
-            this.textBox1.TabIndex = 9;
+            this.textBox_soundPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBox_soundPath.Location = new System.Drawing.Point(186, 72);
+            this.textBox_soundPath.Name = "textBox_soundPath";
+            this.textBox_soundPath.ReadOnly = true;
+            this.textBox_soundPath.Size = new System.Drawing.Size(157, 21);
+            this.textBox_soundPath.TabIndex = 9;
+            this.textBox_soundPath.TextChanged += new System.EventHandler(this.textBox_soundPath_TextChanged);
             // 
             // button_browseSound
             // 
             this.button_browseSound.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button_browseSound.Enabled = false;
             this.button_browseSound.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_browseSound.Location = new System.Drawing.Point(353, 111);
+            this.button_browseSound.Location = new System.Drawing.Point(349, 71);
             this.button_browseSound.Name = "button_browseSound";
             this.button_browseSound.Size = new System.Drawing.Size(87, 22);
             this.button_browseSound.TabIndex = 10;
             this.button_browseSound.Text = "Browse";
             this.button_browseSound.UseVisualStyleBackColor = true;
+            this.button_browseSound.Click += new System.EventHandler(this.button_browseSound_Click);
             // 
             // panel_header
             // 
             this.panel_header.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_header.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel_header.Controls.Add(this.checkBox_minimize);
             this.panel_header.Controls.Add(this.label_name);
             this.panel_header.Controls.Add(this.button_save);
             this.panel_header.Controls.Add(this.button_deleteGroup);
@@ -154,50 +126,20 @@ namespace TibiantisHelper
             this.panel_header.Size = new System.Drawing.Size(668, 30);
             this.panel_header.TabIndex = 11;
             // 
-            // label1
+            // checkBox_minimize
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(2, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Players";
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button_addPlayer);
-            this.panel1.Controls.Add(this.button_deletePlayer);
-            this.panel1.Location = new System.Drawing.Point(469, 111);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(108, 22);
-            this.panel1.TabIndex = 14;
-            // 
-            // button_addPlayer
-            // 
-            this.button_addPlayer.FlatAppearance.BorderSize = 0;
-            this.button_addPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_addPlayer.Image = global::TibiantisHelper.Properties.Resources.add16;
-            this.button_addPlayer.Location = new System.Drawing.Point(54, -1);
-            this.button_addPlayer.Margin = new System.Windows.Forms.Padding(0);
-            this.button_addPlayer.Name = "button_addPlayer";
-            this.button_addPlayer.Size = new System.Drawing.Size(18, 18);
-            this.button_addPlayer.TabIndex = 7;
-            this.button_addPlayer.UseVisualStyleBackColor = true;
-            // 
-            // button_deletePlayer
-            // 
-            this.button_deletePlayer.FlatAppearance.BorderSize = 0;
-            this.button_deletePlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_deletePlayer.Image = global::TibiantisHelper.Properties.Resources.delete16;
-            this.button_deletePlayer.Location = new System.Drawing.Point(75, -1);
-            this.button_deletePlayer.Margin = new System.Windows.Forms.Padding(0);
-            this.button_deletePlayer.Name = "button_deletePlayer";
-            this.button_deletePlayer.Size = new System.Drawing.Size(18, 18);
-            this.button_deletePlayer.TabIndex = 12;
-            this.button_deletePlayer.UseVisualStyleBackColor = true;
+            this.checkBox_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBox_minimize.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox_minimize.AutoSize = true;
+            this.checkBox_minimize.FlatAppearance.BorderSize = 0;
+            this.checkBox_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox_minimize.Image = global::TibiantisHelper.Properties.Resources.view;
+            this.checkBox_minimize.Location = new System.Drawing.Point(533, 0);
+            this.checkBox_minimize.Name = "checkBox_minimize";
+            this.checkBox_minimize.Size = new System.Drawing.Size(30, 30);
+            this.checkBox_minimize.TabIndex = 8;
+            this.checkBox_minimize.UseVisualStyleBackColor = true;
+            this.checkBox_minimize.CheckedChanged += new System.EventHandler(this.checkBox_minimized_CheckedChanged);
             // 
             // button_save
             // 
@@ -211,6 +153,7 @@ namespace TibiantisHelper
             this.button_save.Size = new System.Drawing.Size(28, 24);
             this.button_save.TabIndex = 6;
             this.button_save.UseVisualStyleBackColor = true;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
             // button_deleteGroup
             // 
@@ -223,6 +166,7 @@ namespace TibiantisHelper
             this.button_deleteGroup.Size = new System.Drawing.Size(28, 24);
             this.button_deleteGroup.TabIndex = 4;
             this.button_deleteGroup.UseVisualStyleBackColor = true;
+            this.button_deleteGroup.Click += new System.EventHandler(this.button_deleteGroup_Click);
             // 
             // button_edit
             // 
@@ -235,59 +179,147 @@ namespace TibiantisHelper
             this.button_edit.Size = new System.Drawing.Size(28, 24);
             this.button_edit.TabIndex = 5;
             this.button_edit.UseVisualStyleBackColor = true;
+            this.button_edit.Click += new System.EventHandler(this.button_edit_Click);
             // 
-            // pictureBox1
+            // label_playerControl
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(74, 64);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.label_playerControl.AutoSize = true;
+            this.label_playerControl.Location = new System.Drawing.Point(2, 2);
+            this.label_playerControl.Name = "label_playerControl";
+            this.label_playerControl.Size = new System.Drawing.Size(49, 13);
+            this.label_playerControl.TabIndex = 13;
+            this.label_playerControl.Text = "Players";
+            // 
+            // panel_playerControls
+            // 
+            this.panel_playerControls.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel_playerControls.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel_playerControls.Controls.Add(this.label_playerControl);
+            this.panel_playerControls.Controls.Add(this.button_addPlayer);
+            this.panel_playerControls.Controls.Add(this.button_deletePlayer);
+            this.panel_playerControls.Location = new System.Drawing.Point(467, 71);
+            this.panel_playerControls.Name = "panel_playerControls";
+            this.panel_playerControls.Size = new System.Drawing.Size(108, 22);
+            this.panel_playerControls.TabIndex = 14;
+            // 
+            // button_addPlayer
+            // 
+            this.button_addPlayer.FlatAppearance.BorderSize = 0;
+            this.button_addPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_addPlayer.Image = global::TibiantisHelper.Properties.Resources.add16;
+            this.button_addPlayer.Location = new System.Drawing.Point(54, -1);
+            this.button_addPlayer.Margin = new System.Windows.Forms.Padding(0);
+            this.button_addPlayer.Name = "button_addPlayer";
+            this.button_addPlayer.Size = new System.Drawing.Size(18, 18);
+            this.button_addPlayer.TabIndex = 7;
+            this.button_addPlayer.UseVisualStyleBackColor = true;
+            this.button_addPlayer.Click += new System.EventHandler(this.button_addPlayer_Click);
+            // 
+            // button_deletePlayer
+            // 
+            this.button_deletePlayer.FlatAppearance.BorderSize = 0;
+            this.button_deletePlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_deletePlayer.Image = global::TibiantisHelper.Properties.Resources.delete16;
+            this.button_deletePlayer.Location = new System.Drawing.Point(75, -1);
+            this.button_deletePlayer.Margin = new System.Windows.Forms.Padding(0);
+            this.button_deletePlayer.Name = "button_deletePlayer";
+            this.button_deletePlayer.Size = new System.Drawing.Size(18, 18);
+            this.button_deletePlayer.TabIndex = 12;
+            this.button_deletePlayer.UseVisualStyleBackColor = true;
+            this.button_deletePlayer.Click += new System.EventHandler(this.button_deletePlayer_Click);
+            // 
+            // button_icon
+            // 
+            this.button_icon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.button_icon.FlatAppearance.BorderSize = 0;
+            this.button_icon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_icon.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button_icon.Location = new System.Drawing.Point(0, 0);
+            this.button_icon.MaximumSize = new System.Drawing.Size(73, 65);
+            this.button_icon.MinimumSize = new System.Drawing.Size(73, 65);
+            this.button_icon.Name = "button_icon";
+            this.button_icon.Size = new System.Drawing.Size(73, 65);
+            this.button_icon.TabIndex = 15;
+            this.button_icon.UseVisualStyleBackColor = true;
+            this.button_icon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_icon_MouseClick);
+            // 
+            // objectListView1
+            // 
+            this.objectListView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.objectListView1.CellEditUseWholeCell = false;
+            this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.objectListView1.FullRowSelect = true;
+            this.objectListView1.GridLines = true;
+            this.objectListView1.HideSelection = false;
+            this.objectListView1.Location = new System.Drawing.Point(79, 0);
+            this.objectListView1.Name = "objectListView1";
+            this.objectListView1.ShowGroups = false;
+            this.objectListView1.Size = new System.Drawing.Size(589, 65);
+            this.objectListView1.TabIndex = 16;
+            this.objectListView1.UseCompatibleStateImageBehavior = false;
+            this.objectListView1.UseHotControls = false;
+            this.objectListView1.View = System.Windows.Forms.View.Details;
+            this.objectListView1.CellEditValidating += new BrightIdeasSoftware.CellEditEventHandler(this.objectListView1_CellEditValidating);
+            // 
+            // panel_main
+            // 
+            this.panel_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel_main.Controls.Add(this.checkBox_trayNotif);
+            this.panel_main.Controls.Add(this.checkBox_soundEnabled);
+            this.panel_main.Controls.Add(this.textBox_soundPath);
+            this.panel_main.Controls.Add(this.button_browseSound);
+            this.panel_main.Controls.Add(this.panel_playerControls);
+            this.panel_main.Controls.Add(this.button_icon);
+            this.panel_main.Controls.Add(this.objectListView1);
+            this.panel_main.Location = new System.Drawing.Point(3, 42);
+            this.panel_main.Name = "panel_main";
+            this.panel_main.Size = new System.Drawing.Size(668, 96);
+            this.panel_main.TabIndex = 17;
             // 
             // Control_TrackedPlayerGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_main);
             this.Controls.Add(this.panel_header);
-            this.Controls.Add(this.button_browseSound);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Control_TrackedPlayerGroup";
-            this.Size = new System.Drawing.Size(677, 145);
+            this.Size = new System.Drawing.Size(677, 150);
+            this.Load += new System.EventHandler(this.Control_TrackedPlayerGroup_Load);
             this.panel_header.ResumeLayout(false);
             this.panel_header.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel_playerControls.ResumeLayout(false);
+            this.panel_playerControls.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
+            this.panel_main.ResumeLayout(false);
+            this.panel_main.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label label_name;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader_blank;
-        private System.Windows.Forms.ColumnHeader columnHeader_name;
         private System.Windows.Forms.Button button_deleteGroup;
         private System.Windows.Forms.Button button_edit;
         private System.Windows.Forms.Button button_save;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_soundPath;
         private System.Windows.Forms.Button button_browseSound;
         private System.Windows.Forms.Panel panel_header;
         private System.Windows.Forms.Button button_addPlayer;
         private System.Windows.Forms.Button button_deletePlayer;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label_playerControl;
+        private System.Windows.Forms.Panel panel_playerControls;
+        private System.Windows.Forms.Button button_icon;
+        private BrightIdeasSoftware.ObjectListView objectListView1;
+        private System.Windows.Forms.Panel panel_main;
+        private System.Windows.Forms.CheckBox checkBox_trayNotif;
+        private System.Windows.Forms.CheckBox checkBox_soundEnabled;
+        private System.Windows.Forms.CheckBox checkBox_minimize;
     }
 }

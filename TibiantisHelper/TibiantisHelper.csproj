@@ -150,11 +150,29 @@
     <Compile Include="Tabs\Items\Tab_Items.Designer.cs">
       <DependentUpon>Tab_Items.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tabs\LoginAlert\Form_AddPlayerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabs\LoginAlert\Form_AddPlayerDialog.Designer.cs">
+      <DependentUpon>Form_AddPlayerDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tabs\LoginAlert\Form_AddPlayerGroupDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tabs\LoginAlert\Form_AddPlayerGroupDialog.Designer.cs">
       <DependentUpon>Form_AddPlayerGroupDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\LoginAlert\Form_GroupEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabs\LoginAlert\Form_GroupEdit.Designer.cs">
+      <DependentUpon>Form_GroupEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs\LoginAlert\Form_IconSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tabs\LoginAlert\Form_IconSelect.Designer.cs">
+      <DependentUpon>Form_IconSelect.cs</DependentUpon>
     </Compile>
     <Compile Include="Tabs\LoginAlert\Tab_LoginAlertNew.cs">
       <SubType>UserControl</SubType>
@@ -290,8 +308,17 @@
     <EmbeddedResource Include="Tabs\Items\Tab_Items.resx">
       <DependentUpon>Tab_Items.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tabs\LoginAlert\Form_AddPlayerDialog.resx">
+      <DependentUpon>Form_AddPlayerDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tabs\LoginAlert\Form_AddPlayerGroupDialog.resx">
       <DependentUpon>Form_AddPlayerGroupDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabs\LoginAlert\Form_GroupEdit.resx">
+      <DependentUpon>Form_GroupEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tabs\LoginAlert\Form_IconSelect.resx">
+      <DependentUpon>Form_IconSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tabs\LoginAlert\Tab_LoginAlert.resx">
       <DependentUpon>Tab_LoginAlert.cs</DependentUpon>
@@ -1887,6 +1914,7 @@
     <Content Include="data\Spells.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\view.png" />
     <None Include="Resources\delete16.png" />
     <None Include="Resources\add16.png" />
     <None Include="Resources\save.png" />
