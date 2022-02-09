@@ -89,6 +89,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.Name = "Form_GroupEdit";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Edit Group Name";
             this.ResumeLayout(false);
             this.PerformLayout();
