@@ -125,7 +125,7 @@ namespace TibiantisHelper
                     });
                     ct.Items.Add("Name to Clipboard", null, (s,ee) => { Utility.StringToClipboard(player.Name); });
                     ct.Items.Add("Add to Login Alert", null, (s, ee) => {
-                        Form_Main.Form.tab_LoginAlert1.ImportPlayers( new string[] { player.Name }.ToList() );
+                        Form_Main.Form.tab_LoginAlert1.Import( new string[] { player.Name }.ToList() );
                         Form_Main.Form.tabControl1.SelectedTab = Form_Main.Form.tabPage_LoginAlert;
                     });
 
