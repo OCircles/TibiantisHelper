@@ -170,7 +170,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             xmlWriter.Close();
 
         }
-        private List<TrackedPlayerGroup> LoadGroups(string path)
+        public static List<TrackedPlayerGroup> LoadGroups(string path)
         {
             List<TrackedPlayerGroup> groups = new List<TrackedPlayerGroup>();
 

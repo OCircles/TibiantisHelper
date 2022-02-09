@@ -43,6 +43,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(7, 20);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(88, 17);
@@ -70,6 +71,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(179, 21);
             this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "Uncategorized";
             // 
             // groupBox1
             // 

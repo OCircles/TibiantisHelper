@@ -363,6 +363,9 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
 			if (diag.ShowDialog() == DialogResult.OK)
 			{
+				var group = Tab_LoginAlert.LoadGroups(diag.FileName)[0];
+				var import = new Form_Import(group);
+
 			}
 		}
     }
