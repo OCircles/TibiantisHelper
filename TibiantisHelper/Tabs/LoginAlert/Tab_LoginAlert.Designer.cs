@@ -1,7 +1,7 @@
 ﻿
 namespace TibiantisHelper.Tabs.LoginAlert
 {
-    partial class Tab_LoginAlertNew
+    partial class Tab_LoginAlert
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tab_LoginAlertNew));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tab_LoginAlert));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer11 = new System.Windows.Forms.SplitContainer();
             this.label_selectedPlayer = new System.Windows.Forms.Label();

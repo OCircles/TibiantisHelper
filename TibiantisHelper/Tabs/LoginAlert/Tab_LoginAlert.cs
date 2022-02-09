@@ -14,7 +14,7 @@ using static TibiantisHelper.Form_Main;
 
 namespace TibiantisHelper.Tabs.LoginAlert
 {
-    public partial class Tab_LoginAlertNew : UserControl
+    public partial class Tab_LoginAlert : UserControl
     {
 
         static string file_loginAlert = "TrackedPlayers.xml";
@@ -22,7 +22,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
         public static List<string> LastOnline;
 
 
-        public Tab_LoginAlertNew()
+        public Tab_LoginAlert()
         {
             PlayerGroups = new List<TrackedPlayerGroup>();
             LastOnline = new List<string>();

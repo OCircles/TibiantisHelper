@@ -174,11 +174,11 @@
     <Compile Include="Tabs\LoginAlert\Form_IconSelect.Designer.cs">
       <DependentUpon>Form_IconSelect.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tabs\LoginAlert\Tab_LoginAlertNew.cs">
+    <Compile Include="Tabs\LoginAlert\Tab_LoginAlert.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Tabs\LoginAlert\Tab_LoginAlertNew.Designer.cs">
-      <DependentUpon>Tab_LoginAlertNew.cs</DependentUpon>
+    <Compile Include="Tabs\LoginAlert\Tab_LoginAlert.Designer.cs">
+      <DependentUpon>Tab_LoginAlert.cs</DependentUpon>
     </Compile>
     <Compile Include="Tabs\Spells\Tab_Spells.cs">
       <SubType>UserControl</SubType>
@@ -314,8 +314,8 @@
     <EmbeddedResource Include="Tabs\LoginAlert\Form_IconSelect.resx">
       <DependentUpon>Form_IconSelect.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tabs\LoginAlert\Tab_LoginAlertNew.resx">
-      <DependentUpon>Tab_LoginAlertNew.cs</DependentUpon>
+    <EmbeddedResource Include="Tabs\LoginAlert\Tab_LoginAlert.resx">
+      <DependentUpon>Tab_LoginAlert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tabs\Monsters\Tab_Monsters.resx">
       <DependentUpon>Tab_Monsters.cs</DependentUpon>

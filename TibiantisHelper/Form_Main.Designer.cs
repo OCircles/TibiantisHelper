@@ -59,7 +59,7 @@
             this.tabPage_monsters = new System.Windows.Forms.TabPage();
             this.tab_Monsters1 = new TibiantisHelper.Tabs.Tab_Monsters();
             this.tabPage_LoginAlert = new System.Windows.Forms.TabPage();
-            this.tab_LoginAlert1 = new TibiantisHelper.Tabs.LoginAlert.Tab_LoginAlertNew();
+            this.tab_LoginAlert1 = new TibiantisHelper.Tabs.LoginAlert.Tab_LoginAlert();
             this.tabPage_map = new System.Windows.Forms.TabPage();
             this.tab_Map1 = new TibiantisHelper.Tab_Map();
             this.tabPage_Raids = new System.Windows.Forms.TabPage();
@@ -612,7 +612,7 @@
         private Tabs.Tab_NPC tab_NPC1;
         private Tabs.Tab_Calculators tab_Calculators1;
         private System.Windows.Forms.TabPage tabPage_LoginAlert;
-        private Tabs.LoginAlert.Tab_LoginAlertNew tab_LoginAlert1;
+        private Tabs.LoginAlert.Tab_LoginAlert tab_LoginAlert1;
     }
 }
 
