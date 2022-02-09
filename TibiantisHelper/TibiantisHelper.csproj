@@ -1914,6 +1914,7 @@
     <Content Include="data\Spells.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\16view.png" />
     <None Include="Resources\16up.png" />
     <None Include="Resources\16save.png" />
     <None Include="Resources\16folder.png" />

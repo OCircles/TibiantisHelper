@@ -327,6 +327,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.objectListView1.UseHotControls = false;
             this.objectListView1.View = System.Windows.Forms.View.Details;
             this.objectListView1.CellEditValidating += new BrightIdeasSoftware.CellEditEventHandler(this.objectListView1_CellEditValidating);
+            this.objectListView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.objectListView1_MouseDown);
             // 
             // panel_main
             // 

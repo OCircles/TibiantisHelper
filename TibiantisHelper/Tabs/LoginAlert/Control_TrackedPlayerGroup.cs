@@ -292,6 +292,20 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
 		private void button_addPlayer_Click(object sender, EventArgs e)
 		{
+			AddPlayerDialog();
+		}
+
+		private void button_deletePlayer_Click(object sender, EventArgs e)
+		{
+			RemoveSelectedPlayers();
+		}
+
+		#endregion
+
+
+
+		private void AddPlayerDialog()
+        {
 			Form_AddPlayerDialog diag = new Form_AddPlayerDialog();
 
 			if (diag.ShowDialog() == DialogResult.OK)
@@ -301,14 +315,14 @@ namespace TibiantisHelper.Tabs.LoginAlert
 			}
 		}
 
-		private void button_deletePlayer_Click(object sender, EventArgs e)
+		private void RemoveSelectedPlayers()
 		{
 			if (objectListView1.SelectedItems.Count != 0)
 			{
 				if (objectListView1.SelectedItems.Count == 1)
 				{
 					string player = objectListView1.SelectedItems[0].Text;
-					var result = MessageBox.Show("Remove \""+ player +"\"?", "Remove Player", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+					var result = MessageBox.Show("Remove \"" + player + "\"?", "Remove Player", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
 					if (result == DialogResult.Yes)
 					{
@@ -349,7 +363,8 @@ namespace TibiantisHelper.Tabs.LoginAlert
 			}
 		}
 
-		#endregion
+
+
 
 
 
@@ -394,5 +409,39 @@ namespace TibiantisHelper.Tabs.LoginAlert
 		{
 			this.BackColor = Color.White;
 		}
+
+        private void objectListView1_MouseDown(object sender, MouseEventArgs e)
+        {
+			if (e.Button == MouseButtons.Right)
+            {
+				var ctx = new ContextMenuStrip();
+
+				var add = ctx.Items.Add("Add");
+				add.Image = Properties.Resources.add16;
+				add.Click += (s, ee) =>
+				{
+					AddPlayerDialog();
+				};
+
+				var remove = ctx.Items.Add("Remove");
+				remove.Image = Properties.Resources.delete16;
+				remove.Click += (s, ee) =>
+				{
+					RemoveSelectedPlayers();
+				};
+
+				ctx.Items.Add("-");
+
+				var lookup = ctx.Items.Add("Lookup");
+				lookup.Image = Properties.Resources._16view;
+				lookup.Click += (s, ee) =>
+				{
+					MessageBox.Show("Not implemented");
+				};
+
+				ctx.Show(Cursor.Position);
+
+			}
+        }
     }
 }
