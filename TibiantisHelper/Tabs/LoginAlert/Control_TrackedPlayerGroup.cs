@@ -94,6 +94,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
 			XmlWriter xmlWriter = XmlWriter.Create(path, settings);
 
 			xmlWriter.WriteStartDocument();
+			xmlWriter.WriteStartElement("Groups");
 			xmlWriter.WriteStartElement("Group");
 
 			xmlWriter.WriteStartElement("Name");
@@ -119,6 +120,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
 				xmlWriter.WriteEndElement();
 			}
 
+			xmlWriter.WriteEndElement();
 			xmlWriter.WriteEndElement();
 			xmlWriter.WriteEndDocument();
 
