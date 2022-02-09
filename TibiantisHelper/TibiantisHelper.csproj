@@ -198,12 +198,6 @@
     <Compile Include="Tabs\NPC\Tab_NPC.Designer.cs">
       <DependentUpon>Tab_NPC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tabs\LoginAlert\Tab_LoginAlert.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Tabs\LoginAlert\Tab_LoginAlert.Designer.cs">
-      <DependentUpon>Tab_LoginAlert.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tabs\Calculators\Tab_Calculators.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -319,9 +313,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tabs\LoginAlert\Form_IconSelect.resx">
       <DependentUpon>Form_IconSelect.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tabs\LoginAlert\Tab_LoginAlert.resx">
-      <DependentUpon>Tab_LoginAlert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tabs\LoginAlert\Tab_LoginAlertNew.resx">
       <DependentUpon>Tab_LoginAlertNew.cs</DependentUpon>
@@ -1914,6 +1905,13 @@
     <Content Include="data\Spells.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\16up.png" />
+    <None Include="Resources\16save.png" />
+    <None Include="Resources\16folder.png" />
+    <None Include="Resources\16edit.png" />
+    <None Include="Resources\16download.png" />
+    <None Include="Resources\16down.png" />
+    <None Include="Resources\gear.png" />
     <None Include="Resources\view.png" />
     <None Include="Resources\delete16.png" />
     <None Include="Resources\add16.png" />

@@ -30,7 +30,6 @@ namespace TibiantisHelper
 
         public static List<Control_Timer> _timers;
         public static List<Vocation> _vocations;
-        public static List<string> _lastOnline; // Separate list for _trackedPlayers
         public static List<Player> _currentlyOnline;
 
         public static SelectedVocation _selectedVocation;
@@ -55,7 +54,6 @@ namespace TibiantisHelper
             _timers = new List<Control_Timer>();
             _vocations = new List<Vocation>();
             _dataReader = new DataReader();
-            _lastOnline = new List<string>();
             _currentlyOnline = new List<Player>();
 
             if (Settings.Default.UpgradeRequired)
@@ -416,7 +414,7 @@ namespace TibiantisHelper
                 {
                     await GetOnlineUsers();
                     // tab_LoginAlert1.CheckOnline();
-                    tab_LoginAlertNew1.CheckOnline();
+                    tab_LoginAlert1.CheckOnline();
                 }
                 catch (Exception ex)
                 {
@@ -757,7 +755,7 @@ namespace TibiantisHelper
 
             try
             {
-                tab_LoginAlert1.SaveData();
+                tab_LoginAlert1.SaveGroups();
             }
             catch (Exception ex)
             {

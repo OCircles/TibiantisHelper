@@ -58,13 +58,12 @@
             this.tab_NPC1 = new TibiantisHelper.Tabs.Tab_NPC();
             this.tabPage_monsters = new System.Windows.Forms.TabPage();
             this.tab_Monsters1 = new TibiantisHelper.Tabs.Tab_Monsters();
-            this.tabPage_loginAlert = new System.Windows.Forms.TabPage();
-            this.tab_LoginAlert1 = new TibiantisHelper.Tabs.Tab_LoginAlert();
+            this.tabPage_LoginAlert = new System.Windows.Forms.TabPage();
+            this.tab_LoginAlert1 = new TibiantisHelper.Tabs.LoginAlert.Tab_LoginAlertNew();
             this.tabPage_map = new System.Windows.Forms.TabPage();
             this.tab_Map1 = new TibiantisHelper.Tab_Map();
             this.tabPage_Raids = new System.Windows.Forms.TabPage();
             this.tab_Raids1 = new TibiantisHelper.Tabs.Tab_Raids();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.timers_contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.bedmageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.idleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,7 +74,6 @@
             this.header_linkLabel_discord = new System.Windows.Forms.LinkLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timerTrayFlash = new System.Windows.Forms.Timer(this.components);
-            this.tab_LoginAlertNew1 = new TibiantisHelper.Tabs.LoginAlert.Tab_LoginAlertNew();
             ((System.ComponentModel.ISupportInitialize)(this.header_pictureBox)).BeginInit();
             this.header_panel_vocations.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -87,10 +85,9 @@
             this.tabPage_spells.SuspendLayout();
             this.tabPage_npc.SuspendLayout();
             this.tabPage_monsters.SuspendLayout();
-            this.tabPage_loginAlert.SuspendLayout();
+            this.tabPage_LoginAlert.SuspendLayout();
             this.tabPage_map.SuspendLayout();
             this.tabPage_Raids.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.timers_contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -241,10 +238,9 @@
             this.tabControl1.Controls.Add(this.tabPage_spells);
             this.tabControl1.Controls.Add(this.tabPage_npc);
             this.tabControl1.Controls.Add(this.tabPage_monsters);
-            this.tabControl1.Controls.Add(this.tabPage_loginAlert);
+            this.tabControl1.Controls.Add(this.tabPage_LoginAlert);
             this.tabControl1.Controls.Add(this.tabPage_map);
             this.tabControl1.Controls.Add(this.tabPage_Raids);
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Location = new System.Drawing.Point(14, 9);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -393,16 +389,16 @@
             this.tab_Monsters1.Size = new System.Drawing.Size(919, 400);
             this.tab_Monsters1.TabIndex = 0;
             // 
-            // tabPage_loginAlert
+            // tabPage_LoginAlert
             // 
-            this.tabPage_loginAlert.Controls.Add(this.tab_LoginAlert1);
-            this.tabPage_loginAlert.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_loginAlert.Name = "tabPage_loginAlert";
-            this.tabPage_loginAlert.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_loginAlert.Size = new System.Drawing.Size(925, 406);
-            this.tabPage_loginAlert.TabIndex = 5;
-            this.tabPage_loginAlert.Text = "Login Alert";
-            this.tabPage_loginAlert.UseVisualStyleBackColor = true;
+            this.tabPage_LoginAlert.Controls.Add(this.tab_LoginAlert1);
+            this.tabPage_LoginAlert.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_LoginAlert.Name = "tabPage_LoginAlert";
+            this.tabPage_LoginAlert.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_LoginAlert.Size = new System.Drawing.Size(925, 406);
+            this.tabPage_LoginAlert.TabIndex = 11;
+            this.tabPage_LoginAlert.Text = "Login Alert";
+            this.tabPage_LoginAlert.UseVisualStyleBackColor = true;
             // 
             // tab_LoginAlert1
             // 
@@ -452,17 +448,6 @@
             this.tab_Raids1.Name = "tab_Raids1";
             this.tab_Raids1.Size = new System.Drawing.Size(919, 400);
             this.tab_Raids1.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.tab_LoginAlertNew1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(925, 406);
-            this.tabPage1.TabIndex = 11;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // timers_contextMenuStrip
             // 
@@ -535,14 +520,6 @@
             this.timerTrayFlash.Interval = 1000;
             this.timerTrayFlash.Tick += new System.EventHandler(this.timerTrayFlash_Tick);
             // 
-            // tab_LoginAlertNew1
-            // 
-            this.tab_LoginAlertNew1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_LoginAlertNew1.Location = new System.Drawing.Point(3, 3);
-            this.tab_LoginAlertNew1.Name = "tab_LoginAlertNew1";
-            this.tab_LoginAlertNew1.Size = new System.Drawing.Size(919, 400);
-            this.tab_LoginAlertNew1.TabIndex = 0;
-            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -581,10 +558,9 @@
             this.tabPage_spells.ResumeLayout(false);
             this.tabPage_npc.ResumeLayout(false);
             this.tabPage_monsters.ResumeLayout(false);
-            this.tabPage_loginAlert.ResumeLayout(false);
+            this.tabPage_LoginAlert.ResumeLayout(false);
             this.tabPage_map.ResumeLayout(false);
             this.tabPage_Raids.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             this.timers_contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -634,11 +610,9 @@
         public System.Windows.Forms.TabPage tabPage_spells;
         public Tabs.Tab_Spells tab_Spells1;
         private Tabs.Tab_NPC tab_NPC1;
-        public System.Windows.Forms.TabPage tabPage_loginAlert;
-        public Tabs.Tab_LoginAlert tab_LoginAlert1;
         private Tabs.Tab_Calculators tab_Calculators1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private Tabs.LoginAlert.Tab_LoginAlertNew tab_LoginAlertNew1;
+        private System.Windows.Forms.TabPage tabPage_LoginAlert;
+        private Tabs.LoginAlert.Tab_LoginAlertNew tab_LoginAlert1;
     }
 }
 
