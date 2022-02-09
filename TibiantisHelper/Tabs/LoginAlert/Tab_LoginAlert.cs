@@ -29,7 +29,13 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
             InitializeComponent();
 
-            PlayerGroups = LoadGroups(file_loginAlert);
+            try
+            {
+                PlayerGroups = LoadGroups(file_loginAlert);
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Could not read " + file_loginAlert + Environment.NewLine + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             Populate();
         }
@@ -83,7 +89,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             groupControl.Dock = DockStyle.Top;
         }
 
-        private void Populate()
+        public void Populate()
         {
             splitContainer1.Panel2.Controls.Clear();
             foreach (var group in PlayerGroups)
@@ -91,9 +97,40 @@ namespace TibiantisHelper.Tabs.LoginAlert
         }
 
 
-        public void ImportPlayers(List<string> players)
-        {
 
+        public void Import(List<string> group, TrackedPlayerGroup destination = null)
+        {
+            Import(new TrackedPlayerGroup() { Name = "Uncategorized", Players = group }, destination);
+        }
+
+        public void Import(TrackedPlayerGroup group, TrackedPlayerGroup destination = null)
+        {
+            bool repop = false;
+            var import = new Form_ImportDialog(group.Players, destination);
+
+            if (import.ShowDialog() == DialogResult.OK)
+            {
+                TrackedPlayerGroup grp = import.ImportGroupDestination;
+                if (grp == null)
+                {
+                    Console.WriteLine("New");
+                    var ng = new TrackedPlayerGroup() { Name = import.ImportNewGroupName, Players = import.ImportPlayers };
+                    PlayerGroups.Add(ng);
+                    repop = true;
+                }
+                else
+                {
+                    foreach (var p in import.ImportPlayers)
+                    {
+                        if (!destination.Players.Exists(ss => ss == p))
+                            destination.Players.Add(p);
+
+                    }
+                    destination.Control.RefreshList();
+                }
+                if (repop)
+                    this.Populate();
+            }
         }
 
 

@@ -174,6 +174,8 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.button_settings.Size = new System.Drawing.Size(28, 24);
             this.button_settings.TabIndex = 5;
             this.button_settings.UseVisualStyleBackColor = true;
+            this.button_settings.Click += new System.EventHandler(this.button_settings_Click);
+            this.button_settings.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button_settings_MouseClick);
             // 
             // contextMenuStrip1
             // 
@@ -200,7 +202,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             // 
             this.toolStripMenuItem_saveAs.Image = global::TibiantisHelper.Properties.Resources._16save;
             this.toolStripMenuItem_saveAs.Name = "toolStripMenuItem_saveAs";
-            this.toolStripMenuItem_saveAs.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_saveAs.Size = new System.Drawing.Size(114, 22);
             this.toolStripMenuItem_saveAs.Text = "Save As";
             this.toolStripMenuItem_saveAs.Click += new System.EventHandler(this.toolStripMenuItem_saveAs_Click);
             // 
@@ -208,7 +210,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             // 
             this.toolStripMenuItem_import.Image = global::TibiantisHelper.Properties.Resources._16download;
             this.toolStripMenuItem_import.Name = "toolStripMenuItem_import";
-            this.toolStripMenuItem_import.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_import.Size = new System.Drawing.Size(114, 22);
             this.toolStripMenuItem_import.Text = "Import";
             this.toolStripMenuItem_import.Click += new System.EventHandler(this.toolStripMenuItem_import_Click);
             // 

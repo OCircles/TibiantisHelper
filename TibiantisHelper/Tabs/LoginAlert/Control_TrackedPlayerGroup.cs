@@ -144,7 +144,14 @@ namespace TibiantisHelper.Tabs.LoginAlert
 				this.Size = new Size(this.Width, baseHeight);
 
 		}
-		
+		public void RefreshList()
+        {
+
+			objectListView1.Objects = Group.Players;
+			objectListView1.SelectedIndex = objectListView1.Items.Count - 1;
+			GroupChanged?.Invoke(this, EventArgs.Empty);
+			ResizeList();
+		}
 
 		private void DrawSprite()
 		{
@@ -289,10 +296,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
 			if (diag.ShowDialog() == DialogResult.OK)
 			{
 				Group.Players.Add(diag.PlayerName);
-				objectListView1.Objects = Group.Players;
-				objectListView1.SelectedIndex = objectListView1.Items.Count - 1;
-				GroupChanged?.Invoke(this, EventArgs.Empty);
-				ResizeList();
+				RefreshList();
 			}
 		}
 
@@ -356,7 +360,6 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
 		private void toolStripMenuItem_import_Click(object sender, EventArgs e)
 		{
-
 			var diag = new OpenFileDialog();
 			diag.Filter = "THG file (*.thg)|*.thg";
 			diag.RestoreDirectory = true;
@@ -364,9 +367,20 @@ namespace TibiantisHelper.Tabs.LoginAlert
 			if (diag.ShowDialog() == DialogResult.OK)
 			{
 				var group = Tab_LoginAlert.LoadGroups(diag.FileName)[0];
-				var import = new Form_Import(group);
-
+				Form_Main.Form.tab_LoginAlert1.Import(group, Group);
 			}
+		}
+
+        private void button_settings_MouseClick(object sender, MouseEventArgs e)
+        {
+			//button_settings.ContextMenu.Show(e.Location.X, e.Location.Y);
+        }
+
+        private void button_settings_Click(object sender, EventArgs e)
+		{
+			contextMenuStrip1.Show(Cursor.Position);
+
+
 		}
     }
 }

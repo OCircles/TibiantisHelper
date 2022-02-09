@@ -1,7 +1,7 @@
 ﻿
 namespace TibiantisHelper.Tabs.LoginAlert
 {
-    partial class Form_Import
+    partial class Form_ImportDialog
     {
         /// <summary>
         /// Required designer variable.
@@ -33,8 +33,8 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -88,16 +88,6 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Import";
             // 
-            // listBox1
-            // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(14, 12);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(310, 121);
-            this.listBox1.TabIndex = 4;
-            // 
             // comboBox1
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -108,9 +98,18 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.comboBox1.Size = new System.Drawing.Size(179, 21);
             this.comboBox1.TabIndex = 3;
             // 
+            // listBox1
+            // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(14, 12);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(310, 121);
+            this.listBox1.TabIndex = 4;
+            // 
             // button1
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.Location = new System.Drawing.Point(14, 225);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 23);
@@ -121,7 +120,6 @@ namespace TibiantisHelper.Tabs.LoginAlert
             // 
             // button2
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Location = new System.Drawing.Point(108, 224);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 23);
@@ -132,6 +130,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             // 
             // Form_Import
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
