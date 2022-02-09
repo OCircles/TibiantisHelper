@@ -91,6 +91,12 @@ namespace TibiantisHelper.Tabs.LoginAlert
         }
 
 
+        public void ImportPlayers(List<string> players)
+        {
+
+        }
+
+
         #region File I/O
 
         public void SaveGroups() { SaveGroups(file_loginAlert); }
