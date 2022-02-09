@@ -38,8 +38,10 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.button_add = new System.Windows.Forms.Button();
             this.button_remove = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.panel1 = new TibiantisHelper.Tabs.LoginAlert.PanelNoScrollOnFocus();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer11)).BeginInit();
             this.splitContainer11.Panel1.SuspendLayout();
@@ -61,6 +63,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
+            this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Size = new System.Drawing.Size(1095, 485);
             this.splitContainer1.SplitterDistance = 283;
             this.splitContainer1.SplitterWidth = 5;
@@ -162,6 +165,15 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.textBox2.TabIndex = 0;
             this.textBox2.Text = resources.GetString("textBox2.Text");
             // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(807, 485);
+            this.panel1.TabIndex = 0;
+            // 
             // Tab_LoginAlert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -171,6 +183,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.Name = "Tab_LoginAlert";
             this.Size = new System.Drawing.Size(1095, 485);
             this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.splitContainer11.Panel1.ResumeLayout(false);
@@ -193,5 +206,6 @@ namespace TibiantisHelper.Tabs.LoginAlert
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button_import;
         private System.Windows.Forms.TextBox textBox1;
+        private PanelNoScrollOnFocus panel1;
     }
 }

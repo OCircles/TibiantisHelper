@@ -158,16 +158,16 @@ namespace TibiantisHelper.Tabs.LoginAlert
                 RemoveGroup(group);
             };
 
-            splitContainer1.Panel2.Controls.Add(groupControl);
+            panel1.Controls.Add(groupControl);
             groupControl.Dock = DockStyle.Top;
         }
 
         public void RemoveGroup(TrackedPlayerGroup group)
         {
-            foreach (Control_TrackedPlayerGroup control in splitContainer1.Panel2.Controls)
+            foreach (Control_TrackedPlayerGroup control in panel1.Controls)
                 if (control.Group == group)
                 {
-                    splitContainer1.Panel2.Controls.Remove(control);
+                    panel1.Controls.Remove(control);
                     PlayerGroups.Remove(control.Group);
                     SaveGroups();
 
@@ -178,7 +178,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
         public void Populate()
         {
-            splitContainer1.Panel2.Controls.Clear();
+            panel1.Controls.Clear();
             foreach (var group in PlayerGroups)
                 AddGroupControl(group);
         }
@@ -481,6 +481,14 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
         #endregion
 
+    }
+
+    class PanelNoScrollOnFocus : Panel
+    {
+        protected override System.Drawing.Point ScrollToControl(Control activeControl)
+        {
+            return DisplayRectangle.Location;
+        }
     }
 
     public class TrackedPlayerGroup
