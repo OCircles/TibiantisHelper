@@ -50,6 +50,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
         }
 
 
+        #region Sidebar Buttons
 
         private void button_add_Click(object sender, EventArgs e)
         {
@@ -73,8 +74,58 @@ namespace TibiantisHelper.Tabs.LoginAlert
             }
 
         }
-    
-        
+        private void button_import_Click(object sender, EventArgs e)
+        {
+            var diag = new OpenFileDialog();
+            diag.Filter = Tab_LoginAlert.file_playerGroupExtensionFilter();
+            diag.RestoreDirectory = true;
+
+            if (diag.ShowDialog() == DialogResult.OK)
+            {
+                var group = LoadGroups(diag.FileName)[0];
+                Form_Main.Form.tab_LoginAlert1.Import(group);
+            }
+        }
+
+        private void button_remove_Click(object sender, EventArgs e)
+        {
+            if (SelectedGroup == null)
+            {
+                MessageBox.Show("No group selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (MessageBox.Show(
+                "You are about to delete group \"" + SelectedGroup.Group.Name + "\". Are you sure you want to proceed?"
+                ,"Delete group",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question )
+
+                == DialogResult.Yes)
+            {
+                RemoveGroup(SelectedGroup.Group);
+            }
+
+        }
+
+        #endregion
+
+        public void UpdateTextbox()
+        {
+            int players = 0;
+
+            foreach (var g in PlayerGroups)
+                foreach (var p in g.Players)
+                    players++;
+
+            string txt = "Total online: " + LastOnline.Count + Environment.NewLine;
+            txt += "Tracked players: " + players + Environment.NewLine;
+            txt += "Groups: " + PlayerGroups.Count;
+
+            textBox1.Text = txt;
+        }
+
+
         private void SetSelectedGroup(Control_TrackedPlayerGroup group)
         {
             SelectedGroup = group;
@@ -123,21 +174,6 @@ namespace TibiantisHelper.Tabs.LoginAlert
             splitContainer1.Panel2.Controls.Clear();
             foreach (var group in PlayerGroups)
                 AddGroupControl(group);
-        }
-
-        public void UpdateTextbox()
-        {
-            int players = 0;
-
-            foreach (var g in PlayerGroups)
-                foreach (var p in g.Players)
-                    players++;
-
-            string txt = "Total online: " + LastOnline.Count + Environment.NewLine;
-            txt += "Tracked players: " + players + Environment.NewLine;
-            txt += "Groups: " + PlayerGroups.Count;
-
-            textBox1.Text = txt;
         }
 
 
@@ -322,11 +358,13 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
             return groups;
         }
-        
+
         #endregion
 
 
 
+        #region Online check
+        
         public void CheckOnline()
         {
             List<string> alertPlayers = new List<string>();
@@ -434,39 +472,8 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
         }
 
-        private void button_import_Click(object sender, EventArgs e)
-        {
-            var diag = new OpenFileDialog();
-            diag.Filter = Tab_LoginAlert.file_playerGroupExtensionFilter();
-            diag.RestoreDirectory = true;
+        #endregion
 
-            if (diag.ShowDialog() == DialogResult.OK)
-            {
-                var group = LoadGroups(diag.FileName)[0];
-                Form_Main.Form.tab_LoginAlert1.Import(group);
-            }
-        }
-
-        private void button_remove_Click(object sender, EventArgs e)
-        {
-            if (SelectedGroup == null)
-            {
-                MessageBox.Show("No group selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (MessageBox.Show(
-                "You are about to delete group \"" + SelectedGroup.Group.Name + "\". Are you sure you want to proceed?"
-                ,"Delete group",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question )
-
-                == DialogResult.Yes)
-            {
-                RemoveGroup(SelectedGroup.Group);
-            }
-
-        }
     }
 
     public class TrackedPlayerGroup
