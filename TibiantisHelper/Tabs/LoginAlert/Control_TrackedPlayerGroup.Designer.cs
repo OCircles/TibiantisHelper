@@ -70,6 +70,8 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.label_name.Size = new System.Drawing.Size(101, 18);
             this.label_name.TabIndex = 0;
             this.label_name.Text = "Group Name";
+            this.label_name.MouseDown += new System.Windows.Forms.MouseEventHandler(this.header_MouseDown);
+            this.label_name.MouseUp += new System.Windows.Forms.MouseEventHandler(this.header_MouseUp);
             // 
             // checkBox_trayNotif
             // 
@@ -133,8 +135,8 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.panel_header.Name = "panel_header";
             this.panel_header.Size = new System.Drawing.Size(668, 30);
             this.panel_header.TabIndex = 11;
-            this.panel_header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_header_MouseDown);
-            this.panel_header.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_header_MouseUp);
+            this.panel_header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.header_MouseDown);
+            this.panel_header.MouseUp += new System.Windows.Forms.MouseEventHandler(this.header_MouseUp);
             // 
             // checkBox_minimize
             // 
@@ -159,7 +161,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.button_deleteGroup.Image = global::TibiantisHelper.Properties.Resources.delete;
             this.button_deleteGroup.Location = new System.Drawing.Point(633, 2);
             this.button_deleteGroup.Name = "button_deleteGroup";
-            this.button_deleteGroup.Size = new System.Drawing.Size(28, 24);
+            this.button_deleteGroup.Size = new System.Drawing.Size(28, 26);
             this.button_deleteGroup.TabIndex = 4;
             this.button_deleteGroup.UseVisualStyleBackColor = true;
             this.button_deleteGroup.Click += new System.EventHandler(this.button_deleteGroup_Click);
@@ -173,7 +175,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.button_settings.Image = global::TibiantisHelper.Properties.Resources.gear;
             this.button_settings.Location = new System.Drawing.Point(601, 2);
             this.button_settings.Name = "button_settings";
-            this.button_settings.Size = new System.Drawing.Size(28, 24);
+            this.button_settings.Size = new System.Drawing.Size(28, 26);
             this.button_settings.TabIndex = 5;
             this.button_settings.UseVisualStyleBackColor = true;
             this.button_settings.Click += new System.EventHandler(this.button_settings_Click);

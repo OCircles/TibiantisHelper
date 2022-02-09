@@ -384,13 +384,13 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
 		}
 
-        private void panel_header_MouseDown(object sender, MouseEventArgs e)
+        private void header_MouseDown(object sender, MouseEventArgs e)
         {
 			this.BackColor = SystemColors.Control;
 			GroupSelected?.Invoke(this, EventArgs.Empty);
 		}
 
-        private void panel_header_MouseUp(object sender, MouseEventArgs e)
+        private void header_MouseUp(object sender, MouseEventArgs e)
 		{
 			this.BackColor = Color.White;
 		}
