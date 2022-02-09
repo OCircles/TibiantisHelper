@@ -17,7 +17,15 @@ namespace TibiantisHelper.Tabs.LoginAlert
     public partial class Tab_LoginAlert : UserControl
     {
 
-        static string file_loginAlert = "TrackedPlayers.xml";
+        public static string file_loginAlert = "TrackedPlayers.xml";
+
+        public static string file_playerGroupExtension = "thg";
+        public static string file_playerGroupExtensionFilter()
+        {
+            // "THG file (*.thg)|*.thg"
+            return $"{Tab_LoginAlert.file_playerGroupExtension.ToUpperInvariant()} file (*.{Tab_LoginAlert.file_playerGroupExtension})|*.{Tab_LoginAlert.file_playerGroupExtension}";
+        }
+
         public static List<TrackedPlayerGroup> PlayerGroups;
         public static List<string> LastOnline;
 
@@ -428,7 +436,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
         private void button_import_Click(object sender, EventArgs e)
         {
             var diag = new OpenFileDialog();
-            diag.Filter = "THG file (*.thg)|*.thg";
+            diag.Filter = Tab_LoginAlert.file_playerGroupExtensionFilter();
             diag.RestoreDirectory = true;
 
             if (diag.ShowDialog() == DialogResult.OK)

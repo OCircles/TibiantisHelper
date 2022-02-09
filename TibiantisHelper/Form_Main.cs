@@ -811,7 +811,7 @@ namespace TibiantisHelper
 
             string lwr = Path.GetExtension(files[0]).ToLowerInvariant();
 
-            if (lwr == ".thg")
+            if (lwr == Tabs.LoginAlert.Tab_LoginAlert.file_playerGroupExtension)
             {
                 tabControl1.SelectedTab = tabPage_LoginAlert;
 

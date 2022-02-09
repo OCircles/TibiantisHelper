@@ -205,7 +205,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
 		{
 			SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
-			saveFileDialog1.Filter = "THG file (*.thg)|*.thg";
+			saveFileDialog1.Filter = Tab_LoginAlert.file_playerGroupExtensionFilter();
 			saveFileDialog1.RestoreDirectory = true;
 
 			if (saveFileDialog1.ShowDialog() == DialogResult.OK)
@@ -362,7 +362,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
 		private void toolStripMenuItem_import_Click(object sender, EventArgs e)
 		{
 			var diag = new OpenFileDialog();
-			diag.Filter = "THG file (*.thg)|*.thg";
+			diag.Filter = Tab_LoginAlert.file_playerGroupExtensionFilter();
 			diag.RestoreDirectory = true;
 
 			if (diag.ShowDialog() == DialogResult.OK)
