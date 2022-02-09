@@ -29,6 +29,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label_name = new System.Windows.Forms.Label();
             this.checkBox_trayNotif = new System.Windows.Forms.CheckBox();
             this.checkBox_soundEnabled = new System.Windows.Forms.CheckBox();
@@ -36,9 +37,16 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.button_browseSound = new System.Windows.Forms.Button();
             this.panel_header = new System.Windows.Forms.Panel();
             this.checkBox_minimize = new System.Windows.Forms.CheckBox();
-            this.button_save = new System.Windows.Forms.Button();
             this.button_deleteGroup = new System.Windows.Forms.Button();
-            this.button_edit = new System.Windows.Forms.Button();
+            this.button_settings = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem_fileDropdown = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_saveAs = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_import = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_editName = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem_MoveUp = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_MoveDown = new System.Windows.Forms.ToolStripMenuItem();
             this.label_playerControl = new System.Windows.Forms.Label();
             this.panel_playerControls = new System.Windows.Forms.Panel();
             this.button_addPlayer = new System.Windows.Forms.Button();
@@ -47,6 +55,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
             this.panel_main = new System.Windows.Forms.Panel();
             this.panel_header.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.panel_playerControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
             this.panel_main.SuspendLayout();
@@ -117,9 +126,8 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.panel_header.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel_header.Controls.Add(this.checkBox_minimize);
             this.panel_header.Controls.Add(this.label_name);
-            this.panel_header.Controls.Add(this.button_save);
             this.panel_header.Controls.Add(this.button_deleteGroup);
-            this.panel_header.Controls.Add(this.button_edit);
+            this.panel_header.Controls.Add(this.button_settings);
             this.panel_header.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_header.Location = new System.Drawing.Point(3, 6);
             this.panel_header.Name = "panel_header";
@@ -134,26 +142,12 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.checkBox_minimize.FlatAppearance.BorderSize = 0;
             this.checkBox_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox_minimize.Image = global::TibiantisHelper.Properties.Resources.view;
-            this.checkBox_minimize.Location = new System.Drawing.Point(533, 0);
+            this.checkBox_minimize.Location = new System.Drawing.Point(566, 0);
             this.checkBox_minimize.Name = "checkBox_minimize";
             this.checkBox_minimize.Size = new System.Drawing.Size(30, 30);
             this.checkBox_minimize.TabIndex = 8;
             this.checkBox_minimize.UseVisualStyleBackColor = true;
             this.checkBox_minimize.CheckedChanged += new System.EventHandler(this.checkBox_minimized_CheckedChanged);
-            // 
-            // button_save
-            // 
-            this.button_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_save.FlatAppearance.BorderSize = 0;
-            this.button_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_save.Image = global::TibiantisHelper.Properties.Resources.save;
-            this.button_save.Location = new System.Drawing.Point(566, 3);
-            this.button_save.Margin = new System.Windows.Forms.Padding(0);
-            this.button_save.Name = "button_save";
-            this.button_save.Size = new System.Drawing.Size(28, 24);
-            this.button_save.TabIndex = 6;
-            this.button_save.UseVisualStyleBackColor = true;
-            this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
             // button_deleteGroup
             // 
@@ -161,25 +155,89 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.button_deleteGroup.FlatAppearance.BorderSize = 0;
             this.button_deleteGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_deleteGroup.Image = global::TibiantisHelper.Properties.Resources.delete;
-            this.button_deleteGroup.Location = new System.Drawing.Point(636, 3);
+            this.button_deleteGroup.Location = new System.Drawing.Point(633, 2);
             this.button_deleteGroup.Name = "button_deleteGroup";
             this.button_deleteGroup.Size = new System.Drawing.Size(28, 24);
             this.button_deleteGroup.TabIndex = 4;
             this.button_deleteGroup.UseVisualStyleBackColor = true;
             this.button_deleteGroup.Click += new System.EventHandler(this.button_deleteGroup_Click);
             // 
-            // button_edit
+            // button_settings
             // 
-            this.button_edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_edit.FlatAppearance.BorderSize = 0;
-            this.button_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_edit.Image = global::TibiantisHelper.Properties.Resources.edit;
-            this.button_edit.Location = new System.Drawing.Point(601, 3);
-            this.button_edit.Name = "button_edit";
-            this.button_edit.Size = new System.Drawing.Size(28, 24);
-            this.button_edit.TabIndex = 5;
-            this.button_edit.UseVisualStyleBackColor = true;
-            this.button_edit.Click += new System.EventHandler(this.button_edit_Click);
+            this.button_settings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_settings.ContextMenuStrip = this.contextMenuStrip1;
+            this.button_settings.FlatAppearance.BorderSize = 0;
+            this.button_settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_settings.Image = global::TibiantisHelper.Properties.Resources.gear;
+            this.button_settings.Location = new System.Drawing.Point(601, 2);
+            this.button_settings.Name = "button_settings";
+            this.button_settings.Size = new System.Drawing.Size(28, 24);
+            this.button_settings.TabIndex = 5;
+            this.button_settings.UseVisualStyleBackColor = true;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_fileDropdown,
+            this.toolStripMenuItem_editName,
+            this.toolStripSeparator1,
+            this.toolStripMenuItem_MoveUp,
+            this.toolStripMenuItem_MoveDown});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 98);
+            // 
+            // toolStripMenuItem_fileDropdown
+            // 
+            this.toolStripMenuItem_fileDropdown.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_saveAs,
+            this.toolStripMenuItem_import});
+            this.toolStripMenuItem_fileDropdown.Image = global::TibiantisHelper.Properties.Resources._16folder;
+            this.toolStripMenuItem_fileDropdown.Name = "toolStripMenuItem_fileDropdown";
+            this.toolStripMenuItem_fileDropdown.Size = new System.Drawing.Size(138, 22);
+            this.toolStripMenuItem_fileDropdown.Text = "File";
+            // 
+            // toolStripMenuItem_saveAs
+            // 
+            this.toolStripMenuItem_saveAs.Image = global::TibiantisHelper.Properties.Resources._16save;
+            this.toolStripMenuItem_saveAs.Name = "toolStripMenuItem_saveAs";
+            this.toolStripMenuItem_saveAs.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_saveAs.Text = "Save As";
+            this.toolStripMenuItem_saveAs.Click += new System.EventHandler(this.toolStripMenuItem_saveAs_Click);
+            // 
+            // toolStripMenuItem_import
+            // 
+            this.toolStripMenuItem_import.Image = global::TibiantisHelper.Properties.Resources._16download;
+            this.toolStripMenuItem_import.Name = "toolStripMenuItem_import";
+            this.toolStripMenuItem_import.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_import.Text = "Import";
+            this.toolStripMenuItem_import.Click += new System.EventHandler(this.toolStripMenuItem_import_Click);
+            // 
+            // toolStripMenuItem_editName
+            // 
+            this.toolStripMenuItem_editName.Image = global::TibiantisHelper.Properties.Resources._16edit;
+            this.toolStripMenuItem_editName.Name = "toolStripMenuItem_editName";
+            this.toolStripMenuItem_editName.Size = new System.Drawing.Size(138, 22);
+            this.toolStripMenuItem_editName.Text = "Edit Name";
+            this.toolStripMenuItem_editName.Click += new System.EventHandler(this.btoolStripMenuItem_editName_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(135, 6);
+            // 
+            // toolStripMenuItem_MoveUp
+            // 
+            this.toolStripMenuItem_MoveUp.Image = global::TibiantisHelper.Properties.Resources._16up;
+            this.toolStripMenuItem_MoveUp.Name = "toolStripMenuItem_MoveUp";
+            this.toolStripMenuItem_MoveUp.Size = new System.Drawing.Size(138, 22);
+            this.toolStripMenuItem_MoveUp.Text = "Move Up";
+            // 
+            // toolStripMenuItem_MoveDown
+            // 
+            this.toolStripMenuItem_MoveDown.Image = global::TibiantisHelper.Properties.Resources._16down;
+            this.toolStripMenuItem_MoveDown.Name = "toolStripMenuItem_MoveDown";
+            this.toolStripMenuItem_MoveDown.Size = new System.Drawing.Size(138, 22);
+            this.toolStripMenuItem_MoveDown.Text = "Move Down";
             // 
             // label_playerControl
             // 
@@ -293,6 +351,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.Load += new System.EventHandler(this.Control_TrackedPlayerGroup_Load);
             this.panel_header.ResumeLayout(false);
             this.panel_header.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.panel_playerControls.ResumeLayout(false);
             this.panel_playerControls.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
@@ -306,8 +365,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
         private System.Windows.Forms.Label label_name;
         private System.Windows.Forms.Button button_deleteGroup;
-        private System.Windows.Forms.Button button_edit;
-        private System.Windows.Forms.Button button_save;
+        private System.Windows.Forms.Button button_settings;
         private System.Windows.Forms.TextBox textBox_soundPath;
         private System.Windows.Forms.Button button_browseSound;
         private System.Windows.Forms.Panel panel_header;
@@ -321,5 +379,13 @@ namespace TibiantisHelper.Tabs.LoginAlert
         private System.Windows.Forms.CheckBox checkBox_trayNotif;
         private System.Windows.Forms.CheckBox checkBox_soundEnabled;
         private System.Windows.Forms.CheckBox checkBox_minimize;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_editName;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_MoveUp;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_MoveDown;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_fileDropdown;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_saveAs;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_import;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }

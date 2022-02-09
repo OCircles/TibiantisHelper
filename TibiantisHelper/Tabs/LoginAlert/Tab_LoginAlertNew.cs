@@ -93,7 +93,8 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
         #region File I/O
 
-        public static void SaveGroups(string path)
+        public void SaveGroups() { SaveGroups(file_loginAlert); }
+        public void SaveGroups(string path)
         {
             XmlWriterSettings settings = new XmlWriterSettings();
             settings.Indent = true;

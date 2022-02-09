@@ -30,7 +30,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
 			InitializeComponent();
 
-			button_edit.FlatAppearance.BorderSize = 0;
+			button_settings.FlatAppearance.BorderSize = 0;
 
 			label_name.Text = Group.Name;
 			displayedSprite = Group.Icon;
@@ -142,7 +142,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
 				this.Size = new Size(this.Width, baseHeight);
 
 		}
-
+		
 
 		private void DrawSprite()
 		{
@@ -189,7 +189,9 @@ namespace TibiantisHelper.Tabs.LoginAlert
 			ResizeList();
 			GroupChanged?.Invoke(this, EventArgs.Empty);
 		}
-		private void button_save_Click(object sender, EventArgs e)
+
+
+		private void toolStripMenuItem_saveAs_Click(object sender, EventArgs e)
 		{
 			SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
@@ -208,7 +210,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
 				}
 			}
 		}
-		private void button_edit_Click(object sender, EventArgs e)
+		private void btoolStripMenuItem_editName_Click(object sender, EventArgs e)
 		{
 			Form_GroupEdit diag = new Form_GroupEdit(Group.Name);
 			if (diag.ShowDialog() == DialogResult.OK)
@@ -221,6 +223,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
 				}
 			}
 		}
+
 		private void button_deleteGroup_Click(object sender, EventArgs e)
 		{
 			var result = MessageBox.Show("Remove group \"" + Group.Name + "\"?", "Remove Group", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -349,6 +352,16 @@ namespace TibiantisHelper.Tabs.LoginAlert
 			Console.WriteLine((string)e.NewValue);
 		}
 
+		private void toolStripMenuItem_import_Click(object sender, EventArgs e)
+		{
 
+			var diag = new OpenFileDialog();
+			diag.Filter = "THG file (*.thg)|*.thg";
+			diag.RestoreDirectory = true;
+
+			if (diag.ShowDialog() == DialogResult.OK)
+			{
+			}
+		}
     }
 }
