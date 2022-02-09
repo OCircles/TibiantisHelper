@@ -199,14 +199,12 @@ namespace TibiantisHelper.Tabs.LoginAlert
                 TrackedPlayerGroup grp = import.ImportGroupDestination;
                 if (grp == null)
                 {
-                    Console.WriteLine("New");
                     var ng = new TrackedPlayerGroup() { Name = import.ImportNewGroupName, Players = import.ImportPlayers };
                     PlayerGroups.Add(ng);
                     repop = true;
                 }
                 else
                 {
-                    Console.WriteLine("What? " + import.ImportGroupDestination.Players.Count);
                     foreach (var p in import.ImportPlayers)
                     {
                         if (!import.ImportGroupDestination.Players.Exists(ss => ss == p))
