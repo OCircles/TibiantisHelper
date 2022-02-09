@@ -368,12 +368,6 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
 
 
-		private void objectListView1_CellEditValidating(object sender, CellEditEventArgs e)
-		{
-			Console.WriteLine((string)e.Value);
-			Console.WriteLine((string)e.NewValue);
-		}
-
 		private void toolStripMenuItem_import_Click(object sender, EventArgs e)
 		{
 			var diag = new OpenFileDialog();
@@ -443,5 +437,47 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
 			}
         }
+
+
+
+
+        #region OLV Edit
+		// Why is it like this...
+        private void objectListView1_CellEditFinished(object sender, CellEditEventArgs e)
+		{
+			e.ListViewItem.RowObject = e.NewValue;
+			objectListView1.RefreshItem(e.ListViewItem);
+			e.Cancel = true;
+		}
+
+        private void objectListView1_CellEditFinishing(object sender, CellEditEventArgs e)
+		{
+			var i = Group.Players.IndexOf((string)e.Value);
+			Group.Players[i] = (string)e.NewValue;
+			GroupChanged?.Invoke(this, EventArgs.Empty);
+		}
+
+        private void objectListView1_CellEditValidating(object sender, CellEditEventArgs e)
+        {
+
+			if (e.Cancel || (string)e.Value == (string)e.NewValue)
+			{
+				e.Cancel = true;
+				return;
+			}
+
+			Console.WriteLine($"New {e.Value.ToString()} Old {e.NewValue.ToString()}");
+
+			string edit = ((string)e.NewValue);
+
+			if (Group.Players.Exists(ss => ss.Equals(edit, StringComparison.OrdinalIgnoreCase)))
+			{
+				MessageBox.Show("Duplicate player", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				e.Cancel = true;
+				return;
+			}
+		}
+        #endregion
+
     }
 }

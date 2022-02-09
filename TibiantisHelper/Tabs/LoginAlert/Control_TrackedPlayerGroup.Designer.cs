@@ -313,6 +313,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.objectListView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.objectListView1.CellEditActivation = BrightIdeasSoftware.ObjectListView.CellEditActivateMode.DoubleClick;
             this.objectListView1.CellEditUseWholeCell = false;
             this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.objectListView1.FullRowSelect = true;
@@ -320,12 +321,15 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.objectListView1.HideSelection = false;
             this.objectListView1.Location = new System.Drawing.Point(79, 0);
             this.objectListView1.Name = "objectListView1";
+            this.objectListView1.Scrollable = false;
             this.objectListView1.ShowGroups = false;
             this.objectListView1.Size = new System.Drawing.Size(589, 65);
             this.objectListView1.TabIndex = 16;
             this.objectListView1.UseCompatibleStateImageBehavior = false;
             this.objectListView1.UseHotControls = false;
             this.objectListView1.View = System.Windows.Forms.View.Details;
+            this.objectListView1.CellEditFinished += new BrightIdeasSoftware.CellEditEventHandler(this.objectListView1_CellEditFinished);
+            this.objectListView1.CellEditFinishing += new BrightIdeasSoftware.CellEditEventHandler(this.objectListView1_CellEditFinishing);
             this.objectListView1.CellEditValidating += new BrightIdeasSoftware.CellEditEventHandler(this.objectListView1_CellEditValidating);
             this.objectListView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.objectListView1_MouseDown);
             // 
