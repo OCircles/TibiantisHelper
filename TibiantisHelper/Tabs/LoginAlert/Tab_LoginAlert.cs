@@ -31,12 +31,16 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
         private Control_TrackedPlayerGroup SelectedGroup;
 
+        private const string selectedGroupDefaultText = "No group selected";
+
         public Tab_LoginAlert()
         {
             PlayerGroups = new List<TrackedPlayerGroup>();
             LastOnline = new List<string>();
 
             InitializeComponent();
+
+            label_selectedGroup.Text = selectedGroupDefaultText;
 
             try
             {
@@ -166,6 +170,9 @@ namespace TibiantisHelper.Tabs.LoginAlert
                     splitContainer1.Panel2.Controls.Remove(control);
                     PlayerGroups.Remove(control.Group);
                     SaveGroups();
+
+                    label_selectedGroup.Text = selectedGroupDefaultText;
+                    SelectedGroup = null;
                 }
         }
 
