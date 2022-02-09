@@ -163,13 +163,14 @@ namespace TibiantisHelper.Tabs.LoginAlert
                 }
                 else
                 {
+                    Console.WriteLine("What? " + import.ImportGroupDestination.Players.Count);
                     foreach (var p in import.ImportPlayers)
                     {
-                        if (!destination.Players.Exists(ss => ss == p))
-                            destination.Players.Add(p);
+                        if (!import.ImportGroupDestination.Players.Exists(ss => ss == p))
+                            import.ImportGroupDestination.Players.Add(p);
 
                     }
-                    destination.Control.RefreshList();
+                    import.ImportGroupDestination.Control.RefreshList();
                 }
                 if (repop)
                     this.Populate();
