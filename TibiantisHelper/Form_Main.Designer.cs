@@ -611,8 +611,8 @@
         public Tabs.Tab_Spells tab_Spells1;
         private Tabs.Tab_NPC tab_NPC1;
         private Tabs.Tab_Calculators tab_Calculators1;
-        private System.Windows.Forms.TabPage tabPage_LoginAlert;
-        private Tabs.LoginAlert.Tab_LoginAlert tab_LoginAlert1;
+        public System.Windows.Forms.TabPage tabPage_LoginAlert;
+        public Tabs.LoginAlert.Tab_LoginAlert tab_LoginAlert1;
     }
 }
 
