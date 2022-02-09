@@ -23,6 +23,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
 		public event EventHandler GroupRemove;
 		public event EventHandler GroupChanged;
+		public event EventHandler GroupSelected;
 
 		public Control_TrackedPlayerGroup(Tabs.LoginAlert.TrackedPlayerGroup group)
 		{
@@ -381,6 +382,17 @@ namespace TibiantisHelper.Tabs.LoginAlert
 			contextMenuStrip1.Show(Cursor.Position);
 
 
+		}
+
+        private void panel_header_MouseDown(object sender, MouseEventArgs e)
+        {
+			this.BackColor = SystemColors.Control;
+			GroupSelected?.Invoke(this, EventArgs.Empty);
+		}
+
+        private void panel_header_MouseUp(object sender, MouseEventArgs e)
+		{
+			this.BackColor = Color.White;
 		}
     }
 }

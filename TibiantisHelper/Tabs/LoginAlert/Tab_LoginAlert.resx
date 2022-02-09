@@ -117,11 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBox11.Text" xml:space="preserve">
+  <data name="textBox2.Text" xml:space="preserve">
     <value>Good if you're hunting someone!
 
-- Right-click items
-- Double click items to edit
+- Add players easily from online players list
+- Export groups and share with your friends
+- Drag &amp; Drop THG files to import
+- Double click players to edit
+
+If several groups have been set to play sounds or send a traybar notification, the corresponding alert from the top-most group in the list will take priority when players from multiple groups are detected simultaneously
 
 If you don't like this app using network resources, there's an option in the tray bar (right click) to entirely disable this component</value>
   </data>

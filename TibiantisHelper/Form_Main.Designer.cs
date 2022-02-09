@@ -522,6 +522,7 @@
             // 
             // Form_Main
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PapayaWhip;
@@ -543,6 +544,8 @@
             this.Text = "Tibiantis Helper v0.96";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Form_Main_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.Form_Main_DragEnter);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_Main_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form_Main_KeyUp);
             this.Resize += new System.EventHandler(this.Form1_Resize);

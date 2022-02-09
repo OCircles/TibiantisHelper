@@ -133,6 +133,8 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.panel_header.Name = "panel_header";
             this.panel_header.Size = new System.Drawing.Size(668, 30);
             this.panel_header.TabIndex = 11;
+            this.panel_header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_header_MouseDown);
+            this.panel_header.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_header_MouseUp);
             // 
             // checkBox_minimize
             // 

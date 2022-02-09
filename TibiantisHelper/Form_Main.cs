@@ -413,7 +413,6 @@ namespace TibiantisHelper
                 try
                 {
                     await GetOnlineUsers();
-                    // tab_LoginAlert1.CheckOnline();
                     tab_LoginAlert1.CheckOnline();
                 }
                 catch (Exception ex)
@@ -801,7 +800,32 @@ namespace TibiantisHelper
             }
         }
 
+        #region Drag & Drop
 
+        private void Form_Main_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+            if (files[0] == null)
+                return;
+
+            string lwr = Path.GetExtension(files[0]).ToLowerInvariant();
+
+            if (lwr == ".thg")
+            {
+                tabControl1.SelectedTab = tabPage_LoginAlert;
+
+                var grp = Tabs.LoginAlert.Tab_LoginAlert.LoadGroups(files[0]);
+                tab_LoginAlert1.Import(grp[0]);
+            }
+        }
+
+        private void Form_Main_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop)) e.Effect = DragDropEffects.Copy;
+        }
+
+        #endregion
 
     }
 

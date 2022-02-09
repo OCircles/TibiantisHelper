@@ -21,6 +21,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
         public static List<TrackedPlayerGroup> PlayerGroups;
         public static List<string> LastOnline;
 
+        private Control_TrackedPlayerGroup SelectedGroup;
 
         public Tab_LoginAlert()
         {
@@ -65,13 +66,13 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
         }
     
-    
-        private void NewPlayerGroup(string name)
+        
+        private void SetSelectedGroup(Control_TrackedPlayerGroup group)
         {
-            var group = new TrackedPlayerGroup() { Name = name };
-            PlayerGroups.Add(group);
-            Populate();
+            SelectedGroup = group;
+            label_selectedGroup.Text = group.Group.Name;
         }
+
 
         private void AddGroupControl(TrackedPlayerGroup group)
         {
@@ -79,20 +80,34 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
             group.Control = groupControl;
 
+            groupControl.GroupSelected += (s, e) =>
+            {
+                SetSelectedGroup((Control_TrackedPlayerGroup)s);
+            };
+
             groupControl.GroupChanged += (s, e) =>
             {
-                SaveGroups(file_loginAlert);
+                SaveGroups();
             };
 
             groupControl.GroupRemove += (s, e) =>
             {
-                PlayerGroups.Remove(group);
-                SaveGroups(file_loginAlert);
-                Populate();
+                RemoveGroup(group);
             };
 
             splitContainer1.Panel2.Controls.Add(groupControl);
             groupControl.Dock = DockStyle.Top;
+        }
+
+        public void RemoveGroup(TrackedPlayerGroup group)
+        {
+            foreach (Control_TrackedPlayerGroup control in splitContainer1.Panel2.Controls)
+                if (control.Group == group)
+                {
+                    splitContainer1.Panel2.Controls.Remove(control);
+                    PlayerGroups.Remove(control.Group);
+                    SaveGroups();
+                }
         }
 
         public void Populate()
@@ -102,6 +117,20 @@ namespace TibiantisHelper.Tabs.LoginAlert
                 AddGroupControl(group);
         }
 
+        public void UpdateTextbox()
+        {
+            int players = 0;
+
+            foreach (var g in PlayerGroups)
+                foreach (var p in g.Players)
+                    players++;
+
+            string txt = "Total online: " + LastOnline.Count + Environment.NewLine;
+            txt += "Tracked players: " + players + Environment.NewLine;
+            txt += "Groups: " + PlayerGroups.Count;
+
+            textBox1.Text = txt;
+        }
 
 
         public void Import(List<string> group, TrackedPlayerGroup destination = null)
@@ -332,6 +361,8 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
             }
 
+            UpdateTextbox();
+
             LoginAlert(alertPlayers, alertGroup);
 
         }
@@ -394,14 +425,39 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
         }
 
+        private void button_import_Click(object sender, EventArgs e)
+        {
+            var diag = new OpenFileDialog();
+            diag.Filter = "THG file (*.thg)|*.thg";
+            diag.RestoreDirectory = true;
 
+            if (diag.ShowDialog() == DialogResult.OK)
+            {
+                var group = LoadGroups(diag.FileName)[0];
+                Form_Main.Form.tab_LoginAlert1.Import(group);
+            }
+        }
 
+        private void button_remove_Click(object sender, EventArgs e)
+        {
+            if (SelectedGroup == null)
+            {
+                MessageBox.Show("No group selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            if (MessageBox.Show(
+                "You are about to delete group \"" + SelectedGroup.Group.Name + "\". Are you sure you want to proceed?"
+                ,"Delete group",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question )
 
+                == DialogResult.Yes)
+            {
+                RemoveGroup(SelectedGroup.Group);
+            }
 
-
-
-
+        }
     }
 
     public class TrackedPlayerGroup
