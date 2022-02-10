@@ -18,6 +18,8 @@ namespace TibiantisHelper.Tabs
     public partial class Tab_Accounts : UserControl
     {
 
+        // This whole thing needs a huge rewrite to use OLV but it works I guess
+
         public static List<Account> _accounts;
         static string file_accounts = "Accounts.xml";
 
@@ -28,7 +30,10 @@ namespace TibiantisHelper.Tabs
 
             AccountsPopulate();
             if (_accounts.Count != 0)
+            {
                 AccountsDisplayInfo(_accounts[0]);
+                accounts_label_selected.Text = _accounts[0].name;
+            }
         }
 
 
@@ -78,7 +83,11 @@ namespace TibiantisHelper.Tabs
         {
             if (acc != null)
             {
-                textBox10.Text = $"Name: {acc.name}{Environment.NewLine}Account: {acc.login}";
+                string loginString = acc.login;
+                if (checkBox_hideAcc.Checked)
+                    loginString = ProtectedString(acc.login);
+
+                textBox10.Text = $"Name: {acc.name}{Environment.NewLine}Account: {loginString}";
 
                 DateTime blank = new DateTime();
 
@@ -137,6 +146,8 @@ namespace TibiantisHelper.Tabs
         
         private void checkBox_hideAcc_CheckedChanged(object sender, EventArgs e)
         {
+            UpdateSelectedInfo();
+
             Settings.Default.AccountsHideLogin = checkBox_hideAcc.Checked;
             Settings.Default.Save();
 
