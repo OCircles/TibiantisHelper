@@ -440,9 +440,10 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
                 for (int i = 0; i < players.Count; i++)
                 {
-                    if (group.SoundEnabled && !string.IsNullOrEmpty(group.SoundPath))
-                        if (File.Exists(group.SoundPath))
-                            alertSound = group.SoundPath;
+                    if (group != null)
+                        if (group.SoundEnabled && !string.IsNullOrEmpty(group.SoundPath))
+                            if (File.Exists(group.SoundPath))
+                                alertSound = group.SoundPath;
 
                     if (i < 3)
                     {
@@ -465,8 +466,9 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
                 alertString += "logged in!";
 
-                if (group.TrayNotif)
-                    Form_Main.Tray_ShowBubble(TrayBubbleBehaviour.None, 5000, "Tibiantis Login", alertString, ToolTipIcon.Warning);
+                if (group != null)
+                    if (group.TrayNotif)
+                        Form_Main.Tray_ShowBubble(TrayBubbleBehaviour.None, 5000, "Tibiantis Login", alertString, ToolTipIcon.Warning);
 
                 if (alertSound != "")
                 {
