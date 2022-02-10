@@ -138,7 +138,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
         }
 
 
-        private void AddGroupControl(TrackedPlayerGroup group)
+        private void AddGroupControl(TrackedPlayerGroup group, bool scrollToBottom = true)
         {
             var groupControl = new Control_TrackedPlayerGroup(group);
             groupControl.Visible = false;
@@ -161,10 +161,12 @@ namespace TibiantisHelper.Tabs.LoginAlert
             };
 
             panel1.Controls.Add(groupControl);
-            panel1.Controls.SetChildIndex(groupControl, 0);
             groupControl.Dock = DockStyle.Top;
+            panel1.Controls.SetChildIndex(groupControl, 0);
             groupControl.Visible = true;
-            panel1.ScrollToBottom();
+
+            if (scrollToBottom)
+                panel1.ScrollToBottom();
         }
 
         public void RemoveGroup(TrackedPlayerGroup group)
@@ -185,7 +187,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
         {
             panel1.Controls.Clear();
             foreach (var group in PlayerGroups)
-                AddGroupControl(group);
+                AddGroupControl(group, false);
         }
 
 
