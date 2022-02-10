@@ -117,7 +117,7 @@ namespace TibiantisHelper
 
                         if (info != null)
                         {
-                            var result = new Form_PlayerLookupResult(info[0], info[1], info[2], info[3], info[4], info[5]);
+                            var result = new Form_PlayerLookupResult(info[0], info[1], info[2], info[3], info[4], info[5], info[6]);
                             result.StartPosition = FormStartPosition.Manual;
                             result.Location = new Point { X = Cursor.Position.X - (result.Width/2), Y = Cursor.Position.Y - (result.Height / 2) };
                             result.ShowDialog();

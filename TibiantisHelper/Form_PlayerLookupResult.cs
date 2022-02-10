@@ -18,7 +18,7 @@ namespace TibiantisHelper
         private int longestText = 0;
         private int labelCount = 0;
 
-        public Form_PlayerLookupResult(string name, string level, string vocation, string promotion, string guild, string characters)
+        public Form_PlayerLookupResult(string name, string level, string vocation, string promotion, string guild, string guildID, string characters)
         {
             InitializeComponent();
             button_ok.Focus();
@@ -32,8 +32,7 @@ namespace TibiantisHelper
                 AddLabel("No Guild");
             else
             {
-                string guildSafe = System.Net.WebUtility.UrlEncode(guild);
-                AddLabel($"Guild: {guild}", "https://tibiantis.online/?page=showguild&name=" + guildSafe);
+                AddLabel($"Guild: {guild}", "https://tibiantis.online/?page=showguild&id=" + guildID);
             }
 
             AddLabel(promotion);

@@ -16,7 +16,7 @@ namespace TibiantisHelper
 
         public static async Task<string[]> GetUserData(string username)
         {
-            string[] userData = { "", "", "", "", "", "" };
+            string[] userData = { "", "", "", "", "", "", "" };
 
             try
             {
@@ -57,8 +57,12 @@ namespace TibiantisHelper
 
 
                             var guild = "None";
+                            var guildID = "";
                             if (gi != -1)
+                            {
                                 guild = GetBetweenChars(line.Substring(gi), '>', '<');
+                                guildID = GetBetweenChars(line.Substring(gi), '=', '\'');
+                            }
 
                             var chars = new List<(string, string)>();
                             var ci = line.IndexOf("<b>Characters</b>");
@@ -94,9 +98,10 @@ namespace TibiantisHelper
                             userData[2] = CapitalizeString(vocS).TrimEnd(' ');
                             userData[3] = prem;
                             userData[4] = guild;
+                            userData[5] = guildID;
 
                             foreach ( var tup in chars )
-                                userData[5] += tup.Item1 + "," + tup.Item2 + ";";
+                                userData[6] += tup.Item1 + "," + tup.Item2 + ";";
 
                         }
                     }
