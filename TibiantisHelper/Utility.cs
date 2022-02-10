@@ -41,10 +41,10 @@ namespace TibiantisHelper
                             var ni = line.IndexOf("Name:") + 5 + 8;
                             var li = line.IndexOf("Level:") + 6 + 8;
                             var vi = line.IndexOf("Vocation:") + 9 + 8;
-                            var gi = line.IndexOf("showguild&name");
+                            var gi = line.IndexOf("showguild&id");
 
                             if (gi != -1)
-                                gi += 14;
+                                gi += 12;
 
                             var namS = GetBetweenChars(line.Substring(ni), '>', '<');
                             var levS = GetBetweenChars(line.Substring(li), '>', '<');
