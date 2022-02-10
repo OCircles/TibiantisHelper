@@ -52,7 +52,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.button_addPlayer = new System.Windows.Forms.Button();
             this.button_deletePlayer = new System.Windows.Forms.Button();
             this.button_icon = new System.Windows.Forms.Button();
-            this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
+            this.objectListView1 = new ObjectListView_FreeScroll();
             this.panel_main = new System.Windows.Forms.Panel();
             this.panel_header.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -387,7 +387,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
         private System.Windows.Forms.Label label_playerControl;
         private System.Windows.Forms.Panel panel_playerControls;
         private System.Windows.Forms.Button button_icon;
-        private BrightIdeasSoftware.ObjectListView objectListView1;
+        private ObjectListView_FreeScroll objectListView1;
         private System.Windows.Forms.Panel panel_main;
         private System.Windows.Forms.CheckBox checkBox_trayNotif;
         private System.Windows.Forms.CheckBox checkBox_soundEnabled;

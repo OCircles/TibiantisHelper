@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -39,8 +40,6 @@ namespace TibiantisHelper.Tabs.LoginAlert
 			DrawSprite();
 
 			baseHeight = this.Height;
-
-			objectListView1.LabelEdit = true;
 
 			OLVColumn playerName = new OLVColumn();
 			playerName.Text = "Player";
@@ -500,4 +499,27 @@ namespace TibiantisHelper.Tabs.LoginAlert
 			Parent.Controls.SetChildIndex(this, i - 1);
 		}
     }
+
+
+	public class ObjectListView_FreeScroll : ObjectListView
+    {
+		// Why is it always like this with WinForms?
+		// https://stackoverflow.com/questions/33129854/make-mousewheel-event-pass-from-child-to-parent
+
+		[DllImport("user32.dll", CharSet = CharSet.Auto)]
+		private static extern IntPtr SendMessage(IntPtr hWnd, int msg, IntPtr wp, IntPtr lp);
+
+		const int WM_MOUSEWHEEL = 0x020A;
+
+		protected override void WndProc(ref Message m)
+		{
+			if (m.Msg == WM_MOUSEWHEEL)
+			{
+				SendMessage(this.Parent.Handle, m.Msg, m.WParam, m.LParam);
+				m.Result = IntPtr.Zero;
+			}
+			else base.WndProc(ref m);
+		}
+	}
+
 }
