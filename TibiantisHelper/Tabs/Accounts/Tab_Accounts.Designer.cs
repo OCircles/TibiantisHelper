@@ -90,7 +90,7 @@ namespace TibiantisHelper.Tabs
             // 
             this.splitContainer2.Panel2.Controls.Add(this.textBox12);
             this.splitContainer2.Size = new System.Drawing.Size(235, 415);
-            this.splitContainer2.SplitterDistance = 177;
+            this.splitContainer2.SplitterDistance = 201;
             this.splitContainer2.TabIndex = 3;
             // 
             // checkBox_hideAcc
@@ -100,7 +100,7 @@ namespace TibiantisHelper.Tabs
             this.checkBox_hideAcc.Checked = global::TibiantisHelper.Properties.Settings.Default.AccountsHideLogin;
             this.checkBox_hideAcc.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_hideAcc.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::TibiantisHelper.Properties.Settings.Default, "AccountsHideLogin", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox_hideAcc.Location = new System.Drawing.Point(5, 157);
+            this.checkBox_hideAcc.Location = new System.Drawing.Point(0, 183);
             this.checkBox_hideAcc.Name = "checkBox_hideAcc";
             this.checkBox_hideAcc.Size = new System.Drawing.Size(149, 17);
             this.checkBox_hideAcc.TabIndex = 5;
@@ -118,7 +118,7 @@ namespace TibiantisHelper.Tabs
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
             this.textBox10.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox10.Size = new System.Drawing.Size(234, 105);
+            this.textBox10.Size = new System.Drawing.Size(234, 103);
             this.textBox10.TabIndex = 4;
             this.textBox10.WordWrap = false;
             // 
@@ -138,9 +138,9 @@ namespace TibiantisHelper.Tabs
             // 
             this.button_addAccount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_addAccount.Location = new System.Drawing.Point(3, 131);
+            this.button_addAccount.Location = new System.Drawing.Point(-1, 130);
             this.button_addAccount.Name = "button_addAccount";
-            this.button_addAccount.Size = new System.Drawing.Size(110, 23);
+            this.button_addAccount.Size = new System.Drawing.Size(236, 23);
             this.button_addAccount.TabIndex = 0;
             this.button_addAccount.Text = "Add Account";
             this.button_addAccount.UseVisualStyleBackColor = true;
@@ -150,9 +150,9 @@ namespace TibiantisHelper.Tabs
             // 
             this.button_removeAccount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_removeAccount.Location = new System.Drawing.Point(122, 131);
+            this.button_removeAccount.Location = new System.Drawing.Point(-1, 155);
             this.button_removeAccount.Name = "button_removeAccount";
-            this.button_removeAccount.Size = new System.Drawing.Size(110, 23);
+            this.button_removeAccount.Size = new System.Drawing.Size(236, 23);
             this.button_removeAccount.TabIndex = 1;
             this.button_removeAccount.Text = "Remove Account";
             this.button_removeAccount.UseVisualStyleBackColor = true;
@@ -166,7 +166,7 @@ namespace TibiantisHelper.Tabs
             this.textBox12.Name = "textBox12";
             this.textBox12.ReadOnly = true;
             this.textBox12.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox12.Size = new System.Drawing.Size(235, 234);
+            this.textBox12.Size = new System.Drawing.Size(235, 210);
             this.textBox12.TabIndex = 0;
             this.textBox12.Text = resources.GetString("textBox12.Text");
             // 
