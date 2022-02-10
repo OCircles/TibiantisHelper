@@ -65,7 +65,7 @@ namespace TibiantisHelper
                             }
 
                             var chars = new List<(string, string)>();
-                            var ci = line.IndexOf("<b>Characters</b>");
+                            var ci = line.IndexOf("Characters");
 
                             if (ci != -1)
                             {
