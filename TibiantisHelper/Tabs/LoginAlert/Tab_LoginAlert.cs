@@ -74,6 +74,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
                     var grp = new TrackedPlayerGroup() { Name = diag.GroupName };
                     PlayerGroups.Add(grp);
                     AddGroupControl(grp);
+                    SaveGroups();
                 }
             }
 
@@ -140,6 +141,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
         private void AddGroupControl(TrackedPlayerGroup group)
         {
             var groupControl = new Control_TrackedPlayerGroup(group);
+            groupControl.Visible = false;
 
             group.Control = groupControl;
 
@@ -159,7 +161,10 @@ namespace TibiantisHelper.Tabs.LoginAlert
             };
 
             panel1.Controls.Add(groupControl);
+            panel1.Controls.SetChildIndex(groupControl, 0);
             groupControl.Dock = DockStyle.Top;
+            groupControl.Visible = true;
+            panel1.ScrollToBottom();
         }
 
         public void RemoveGroup(TrackedPlayerGroup group)
@@ -191,7 +196,6 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
         public void Import(TrackedPlayerGroup group, TrackedPlayerGroup destination = null)
         {
-            bool repop = false;
             var import = new Form_ImportDialog(group, destination);
 
             if (import.ShowDialog() == DialogResult.OK)
@@ -201,7 +205,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
                 {
                     var ng = new TrackedPlayerGroup() { Name = import.ImportNewGroupName, Players = import.ImportPlayers };
                     PlayerGroups.Add(ng);
-                    repop = true;
+                    AddGroupControl(ng);
                 }
                 else
                 {
@@ -213,8 +217,8 @@ namespace TibiantisHelper.Tabs.LoginAlert
                     }
                     import.ImportGroupDestination.Control.RefreshList();
                 }
-                if (repop)
-                    this.Populate();
+
+                SaveGroups();
             }
         }
 
@@ -487,6 +491,14 @@ namespace TibiantisHelper.Tabs.LoginAlert
         {
             return DisplayRectangle.Location;
         }
+
+
+        public void ScrollToBottom()
+        {
+            SetDisplayRectLocation(0, AutoScrollPosition.Y - ClientRectangle.Bottom);
+            AdjustFormScrollbars(true);
+        }
+
     }
 
     public class TrackedPlayerGroup
