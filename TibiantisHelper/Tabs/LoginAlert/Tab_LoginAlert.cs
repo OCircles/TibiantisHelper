@@ -161,6 +161,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             groupControl.GroupRemove += (s, e) =>
             {
                 RemoveGroup(group);
+                CheckOnline(false);
             };
             panel1.Controls.Add(groupControl);
             groupControl.Dock = DockStyle.Top;
