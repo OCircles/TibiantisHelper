@@ -26,7 +26,7 @@ namespace TibiantisHelper
             string nameSafe = System.Net.WebUtility.UrlEncode(name);
 
             AddLabel(name, "https://tibiantis.online/?page=character&name=" + nameSafe);
-            AddLabel($"{vocation}, level {level}");
+            AddLabel($"{vocation} (Level {level})");
 
             if (guild == "None")
                 AddLabel("No Guild");
@@ -52,7 +52,7 @@ namespace TibiantisHelper
                     var cname = carr[0];
                     var clvl = carr[1];
 
-                    AddLabel($"{cname} ({clvl})");
+                    AddLabel($"{cname} (Level {clvl})");
                 }
             }
 
