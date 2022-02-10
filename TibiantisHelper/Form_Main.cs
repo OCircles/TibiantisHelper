@@ -43,7 +43,7 @@ namespace TibiantisHelper
 
         public static TraybarContainer _traybarContainer;
 
-        static string webpage_whoIsOnline = "https://tibiantis.online/?page=WhoIsOnline";
+        static string webpage_whoIsOnline = "https://tibiantis.online/?page=whoisonline&ord=lvl&sort=DESC";
 
         public static Color mainBackcolor = Color.FromArgb(251, 234, 208);
 
@@ -484,48 +484,17 @@ namespace TibiantisHelper
 
                                 _currentlyOnline.Add(player);
                             }
-                            
-                            
-
-                            // Console.WriteLine("Parsed " + _currentlyOnline.Count + " usernames from website");
-
                         }
-                        
-                        if (line.Contains("'text-success'>Online"))
-                        {
-                            // Sets the "X players" header label
-                            // Just in case online user string turns out to be unreliable
-                            // (Like maybe if theres >200 users it'll have several pages, and currently we're only getting one page)
 
-                            header_label_onlineStatus.Text = "Online";
-                            int end = line.Length;
-                            var index = line.IndexOf("<b>");
-                            int i = 0;
+                        header_linkLabel_playersOnline.Text = $"{_currentlyOnline.Count} players";
 
-                            foreach (var c in line.Substring(index + 3))
-                            {
-                                if (end == line.Length && c == '<')
-                                    end = i;
-                                i++;
-                            }
-
-                            if (!header_linkLabel_playersOnline.Visible)
-                                header_linkLabel_playersOnline.Visible = true;
-
-                            header_linkLabel_playersOnline.Text = line.Substring(index + 3, end) + " players";
-                            notifyIcon1.Text = "Tibiantis Helper";
-                            notifyIcon1.Text += Environment.NewLine + header_linkLabel_playersOnline.Text;
-                        }
-                        else if (line.Contains("'text-danger'>Offline"))
-                        {
+                        if (_currentlyOnline.Count == 0)
                             header_label_onlineStatus.Text = "Offline";
+                        else
+                            header_label_onlineStatus.Text = "Online";
 
-                            header_linkLabel_playersOnline.Text = "0 players";
-                            notifyIcon1.Text = "Tibiantis Helper";
-                            notifyIcon1.Text += Environment.NewLine + header_linkLabel_playersOnline.Text;
-
-                            _currentlyOnline.Clear();
-                        }
+                        notifyIcon1.Text = "Tibiantis Helper";
+                        notifyIcon1.Text += Environment.NewLine + header_linkLabel_playersOnline.Text;
 
                     }
                 }
