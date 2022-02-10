@@ -141,7 +141,9 @@ namespace TibiantisHelper.Tabs.LoginAlert
         private void AddGroupControl(TrackedPlayerGroup group, bool scrollToBottom = true)
         {
             var groupControl = new Control_TrackedPlayerGroup(group);
-            //groupControl.Visible = false;
+
+            if (scrollToBottom)
+                groupControl.Visible = false; // This is skipped on startup populating so layout doesn't get messed up for minimized groups
 
             group.Control = groupControl;
 
