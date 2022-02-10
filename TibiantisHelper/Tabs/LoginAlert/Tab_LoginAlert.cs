@@ -154,6 +154,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
             groupControl.GroupChanged += (s, e) =>
             {
+                UpdateTextbox();
                 SaveGroups();
             };
 
