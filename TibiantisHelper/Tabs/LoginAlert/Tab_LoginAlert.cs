@@ -65,7 +65,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             {
                 if (!string.IsNullOrEmpty(diag.GroupName))
                 {
-                    if (PlayerGroups.Exists(ss => diag.GroupName.Equals(diag.GroupName,StringComparison.OrdinalIgnoreCase)))
+                    if (PlayerGroups.Exists(ss => diag.GroupName.Equals(ss.Name,StringComparison.OrdinalIgnoreCase)))
                     {
                         MessageBox.Show("Duplicate group name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
