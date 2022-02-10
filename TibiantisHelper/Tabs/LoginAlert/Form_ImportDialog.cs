@@ -20,27 +20,21 @@ namespace TibiantisHelper.Tabs.LoginAlert
         public TrackedPlayerGroup ImportGroupDestination;   // Null on new
         public List<string> ImportPlayers;
 
+        private TrackedPlayerGroup Group;
 
         public Form_ImportDialog(List<string> players, TrackedPlayerGroup destination = null)
         {
-            ImportPlayers = players;
-            if (destination != null)
-                ImportGroupDestination = destination;
+            Group = new TrackedPlayerGroup() { Players = players };
+            init(destination);
 
-            init();
         }
 
         public Form_ImportDialog(TrackedPlayerGroup group, TrackedPlayerGroup destination = null)
         {
-            ImportPlayers = group.Players;
-            if (destination != null)
-                ImportGroupDestination = destination;
-
-            init();
+            Group = group;
+            init(destination);
 
             textBox1.Text = group.Name;
-
-            SelectInCombobox(group.Name);
         }
 
         private void SelectInCombobox(string target)
@@ -55,8 +49,12 @@ namespace TibiantisHelper.Tabs.LoginAlert
         }
 
 
-        private void init()
+        private void init(TrackedPlayerGroup destination = null)
         {
+            ImportPlayers = Group.Players;
+            if (destination != null)
+                ImportGroupDestination = destination;
+
             InitializeComponent();
 
 
@@ -69,11 +67,10 @@ namespace TibiantisHelper.Tabs.LoginAlert
             if (comboBox1.Items.Count != 0)
             {
                 comboBox1.SelectedIndex = 0;
-                if (ImportGroupDestination != null)
-                {
+                if (destination != null)
                     SelectInCombobox(ImportGroupDestination.Name);
-                    radioButton2.Checked = true;
-                }
+                else
+                    SelectInCombobox(Group.Name);
             }
         }
 

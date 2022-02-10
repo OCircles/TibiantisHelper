@@ -220,7 +220,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
 				}
 			}
 		}
-		private void btoolStripMenuItem_editName_Click(object sender, EventArgs e)
+		private void toolStripMenuItem_editName_Click(object sender, EventArgs e)
 		{
 			Form_GroupEdit diag = new Form_GroupEdit(Group.Name);
 			if (diag.ShowDialog() == DialogResult.OK)
@@ -231,6 +231,18 @@ namespace TibiantisHelper.Tabs.LoginAlert
 					label_name.Text = Group.Name;
 					GroupChanged?.Invoke(this, EventArgs.Empty);
 				}
+			}
+		}
+		private void toolStripMenuItem_import_Click(object sender, EventArgs e)
+		{
+			var diag = new OpenFileDialog();
+			diag.Filter = Tab_LoginAlert.file_playerGroupExtensionFilter();
+			diag.RestoreDirectory = true;
+
+			if (diag.ShowDialog() == DialogResult.OK)
+			{
+				var group = Tab_LoginAlert.LoadGroups(diag.FileName)[0];
+				Form_Main.Form.tab_LoginAlert1.Import(group, Group);
 			}
 		}
 
@@ -368,18 +380,6 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
 
 
-		private void toolStripMenuItem_import_Click(object sender, EventArgs e)
-		{
-			var diag = new OpenFileDialog();
-			diag.Filter = Tab_LoginAlert.file_playerGroupExtensionFilter();
-			diag.RestoreDirectory = true;
-
-			if (diag.ShowDialog() == DialogResult.OK)
-			{
-				var group = Tab_LoginAlert.LoadGroups(diag.FileName)[0];
-				Form_Main.Form.tab_LoginAlert1.Import(group, Group);
-			}
-		}
 
         private void button_settings_MouseClick(object sender, MouseEventArgs e)
         {

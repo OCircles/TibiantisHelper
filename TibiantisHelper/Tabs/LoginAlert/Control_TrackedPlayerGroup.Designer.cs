@@ -224,7 +224,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.toolStripMenuItem_editName.Name = "toolStripMenuItem_editName";
             this.toolStripMenuItem_editName.Size = new System.Drawing.Size(138, 22);
             this.toolStripMenuItem_editName.Text = "Edit Name";
-            this.toolStripMenuItem_editName.Click += new System.EventHandler(this.btoolStripMenuItem_editName_Click);
+            this.toolStripMenuItem_editName.Click += new System.EventHandler(this.toolStripMenuItem_editName_Click);
             // 
             // toolStripSeparator1
             // 

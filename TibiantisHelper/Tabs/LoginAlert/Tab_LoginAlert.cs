@@ -192,7 +192,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
         public void Import(TrackedPlayerGroup group, TrackedPlayerGroup destination = null)
         {
             bool repop = false;
-            var import = new Form_ImportDialog(group.Players, destination);
+            var import = new Form_ImportDialog(group, destination);
 
             if (import.ShowDialog() == DialogResult.OK)
             {
@@ -492,7 +492,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
     public class TrackedPlayerGroup
     {
         public Control_TrackedPlayerGroup Control;
-        public string Name;
+        public string Name = "Uncategorized";
         public int Icon = 207;
         public bool Minimized = false;
         public bool TrayNotif = false;
