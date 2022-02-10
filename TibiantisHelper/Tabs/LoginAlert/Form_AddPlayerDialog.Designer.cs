@@ -41,7 +41,6 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(258, 21);
             this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -62,7 +61,6 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button2
             // 
