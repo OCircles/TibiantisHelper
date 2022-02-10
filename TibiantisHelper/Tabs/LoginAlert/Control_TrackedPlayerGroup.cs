@@ -322,6 +322,10 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
 			if (diag.ShowDialog() == DialogResult.OK)
 			{
+				if (string.IsNullOrEmpty(diag.PlayerName))
+					return;
+
+
 				Group.Players.Add(diag.PlayerName);
 				RefreshList();
 			}
@@ -460,7 +464,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
         private void objectListView1_CellEditValidating(object sender, CellEditEventArgs e)
         {
 
-			if (e.Cancel || (string)e.Value == (string)e.NewValue)
+			if (e.Cancel || string.IsNullOrEmpty((string)e.NewValue) || (string)e.Value == (string)e.NewValue)
 			{
 				e.Cancel = true;
 				return;
