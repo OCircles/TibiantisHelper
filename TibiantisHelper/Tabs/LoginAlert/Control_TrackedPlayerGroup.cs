@@ -479,5 +479,18 @@ namespace TibiantisHelper.Tabs.LoginAlert
 		}
         #endregion
 
+        private void toolStripMenuItem_MoveUp_Click(object sender, EventArgs e)
+        {
+			int i = Parent.Controls.GetChildIndex(this);
+			Parent.Controls.SetChildIndex(this, i + 1);
+		}
+
+        private void toolStripMenuItem_MoveDown_Click(object sender, EventArgs e)
+        {
+			int i = Parent.Controls.GetChildIndex(this);
+			if (i == 0)
+				return;
+			Parent.Controls.SetChildIndex(this, i - 1);
+		}
     }
 }

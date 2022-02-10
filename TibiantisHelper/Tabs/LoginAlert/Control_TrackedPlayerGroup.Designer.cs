@@ -190,7 +190,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.toolStripMenuItem_MoveUp,
             this.toolStripMenuItem_MoveDown});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 98);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 120);
             // 
             // toolStripMenuItem_fileDropdown
             // 
@@ -199,7 +199,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
             this.toolStripMenuItem_import});
             this.toolStripMenuItem_fileDropdown.Image = global::TibiantisHelper.Properties.Resources._16folder;
             this.toolStripMenuItem_fileDropdown.Name = "toolStripMenuItem_fileDropdown";
-            this.toolStripMenuItem_fileDropdown.Size = new System.Drawing.Size(138, 22);
+            this.toolStripMenuItem_fileDropdown.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem_fileDropdown.Text = "File";
             // 
             // toolStripMenuItem_saveAs
@@ -222,28 +222,30 @@ namespace TibiantisHelper.Tabs.LoginAlert
             // 
             this.toolStripMenuItem_editName.Image = global::TibiantisHelper.Properties.Resources._16edit;
             this.toolStripMenuItem_editName.Name = "toolStripMenuItem_editName";
-            this.toolStripMenuItem_editName.Size = new System.Drawing.Size(138, 22);
+            this.toolStripMenuItem_editName.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem_editName.Text = "Edit Name";
             this.toolStripMenuItem_editName.Click += new System.EventHandler(this.toolStripMenuItem_editName_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(135, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // toolStripMenuItem_MoveUp
             // 
             this.toolStripMenuItem_MoveUp.Image = global::TibiantisHelper.Properties.Resources._16up;
             this.toolStripMenuItem_MoveUp.Name = "toolStripMenuItem_MoveUp";
-            this.toolStripMenuItem_MoveUp.Size = new System.Drawing.Size(138, 22);
+            this.toolStripMenuItem_MoveUp.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem_MoveUp.Text = "Move Up";
+            this.toolStripMenuItem_MoveUp.Click += new System.EventHandler(this.toolStripMenuItem_MoveUp_Click);
             // 
             // toolStripMenuItem_MoveDown
             // 
             this.toolStripMenuItem_MoveDown.Image = global::TibiantisHelper.Properties.Resources._16down;
             this.toolStripMenuItem_MoveDown.Name = "toolStripMenuItem_MoveDown";
-            this.toolStripMenuItem_MoveDown.Size = new System.Drawing.Size(138, 22);
+            this.toolStripMenuItem_MoveDown.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem_MoveDown.Text = "Move Down";
+            this.toolStripMenuItem_MoveDown.Click += new System.EventHandler(this.toolStripMenuItem_MoveDown_Click);
             // 
             // label_playerControl
             // 
