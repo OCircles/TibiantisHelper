@@ -344,6 +344,8 @@ namespace TibiantisHelper.Tabs.LoginAlert
 						List<string> copy = new List<string>();
 						copy.AddRange(Group.Players);
 						Group.Players.Remove(player);
+						if (Tab_LoginAlert.LastOnline.Contains(player))
+							Tab_LoginAlert.LastOnline.Remove(player);
 					}
 				}
 				else
@@ -364,6 +366,9 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
 							if (!matched)
 								copy.Add(p);
+							else
+								if (Tab_LoginAlert.LastOnline.Contains(p))
+										Tab_LoginAlert.LastOnline.Remove(p);
 
 						}
 

@@ -154,7 +154,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
             groupControl.GroupChanged += (s, e) =>
             {
-                UpdateTextbox();
+                CheckOnline(false);
                 SaveGroups();
             };
 
@@ -378,7 +378,7 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
         #region Online check
         
-        public void CheckOnline()
+        public void CheckOnline(bool alert = true)
         {
             List<string> alertPlayers = new List<string>();
             TrackedPlayerGroup alertGroup = null;
@@ -423,7 +423,8 @@ namespace TibiantisHelper.Tabs.LoginAlert
 
             UpdateTextbox();
 
-            LoginAlert(alertPlayers, alertGroup);
+            if (alert)
+                LoginAlert(alertPlayers, alertGroup);
 
         }
 
