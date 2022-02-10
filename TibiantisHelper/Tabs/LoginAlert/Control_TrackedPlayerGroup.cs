@@ -428,6 +428,9 @@ namespace TibiantisHelper.Tabs.LoginAlert
 					RemoveSelectedPlayers();
 				};
 
+				if (objectListView1.SelectedObjects.Count == 0)
+					remove.Enabled = false;
+
 				ctx.Items.Add("-");
 
 				var lookup = ctx.Items.Add("Lookup");
