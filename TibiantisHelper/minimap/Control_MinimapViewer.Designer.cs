@@ -34,6 +34,7 @@ namespace TibiantisHelper
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer_markerDrawTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,6 +80,11 @@ namespace TibiantisHelper
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // timer_markerDrawTimer
+            // 
+            this.timer_markerDrawTimer.Interval = 250;
+            this.timer_markerDrawTimer.Tick += new System.EventHandler(this.timer_markerDrawTimer_Tick);
+            // 
             // Control_MinimapViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,5 +107,6 @@ namespace TibiantisHelper
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer_markerDrawTimer;
     }
 }

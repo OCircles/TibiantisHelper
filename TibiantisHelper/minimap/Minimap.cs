@@ -153,7 +153,6 @@ namespace TibiantisHelper
 
             foreach (XmlNode node in xmlDoc.DocumentElement)
             {
-                Console.WriteLine(node.Name);
                 if (!String.IsNullOrEmpty(node.InnerText))
                 {
                     switch (node.Name)
@@ -189,7 +188,6 @@ namespace TibiantisHelper
 
         public Point ImgPosToMapPos(Point position) { return new Point { X = position.X + (FirstSubsection.X * 256), Y = position.Y + (FirstSubsection.Y * 256) }; }
         public Point MapPosToImgPos(Point position) {
-            Console.WriteLine(position.X + " " + position.Y);
             return new Point {
             X = position.X - (FirstSubsection.X * 256),
             Y = position.Y - (FirstSubsection.Y * 256)

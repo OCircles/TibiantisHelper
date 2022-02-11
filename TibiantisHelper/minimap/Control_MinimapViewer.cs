@@ -65,6 +65,11 @@ namespace TibiantisHelper
         Size s_allSectorPixels;
         Point s_lastSector;
 
+
+        List<Tuple<Point, int>> MapMarkerPositions;
+        List<MapMarker> MapMarkers;
+
+
         public bool IsDrawing { get { return r_isMoving || r_isDragging || r_isSelectingSector; } }
 
 
@@ -92,6 +97,8 @@ namespace TibiantisHelper
         public Control_MinimapViewer() {
             InitializeComponent();
 
+            MapMarkerPositions = new List<Tuple<Point, int>>();
+            MapMarkers = new List<MapMarker>();
             HighlightedAreas = new List<HighlightedArea>();
 
             label1.BackColor = background;
@@ -107,7 +114,75 @@ namespace TibiantisHelper
             pictureBox1.GotFocus += pictureBox1_GotFocus;
             pictureBox1.LostFocus += pictureBox1_LostFocus;
 
+            GetMarkers();
+
         }
+
+        private void GetMarkers()
+        {
+            MapMarkerPositions.Clear();
+            for (int i = 0; i < DataReader.Npcs.Count; i++)
+            {
+                var n = DataReader.Npcs[i];
+                if (n.Position.Z == p_Layer)
+                    MapMarkerPositions.Add(new Tuple<Point, int>(new Point(n.Position.X, n.Position.Y), i));
+            }
+        }
+
+        private void DrawMapMarkers()
+        {
+            // This could be replaced with a K-D tree for better performance
+
+
+            // Wow, I really need to make the minimap static...
+            var topLeft = Form_Main._miniMap.ImgPosToMapPos(mouseToPos(new Point(0, 0)));
+            var bottomLeft = Form_Main._miniMap.ImgPosToMapPos(mouseToPos(new Point(0, pictureBox1.Height)));
+            var topRight = Form_Main._miniMap.ImgPosToMapPos(mouseToPos(new Point(pictureBox1.Width, 0)));
+
+            ClearMapMarkers();
+
+            pictureBox1.SuspendLayout();
+
+            foreach (var m in MapMarkerPositions)
+            {
+                // Console.WriteLine(m.Item1.ToString());
+
+                if (m.Item1.X >= topLeft.X &&
+                    m.Item1.X <= topRight.X &&
+                    m.Item1.Y >= topLeft.Y &&
+                    m.Item1.Y <= bottomLeft.Y)
+                {
+                    Point[] tv = new Point[] { Form_Main._miniMap.MapPosToImgPos(m.Item1) };
+                    transform.TransformPoints(tv);
+
+                    var iconSize = 16;
+
+                    var loc = new Point(
+                        tv[0].X - (iconSize / 2),
+                        tv[0].Y - (iconSize / 2)
+                    );
+
+                    MapMarker marker = new MapMarker(m.Item2);
+                    MapMarkers.Add(marker);
+
+                    pictureBox1.Controls.Add(marker);
+
+                    marker.Location = loc;
+                    marker.BringToFront();
+
+
+                }
+                pictureBox1.ResumeLayout();
+            }
+
+        }
+
+        private void ClearMapMarkers()
+        {
+            foreach (var mm in MapMarkers)
+                pictureBox1.Controls.Remove(mm);
+        }
+
 
 
         private void Control_MinimapViewer_Load(object sender, EventArgs e)
@@ -161,6 +236,8 @@ namespace TibiantisHelper
                     ZoomPosition(p_Transform, this.c_zoomScale);
 
                     pictureBox1.Invalidate();
+                    GetMarkers();
+                    DrawMapMarkers();
                 }
             }
             MapFileCheck();
@@ -189,7 +266,6 @@ namespace TibiantisHelper
             c_zoomScale = zoom;
             ZoomPosition(p_Transform, zoom);
         }
-
 
 
         #region Drawing
@@ -271,9 +347,10 @@ namespace TibiantisHelper
                                         1+area.Size.Height *2
                                         )
                                     ));
-
-                                //Console.WriteLine("drawing");
                             }
+
+                e.Graphics.Transform.Invert();
+                e.Graphics.DrawImage(Properties.Resources._16save, 25,25);
 
                 Redraw?.Invoke(this, EventArgs.Empty);
             }
@@ -547,6 +624,9 @@ namespace TibiantisHelper
 
             if (r_isDragging)
             {
+                if (MapMarkers.Count != 0)
+                    ClearMapMarkers();
+
                 var xx = (_lastMousePos.X - e.X) / c_zoomScale;
                 var yy = (_lastMousePos.Y - e.Y) / c_zoomScale;
 
@@ -573,6 +653,7 @@ namespace TibiantisHelper
                 r_isDragging = false;
 
                 FixViewport();
+                DrawMapMarkers();
 
                 pictureBox1.Invalidate();
 
@@ -654,9 +735,29 @@ namespace TibiantisHelper
 
             transform.Scale(c_zoomScale, c_zoomScale);
 
+
             FixViewport();
             pictureBox1.Invalidate();
+
+
+            if (MapMarkers.Count != 0)
+            {
+                ClearMapMarkers();
+                timer_markerDrawTimer.Enabled = true;
+            }
         }
+
+        private void timer_markerDrawTimer_Tick(object sender, EventArgs e)
+        {
+
+            //foreach (var mark in MapMarkers)
+            //    mark.Location = mark.GetClientPoint(transform);
+
+            DrawMapMarkers();
+
+            timer_markerDrawTimer.Enabled = false;
+        }
+
         private void ZoomScroll(bool zoomIn)
         {
             var newScale = Math.Min(Math.Max(
@@ -681,9 +782,51 @@ namespace TibiantisHelper
 
 
 
+        public class MapMarker : Button
+        {
+            int npc = -1;
+
+            public MapMarker(int npc)
+            {
+                this.npc = npc;
+
+                this.TabStop = false;
+                this.FlatStyle = FlatStyle.Flat;
+                this.FlatAppearance.BorderSize = 0;
+                this.FlatAppearance.MouseDownBackColor = Color.FromArgb(100, 150, 150, 150);
+                this.FlatAppearance.MouseOverBackColor = Color.FromArgb(100, 255, 255, 255);
+                this.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+                this.BackColor = Color.FromArgb(0, 0, 0, 0);
+
+                this.Size = new Size(16, 16);
+
+                this.Image = Properties.Resources.map_helmet;
+                if (DataReader.Npcs[npc].Vendor) this.Image = Properties.Resources.map_coin;
+                if (DataReader.Npcs[npc].IsTeacher) this.Image = Properties.Resources.map_book;
+            }
+    
+            public Point GetClientPoint(Matrix transform)
+            {
+                var markerPos = new Point(DataReader.Npcs[npc].Position.X, DataReader.Npcs[npc].Position.Y);
+
+                Point[] tv = new Point[] { Form_Main._miniMap.MapPosToImgPos(markerPos) };
+                transform.TransformPoints(tv);
+
+                var iconSize = 16;
+
+                var loc = new Point(
+                    tv[0].X - (iconSize / 2),
+                    tv[0].Y - (iconSize / 2)
+                );
+
+                return loc;
+        }
+    
+    }
 
 
     }
+
 
     public class HighlightedArea {
         public DataReader.Point3D Position;

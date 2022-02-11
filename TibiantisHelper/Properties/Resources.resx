@@ -142,6 +142,15 @@
   <data name="IconTrayRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconTrayRed.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="map_book" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map_book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="map_coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map_coin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="map_helmet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map_helmet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Pause" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
