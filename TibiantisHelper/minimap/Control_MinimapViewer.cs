@@ -784,44 +784,44 @@ namespace TibiantisHelper
 
         public class MapMarker : Button
         {
-            int npc = -1;
+            DataReader.NPC NPC;
 
             public MapMarker(int npc)
             {
-                this.npc = npc;
+                NPC = DataReader.Npcs[npc];
 
-                this.TabStop = false;
-                this.FlatStyle = FlatStyle.Flat;
-                this.FlatAppearance.BorderSize = 0;
-                this.FlatAppearance.MouseDownBackColor = Color.FromArgb(100, 150, 150, 150);
-                this.FlatAppearance.MouseOverBackColor = Color.FromArgb(100, 255, 255, 255);
-                this.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-                this.BackColor = Color.FromArgb(0, 0, 0, 0);
+                TabStop = false;
+                FlatStyle = FlatStyle.Flat;
+                FlatAppearance.BorderSize = 0;
+                FlatAppearance.MouseDownBackColor = Color.FromArgb(100, 150, 150, 150);
+                FlatAppearance.MouseOverBackColor = Color.FromArgb(100, 255, 255, 255);
+                FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+                BackColor = Color.FromArgb(0, 0, 0, 0);
 
-                this.Size = new Size(16, 16);
+                Size = new Size(16, 16);
 
                 string tipVoc = "NPC";
 
-                this.Image = Properties.Resources.map_helmet;
-                if (DataReader.Npcs[npc].Vendor)
+                Image = Properties.Resources.map_helmet;
+                if (NPC.Vendor)
                 {
-                    this.Image = Properties.Resources.map_coin;
+                    Image = Properties.Resources.map_coin;
                     tipVoc = "Vendor";
                 }
-                if (DataReader.Npcs[npc].IsTeacher)
+                if (NPC.IsTeacher)
                 {
-                    this.Image = Properties.Resources.map_book;
+                    Image = Properties.Resources.map_book;
                     tipVoc = "Teacher";
-                    if (DataReader.Npcs[npc].Vendor)
+                    if (NPC.Vendor)
                         tipVoc += "/Vendor";
                 }
 
-                string tipText = DataReader.Npcs[npc].Name + " (" + DataReader.Npcs[npc].Location.Name + ")" +
+                string tipText = NPC.Name + " (" + NPC.Location.Name + ")" +
                     Environment.NewLine +
                     Environment.NewLine +
                     tipVoc +
                     Environment.NewLine +
-                    DataReader.Npcs[npc].Position.X + "," + DataReader.Npcs[npc].Position.Y + "," + DataReader.Npcs[npc].Position.Z;
+                    NPC.Position.X + "," + NPC.Position.Y + "," + NPC.Position.Z;
 
                 ToolTip tip = new ToolTip();
                 tip.SetToolTip(this, tipText);
@@ -831,7 +831,7 @@ namespace TibiantisHelper
 
             public Point GetClientPoint(Matrix transform)
             {
-                var markerPos = new Point(DataReader.Npcs[npc].Position.X, DataReader.Npcs[npc].Position.Y);
+                var markerPos = new Point(this.NPC.Position.X, this.NPC.Position.Y);
 
                 Point[] tv = new Point[] { Form_Main._miniMap.MapPosToImgPos(markerPos) };
                 transform.TransformPoints(tv);
