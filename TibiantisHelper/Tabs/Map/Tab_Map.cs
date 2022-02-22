@@ -36,6 +36,8 @@ namespace TibiantisHelper
 
         private void Tab_Map_Load(object sender, System.EventArgs e)
         {
+            if (DesignMode)
+                return;
             
             control_MinimapViewer1.SectorSelected += control_MinimapViewer1_SectorSelected;
             control_MinimapViewer1.Redraw += (ss, ee) => OnMinimapRedraw();

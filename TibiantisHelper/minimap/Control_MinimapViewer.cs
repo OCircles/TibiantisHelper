@@ -114,9 +114,22 @@ namespace TibiantisHelper
             pictureBox1.GotFocus += pictureBox1_GotFocus;
             pictureBox1.LostFocus += pictureBox1_LostFocus;
 
-            GetMarkers();
-
         }
+
+        private void Control_MinimapViewer_Load(object sender, EventArgs e)
+        {
+            if (DesignMode)
+                return;
+
+            if (Form_Main._miniMap.Initialized)
+            {
+                this.p_Transform = new PointF(Form_Main._miniMap.TotalBitmapSize.Width / 2, Form_Main._miniMap.TotalBitmapSize.Height / 2);
+                SLoad();
+            }
+            MapFileCheck();
+            GetMarkers();
+        }
+
 
         private void GetMarkers()
         {
@@ -185,18 +198,6 @@ namespace TibiantisHelper
 
 
 
-        private void Control_MinimapViewer_Load(object sender, EventArgs e)
-        {
-            if (DesignMode)
-                return;
-
-            if (Form_Main._miniMap.Initialized)
-            {
-                this.p_Transform = new PointF(Form_Main._miniMap.TotalBitmapSize.Width / 2, Form_Main._miniMap.TotalBitmapSize.Height / 2);
-                SLoad();
-            }
-            MapFileCheck();
-        }
 
         private void Control_Minimap_Resize(object sender, EventArgs e)
         {
