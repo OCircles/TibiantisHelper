@@ -826,7 +826,7 @@ namespace TibiantisHelper
                 ToolTip tip = new ToolTip();
                 tip.SetToolTip(this, tipText);
                 tip.AutomaticDelay = 0;
-
+                tip.UseFading = tip.UseAnimation = false;
             }
 
             public Point GetClientPoint(Matrix transform)
