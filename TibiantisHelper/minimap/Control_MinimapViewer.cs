@@ -800,11 +800,35 @@ namespace TibiantisHelper
 
                 this.Size = new Size(16, 16);
 
+                string tipVoc = "NPC";
+
                 this.Image = Properties.Resources.map_helmet;
-                if (DataReader.Npcs[npc].Vendor) this.Image = Properties.Resources.map_coin;
-                if (DataReader.Npcs[npc].IsTeacher) this.Image = Properties.Resources.map_book;
+                if (DataReader.Npcs[npc].Vendor)
+                {
+                    this.Image = Properties.Resources.map_coin;
+                    tipVoc = "Vendor";
+                }
+                if (DataReader.Npcs[npc].IsTeacher)
+                {
+                    this.Image = Properties.Resources.map_book;
+                    tipVoc = "Teacher";
+                    if (DataReader.Npcs[npc].Vendor)
+                        tipVoc += "/Vendor";
+                }
+
+                string tipText = DataReader.Npcs[npc].Name + " (" + DataReader.Npcs[npc].Location.Name + ")" +
+                    Environment.NewLine +
+                    Environment.NewLine +
+                    tipVoc +
+                    Environment.NewLine +
+                    DataReader.Npcs[npc].Position.X + "," + DataReader.Npcs[npc].Position.Y + "," + DataReader.Npcs[npc].Position.Z;
+
+                ToolTip tip = new ToolTip();
+                tip.SetToolTip(this, tipText);
+                tip.AutomaticDelay = 0;
+
             }
-    
+
             public Point GetClientPoint(Matrix transform)
             {
                 var markerPos = new Point(DataReader.Npcs[npc].Position.X, DataReader.Npcs[npc].Position.Y);
