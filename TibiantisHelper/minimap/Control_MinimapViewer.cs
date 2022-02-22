@@ -237,7 +237,8 @@ namespace TibiantisHelper
 
                     pictureBox1.Invalidate();
                     GetMarkers();
-                    DrawMapMarkers();
+                    timer_markerDrawTimer.Stop();
+                    timer_markerDrawTimer.Start();
                 }
             }
             MapFileCheck();
