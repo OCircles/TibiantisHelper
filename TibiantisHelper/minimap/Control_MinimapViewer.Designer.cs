@@ -82,7 +82,7 @@ namespace TibiantisHelper
             // 
             // timer_markerDrawTimer
             // 
-            this.timer_markerDrawTimer.Interval = 250;
+            this.timer_markerDrawTimer.Interval = 1000;
             this.timer_markerDrawTimer.Tick += new System.EventHandler(this.timer_markerDrawTimer_Tick);
             // 
             // Control_MinimapViewer

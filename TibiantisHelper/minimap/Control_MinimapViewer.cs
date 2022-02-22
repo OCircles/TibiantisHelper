@@ -179,8 +179,8 @@ namespace TibiantisHelper
 
         private void ClearMapMarkers()
         {
-            foreach (var mm in MapMarkers)
-                pictureBox1.Controls.Remove(mm);
+            for (int i = pictureBox1.Controls.Count - 1; i >= 0; --i)
+                pictureBox1.Controls[i].Dispose();
         }
 
 
@@ -624,6 +624,8 @@ namespace TibiantisHelper
 
             if (r_isDragging)
             {
+                timer_markerDrawTimer.Stop();
+
                 if (MapMarkers.Count != 0)
                     ClearMapMarkers();
 
@@ -653,7 +655,7 @@ namespace TibiantisHelper
                 r_isDragging = false;
 
                 FixViewport();
-                DrawMapMarkers();
+                timer_markerDrawTimer.Start();
 
                 pictureBox1.Invalidate();
 
@@ -719,6 +721,8 @@ namespace TibiantisHelper
         }
         private void ZoomPosition(PointF point, float zoom = 1f)
         {
+            timer_markerDrawTimer.Stop();
+
             p_Transform = point;
             c_zoomScale = zoom;
 
@@ -749,12 +753,7 @@ namespace TibiantisHelper
 
         private void timer_markerDrawTimer_Tick(object sender, EventArgs e)
         {
-
-            //foreach (var mark in MapMarkers)
-            //    mark.Location = mark.GetClientPoint(transform);
-
             DrawMapMarkers();
-
             timer_markerDrawTimer.Enabled = false;
         }
 
