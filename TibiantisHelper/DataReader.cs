@@ -1237,10 +1237,12 @@ namespace TibiantisHelper
                 Location closest = locations[0];
 
                 double lowestDistance = distance(this.Position.X, this.Position.Y, closest.Position.X, closest.Position.Y);
+                lowestDistance += Math.Abs(this.Position.Z - closest.Position.Z) * 5;
 
                 foreach (var loc in locations)
                 {
                     var dist = distance(this.Position.X, this.Position.Y, loc.Position.X, loc.Position.Y);
+                    dist += Math.Abs(this.Position.Z - loc.Position.Z) * 5;
                     if (dist < lowestDistance)
                     {
                         closest = loc;
