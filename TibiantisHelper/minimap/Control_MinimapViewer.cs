@@ -127,7 +127,6 @@ namespace TibiantisHelper
                 SLoad();
             }
             MapFileCheck();
-            GetMarkers();
         }
 
 
@@ -234,10 +233,10 @@ namespace TibiantisHelper
                     if (imgHandle != null)
                         imgHandle.Dispose(); // Seeing the profiler RAM after this makes me a happy boy
 
+                    GetMarkers();
                     ZoomPosition(p_Transform, this.c_zoomScale);
 
                     pictureBox1.Invalidate();
-                    GetMarkers();
                     timer_markerDrawTimer.Stop();
                     timer_markerDrawTimer.Start();
                 }
