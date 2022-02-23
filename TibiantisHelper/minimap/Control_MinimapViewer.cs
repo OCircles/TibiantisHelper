@@ -797,21 +797,21 @@ namespace TibiantisHelper
                 FlatAppearance.MouseDownBackColor = Color.FromArgb(100, 150, 150, 150);
                 FlatAppearance.MouseOverBackColor = Color.FromArgb(100, 255, 255, 255);
                 FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
-                BackColor = Color.FromArgb(0, 0, 0, 0);
+                BackColor = Color.FromArgb(50, 0, 0, 0);
 
-                Size = new Size(16, 16);
+                Size = new Size(17, 17);
 
                 string tipVoc = "NPC";
 
-                Image = Properties.Resources.map_helmet;
+                Image = Properties.Resources.icon_116;
                 if (NPC.Vendor)
                 {
-                    Image = Properties.Resources.map_coin;
+                    Image = Properties.Resources.icon_112;
                     tipVoc = "Vendor";
                 }
                 if (NPC.IsTeacher)
                 {
-                    Image = Properties.Resources.map_book;
+                    Image = Properties.Resources.icon_117;
                     tipVoc = "Teacher";
                     if (NPC.Vendor)
                         tipVoc += "/Vendor";
